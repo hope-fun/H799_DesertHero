@@ -24,6 +24,9 @@ var ViewModel;
              * @100连关闭时间
              */
             _this.hundredBtn = null;
+            _this.effectDiskJson = "dipan_json";
+            _this.effectDiskPng = "dipan_png";
+            _this.effectDisk = "dipan";
             _this.skinName = View.CharItem;
             _this.uiGroup = _uiGroup;
             _this.onCallback = _onCallback;
@@ -434,16 +437,11 @@ var ViewModel;
         /**
          * @升级特效
          * @by cai_haotian 2016.2.15
+         * @by zhu_jun,2017.02.26.
          */
         CharItemVM.prototype.levelUpAnimel = function () {
-            //TODO: by zhu_jun,2017.02.19.
-            // var factory: dragonBones.EgretFactory=Model.DragonBones.addArmatureToFactory("texture_shengji_02_texiao","texture_shengji_02_json","texture_shengji_02_png");
-            // this.armature=Model.DragonBones.buildArmature(factory,"Tx_shengji_02");
-            // dragonBones.WorldClock.clock.add(this.armature);
-            // this.addChild(this.armature.display);
-            // this.armature.display.x = 47;
-            // this.armature.display.y = 36;
-            // this.armature.display.visible = false;
+            this.levelUpDB = new Model.DragonBones(this, "texture_shengji_02_texiao", "texture_shengji_02_json", "texture_shengji_02_png", "Tx_shengji_02", 47, 36);
+            this.levelUpDB.setActive(false);
         };
         /**
          * @播放item上的升级特效
@@ -452,12 +450,10 @@ var ViewModel;
         CharItemVM.prototype.playlevelUpAnieml = function () {
             var _this = this;
             //by cai_haotian 2016.2.15.
-            this.armature.display.visible = true;
-            this.armature.animation.gotoAndPlay("Tx_shengji_02", -1, -1, 1);
-            //动画完成后隐藏
-            this.armature.addEventListener(dragonBones.AnimationEvent.COMPLETE, function () {
-                _this.armature.display.visible = false;
-            }, this);
+            this.levelUpDB.setActive(true);
+            this.levelUpDB.play("Tx_shengji_02", 1, function () {
+                _this.levelUpDB.setActive(false); //动画完成后隐藏
+            });
             if (this.fData.Type == Model.FriendType.FRIEND_TYPE_FRIEND) {
                 this.levelUpCharAnimel(this.fData.st.id);
             }
@@ -468,14 +464,14 @@ var ViewModel;
         CharItemVM.prototype.levelUpCharAnimel = function (id) {
             if (id === void 0) { id = 0; }
             //光特效
-            var light = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.levelUpLight);
-            var mcLight = light.initMovieClip("levelUpLight_12_json", "levelUpLight_12_png", "guangxian", 1, function () {
+            var light = new Model.MovieClipService(Main.singleton.mainGameVM.levelUpLight);
+            var mcLight = light.initMovieClip("guangxian_json", "guangxian_png", "guangxian", 1, function () {
                 Main.singleton.mainGameVM.levelUpLight.removeChild(mcLight);
             });
             switch (id) {
                 case 0:
-                    var groud = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.yungeLevelUp);
-                    var mc = groud.initMovieClip("levelUp_12_json", "levelUp_12_png", "dipan", 1, function () {
+                    var groud = new Model.MovieClipService(Main.singleton.mainGameVM.yungeLevelUp);
+                    var mc = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, function () {
                         Main.singleton.mainGameVM.yungeLevelUp.removeChild(mc);
                     });
                     mc.x = 268;
@@ -484,8 +480,8 @@ var ViewModel;
                     mcLight.y = 413.45;
                     break;
                 case 1:
-                    var groud = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.baiheLevelUp);
-                    var mc = groud.initMovieClip("levelUp_12_json", "levelUp_12_png", "dipan", 1, function () {
+                    var groud = new Model.MovieClipService(Main.singleton.mainGameVM.baiheLevelUp);
+                    var mc = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, function () {
                         Main.singleton.mainGameVM.baiheLevelUp.removeChild(mc);
                     });
                     mc.x = 190;
@@ -494,8 +490,8 @@ var ViewModel;
                     mcLight.y = 463.45;
                     break;
                 case 7:
-                    var groud = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.bingyiLevelUp);
-                    var mc = groud.initMovieClip("levelUp_12_json", "levelUp_12_png", "dipan", 1, function () {
+                    var groud = new Model.MovieClipService(Main.singleton.mainGameVM.bingyiLevelUp);
+                    var mc = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, function () {
                         Main.singleton.mainGameVM.bingyiLevelUp.removeChild(mc);
                     });
                     mc.x = 91;
@@ -504,8 +500,8 @@ var ViewModel;
                     mcLight.y = 501.45;
                     break;
                 case 13:
-                    var groud = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.xupingjunLevelUp);
-                    var mc = groud.initMovieClip("levelUp_12_json", "levelUp_12_png", "dipan", 1, function () {
+                    var groud = new Model.MovieClipService(Main.singleton.mainGameVM.xupingjunLevelUp);
+                    var mc = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, function () {
                         Main.singleton.mainGameVM.xupingjunLevelUp.removeChild(mc);
                     });
                     mc.x = 201;
@@ -514,8 +510,8 @@ var ViewModel;
                     mcLight.y = 350.45;
                     break;
                 case 19:
-                    var groud = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.mengjueLevelUp);
-                    var mc = groud.initMovieClip("levelUp_12_json", "levelUp_12_png", "dipan", 1, function () {
+                    var groud = new Model.MovieClipService(Main.singleton.mainGameVM.mengjueLevelUp);
+                    var mc = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, function () {
                         Main.singleton.mainGameVM.mengjueLevelUp.removeChild(mc);
                     });
                     mc.x = 96;
@@ -524,8 +520,8 @@ var ViewModel;
                     mcLight.y = 308.45;
                     break;
                 case 25:
-                    var groud = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.liufulingLevelUp);
-                    var mc = groud.initMovieClip("levelUp_12_json", "levelUp_12_png", "dipan", 1, function () {
+                    var groud = new Model.MovieClipService(Main.singleton.mainGameVM.liufulingLevelUp);
+                    var mc = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, function () {
                         Main.singleton.mainGameVM.liufulingLevelUp.removeChild(mc);
                     });
                     mc.x = 78;

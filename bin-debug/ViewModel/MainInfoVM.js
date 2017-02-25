@@ -107,15 +107,6 @@ var ViewModel;
             var armature;
             var duringTime = _flag ? _data.continueTime : 15;
             var cd = null;
-            //技能1的时候方法
-            //            var skillOncAnimate = () => {
-            //                mcItem = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.yungeFrontSkill);
-            //                mc = mcItem.initMovieClip("Tx_zhujue_0" + _data.st.id + "_json","Tx_zhujue_0" + _data.st.id + "_png","Tx_zhujue_0" + _data.st.id,1,() => {
-            //                    Main.singleton.mainGameVM.yungeFrontSkill.removeChild(mcItem.movieClip);
-            //                });
-            //                duringTime = 0;
-            //                Model.AudioService.Shared().PlaySound("YX-007_mp3");
-            //            };
             var enemyHit = function () { Main.singleton.mainGameVM.enemyHit(); };
             if (_flag) {
                 _item.touchEnabled = false;
@@ -138,11 +129,9 @@ var ViewModel;
             switch (_data.st.id) {
                 case 1:
                     //技能1 是单次点击后直接播放 并且开始计时cd
-                    //给主游戏添加点击动画
-                    //    Main.singleton.mainGameVM.clickBtn.once(egret.TouchEvent.TOUCH_TAP,skillOncAnimate,this);
                     //3秒后实现攻击
                     egret.setTimeout(function () {
-                        mcItem = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.yungeFrontSkill);
+                        mcItem = new Model.MovieClipService(Main.singleton.mainGameVM.yungeFrontSkill);
                         mc = mcItem.initMovieClip("Tx_zhujue_0" + _data.st.id + "_json", "Tx_zhujue_0" + _data.st.id + "_png", "Tx_zhujue_0" + _data.st.id, 1, function () {
                             Main.singleton.mainGameVM.yungeFrontSkill.removeChild(mcItem.movieClip);
                         });
@@ -159,7 +148,7 @@ var ViewModel;
                     //调用技能逻辑效果
                     break;
                 case 2:
-                    mcItem = new ViewModel.HeroItemVM(Main.singleton.mainGameVM.yungeFrontSkill);
+                    mcItem = new Model.MovieClipService(Main.singleton.mainGameVM.yungeFrontSkill);
                     mc = mcItem.initMovieClip("Tx_zhujue_0" + _data.st.id + "_json", "Tx_zhujue_0" + _data.st.id + "_png", "Tx_zhujue_0" + _data.st.id, -1, function () { });
                     mc.addEventListener(egret.Event.LOOP_COMPLETE, enemyHit, this);
                     if (_flag) {
@@ -179,11 +168,9 @@ var ViewModel;
                         //调用成就 by cai_haotian 2016.4.5
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_USE_SKILL3, 1);
                     }
-                    //TODO: by zhu_jun,2017.02.21.,技能特效.
-                    // var factory = Model.DragonBones.addArmatureToFactory("Tx_zhujue_03_json","Tx_zhujue_03_part_json","Tx_zhujue_03_part_png");
-                    // armature = Model.DragonBones.buildArmature(factory,"Tx_zhujue_03");
-                    // Model.DragonBones.play(Main.singleton.mainGameVM.yungeFrontSkill,armature,"Tx_zhujue_03",300,440);
-                    //调用技能逻辑效果
+                    // by zhu_jun,2017.02.21.,技能特效.
+                    var skill3DB = new Model.DragonBones(Main.singleton.mainGameVM.yungeFrontSkill, "Tx_zhujue_03_json", "Tx_zhujue_03_part_json", "Tx_zhujue_03_part_png", "Tx_zhujue_03", 720, 360);
+                    skill3DB.play("Tx_zhujue_03");
                     Model.PlayerSkillLocalService.PlayerSkillEffect(_data, function () {
                     }, _flag);
                     break;
@@ -198,9 +185,9 @@ var ViewModel;
                     break;
                 case 5:
                     this.bufferAnimel(Main.singleton.mainGameVM.yungeFrontSkill, function () {
-                        //TODO: by zhu_jun,2017.02.21.
-                        // var factory = new ViewModel.EffectSkillVM(Main.singleton.mainGameVM.yungeSkill0,() => { });
-                        // armature = factory.initDragonBone("Tx_zhujue_05_part_json","Tx_zhujue_05_part_png","Tx_zhujue_05_json",0);
+                        var skill3DB = new Model.DragonBones(Main.singleton.mainGameVM.yungeSkill0, //by zhu_jun,2017.02.21.
+                        "Tx_zhujue_05_json", "Tx_zhujue_05_part_json", "Tx_zhujue_05_part_png", "Tx_zhujue_05", 720, 360);
+                        skill3DB.play("Tx_zhujue_05");
                     });
                     if (_flag) {
                         //调用成就 by cai_haotian 2016.4.5
@@ -217,7 +204,6 @@ var ViewModel;
                         //调用成就 by cai_haotian 2016.4.5
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_USE_SKILL6, 1);
                     }
-                    //调用技能逻辑效果
                     Model.PlayerSkillLocalService.PlayerSkillEffect(_data, function (_gold, _goldAndunit) {
                         Main.singleton.mainGameVM.goldAnimel(_gold, _goldAndunit);
                     }, _flag);

@@ -254,33 +254,38 @@ module Model {
             return <FriendType>FriendType[this.st.type];
         }
 
+        //         _data.DBJson,
+        // Model.PlayerLocalService.PlayerData.DBPngJson,
+        // Model.PlayerLocalService.PlayerData.DBPng,
+        // Model.PlayerLocalService.PlayerData.st.playerDragonBones,
 
-        /**
-         * @待机配置.
-         */
-        public get IdleJson(): string {
-            return this.st.idle + "_json";
-        }
-        /**
-         * @待机图片.
-         */
-        public get IdlePng(): string {
-            return this.st.idle + "_png";
-        }
 
-        /**
-         * @攻击配置
-         */
-        public get AttackJson(): string {
-            return this.st.attack + "_json";
-        }
+        // /**
+        //  * @待机配置.
+        //  */
+        // public get IdleJson(): string {
+        //     return this.st.idle + "_json";
+        // }
+        // /**
+        //  * @待机图片.
+        //  */
+        // public get IdlePng(): string {
+        //     return this.st.idle + "_png";
+        // }
 
-        /**
-         * @攻击图片
-         */
-        public get AttackPng(): string {
-            return this.st.attack + "_png";
-        }
+        // /**
+        //  * @攻击配置
+        //  */
+        // public get AttackJson(): string {
+        //     return this.st.attack + "_json";
+        // }
+
+        // /**
+        //  * @攻击图片
+        //  */
+        // public get AttackPng(): string {
+        //     return this.st.attack + "_png";
+        // }
         /**
          * @特效配置
          */
@@ -301,8 +306,52 @@ module Model {
             return this.st.effect + "_texiao";
         }
 
-        public get Icon():string{
+        public get Icon(): string {
             return this.st.icon + "_png";
+        }
+
+        /**
+         * @主角攻击.
+         */
+        public get Attack(): string {
+        	return this.st.dragonBones + "_attack";
+        }
+
+		/**
+		 * @主角待机.
+		 */
+        public get Idle(): string {
+            return this.st.dragonBones + "_idle";
+        }
+		// /**
+		//  * @受击动画名称.
+		//  */
+        // public get Hit(): string {
+        //     return this.st.dragonBones + "_hit";
+        // }
+
+		/**
+		 * @主角龙骨配置.
+		 * @bodyGuanYu_ske_json
+		 */
+        public get DBJson(): string {
+            return this.st.dragonBones + "_ske_json";
+        }
+
+		/**
+		 * @主角待机图片配置.
+		 * @bodyGuanYu_tex_json
+		 */
+        public get DBPngJson(): string {
+            return this.st.dragonBones + "_tex_json";
+        }
+
+		/**
+		 * @主角待机图片.
+		 * @示例:bodyGuanYu_tex_png
+		 */
+        public get DBPng(): string {
+            return this.st.dragonBones + "_tex_png";
         }
 
 		/**

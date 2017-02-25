@@ -294,47 +294,35 @@ var Model;
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(FriendData.prototype, "IdleJson", {
-            /**
-             * @待机配置.
-             */
-            get: function () {
-                return this.st.idle + "_json";
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Object.defineProperty(FriendData.prototype, "IdlePng", {
-            /**
-             * @待机图片.
-             */
-            get: function () {
-                return this.st.idle + "_png";
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Object.defineProperty(FriendData.prototype, "AttackJson", {
-            /**
-             * @攻击配置
-             */
-            get: function () {
-                return this.st.attack + "_json";
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Object.defineProperty(FriendData.prototype, "AttackPng", {
-            /**
-             * @攻击图片
-             */
-            get: function () {
-                return this.st.attack + "_png";
-            },
-            enumerable: true,
-            configurable: true
-        });
         Object.defineProperty(FriendData.prototype, "EffectJson", {
+            //         _data.DBJson,
+            // Model.PlayerLocalService.PlayerData.DBPngJson,
+            // Model.PlayerLocalService.PlayerData.DBPng,
+            // Model.PlayerLocalService.PlayerData.st.playerDragonBones,
+            // /**
+            //  * @待机配置.
+            //  */
+            // public get IdleJson(): string {
+            //     return this.st.idle + "_json";
+            // }
+            // /**
+            //  * @待机图片.
+            //  */
+            // public get IdlePng(): string {
+            //     return this.st.idle + "_png";
+            // }
+            // /**
+            //  * @攻击配置
+            //  */
+            // public get AttackJson(): string {
+            //     return this.st.attack + "_json";
+            // }
+            // /**
+            //  * @攻击图片
+            //  */
+            // public get AttackPng(): string {
+            //     return this.st.attack + "_png";
+            // }
             /**
              * @特效配置
              */
@@ -367,6 +355,65 @@ var Model;
         Object.defineProperty(FriendData.prototype, "Icon", {
             get: function () {
                 return this.st.icon + "_png";
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(FriendData.prototype, "Attack", {
+            /**
+             * @主角攻击.
+             */
+            get: function () {
+                return this.st.dragonBones + "_attack";
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(FriendData.prototype, "Idle", {
+            /**
+             * @主角待机.
+             */
+            get: function () {
+                return this.st.dragonBones + "_idle";
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(FriendData.prototype, "DBJson", {
+            // /**
+            //  * @受击动画名称.
+            //  */
+            // public get Hit(): string {
+            //     return this.st.dragonBones + "_hit";
+            // }
+            /**
+             * @主角龙骨配置.
+             * @bodyGuanYu_ske_json
+             */
+            get: function () {
+                return this.st.dragonBones + "_ske_json";
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(FriendData.prototype, "DBPngJson", {
+            /**
+             * @主角待机图片配置.
+             * @bodyGuanYu_tex_json
+             */
+            get: function () {
+                return this.st.dragonBones + "_tex_json";
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(FriendData.prototype, "DBPng", {
+            /**
+             * @主角待机图片.
+             * @示例:bodyGuanYu_tex_png
+             */
+            get: function () {
+                return this.st.dragonBones + "_tex_png";
             },
             enumerable: true,
             configurable: true

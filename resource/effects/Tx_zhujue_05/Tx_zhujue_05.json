@@ -1,0 +1,228 @@
+{
+    "frameRate": 12,
+    "armature": [
+        {
+            "skin": [
+                {
+                    "name": "",
+                    "slot": [
+                        {
+                            "display": [
+                                {
+                                    "type": "image",
+                                    "name": "BBB",
+                                    "transform": {
+                                        "y": 0.9962,
+                                        "x": -1.5033
+                                    }
+                                }
+                            ],
+                            "name": "BBB"
+                        },
+                        {
+                            "display": [
+                                {
+                                    "type": "image",
+                                    "name": "Aaa",
+                                    "transform": {
+                                        "y": -1.0686,
+                                        "skX": -90,
+                                        "skY": -90,
+                                        "x": -6.3213
+                                    }
+                                }
+                            ],
+                            "name": "Aaa"
+                        }
+                    ]
+                }
+            ],
+            "slot": [
+                {
+                    "name": "Aaa",
+                    "parent": "Aa"
+                },
+                {
+                    "z": 1,
+                    "name": "BBB",
+                    "parent": "Bb"
+                }
+            ],
+            "bone": [
+                {
+                    "name": "root",
+                    "transform": {}
+                },
+                {
+                    "transform": {},
+                    "length": 87,
+                    "name": "all",
+                    "parent": "root"
+                },
+                {
+                    "transform": {},
+                    "name": "Aa",
+                    "parent": "all"
+                },
+                {
+                    "transform": {},
+                    "name": "Bb",
+                    "parent": "all"
+                }
+            ],
+            "name": "Tx_zhujue_05",
+            "animation": [
+                {
+                    "frame": [],
+                    "slot": [
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 12,
+                                    "color": {
+                                        "aM": 35
+                                    }
+                                },
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 12,
+                                    "color": {}
+                                },
+                                {
+                                    "tweenEasing": null,
+                                    "duration": 0,
+                                    "color": {
+                                        "aM": 35
+                                    }
+                                }
+                            ],
+                            "name": "Aaa"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 12,
+                                    "color": {
+                                        "aM": 20
+                                    }
+                                },
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 12,
+                                    "color": {
+                                        "aM": 80
+                                    }
+                                },
+                                {
+                                    "tweenEasing": null,
+                                    "duration": 0,
+                                    "color": {
+                                        "aM": 20
+                                    }
+                                }
+                            ],
+                            "name": "BBB"
+                        }
+                    ],
+                    "playTimes": 0,
+                    "bone": [
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": null,
+                                    "duration": 24,
+                                    "transform": {}
+                                }
+                            ],
+                            "name": "root"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 24,
+                                    "transform": {
+                                        "scY": 0.3,
+                                        "y": -17.0663,
+                                        "scX": 0.6,
+                                        "x": -30.904
+                                    }
+                                },
+                                {
+                                    "tweenEasing": null,
+                                    "duration": 0,
+                                    "transform": {
+                                        "scY": 0.3,
+                                        "y": -17.0663,
+                                        "scX": 0.6,
+                                        "x": -30.904
+                                    }
+                                }
+                            ],
+                            "name": "all"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 12,
+                                    "transform": {}
+                                },
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 12,
+                                    "transform": {
+                                        "scY": 1.1,
+                                        "scX": 1.1
+                                    }
+                                },
+                                {
+                                    "tweenEasing": null,
+                                    "duration": 0,
+                                    "transform": {}
+                                }
+                            ],
+                            "name": "Aa"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 12,
+                                    "transform": {
+                                        "scY": 0.9,
+                                        "scX": 0.9
+                                    }
+                                },
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 12,
+                                    "transform": {
+                                        "scY": 1.2,
+                                        "scX": 1.2
+                                    }
+                                },
+                                {
+                                    "tweenEasing": null,
+                                    "duration": 0,
+                                    "transform": {
+                                        "scY": 0.9,
+                                        "scX": 0.9
+                                    }
+                                }
+                            ],
+                            "name": "Bb"
+                        }
+                    ],
+                    "duration": 24,
+                    "name": "Tx_zhujue_05"
+                }
+            ]
+        }
+    ],
+    "name": "Tx_zhujue_05",
+    "version": "4.0",
+    "isGlobal": 0
+}

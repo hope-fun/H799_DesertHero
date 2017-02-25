@@ -410,7 +410,6 @@ module ViewModel {
             }, this, 1000 - Model.PlayerLocalService.PlayerData.friendFrameRate);
         }
 
-
         /**
          * @主角待机动画.
          * @by zhu_jun,2017.02.21.
@@ -423,11 +422,6 @@ module ViewModel {
                 Model.PlayerLocalService.PlayerData.st.playerDragonBones,
                 640, 360);
             this.playerDB.play(Model.PlayerLocalService.PlayerData.PlayerIdle, 0);
-
-            // var bufferFactory: dragonBones.EgretFactory = Model.DragonBones.addArmatureToFactory(Model.PlayerLocalService.PlayerData.DBJson,
-            //     Model.PlayerLocalService.PlayerData.DBPngJson, Model.PlayerLocalService.PlayerData.DBPng);
-            // var bufferArmature: dragonBones.Armature = Model.DragonBones.buildArmature(bufferFactory, Model.PlayerLocalService.PlayerData.st.playerDragonBones);
-            // Model.DragonBones.play(this.guanyuGroup, bufferArmature, Model.PlayerLocalService.PlayerData.PlayerIdle, 500, 300, 0);
         }
 
         /**
@@ -437,9 +431,11 @@ module ViewModel {
             this.onAttackAnim(this.playerDB, Model.PlayerLocalService.PlayerData.PlayerAttack, () => {
                 this.playerDB.play(Model.PlayerLocalService.PlayerData.PlayerIdle, 0);
             });
-
-            //TODO: by zhu_jun,2017.02.20.Temp.
-            // this.onAttackEffect(this.yungeClickEffectGroup, [Model.PlayerLocalService.PlayerData.EffectJson, Model.PlayerLocalService.PlayerData.EffectPng, Model.PlayerLocalService.PlayerData.Effect]);
+            this.onAttackEffect(this.yungeClickEffectGroup, //by zhu_jun,2017.02.26.
+                [Model.PlayerLocalService.PlayerData.EffectJson,
+                Model.PlayerLocalService.PlayerData.EffectPng,
+                Model.PlayerLocalService.PlayerData.Effect,
+                Model.PlayerLocalService.PlayerData.st.playerEffect]);
         }
 
         /**
@@ -447,25 +443,19 @@ module ViewModel {
          */
         public switchFriend(_data: Model.FriendData) {
             switch (_data.dy.friendId) {
-                case 1:
-                    var baihe: HeroItemVM = new HeroItemVM(this.baiheGroup);
-                    this.friendAnimal(baihe, this.baiheGroup, _data);
+                case 1: this.friendAnimal(this.baiheGroup, _data);
                     break;
                 case 7:
-                    var bingyi: HeroItemVM = new HeroItemVM(this.bingyiGroup);
-                    this.friendAnimal(bingyi, this.bingyiGroup, _data);
+                    this.friendAnimal(this.bingyiGroup, _data);
                     break;
                 case 13:
-                    var xupingjun: HeroItemVM = new HeroItemVM(this.xupingjunGroup);
-                    this.friendAnimal(xupingjun, this.xupingjunGroup, _data);
+                    this.friendAnimal(this.xupingjunGroup, _data);
                     break;
                 case 19:
-                    var mengjue: HeroItemVM = new HeroItemVM(this.mengjueGroup);
-                    this.friendAnimal(mengjue, this.mengjueGroup, _data);
+                    this.friendAnimal(this.mengjueGroup, _data);
                     break;
                 case 25:
-                    var liufuling: HeroItemVM = new HeroItemVM(this.liufulingGroup);
-                    this.friendAnimal(liufuling, this.liufulingGroup, _data);
+                    this.friendAnimal(this.liufulingGroup, _data);
                     break;
                 default: ;
             }
@@ -474,7 +464,7 @@ module ViewModel {
         /**
          * @初始化单个挚友动画.
          */
-        private friendAnimal(_item: HeroItemVM, _uiGroup: eui.Group, _data: Model.FriendData) {
+        private friendAnimal(_uiGroup: eui.Group, _data: Model.FriendData) {
             if (_data.dy.sealCD > 0) {//无论有没有对象，都要判断是否已经封印,初始化的时候是没有对象的.
                 _uiGroup.visible = false;
             } else {
@@ -486,13 +476,21 @@ module ViewModel {
                 }
                 return;
             }
-            _item.initMovieClip(_data.IdleJson, _data.IdlePng, _data.st.idle);//待机动画
+            var friendDB = new Model.DragonBones(_uiGroup,//mc改db by zhu_jun.
+                _data.DBJson,
+                _data.DBPngJson,
+                _data.DBPng,
+                _data.st.dragonBones,
+                640, 360);
+            this.playerDB.play(_data.Idle, 0);
+            // _item.initMovieClip(_data.IdleJson, _data.IdlePng, _data.st.idle);//待机动画by zhu_jun,2017.02.26.
             egret.setInterval(() => {//攻击动画
                 //TODO:by zhu_jun,mc改db.
-                // this.onAttackAnim(_uiGroup, [_data.AttackJson, _data.AttackPng, _data.st.attack], () => {
-                //     this.onAttackEffect(_uiGroup, [_data.EffectJson, _data.EffectPng, _data.Effect], () => {
-                //     });
-                // });
+                this.onAttackAnim(friendDB, _data.Attack, () => {
+                    console.log("zhujun: friend _data.name " + _data.st.name + " play attack effect ! ");
+                    this.onAttackEffect(_uiGroup,
+                        [_data.EffectJson, _data.EffectPng, _data.Effect, _data.st.effect], () => { });
+                });
                 Model.AudioService.Shared().PlaySound(_data.st.attackAudio);
             }, this, Model.Mathf.random(Model.PlayerLocalService.PlayerData.st.effectTimeMin * 1000, Model.PlayerLocalService.PlayerData.st.effectTimeMax * 1000));
 
@@ -504,17 +502,7 @@ module ViewModel {
          */
         private onAttackAnim(_db: Model.DragonBones, _actionName: string, _onCallBack: Function = null) {
             _db.play(_actionName, 1, _onCallBack);
-            // _uiGroup.getChildAt(0).visible = false;//重新播放,无论是不是点击,0号位都需要隐藏.
-            // var item: HeroItemVM = new HeroItemVM(_uiGroup);
-            // var mc = item.initMovieClip(_data[0], _data[1], _data[2], 1, () => {
-            //     _uiGroup.getChildAt(0).visible = true;
-            //     _uiGroup.removeChild(item.movieClip);
-            //     if (Model.WebServiceBase.isDebug) {
-            //         console.log("zhujun: once movie clip call back successed ! ");
-            //     }
-
-            // });
-
+            //by zhu_jun,下面这段针对原来mc的，不确定还有没有用了.
             // if (Model.PlayerLocalService.PlayerData.friendFrameRate != 0) {
             //     mc.frameRate = 24 + Model.PlayerLocalService.PlayerData.friendFrameRate;
             // }
@@ -525,29 +513,30 @@ module ViewModel {
             // }, this);
         }
 
-
-        // private onAttackEffect(test:string){
-
-        // }
-
         /**
          * @攻击特效.
+         * @by zhu_jun,2017.02.26.
+         * @_data:
+         * @_data.DBJson,
+         * @_data.DBPngJson,
+         * @_data.DBPng,
+         * @_data.st.dragonBones,
+         * @特效的动作和骨架相同,所以都是_data[3].
          */
         private onAttackEffect(_uiGroup: eui.Group, _data: string[], _onCallBack?: Function) {
             if (Model.WebServiceBase.isDebug) {
                 console.log("zhujun: on attack effect start !  " + JSON.stringify(_data));
             }
-            //TODO: by zhu_jun,2017.02.17.
-            // var item: EffectSkillVM = new EffectSkillVM(_uiGroup,() => {
-            //     if(_onCallBack) {
-            //         _onCallBack();
-            //     }
-            //     if(Model.WebServiceBase.isDebug) {
-            //         console.log("zhujun: attack effect play finished ! ");
-            //     }
-
-            // });
-            // item.initDragonBone(_data[0],_data[1],_data[2]);
+            var roleDB: Model.DragonBones = new Model.DragonBones(_uiGroup,
+                _data[0], _data[1], _data[2], _data[3], 640, 360, () => {
+                    if (_onCallBack) {
+                        _onCallBack();
+                    }
+                    if (Model.WebServiceBase.isDebug) {
+                        console.log("zhujun: attack effect play finished ! ");
+                    }
+                })
+            roleDB.play(_data[3], 1);
         }
 
         /**
@@ -563,7 +552,6 @@ module ViewModel {
                 Model.MonsterLocalService.MonsterList[_index].st.dragonBones
             );
             this.enemyDB.play(Model.MonsterLocalService.MonsterList[_index].Idle);
-            // this.enemyDB.changeMovieClip(Model.MonsterLocalService.MonsterList[_index].IdleJson, Model.MonsterLocalService.MonsterList[_index].IdlePng, Model.MonsterLocalService.MonsterList[_index].Idle);
         }
 
         /**
@@ -589,10 +577,10 @@ module ViewModel {
 
         /**
          * @敌人死亡时动画
+         * @by zhu_jun,2017.02.21.去掉活动相关.
+         * @by zhu_jun,2017.02.26.修改动画相关.
          */
         public enemyKilled(_onKilled: Function) {
-            // TODO: by zhu_jun,2017.02.21.
-            //by cai_haotian 2016.4.15
 
             //这段作为正常游戏流程的调用
             //调用成就方法 by cai_haotian 
@@ -600,63 +588,62 @@ module ViewModel {
             if (Model.WebServiceBase.isDebug) {
                 console.log("zhujun: enemy killed ! ");
             }
-
             this.cutFlag = false;//先停止点击事件 by cai_haotian 2016.3.8.
             this.goldDrop();//要在怪物死亡后，切换index之前调用金币模块.
             this.jewelDrop();//如果为Boss则有几率掉落灵石.
-            // var effect: HeroItemVM = new HeroItemVM(this.enemyGroup);
-            // effect.initMovieClip("tx_siwang_json", "tx_siwang_png", "Tx_siwang", 1, () => {
-            //     this.enemyGroup.removeChild(effect.movieClip);
-            _onKilled();
-            if (Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].MonsterType == Model.MonsterType.MONSTER_TYPE_BOSS) {//判断当前怪是不是boss.
-                this.sceneInfo.swardIcon.visible = false;//关小剑.
-                this.sceneInfo.bossInfoGroup.visible = true;//显示倒计时，逃跑按钮，进度条
-                this.sceneInfo.countTimeImage.visible = true;//显示倒计时 by cai_haotian 2016.4.18
-                this.sceneInfo.countTimeLabel.visible = true;//显示进度条 by cai_haotian 2016.4.18
-                this.sceneInfo.bossBtn.currentState = "down";//设置按钮显示 by cai_haotian 2016.4.18
+            var effect: Model.MovieClipService = new Model.MovieClipService(this.enemyGroup);//by zhu_jun,2017.02.26.
+            effect.initMovieClip("tx_siwang_json", "tx_siwang_png", "Tx_siwang", 1, () => {
+                this.enemyGroup.removeChild(effect.movieClip);
+                _onKilled();
+                if (Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].MonsterType == Model.MonsterType.MONSTER_TYPE_BOSS) {//判断当前怪是不是boss.
+                    this.sceneInfo.swardIcon.visible = false;//关小剑.
+                    this.sceneInfo.bossInfoGroup.visible = true;//显示倒计时，逃跑按钮，进度条
+                    this.sceneInfo.countTimeImage.visible = true;//显示倒计时 by cai_haotian 2016.4.18
+                    this.sceneInfo.countTimeLabel.visible = true;//显示进度条 by cai_haotian 2016.4.18
+                    this.sceneInfo.bossBtn.currentState = "down";//设置按钮显示 by cai_haotian 2016.4.18
 
-                //倒计时初始化.                    
-                this.sceneInfo.setCountDown(() => {
-                    if (Model.WebServiceBase.isDebug) {
-                        console.log("zhujun: boss倒计时结束,进入刷怪模式 ! ");
-                    }
-                    Model.MonsterLocalService.setFarmMonsterData();
-                    Model.SceneLocalService.SceneData.currentMonster = 0;//强制切换怪物.
-                    this.changeEnemy(Model.SceneLocalService.SceneData.currentMonster);//怪物死后调用
-                    this.sceneInfo.setMonsterHp();//倒计时到了,强制切换怪物数据，更新UIhp.
-
-                    Model.WebService.commitData(Model.WebValue.dataDyModel, () => {
+                    //倒计时初始化.                    
+                    this.sceneInfo.setCountDown(() => {
                         if (Model.WebServiceBase.isDebug) {
-                            console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));
+                            console.log("zhujun: boss倒计时结束,进入刷怪模式 ! ");
                         }
-                    }, () => {
+                        Model.MonsterLocalService.setFarmMonsterData();
+                        Model.SceneLocalService.SceneData.currentMonster = 0;//强制切换怪物.
+                        this.changeEnemy(Model.SceneLocalService.SceneData.currentMonster);//怪物死后调用
+                        this.sceneInfo.setMonsterHp();//倒计时到了,强制切换怪物数据，更新UIhp.
 
-                        if (Model.WebValue.isTraditional) {
-                            alert("數據提交失敗請聯繫管理員！！！！");
-                        } else {
-                            alert("数据提交失败请联系管理员！！！！");
+                        Model.WebService.commitData(Model.WebValue.dataDyModel, () => {
+                            if (Model.WebServiceBase.isDebug) {
+                                console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));
+                            }
+                        }, () => {
+
+                            if (Model.WebValue.isTraditional) {
+                                alert("數據提交失敗請聯繫管理員！！！！");
+                            } else {
+                                alert("数据提交失败请联系管理员！！！！");
+                            }
                         }
-                    }
-                    );
-                });
-            } else {
-                if (Model.SceneLocalService.SceneData.currentMonster == Model.SceneLocalService.SceneData.monsterCount - 1) {//如果最后一位非boss,则是循环模式.
-                    Model.MonsterLocalService.setFarmMonsterData();
-                    Model.SceneLocalService.SceneData.currentMonster = 0;//强制切换怪物.
+                        );
+                    });
                 } else {
+                    if (Model.SceneLocalService.SceneData.currentMonster == Model.SceneLocalService.SceneData.monsterCount - 1) {//如果最后一位非boss,则是循环模式.
+                        Model.MonsterLocalService.setFarmMonsterData();
+                        Model.SceneLocalService.SceneData.currentMonster = 0;//强制切换怪物.
+                    } else {
 
-                    if (Model.WebServiceBase.isDebug) {
-                        console.log("zhujun: 这边进入了循环战斗,UI应该不变,等点击按钮时,修改数据,切换回挑战boss ! ");
+                        if (Model.WebServiceBase.isDebug) {
+                            console.log("zhujun: 这边进入了循环战斗,UI应该不变,等点击按钮时,修改数据,切换回挑战boss ! ");
+                        }
+
                     }
-
                 }
-            }
-            this.sceneInfo.setMonsterHp();//普通怪物死亡更新UIhp.
-            this.changeEnemy(Model.SceneLocalService.SceneData.currentMonster);//怪物死后调用
-            this.sceneInfo.setMonsterIndex();
-            this.cutFlag = true;//重新开始扣血事件 by cai_haotian 2016.3.8.
-            this.commitAuto();//自动提交数据
-            // }, false);
+                this.sceneInfo.setMonsterHp();//普通怪物死亡更新UIhp.
+                this.changeEnemy(Model.SceneLocalService.SceneData.currentMonster);//怪物死后调用
+                this.sceneInfo.setMonsterIndex();
+                this.cutFlag = true;//重新开始扣血事件 by cai_haotian 2016.3.8.
+                this.commitAuto();//自动提交数据
+            }, false);
         }
 
         /**

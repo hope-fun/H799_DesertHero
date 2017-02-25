@@ -23,6 +23,10 @@ module Model {
             _parent.addChild(this.armature.getDisplay());
         }
 
+        public setActive(_bool: boolean) {
+            this.armature.display.visible = _bool;
+        }
+
         /**
          * @修改DB工厂骨架.
          */
@@ -49,7 +53,7 @@ module Model {
             this.armature.addEventListener(dragonBones.AnimationEvent.COMPLETE, this.onAnimationEvent, this);//this传谁，监听方法就监听谁.
             this.armature.addEventListener(dragonBones.AnimationEvent.LOOP_COMPLETE, this.onAnimationEvent, this);
         }
-        
+
 
         /**
          * @动画监听事件.

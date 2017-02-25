@@ -199,15 +199,11 @@ module ViewModel {
                         //调用成就 by cai_haotian 2016.4.5
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_USE_SKILL3, 1);
                     }
-                    //TODO: by zhu_jun,2017.02.21.,技能特效.
-                    var factory = Model.DragonBones.addArmatureToFactory("Tx_zhujue_03_json","Tx_zhujue_03_part_json","Tx_zhujue_03_part_png");
-                    armature = Model.DragonBones.buildArmature(factory,"Tx_zhujue_03");
-                    Model.DragonBones.play(Main.singleton.mainGameVM.yungeFrontSkill,armature,"Tx_zhujue_03",300,440);
-                    
+                    // by zhu_jun,2017.02.21.,技能特效.
                     var skill3DB = new Model.DragonBones(Main.singleton.mainGameVM.yungeFrontSkill,
-                    "Tx_zhujue_03_json","Tx_zhujue_03_part_json","Tx_zhujue_03_part_png","Tx_zhujue_03",
-                    720,360)
-                    skill3DB.play("Tx_zhujue_03",1);
+                        "Tx_zhujue_03_json", "Tx_zhujue_03_part_json", "Tx_zhujue_03_part_png", "Tx_zhujue_03",
+                        720, 360)
+                    skill3DB.play("Tx_zhujue_03");
                     Model.PlayerSkillLocalService.PlayerSkillEffect(_data, () => {//调用技能逻辑效果
                     }, _flag);
                     break;
@@ -222,9 +218,10 @@ module ViewModel {
                     break;
                 case 5:
                     this.bufferAnimel(Main.singleton.mainGameVM.yungeFrontSkill, () => {
-                        //TODO: by zhu_jun,2017.02.21.
-                        // var factory = new ViewModel.EffectSkillVM(Main.singleton.mainGameVM.yungeSkill0,() => { });
-                        // armature = factory.initDragonBone("Tx_zhujue_05_part_json","Tx_zhujue_05_part_png","Tx_zhujue_05_json",0);
+                        var skill3DB = new Model.DragonBones(Main.singleton.mainGameVM.yungeSkill0,//by zhu_jun,2017.02.21.
+                            "Tx_zhujue_05_json", "Tx_zhujue_05_part_json", "Tx_zhujue_05_part_png", "Tx_zhujue_05",
+                            720, 360)
+                        skill3DB.play("Tx_zhujue_05");
                     });
                     if (_flag) {
                         //调用成就 by cai_haotian 2016.4.5
@@ -237,14 +234,11 @@ module ViewModel {
                     //最后一个特效为粒子特效
                     var particleEffects = new Model.Particles(Main.singleton.mainGameVM.yungeFrontSkill, "Tx_zhujue_06_2_png", "Tx_zhujue_06_2_json");
                     var partcleObject = particleEffects.setParticlesPos(272, 142);
-
                     if (_flag) {
                         //调用成就 by cai_haotian 2016.4.5
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_USE_SKILL6, 1);
                     }
-
-                    //调用技能逻辑效果
-                    Model.PlayerSkillLocalService.PlayerSkillEffect(_data, (_gold: number, _goldAndunit: string) => {
+                    Model.PlayerSkillLocalService.PlayerSkillEffect(_data, (_gold: number, _goldAndunit: string) => {//调用技能逻辑效果
                         Main.singleton.mainGameVM.goldAnimel(_gold, _goldAndunit);
                     }, _flag);
                     break;
