@@ -24,6 +24,9 @@ var Model;
             dragonBones.WorldClock.clock.add(this.armature);
             _parent.addChild(this.armature.getDisplay());
         }
+        DragonBones.prototype.setActive = function (_bool) {
+            this.armature.display.visible = _bool;
+        };
         /**
          * @修改DB工厂骨架.
          */

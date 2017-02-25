@@ -294,7 +294,7 @@ var ViewModel;
                 _this.playerDB.play(Model.PlayerLocalService.PlayerData.PlayerIdle, 0);
             });
             this.onAttackEffect(this.yungeClickEffectGroup, //by zhu_jun,2017.02.26.
-            [Model.PlayerLocalService.PlayerData.EffectJson,
+            [Model.PlayerLocalService.PlayerData.EffectPngJson,
                 Model.PlayerLocalService.PlayerData.EffectPng,
                 Model.PlayerLocalService.PlayerData.Effect,
                 Model.PlayerLocalService.PlayerData.st.playerEffect]);
@@ -347,7 +347,7 @@ var ViewModel;
                 //TODO:by zhu_jun,mc改db.
                 _this.onAttackAnim(friendDB, _data.Attack, function () {
                     console.log("zhujun: friend _data.name " + _data.st.name + " play attack effect ! ");
-                    _this.onAttackEffect(_uiGroup, [_data.EffectJson, _data.EffectPng, _data.Effect, _data.st.effect], function () { });
+                    _this.onAttackEffect(_uiGroup, [_data.EffectPngJson, _data.EffectPng, _data.Effect, _data.st.effect], function () { });
                 });
                 Model.AudioService.Shared().PlaySound(_data.st.attackAudio);
             }, this, Model.Mathf.random(Model.PlayerLocalService.PlayerData.st.effectTimeMin * 1000, Model.PlayerLocalService.PlayerData.st.effectTimeMax * 1000));

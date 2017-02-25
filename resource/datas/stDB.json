@@ -21,7 +21,7 @@
     "monsterHpRatio": "1.8",
     "leadCostRatio": "1.7",
     "timeBOSS": "30",
-    "playerEffect": "texture_yunge",
+    "playerEffect": "Tx_yunge_attack",
     "playerDragonBones": "bodyGuanYu",
     "playerAttackAudio": "YX-006_mp3",
     "bossSkillFriendProbability": "1000",

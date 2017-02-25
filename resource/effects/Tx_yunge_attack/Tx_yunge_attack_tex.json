@@ -1,0 +1,28 @@
+{
+    "SubTexture": [
+        {
+            "y": 1,
+            "frameWidth": 113,
+            "x": 1,
+            "frameHeight": 228,
+            "width": 113,
+            "frameY": -37,
+            "height": 191,
+            "name": "B2",
+            "frameX": 0
+        },
+        {
+            "y": 1,
+            "frameWidth": 113,
+            "x": 116,
+            "frameHeight": 228,
+            "width": 89,
+            "frameY": 0,
+            "height": 184,
+            "name": "A2",
+            "frameX": -12
+        }
+    ],
+    "name": "Tx_yunge_attack",
+    "imagePath": "Tx_yunge_attack_tex.png"
+}

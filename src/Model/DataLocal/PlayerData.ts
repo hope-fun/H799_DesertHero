@@ -252,23 +252,25 @@ module Model {
         }
 
         /**
-         * @主角特效配置.
-         */
-        public get EffectJson(): string {
-            return this.st.playerEffect + "_json";
+ * @特效配置
+ */
+        public get EffectPngJson(): string {
+            return this.st.playerEffect + "_tex_json";
         }
         /**
-         * @主角特效图片.
+         * @特效图片
          */
         public get EffectPng(): string {
-            return this.st.playerEffect + "_png";
+            return this.st.playerEffect + "_tex_png";
         }
+
         /**
-         * @主角特效骨骼配置.
+         * @特效粒子
          */
         public get Effect(): string {
-            return this.st.playerEffect + "_texiao";
+            return this.st.playerEffect + "_ske_json";
         }
+
         /**
          * @主角攻击配置.
          */
@@ -295,7 +297,7 @@ module Model {
         public get PlayerIdle(): string {
             return this.st.playerDragonBones + "_idle";
         }
-        
+
         /**
          * @主角龙骨配置.
          * @bodyGuanYu_ske_json

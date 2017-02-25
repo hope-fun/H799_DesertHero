@@ -289,21 +289,21 @@ module Model {
         /**
          * @特效配置
          */
-        public get EffectJson(): string {
-            return this.st.effect + "_json";
+        public get EffectPngJson(): string {
+            return this.st.effect + "_tex_json";
         }
         /**
          * @特效图片
          */
         public get EffectPng(): string {
-            return this.st.effect + "_png";
+            return this.st.effect + "_tex_png";
         }
 
         /**
          * @特效粒子
          */
         public get Effect(): string {
-            return this.st.effect + "_texiao";
+            return this.st.effect + "_ske_json";
         }
 
         public get Icon(): string {
@@ -314,7 +314,7 @@ module Model {
          * @主角攻击.
          */
         public get Attack(): string {
-        	return this.st.dragonBones + "_attack";
+            return this.st.dragonBones + "_attack";
         }
 
 		/**
@@ -323,12 +323,6 @@ module Model {
         public get Idle(): string {
             return this.st.dragonBones + "_idle";
         }
-		// /**
-		//  * @受击动画名称.
-		//  */
-        // public get Hit(): string {
-        //     return this.st.dragonBones + "_hit";
-        // }
 
 		/**
 		 * @主角龙骨配置.

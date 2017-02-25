@@ -1,0 +1,259 @@
+{
+    "frameRate": 24,
+    "armature": [
+        {
+            "bone": [
+                {
+                    "name": "root",
+                    "transform": {}
+                },
+                {
+                    "transform": {
+                        "skX": 180,
+                        "y": -75.1039,
+                        "skY": 180,
+                        "scX": 0.5,
+                        "scY": 0.6,
+                        "x": 78.0846
+                    },
+                    "length": 62,
+                    "name": "bone",
+                    "parent": "root"
+                },
+                {
+                    "transform": {
+                        "skX": -90,
+                        "skY": -90,
+                        "x": 26.8678
+                    },
+                    "name": "bone1",
+                    "parent": "bone"
+                },
+                {
+                    "transform": {
+                        "skX": -90,
+                        "skY": -90,
+                        "x": 74.3063
+                    },
+                    "name": "bone2",
+                    "parent": "bone"
+                }
+            ],
+            "slot": [
+                {
+                    "name": "B2",
+                    "parent": "bone2"
+                },
+                {
+                    "z": 1,
+                    "name": "A2",
+                    "parent": "bone1"
+                }
+            ],
+            "name": "Tx_yunge_attack",
+            "skin": [
+                {
+                    "slot": [
+                        {
+                            "display": [
+                                {
+                                    "type": "image",
+                                    "name": "B2",
+                                    "transform": {
+                                        "y": 25.9862
+                                    }
+                                }
+                            ],
+                            "name": "B2"
+                        },
+                        {
+                            "display": [
+                                {
+                                    "type": "image",
+                                    "name": "A2",
+                                    "transform": {
+                                        "y": 73.4247
+                                    }
+                                }
+                            ],
+                            "name": "A2"
+                        }
+                    ],
+                    "name": ""
+                }
+            ],
+            "animation": [
+                {
+                    "duration": 10,
+                    "frame": [
+                        {
+                            "tweenEasing": null,
+                            "duration": 8
+                        },
+                        {
+                            "duration": 0,
+                            "tweenEasing": null,
+                            "event": "yunge"
+                        }
+                    ],
+                    "bone": [
+                        {
+                            "frame": [
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": null,
+                                    "transform": {}
+                                }
+                            ],
+                            "name": "root"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0,
+                                    "transform": {
+                                        "scX": 0.7,
+                                        "scY": 0.8333,
+                                        "x": -21.0325
+                                    }
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "transform": {
+                                        "scX": 0.7,
+                                        "scY": 0.8333,
+                                        "x": 10.7072
+                                    }
+                                },
+                                {
+                                    "duration": 2,
+                                    "tweenEasing": 0,
+                                    "transform": {
+                                        "scX": 0.8,
+                                        "scY": 0.9167,
+                                        "x": 110.9641
+                                    }
+                                },
+                                {
+                                    "duration": 0,
+                                    "tweenEasing": null,
+                                    "transform": {
+                                        "scX": 0.8,
+                                        "scY": 0.9167,
+                                        "x": 135.1367
+                                    }
+                                }
+                            ],
+                            "name": "bone"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": null,
+                                    "transform": {
+                                        "scX": 0.9,
+                                        "scY": 0.9
+                                    }
+                                }
+                            ],
+                            "name": "bone1"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": null,
+                                    "transform": {
+                                        "scX": 0.9,
+                                        "scY": 0.9
+                                    }
+                                }
+                            ],
+                            "name": "bone2"
+                        }
+                    ],
+                    "playTimes": 0,
+                    "slot": [
+                        {
+                            "frame": [
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0,
+                                    "color": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "color": {}
+                                },
+                                {
+                                    "duration": 2,
+                                    "tweenEasing": 0,
+                                    "color": {}
+                                },
+                                {
+                                    "duration": 0,
+                                    "tweenEasing": null,
+                                    "color": {
+                                        "aM": 0
+                                    }
+                                }
+                            ],
+                            "name": "A2"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "duration": 2,
+                                    "tweenEasing": 0,
+                                    "color": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 1,
+                                    "tweenEasing": 0,
+                                    "color": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 1,
+                                    "tweenEasing": 0,
+                                    "color": {}
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "color": {}
+                                },
+                                {
+                                    "duration": 2,
+                                    "tweenEasing": 0,
+                                    "color": {}
+                                },
+                                {
+                                    "duration": 0,
+                                    "tweenEasing": null,
+                                    "color": {
+                                        "aM": 0
+                                    }
+                                }
+                            ],
+                            "name": "B2"
+                        }
+                    ],
+                    "name": "Tx_yunge_attack"
+                }
+            ]
+        }
+    ],
+    "name": "Tx_yunge_attack",
+    "version": "4.0",
+    "isGlobal": 0
+}

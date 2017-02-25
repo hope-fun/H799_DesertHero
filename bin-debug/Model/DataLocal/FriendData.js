@@ -294,7 +294,7 @@ var Model;
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(FriendData.prototype, "EffectJson", {
+        Object.defineProperty(FriendData.prototype, "EffectPngJson", {
             //         _data.DBJson,
             // Model.PlayerLocalService.PlayerData.DBPngJson,
             // Model.PlayerLocalService.PlayerData.DBPng,
@@ -327,7 +327,7 @@ var Model;
              * @特效配置
              */
             get: function () {
-                return this.st.effect + "_json";
+                return this.st.effect + "_tex_json";
             },
             enumerable: true,
             configurable: true
@@ -337,7 +337,7 @@ var Model;
              * @特效图片
              */
             get: function () {
-                return this.st.effect + "_png";
+                return this.st.effect + "_tex_png";
             },
             enumerable: true,
             configurable: true
@@ -347,7 +347,7 @@ var Model;
              * @特效粒子
              */
             get: function () {
-                return this.st.effect + "_texiao";
+                return this.st.effect + "_ske_json";
             },
             enumerable: true,
             configurable: true
@@ -380,12 +380,6 @@ var Model;
             configurable: true
         });
         Object.defineProperty(FriendData.prototype, "DBJson", {
-            // /**
-            //  * @受击动画名称.
-            //  */
-            // public get Hit(): string {
-            //     return this.st.dragonBones + "_hit";
-            // }
             /**
              * @主角龙骨配置.
              * @bodyGuanYu_ske_json

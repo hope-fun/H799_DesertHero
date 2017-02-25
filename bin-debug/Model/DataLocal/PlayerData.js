@@ -291,32 +291,32 @@ var Model;
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(PlayerData.prototype, "EffectJson", {
+        Object.defineProperty(PlayerData.prototype, "EffectPngJson", {
             /**
-             * @主角特效配置.
-             */
+     * @特效配置
+     */
             get: function () {
-                return this.st.playerEffect + "_json";
+                return this.st.playerEffect + "_tex_json";
             },
             enumerable: true,
             configurable: true
         });
         Object.defineProperty(PlayerData.prototype, "EffectPng", {
             /**
-             * @主角特效图片.
+             * @特效图片
              */
             get: function () {
-                return this.st.playerEffect + "_png";
+                return this.st.playerEffect + "_tex_png";
             },
             enumerable: true,
             configurable: true
         });
         Object.defineProperty(PlayerData.prototype, "Effect", {
             /**
-             * @主角特效骨骼配置.
+             * @特效粒子
              */
             get: function () {
-                return this.st.playerEffect + "_texiao";
+                return this.st.playerEffect + "_ske_json";
             },
             enumerable: true,
             configurable: true
