@@ -1,0 +1,13 @@
+{
+    "SubTexture": [
+        {
+            "width": 90,
+            "y": 1,
+            "height": 128,
+            "name": "01",
+            "x": 1
+        }
+    ],
+    "imagePath": "Tx_zhujue_hc0405_tex.png",
+    "name": "Tx_zhujue_hc0405"
+}

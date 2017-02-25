@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.SettingsView_9G" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
+   <e:Image id="maskBlackSettings"  width="100%" height="100%" source="mask_black" alpha="0" horizontalCenter="0" verticalCenter="0" scale9Grid="1,1,1,1"/>
+   <e:Group  id="window" width="600" height="900" y="-550">
+			<e:Group height="357" width="511" horizontalCenter="0.5" verticalCenter="-112.5">
+				<e:Image source="bg_tankuangda" scale9Grid="34,111,6,670" left="0" right="0" top="0" bottom="0"/>
+				<e:Image y="92" width="426" height="234" source="bg_tankuangda_nei" scale9Grid="13,13,4,7" horizontalCenter="0"/>
+				<e:Label y="195" textColor="0xFFFFFF" text="9G游戏QQ交流群：334626457" fontFamily="黑体" size="24" horizontalCenter="0"/>
+				<e:Label y="225" textColor="0xFFFFFF" fontFamily="黑体" size="24" text="9G游戏客服QQ： 2074198326" horizontalCenter="0"/>
+			</e:Group>  
+   	<e:Label text="账号设置" textColor="0xFFFFFF" size="40" horizontalCenter="0" y="192" fontFamily="黑体"/>
+	<e:Label y="269" textColor="0xFFFFFF" text="音效" fontFamily="黑体" size="30" x="146"/>
+	<e:Label y="315" textColor="0xFFFFFF" text="音乐" fontFamily="黑体" size="30" x="146"/>
+	<ViewModel:BtnMusicVM id="sound" x="352" y="266" width="96" height="38"/>
+	<ViewModel:BtnMusicVM id="music" y="311" x="352" width="96" height="38"/>
+	<ViewModel:BtnMagicWeaponDetailVM id="personalMsg" y="416" width="135" height="45" detailTextIn="个人信息" skinName="View.BtnMagicWeaponDetailItem" horizontalCenter="0"/>
+   	<e:Button id="LGCloseBtn" skinName="View.CloseBtn" x="509" y="139"/>
+   </e:Group>
+</e:Skin>

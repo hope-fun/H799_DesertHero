@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.BtnMusicView" width="96" height="38" states="up,down" xmlns:e="http://ns.egret.com/eui">
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Image source="music_off" source.down="music_on" height.down="38" horizontalCenter.down="0" verticalCenter.down="0" width.down="38"/>
+	</e:Group>
+</e:Skin>

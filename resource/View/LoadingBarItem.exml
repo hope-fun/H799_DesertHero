@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.LoadingBarItem" width="380" height="34" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="loadingBg" scale9Grid="4,4,8,8" left="0" right="0" top="0" bottom="0" source="loading01"/>
+	<e:Image id="loadingBar" top="4" bottom="4" width="372" left="4" source="loading02" scale9Grid="1,1,1,1"/>
+	<e:Label id="loadingLabel" text="标签" horizontalCenter="0" verticalCenter="1" fontFamily="黑体" size="24"/>
+</e:Skin>

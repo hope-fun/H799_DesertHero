@@ -1,0 +1,191 @@
+{
+    "frameRate": 24,
+    "isGlobal": 0,
+    "armature": [
+        {
+            "bone": [
+                {
+                    "name": "root",
+                    "transform": {}
+                },
+                {
+                    "transform": {
+                        "y": -33.9387,
+                        "x": -8.1917
+                    },
+                    "name": "lj01",
+                    "parent": "root"
+                },
+                {
+                    "transform": {
+                        "y": -16.1051,
+                        "x": -6.4547
+                    },
+                    "name": "lj021",
+                    "parent": "root"
+                },
+                {
+                    "length": 109,
+                    "transform": {
+                        "y": 8.15,
+                        "skY": -90.3144,
+                        "skX": -90.3144,
+                        "x": -2.3595
+                    },
+                    "parent": "root",
+                    "name": "01"
+                }
+            ],
+            "skin": [
+                {
+                    "name": "",
+                    "slot": [
+                        {
+                            "display": [
+                                {
+                                    "type": "image",
+                                    "name": "01",
+                                    "transform": {
+                                        "y": -0.0795,
+                                        "skY": 90.3144,
+                                        "skX": 90.3144,
+                                        "x": 57.806
+                                    }
+                                }
+                            ],
+                            "name": "01"
+                        }
+                    ]
+                }
+            ],
+            "animation": [
+                {
+                    "frame": [
+                        {
+                            "tweenEasing": null,
+                            "duration": 9
+                        },
+                        {
+                            "tweenEasing": null,
+                            "duration": 0,
+                            "events": [
+                                {
+                                    "name": "hc0405"
+                                }
+                            ]
+                        }
+                    ],
+                    "slot": [
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": null,
+                                    "duration": 8,
+                                    "color": {}
+                                },
+                                {
+                                    "tweenEasing": 0,
+                                    "duration": 15,
+                                    "color": {}
+                                },
+                                {
+                                    "tweenEasing": null,
+                                    "duration": 0,
+                                    "color": {
+                                        "aM": 0
+                                    }
+                                }
+                            ],
+                            "name": "01"
+                        }
+                    ],
+                    "duration": 23,
+                    "bone": [
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": null,
+                                    "transform": {},
+                                    "duration": 23
+                                }
+                            ],
+                            "name": "root"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": null,
+                                    "transform": {},
+                                    "duration": 23
+                                }
+                            ],
+                            "name": "lj01"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": null,
+                                    "transform": {},
+                                    "duration": 23
+                                }
+                            ],
+                            "name": "lj021"
+                        },
+                        {
+                            "frame": [
+                                {
+                                    "tweenEasing": 0,
+                                    "transform": {
+                                        "scX": 0.01,
+                                        "scY": 0.01
+                                    },
+                                    "duration": 3
+                                },
+                                {
+                                    "tweenEasing": 0,
+                                    "transform": {
+                                        "scY": 0.5
+                                    },
+                                    "duration": 5
+                                },
+                                {
+                                    "tweenEasing": null,
+                                    "transform": {},
+                                    "duration": 15
+                                }
+                            ],
+                            "name": "01"
+                        }
+                    ],
+                    "playTimes": 0,
+                    "ffd": [],
+                    "name": "Tx_zhujue_hc0405"
+                }
+            ],
+            "type": "Armature",
+            "frameRate": 24,
+            "aabb": {
+                "width": 90,
+                "y": -113.65469347534308,
+                "height": 128,
+                "x": -47.75619695187776
+            },
+            "defaultActions": [
+                {
+                    "gotoAndPlay": "Tx_zhujue_hc0405"
+                }
+            ],
+            "ik": [],
+            "name": "Tx_zhujue_hc0405",
+            "slot": [
+                {
+                    "name": "01",
+                    "parent": "01",
+                    "color": {}
+                }
+            ]
+        }
+    ],
+    "name": "Tx_zhujue_hc0405",
+    "version": "5.0"
+}

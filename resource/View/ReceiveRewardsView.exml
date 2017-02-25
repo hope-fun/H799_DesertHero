@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.ReceiveRewardsView" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="mask_black" scale9Grid="1,1,1,1" left="0" right="0" top="0" bottom="0" alpha="0.7"/>
+	<e:Group height="349" width="513" horizontalCenter="0" top="159">
+		<e:Image source="bg_tankuangda" scale9Grid="36,111,7,670" left="0" right="0" top="0" bottom="0"/>
+		<ViewModel:CloseBtnVM id="closeBtn" label="按钮" x="465" y="-15" skinName="View.CloseBtn"/>
+		<e:Label id="errorInfo" horizontalCenter="0.5" verticalCenter="-56.5" width="356" textAlign="center" fontFamily="黑体" size="26"/>
+		<e:Group id="rewadCount" left="0" right="0" top="0" bottom="0">
+			<e:Image y="90" width="426" height="233" horizontalCenter="0.5" source="bg_tankuangda_nei" scale9Grid="12,14,6,4"/>
+			<e:Label text="恭喜获得以下奖励" y="38" horizontalCenter="0" fontFamily="黑体"/>
+			<e:Group height="118" width="315" y="110" horizontalCenter="0">
+				<e:Label id="goods0" horizontalCenter="0" size="22" fontFamily="黑体" verticalCenter="-38"/>
+				<e:Label fontFamily="黑体" horizontalCenter="0" size="22" id="goods1" x="10" verticalCenter="-11"/>
+				<e:Label id="goods2" fontFamily="黑体" horizontalCenter="0" size="22" x="20" verticalCenter="14"/>
+				<e:Label x="30" fontFamily="黑体" horizontalCenter="0" size="22" id="goods3" verticalCenter="39"/>
+			</e:Group>
+		</e:Group>
+		<ViewModel:BtnShareVM id="commitBtn" label="按钮" skinName="View.BtnShareItem" horizontalCenter="-3" verticalCenter="89.5"/>
+	</e:Group>
+</e:Skin>

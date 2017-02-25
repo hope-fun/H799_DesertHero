@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.CloseBtn" states="up,down" width="59" height="59"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="btnImg" source="icon_guanbi" includeIn="up,down" scaleX.down="1.1" scaleY.down="1.1" horizontalCenter.up="0" verticalCenter.up="0"  width.down="59" height.down="59" horizontalCenter.down="0" verticalCenter.down="0"/>
+	<e:Group id="effectGroup" left="0" right="0" top="0" bottom="0"/>
+</e:Skin>

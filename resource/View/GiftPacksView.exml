@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.GiftPacksView" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
+	<e:Image source="mask_black" scale9Grid="1,1,1,1" left="0" right="0" top="0" bottom="0" alpha="0.7"/>
+	<e:Group height="360" width="510" x="45" verticalCenter="-182">
+		<e:Image source="bg_tankuangxiao_zhongjian" y="58" horizontalCenter="0" height="252" fillMode="repeat"/>
+		<e:Image source="bg_tankuangxiao_shangbian" horizontalCenter="0"/>
+		<e:Image source="bg_tankuangxiao_xiabian" horizontalCenter="0" bottom="0"/>
+		<e:Label text="超级大礼包" y="28" horizontalCenter="0" size="44" fontFamily="黑体" textColor="0xFF6D00"/>
+		<e:Image width="378" height="231" source="bg_tankuang_neihuabian" scale9Grid="29,32,14,11" top="87" horizontalCenter="0"/>
+		<e:Label text="获得以下物品" horizontalCenter="0" fontFamily="黑体" size="23" verticalCenter="-68.5"/>
+		<e:Label x="20" text="元宝*9999" fontFamily="黑体" horizontalCenter="0" verticalCenter="-38.5" size="23" id="goods0" y="10" textColor="0xFFFF00"/>
+		<e:Label id="goods1" size="23" text="随机法宝礼包*9" fontFamily="黑体" horizontalCenter="0" x="10" verticalCenter="-8.5" textColor="0xFF6D00"/>
+		<e:Label id="leftTime" x="20" text="打折剩余时间：12：30：28" fontFamily="黑体" horizontalCenter="0" verticalCenter="41.5" size="23" y="10" textColor="0xFFFFFF"/>
+		<ViewModel:CloseBtnVM id="closeBtn" label="按钮" x="468" y="-12" skinName="View.CloseBtn"/>
+		<ViewModel:BtnShareVM id="buyBtn" label="按钮" y="227" horizontalCenter="0.5" skinName="View.BtnShareItem"/>
+		<e:Image source="icon_tuijian" x="66" y="87"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.TestView" width="600" height="50" xmlns:e="http://ns.egret.com/eui">
+	<e:Group left="0" right="0" top="0" height="50">
+		<e:Image top="0" left="0" right="0" bottom="0" source="bg_xialacaidan02"/>
+		<e:Label text="WIN10刚出来不久，稳定性还是有待改善，经常就出现莫名其妙的错误，蓝屏，开不了机，而提示只是重启，本人也是吃不了少苦头，在此希望发布一下解决此类经验供大家参考。" left="0" right="0" top="10" height="41"/>
+	</e:Group>
+</e:Skin>

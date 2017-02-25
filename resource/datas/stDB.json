@@ -1,0 +1,3226 @@
+{
+  "sysConfigModel": {
+    "leadHead": "protagonist_png",
+    "openFriendSkillLevelFirst": "10",
+    "openFriendSkillLevelSecond": "25",
+    "openFriendSkillLevelThird": "50",
+    "openFriendSkillLevelFourth": "100",
+    "openFriendSkillLevelFifth": "200",
+    "openFriendSkillLevelSixth": "400",
+    "openFriendSkillLevelSeventh": "800",
+    "friendSkillIconFirst": "",
+    "friendSkillIconSecond": "",
+    "friendSkillIconThird": "",
+    "friendSkillIconFourth": "",
+    "friendSkillIconFifth": "",
+    "friendSkillIconSixth": "",
+    "friendSkillIconSeventh": "",
+    "magicWeaponIcon": "magic_weapon_0_png",
+    "sceneMonsterNumber": "10",
+    "clickHurtRatio": "1.5",
+    "monsterHpRatio": "1.8",
+    "leadCostRatio": "1.7",
+    "timeBOSS": "30",
+    "playerEffect": "texture_yunge",
+    "playerDragonBones": "bodyGuanYu",
+    "playerAttackAudio": "YX-006_mp3",
+    "bossSkillFriendProbability": "1000",
+    "bossSkillFriendTimeMin": "600",
+    "bossSkillFriendTimeMax": "172800",
+    "bossDropJewelProbability": "1000",
+    "bossDropJewelCount": "1",
+    "bagAppearTimeInterval": "120",
+    "baseCritDamageMultiple": "5",
+    "baseCritProbability": "0.1",
+    "effectTimeMax": "2.5",
+    "effectTimeMin": "1",
+    "effectAccelerateMultiple": "3",
+    "playerDescription": "曹操，字孟德，小字阿瞒。曹操对内消灭了二袁、吕布、刘表、马超等势力，对外降服了匈奴、乌桓、鲜卑，统一了中国北方。",
+    "startScene": "101",
+    "dieSceneCount": "80",
+    "everydayRechargeSwitch": "1",
+    "cumulativeRechargeSwitch": "1",
+    "everydayRechargeAmountChina": "6",
+    "everydayChallenge": "将军，今天是你登录的第{}天哦",
+    "everydayCD": "21600"
+  },
+  "magnitudeList": [
+    {
+      "magnitude": "0",
+      "id": 1
+    },
+    {
+      "magnitude": "K",
+      "id": 2
+    },
+    {
+      "magnitude": "M",
+      "id": 3
+    },
+    {
+      "magnitude": "B",
+      "id": 4
+    },
+    {
+      "magnitude": "T",
+      "id": 5
+    },
+    {
+      "magnitude": "aa",
+      "id": 6
+    },
+    {
+      "magnitude": "bb",
+      "id": 7
+    },
+    {
+      "magnitude": "cc",
+      "id": 8
+    },
+    {
+      "magnitude": "dd",
+      "id": 9
+    },
+    {
+      "magnitude": "ee",
+      "id": 10
+    },
+    {
+      "magnitude": "ff",
+      "id": 11
+    },
+    {
+      "magnitude": "gg",
+      "id": 12
+    },
+    {
+      "magnitude": "hh",
+      "id": 13
+    },
+    {
+      "magnitude": "ii",
+      "id": 14
+    },
+    {
+      "magnitude": "jj",
+      "id": 15
+    },
+    {
+      "magnitude": "kk",
+      "id": 16
+    },
+    {
+      "magnitude": "ll",
+      "id": 17
+    },
+    {
+      "magnitude": "mm",
+      "id": 18
+    },
+    {
+      "magnitude": "nn",
+      "id": 19
+    },
+    {
+      "magnitude": "oo",
+      "id": 20
+    },
+    {
+      "magnitude": "pp",
+      "id": 21
+    },
+    {
+      "magnitude": "qq",
+      "id": 22
+    },
+    {
+      "magnitude": "rr",
+      "id": 23
+    },
+    {
+      "magnitude": "ss",
+      "id": 24
+    },
+    {
+      "magnitude": "tt",
+      "id": 25
+    },
+    {
+      "magnitude": "uu",
+      "id": 26
+    },
+    {
+      "magnitude": "vv",
+      "id": 27
+    },
+    {
+      "magnitude": "ww",
+      "id": 28
+    },
+    {
+      "magnitude": "xx",
+      "id": 29
+    },
+    {
+      "magnitude": "yy",
+      "id": 30
+    },
+    {
+      "magnitude": "zz",
+      "id": 31
+    },
+    {
+      "magnitude": "aaa",
+      "id": 32
+    },
+    {
+      "magnitude": "bbb",
+      "id": 33
+    },
+    {
+      "magnitude": "ccc",
+      "id": 34
+    },
+    {
+      "magnitude": "ddd",
+      "id": 35
+    },
+    {
+      "magnitude": "eee",
+      "id": 36
+    },
+    {
+      "magnitude": "fff",
+      "id": 37
+    },
+    {
+      "magnitude": "ggg",
+      "id": 38
+    },
+    {
+      "magnitude": "hhh",
+      "id": 39
+    },
+    {
+      "magnitude": "iii",
+      "id": 40
+    },
+    {
+      "magnitude": "jjj",
+      "id": 41
+    },
+    {
+      "magnitude": "kkk",
+      "id": 42
+    },
+    {
+      "magnitude": "lll",
+      "id": 43
+    },
+    {
+      "magnitude": "mmm",
+      "id": 44
+    },
+    {
+      "magnitude": "nnn",
+      "id": 45
+    },
+    {
+      "magnitude": "ooo",
+      "id": 46
+    },
+    {
+      "magnitude": "ppp",
+      "id": 47
+    },
+    {
+      "magnitude": "qqq",
+      "id": 48
+    },
+    {
+      "magnitude": "rrr",
+      "id": 49
+    },
+    {
+      "magnitude": "sss",
+      "id": 50
+    },
+    {
+      "magnitude": "ttt",
+      "id": 51
+    },
+    {
+      "magnitude": "uuu",
+      "id": 52
+    },
+    {
+      "magnitude": "vvv",
+      "id": 53
+    },
+    {
+      "magnitude": "www",
+      "id": 54
+    },
+    {
+      "magnitude": "xxx",
+      "id": 55
+    },
+    {
+      "magnitude": "yyy",
+      "id": 56
+    },
+    {
+      "magnitude": "zzz",
+      "id": 57
+    },
+    {
+      "magnitude": "aaaa",
+      "id": 58
+    },
+    {
+      "magnitude": "bbbb",
+      "id": 59
+    },
+    {
+      "magnitude": "cccc",
+      "id": 60
+    },
+    {
+      "magnitude": "dddd",
+      "id": 61
+    },
+    {
+      "magnitude": "eeee",
+      "id": 62
+    },
+    {
+      "magnitude": "ffff",
+      "id": 63
+    },
+    {
+      "magnitude": "gggg",
+      "id": 64
+    },
+    {
+      "magnitude": "hhhh",
+      "id": 65
+    },
+    {
+      "magnitude": "iiii",
+      "id": 66
+    },
+    {
+      "magnitude": "jjjj",
+      "id": 67
+    },
+    {
+      "magnitude": "kkkk",
+      "id": 68
+    },
+    {
+      "magnitude": "llll",
+      "id": 69
+    },
+    {
+      "magnitude": "mmmm",
+      "id": 70
+    },
+    {
+      "magnitude": "nnnn",
+      "id": 71
+    },
+    {
+      "magnitude": "oooo",
+      "id": 72
+    },
+    {
+      "magnitude": "pppp",
+      "id": 73
+    },
+    {
+      "magnitude": "qqqq",
+      "id": 74
+    },
+    {
+      "magnitude": "rrrr",
+      "id": 75
+    },
+    {
+      "magnitude": "ssss",
+      "id": 76
+    },
+    {
+      "magnitude": "tttt",
+      "id": 77
+    },
+    {
+      "magnitude": "uuuu",
+      "id": 78
+    },
+    {
+      "magnitude": "vvvv",
+      "id": 79
+    },
+    {
+      "magnitude": "wwww",
+      "id": 80
+    },
+    {
+      "magnitude": "xxxx",
+      "id": 81
+    },
+    {
+      "magnitude": "yyyy",
+      "id": 82
+    },
+    {
+      "magnitude": "zzzz",
+      "id": 83
+    },
+    {
+      "magnitude": "aaaaa",
+      "id": 84
+    },
+    {
+      "magnitude": "bbbbb",
+      "id": 85
+    },
+    {
+      "magnitude": "ccccc",
+      "id": 86
+    },
+    {
+      "magnitude": "ddddd",
+      "id": 87
+    },
+    {
+      "magnitude": "eeeee",
+      "id": 88
+    },
+    {
+      "magnitude": "fffff",
+      "id": 89
+    },
+    {
+      "magnitude": "ggggg",
+      "id": 90
+    },
+    {
+      "magnitude": "hhhhh",
+      "id": 91
+    },
+    {
+      "magnitude": "iiiii",
+      "id": 92
+    },
+    {
+      "magnitude": "jjjjj",
+      "id": 93
+    },
+    {
+      "magnitude": "kkkkk",
+      "id": 94
+    }
+  ],
+  "skillList": [
+    {
+      "name": "青龙偃月",
+      "icon": "active_skill_1_png",
+      "openLevel": 50,
+      "skillEffect": "SKILL_EFFECT_CLICK_MULTIPLE",
+      "skillEffectValue": 140,
+      "skillEffectAdd": 70,
+      "continueTime": 3,
+      "cdTime": 600,
+      "upgradeBaseCost": 2.78,
+      "baseCostMagnitude": 1,
+      "upgradeCostMultiple": 1.4,
+      "description": "造成点击伤害x{}倍伤害",
+      "removeCdCost": 20,
+      "skillYx": "YX-007_mp3",
+      "id": 1
+    },
+    {
+      "name": "天助神兵",
+      "icon": "active_skill_2_png",
+      "openLevel": 100,
+      "skillEffect": "SKILL_EFFECT_SHADOW_ATTACK",
+      "skillEffectValue": 7,
+      "skillEffectAdd": 3,
+      "continueTime": 30,
+      "cdTime": 600,
+      "upgradeBaseCost": 103.73,
+      "baseCostMagnitude": 1,
+      "upgradeCostMultiple": 1.4,
+      "description": "创造一个分身，攻击{}次/秒",
+      "removeCdCost": 20,
+      "skillYx": "YX-006_mp3",
+      "id": 2
+    },
+    {
+      "name": "万箭齐发",
+      "icon": "active_skill_3_png",
+      "openLevel": 200,
+      "skillEffect": "SKILL_EFFECT_CRIT_PROBABILITY",
+      "skillEffectValue": 17,
+      "skillEffectAdd": 3,
+      "continueTime": 30,
+      "cdTime": 1800,
+      "upgradeBaseCost": 143.46,
+      "baseCostMagnitude": 2,
+      "upgradeCostMultiple": 1.4,
+      "description": "暴击率提升{}%",
+      "removeCdCost": 60,
+      "skillYx": "",
+      "id": 3
+    },
+    {
+      "name": "兵贵神速",
+      "icon": "active_skill_4_png",
+      "openLevel": 300,
+      "skillEffect": "SKILL_EFFECTL_FRIEND_ACCELERATE",
+      "skillEffectValue": 150,
+      "skillEffectAdd": 50,
+      "continueTime": 30,
+      "cdTime": 1800,
+      "upgradeBaseCost": 198.43,
+      "baseCostMagnitude": 4,
+      "upgradeCostMultiple": 1.4,
+      "description": "所有副将攻击速度提升{}%",
+      "removeCdCost": 60,
+      "skillYx": "",
+      "id": 4
+    },
+    {
+      "name": "雷光焦狱",
+      "icon": "active_skill_5_png",
+      "openLevel": 400,
+      "skillEffect": "SKILL_EFFECT_CLICK_INCREASE",
+      "skillEffectValue": 70,
+      "skillEffectAdd": 30,
+      "continueTime": 30,
+      "cdTime": 3600,
+      "upgradeBaseCost": 274.44,
+      "baseCostMagnitude": 5,
+      "upgradeCostMultiple": 1.4,
+      "description": "点击伤害提升{}%",
+      "removeCdCost": 120,
+      "skillYx": "",
+      "id": 5
+    },
+    {
+      "name": "招财进宝",
+      "icon": "active_skill_6_png",
+      "openLevel": 500,
+      "skillEffect": "SKILL_EFFECT_CLICK_COIN",
+      "skillEffectValue": 15,
+      "skillEffectAdd": 5,
+      "continueTime": 30,
+      "cdTime": 3600,
+      "upgradeBaseCost": 379.58,
+      "baseCostMagnitude": 6,
+      "upgradeCostMultiple": 1.4,
+      "description": "每次点击获得{}%敌人铜币",
+      "removeCdCost": 120,
+      "skillYx": "",
+      "id": 6
+    }
+  ],
+  "friendSkillList": [
+    {
+      "name": "夏侯惇",
+      "type": "FRIEND_TYPE_FRIEND",
+      "icon": "skill_01",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_COIN",
+      "recruitCost": 8,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 8,
+      "baseCostMagnitude": 1,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 48,
+      "baseDamageMagnitude": 1,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 50,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 100,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "fourthLayerValue": 10,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "fifthLayerValue": 1000,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "sixthLayerValue": 25,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 10000,
+      "idle": "baihe_idle",
+      "attack": "baihe_attack",
+      "effect": "texture_baihe",
+      "attackAudio": "YX-011_mp3",
+      "id": 1
+    },
+    {
+      "name": "诸葛诞",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_02_1",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_COIN",
+      "recruitCost": 140,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 140,
+      "baseCostMagnitude": 1,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 159,
+      "baseDamageMagnitude": 1,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "firstLayerValue": 5,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 100,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "thirdLayerValue": 1000,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fourthLayerValue": 10,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "fifthLayerValue": 10,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "sixthLayerValue": 100,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 10000,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 2
+    },
+    {
+      "name": "朱灵",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_01_2",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_COIN",
+      "recruitCost": 539,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 539,
+      "baseCostMagnitude": 1,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 559,
+      "baseDamageMagnitude": 1,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 150,
+      "secondLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "secondLayerValue": 10,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fourthLayerValue": 10,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "fifthLayerValue": 20,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CRIT_PROBABILITY",
+      "sixthLayerValue": 1,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 30,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 3
+    },
+    {
+      "name": "文聘",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_02_2",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_COIN",
+      "recruitCost": 2.28,
+      "recruitCostMagnitude": 2,
+      "upgradeBaseCost": 2.28,
+      "baseCostMagnitude": 2,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 2.07,
+      "baseDamageMagnitude": 2,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 100,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 800,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "fourthLayerValue": 500,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "sixthLayerValue": 20,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "seventhLayerValue": 20,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 4
+    },
+    {
+      "name": "张绣",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_01_4",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_COIN",
+      "recruitCost": 10.64,
+      "recruitCostMagnitude": 2,
+      "upgradeBaseCost": 10.64,
+      "baseCostMagnitude": 2,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 7.75,
+      "baseDamageMagnitude": 2,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 300,
+      "secondLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "secondLayerValue": 10,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fourthLayerValue": 15,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "fifthLayerValue": 20,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "sixthLayerValue": 5,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 10000,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 5
+    },
+    {
+      "name": "夏侯渊",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_01_5",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_COIN",
+      "recruitCost": 58.56,
+      "recruitCostMagnitude": 2,
+      "upgradeBaseCost": 58.56,
+      "baseCostMagnitude": 2,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 31.62,
+      "baseDamageMagnitude": 2,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 700,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "fourthLayerValue": 20,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CRIT_PROBABILITY",
+      "sixthLayerValue": 1,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 10000,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 6
+    },
+    {
+      "name": "郭嘉",
+      "type": "FRIEND_TYPE_FRIEND",
+      "icon": "skill_02",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 1,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 330.24,
+      "baseCostMagnitude": 2,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 141.37,
+      "baseDamageMagnitude": 2,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "secondLayerValue": 5,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "thirdLayerValue": 7,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "fourthLayerValue": 600,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 20,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 30,
+      "idle": "bingyi_idle",
+      "attack": "bingyi_attack",
+      "effect": "texture_bingyi",
+      "attackAudio": "YX-010_mp3",
+      "id": 7
+    },
+    {
+      "name": "满宠",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_01_3",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 6,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 2.04,
+      "baseCostMagnitude": 3,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 672.98,
+      "baseDamageMagnitude": 2,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "secondLayerValue": 10,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fourthLayerValue": 15,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "fifthLayerValue": 20,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "sixthLayerValue": 1900,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 20,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 8
+    },
+    {
+      "name": "钟会",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_01_1",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 10,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 20.46,
+      "baseCostMagnitude": 3,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 5.11,
+      "baseDamageMagnitude": 3,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 150,
+      "secondLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "secondLayerValue": 5,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "thirdLayerValue": 30,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "fourthLayerValue": 5,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "fifthLayerValue": 5000,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "sixthLayerValue": 25,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 10000,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 9
+    },
+    {
+      "name": "荀攸",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_02_3",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 15,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 122.97,
+      "baseCostMagnitude": 3,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 20.12,
+      "baseDamageMagnitude": 3,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 150,
+      "secondLayerType": "FRIEND_SKILL_TYPE_CRIT_PROBABILITY",
+      "secondLayerValue": 1,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "thirdLayerValue": 5,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fourthLayerValue": 15,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "fifthLayerValue": 20,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 25,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 15,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 10
+    },
+    {
+      "name": "曹植",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_02_4",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 21,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 808.01,
+      "baseCostMagnitude": 3,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 100.63,
+      "baseDamageMagnitude": 3,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 750,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 5,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fourthLayerValue": 10,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fifthLayerValue": 15,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CRIT_PROBABILITY",
+      "sixthLayerValue": 1,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 3800,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 11
+    },
+    {
+      "name": "程昱",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_03_1",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 28,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 5.88,
+      "baseCostMagnitude": 4,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 431.41,
+      "baseDamageMagnitude": 3,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 250,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 750,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "thirdLayerValue": 5,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "fourthLayerValue": 5,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fifthLayerValue": 10,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "sixthLayerValue": 10,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "seventhLayerValue": 20,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 12
+    },
+    {
+      "name": "曹仁",
+      "type": "FRIEND_TYPE_FRIEND",
+      "icon": "skill_03",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 36,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 47.04,
+      "baseCostMagnitude": 4,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 2.5,
+      "baseDamageMagnitude": 4,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 150,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 850,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 5,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "fourthLayerValue": 20,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "fifthLayerValue": 30,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "sixthLayerValue": 5,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 1500,
+      "idle": "xupingjun_idle",
+      "attack": "xupingjun_attack",
+      "effect": "texture_xupingjun",
+      "attackAudio": "YX-010_mp3",
+      "id": 13
+    },
+    {
+      "name": "庞德",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_02_5",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 45,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 705.21,
+      "baseCostMagnitude": 4,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 19.76,
+      "baseDamageMagnitude": 4,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 800,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "fourthLayerValue": 400,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fifthLayerValue": 10,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "sixthLayerValue": 10,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "seventhLayerValue": 10,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 14
+    },
+    {
+      "name": "李典",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_03_2",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 55,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 7.04,
+      "baseCostMagnitude": 5,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 97.89,
+      "baseDamageMagnitude": 4,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 300,
+      "secondLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "secondLayerValue": 10,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "thirdLayerValue": 5,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CRIT_PROBABILITY",
+      "fourthLayerValue": 2,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "fifthLayerValue": 15,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 20,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 10000,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 15
+    },
+    {
+      "name": "乐进",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_04_2",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 66,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 131.19,
+      "baseCostMagnitude": 5,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 1.39,
+      "baseDamageMagnitude": 5,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 350,
+      "secondLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "secondLayerValue": 25,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "thirdLayerValue": 20,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "fourthLayerValue": 5,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "fifthLayerValue": 7,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "sixthLayerValue": 15,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 20,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 16
+    },
+    {
+      "name": "于禁",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_03_4",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 78,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 1.31,
+      "baseCostMagnitude": 6,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 11.01,
+      "baseDamageMagnitude": 5,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 150,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 900,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fourthLayerValue": 10,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "sixthLayerValue": 10,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "seventhLayerValue": 25,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 17
+    },
+    {
+      "name": "曹洪",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_03_5",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 91,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 39.36,
+      "baseCostMagnitude": 6,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 236.09,
+      "baseDamageMagnitude": 5,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 400,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 500,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "thirdLayerValue": 5,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "fourthLayerValue": 450,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 20,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 15,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 18
+    },
+    {
+      "name": "许褚",
+      "type": "FRIEND_TYPE_FRIEND",
+      "icon": "skill_04",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 105,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 1.96,
+      "baseCostMagnitude": 7,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 10.55,
+      "baseDamageMagnitude": 6,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 1000,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fourthLayerValue": 5,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "fifthLayerValue": 10,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 10,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 10,
+      "idle": "mengjue_idle",
+      "attack": "mengjue_attack",
+      "effect": "texture_mengjue",
+      "attackAudio": "YX-009_mp3",
+      "id": 19
+    },
+    {
+      "name": "司马师",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_04_1",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 120,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 59.04,
+      "baseCostMagnitude": 7,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 226.18,
+      "baseDamageMagnitude": 6,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 250,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 600,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "thirdLayerValue": 20,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "fourthLayerValue": 450,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fifthLayerValue": 10,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "sixthLayerValue": 10,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "seventhLayerValue": 10,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 20
+    },
+    {
+      "name": "典韦",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_03_3",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 136,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 1.95,
+      "baseCostMagnitude": 8,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 5.35,
+      "baseDamageMagnitude": 7,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "secondLayerValue": 5,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "thirdLayerValue": 30,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CRIT_PROBABILITY",
+      "fourthLayerValue": 2,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "fifthLayerValue": 10,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 20,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 10000,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 21
+    },
+    {
+      "name": "邓艾",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_04_3",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 153,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 195.22,
+      "baseCostMagnitude": 8,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 420.66,
+      "baseDamageMagnitude": 7,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 250,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 750,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "fourthLayerValue": 500,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "fifthLayerValue": 20,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "sixthLayerValue": 30,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 20,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 22
+    },
+    {
+      "name": "贾诩",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_04_4",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 171,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 50.05,
+      "baseCostMagnitude": 9,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 99.96,
+      "baseDamageMagnitude": 8,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 600,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "thirdLayerValue": 15,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "fourthLayerValue": 15,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 20,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 10,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 23
+    },
+    {
+      "name": "司马昭",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_04_5",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 190,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 152.33,
+      "baseCostMagnitude": 11,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 187.55,
+      "baseDamageMagnitude": 10,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 150,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 500,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "fourthLayerValue": 15,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 20,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 10000,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 24
+    },
+    {
+      "name": "荀彧",
+      "type": "FRIEND_TYPE_FRIEND",
+      "icon": "skill_05",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 310,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 6.42,
+      "baseCostMagnitude": 14,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 4.52,
+      "baseDamageMagnitude": 13,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 150,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 900,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 5,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fourthLayerValue": 10,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "sixthLayerValue": 5,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 20,
+      "idle": "liufuling_idle",
+      "attack": "liufuling_attack",
+      "effect": "texture_liufuling",
+      "attackAudio": "YX-007_mp3",
+      "id": 25
+    },
+    {
+      "name": "曹丕",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_05_1",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 331,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 3.18,
+      "baseCostMagnitude": 17,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 602.21,
+      "baseDamageMagnitude": 15,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 300,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 1000,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 10,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CRIT_PROBABILITY",
+      "fourthLayerValue": 1,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fifthLayerValue": 20,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 20,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "seventhLayerValue": 30,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 26
+    },
+    {
+      "name": "张郃",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_05_2",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 353,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 18.22,
+      "baseCostMagnitude": 21,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 1.86,
+      "baseDamageMagnitude": 20,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 400,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "thirdLayerValue": 600,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fourthLayerValue": 20,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "fifthLayerValue": 10,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 30,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 20,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 27
+    },
+    {
+      "name": "徐晃",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_05_3",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 376,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 2.16,
+      "baseCostMagnitude": 28,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 45.33,
+      "baseDamageMagnitude": 26,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 200,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 300,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "thirdLayerValue": 700,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_CRIT_PROBABILITY",
+      "fourthLayerValue": 1,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_CRIT",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "sixthLayerValue": 10,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "seventhLayerValue": 10000,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 28
+    },
+    {
+      "name": "张辽",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_05_4",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 400,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 78.83,
+      "baseCostMagnitude": 39,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 78.8,
+      "baseDamageMagnitude": 37,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 300,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 700,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 20,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "fourthLayerValue": 800,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "fifthLayerValue": 5,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 40,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 30,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 29
+    },
+    {
+      "name": "司马懿",
+      "type": "FRIEND_TYPE_SKILL",
+      "icon": "skill_05_5",
+      "description": "",
+      "recruitMoneyType": "MONEY_TYPE_YB",
+      "recruitCost": 499,
+      "recruitCostMagnitude": 1,
+      "upgradeBaseCost": 556.95,
+      "baseCostMagnitude": 56,
+      "upgradeCostMultiple": 1.4,
+      "baseDamage": 582.44,
+      "baseDamageMagnitude": 53,
+      "upgradeDamageMultiple": 1.3,
+      "firstLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "firstLayerValue": 500,
+      "secondLayerType": "FRIEND_SKILL_TYPE_SLEF",
+      "secondLayerValue": 1000,
+      "thirdLayerType": "FRIEND_SKILL_TYPE_CLICK",
+      "thirdLayerValue": 50,
+      "fourthLayerType": "FRIEND_SKILL_TYPE_COIN",
+      "fourthLayerValue": 100,
+      "fifthLayerType": "FRIEND_SKILL_TYPE_BOSS",
+      "fifthLayerValue": 10,
+      "sixthLayerType": "FRIEND_SKILL_TYPE_BOX_COIN",
+      "sixthLayerValue": 50,
+      "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
+      "seventhLayerValue": 50,
+      "idle": "",
+      "attack": "",
+      "effect": "",
+      "attackAudio": "",
+      "id": 30
+    }
+  ],
+  "magicWeaponList": [
+    {
+      "name": "没羽箭",
+      "icon": "magic_weapon_1",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 10,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueFirst": 10,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "增加{}%挚友和武学伤害",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 1
+    },
+    {
+      "name": "传国玉玺",
+      "icon": "magic_weapon_2",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 15,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_ENEMY_COUNT",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 5,
+      "descriptionFirst": "减少关卡需要击杀的敌人数量{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 2
+    },
+    {
+      "name": "风神盾",
+      "icon": "magic_weapon_3",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 10,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_OFFLINE_COIN",
+      "weaponEffectValueFirst": 10,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加游戏离线时的铜币{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 3
+    },
+    {
+      "name": "诸葛巾",
+      "icon": "magic_weapon_4",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 10,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_SKILL_SEAL_TIME",
+      "weaponEffectValueFirst": 5,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 40,
+      "descriptionFirst": "减少武学解除封印时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 4
+    },
+    {
+      "name": "爪黄飞电",
+      "icon": "magic_weapon_5",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 25,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_ID1_SKILL_CD",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "减少虎咆阳炎技能冷却时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 5
+    },
+    {
+      "name": "李广之弓",
+      "icon": "magic_weapon_6",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 15,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_COIN",
+      "weaponEffectValueFirst": 10,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "提升获得铜币数量{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 6
+    },
+    {
+      "name": "飞龙道袍",
+      "icon": "magic_weapon_7",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 15,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_BOSS_HP",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "减少boss血量{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 7
+    },
+    {
+      "name": "黄金铠",
+      "icon": "magic_weapon_8",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 25,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_ID3_SKILL_TIME",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "增加三圣华斩技能的持续时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 8
+    },
+    {
+      "name": "龙鳞铠",
+      "icon": "magic_weapon_9",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 15,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_CRIT_DAMAGE",
+      "weaponEffectValueFirst": 5,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加暴击伤害{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 9
+    },
+    {
+      "name": "白银盾",
+      "icon": "magic_weapon_10",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 15,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_ID1_SKILL_DAMAGE",
+      "weaponEffectValueFirst": 5,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加虎咆阳炎技能的伤害{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 10
+    },
+    {
+      "name": "青龙偃月刀",
+      "icon": "magic_weapon_11",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 15,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_ID2_SKILL_TIME",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加神鬼乱舞技能持续时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 11
+    },
+    {
+      "name": "连环铠",
+      "icon": "magic_weapon_12",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 25,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_ID4_SKILL_CD",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "减少雷光焦狱技能冷却时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 12
+    },
+    {
+      "name": "金火罐炮",
+      "icon": "magic_weapon_13",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 25,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_ID3_SKILL_CD",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "减少三圣华斩技能冷却时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 13
+    },
+    {
+      "name": "绝影",
+      "icon": "magic_weapon_14",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 10,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_ALL_SKILL_DAMAGE",
+      "weaponEffectValueFirst": 10,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "增加所有武学伤害{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 14
+    },
+    {
+      "name": "凤凰羽衣",
+      "icon": "magic_weapon_15",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 15,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_ID5_SKILL_TIME",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加八卦奇阵技能持续时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 15
+    },
+    {
+      "name": "五火神焰扇",
+      "icon": "magic_weapon_16",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 10,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_BOX_COIN",
+      "weaponEffectValueFirst": 10,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加宝箱敌人掉铜币数量{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 16
+    },
+    {
+      "name": "雌雄双剑",
+      "icon": "magic_weapon_17",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 10,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_CLICK_DAMAGE",
+      "weaponEffectValueFirst": 10,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加点击伤害{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 17
+    },
+    {
+      "name": "双鞭",
+      "icon": "magic_weapon_18",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 25,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_CRIT_CHANCE",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加暴击率{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 18
+    },
+    {
+      "name": "的卢",
+      "icon": "magic_weapon_19",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 25,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_ID2_SKILL_CD",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "减少神鬼乱舞技能冷却时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 19
+    },
+    {
+      "name": "漆黑道服",
+      "icon": "magic_weapon_20",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 10,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_SKILL_USELESS_CHANCE",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "减少武学禁用几率{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 20
+    },
+    {
+      "name": "流星锤",
+      "icon": "magic_weapon_21",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 25,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_UPLEVEL_MONEY",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "减少升级费用{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 21
+    },
+    {
+      "name": "鹤氅",
+      "icon": "magic_weapon_22",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 10,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_CHEST_CHANCE",
+      "weaponEffectValueFirst": 5,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加宝箱敌人出现几率{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 22
+    },
+    {
+      "name": "蛇矛",
+      "icon": "magic_weapon_23",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 25,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_ID5_SKILL_CD",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 5,
+      "descriptionFirst": "减少八卦奇阵技能冷却时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 23
+    },
+    {
+      "name": "青釭剑",
+      "icon": "magic_weapon_24",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 25,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_CUT_ID6_SKILL_CD",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 5,
+      "descriptionFirst": "减少招财进宝技能冷却时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 24
+    },
+    {
+      "name": "方天画戟",
+      "icon": "magic_weapon_25",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 15,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_ID4_SKILL_TIME",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加雷光焦狱技能持续时间{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 25
+    },
+    {
+      "name": "古锭刀",
+      "icon": "magic_weapon_26",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 20,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_BOSS_TIME",
+      "weaponEffectValueFirst": 5,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 40,
+      "descriptionFirst": "增加的打boss时间",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 26
+    },
+    {
+      "name": "豆袋",
+      "icon": "magic_weapon_27",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 10,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_BOSS_COIN",
+      "weaponEffectValueFirst": 10,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 20,
+      "descriptionFirst": "增加的boss掉落铜币{}%",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 27
+    },
+    {
+      "name": "圣者宝剑",
+      "icon": "magic_weapon_28",
+      "upgradeCostType": "MONEY_TYPE_JEWEL",
+      "upgradeBaseCost": 20,
+      "weaponEffectTypeFirst": "WEAPON_TYPE_ADD_MUCH_COIN_CHANCE",
+      "weaponEffectValueFirst": 1,
+      "weaponEffectTypeSecond": "WEAPON_TYPE_ADD_COMMON",
+      "weaponEffectValueSecond": 10,
+      "descriptionFirst": "有{}%概率获得10倍铜币",
+      "descriptionSecond": "增加{}%挚友和武学伤害",
+      "id": 28
+    }
+  ],
+  "monsterList": [
+    {
+      "name": "裴元绍",
+      "pic": "1",
+      "monsterType": "MONSTER_TYPE_PERSON",
+      "dragonBones": "bodyQinQiong",
+      "id": 1
+    },
+    {
+      "name": "管亥",
+      "pic": "2",
+      "monsterType": "MONSTER_TYPE_PERSON",
+      "dragonBones": "bodyQinQiong",
+      "id": 2
+    },
+    {
+      "name": "赵弘",
+      "pic": "3",
+      "monsterType": "MONSTER_TYPE_PERSON",
+      "dragonBones": "bodyQinQiong",
+      "id": 3
+    },
+    {
+      "name": "张曼成",
+      "pic": "4",
+      "monsterType": "MONSTER_TYPE_PERSON",
+      "dragonBones": "bodyQinQiong",
+      "id": 4
+    },
+    {
+      "name": "张宝",
+      "pic": "5",
+      "monsterType": "MONSTER_TYPE_PERSON",
+      "dragonBones": "bodyQinQiong",
+      "id": 5
+    },
+    {
+      "name": "聚宝盆",
+      "pic": "6",
+      "monsterType": "MONSTER_TYPE_BOX",
+      "dragonBones": "bodyQinQiong",
+      "id": 6
+    },
+    {
+      "name": "张梁",
+      "pic": "7",
+      "monsterType": "MONSTER_TYPE_PERSON",
+      "dragonBones": "bodyQinQiong",
+      "id": 7
+    },
+    {
+      "name": "张角",
+      "pic": "8",
+      "monsterType": "MONSTER_TYPE_PERSON",
+      "dragonBones": "bodyQinQiong",
+      "id": 8
+    },
+    {
+      "name": "裴元绍",
+      "pic": "1",
+      "monsterType": "MONSTER_TYPE_BOSS",
+      "dragonBones": "bodyQinQiong",
+      "id": 9
+    },
+    {
+      "name": "管亥",
+      "pic": "2",
+      "monsterType": "MONSTER_TYPE_BOSS",
+      "dragonBones": "bodyQinQiong",
+      "id": 10
+    },
+    {
+      "name": "赵弘",
+      "pic": "3",
+      "monsterType": "MONSTER_TYPE_BOSS",
+      "dragonBones": "bodyQinQiong",
+      "id": 11
+    },
+    {
+      "name": "张曼成",
+      "pic": "4",
+      "monsterType": "MONSTER_TYPE_BOSS",
+      "dragonBones": "bodyQinQiong",
+      "id": 12
+    },
+    {
+      "name": "张宝",
+      "pic": "5",
+      "monsterType": "MONSTER_TYPE_BOSS",
+      "dragonBones": "bodyQinQiong",
+      "id": 13
+    },
+    {
+      "name": "张梁",
+      "pic": "7",
+      "monsterType": "MONSTER_TYPE_BOSS",
+      "dragonBones": "bodyQinQiong",
+      "id": 14
+    },
+    {
+      "name": "张角",
+      "pic": "8",
+      "monsterType": "MONSTER_TYPE_BOSS",
+      "dragonBones": "bodyQinQiong",
+      "id": 15
+    }
+  ],
+  "sceneList": [
+    {
+      "sceneName": "颖川之战",
+      "scenePic": "scene_pic_1",
+      "dragonBones": "bodyQinQiong",
+      "id": 1
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 2
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 3
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 4
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 5
+    },
+    {
+      "sceneName": "汜水关之战",
+      "scenePic": "scene_pic_2",
+      "id": 6
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 7
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 8
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 9
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 10
+    },
+    {
+      "sceneName": "虎牢关之战",
+      "scenePic": "scene_pic_3",
+      "id": 11
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 12
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 13
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 14
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 15
+    },
+    {
+      "sceneName": "洛阳大火",
+      "scenePic": "scene_pic_4",
+      "id": 16
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 17
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 18
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 19
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 20
+    },
+    {
+      "sceneName": "青州黄巾讨伐战",
+      "scenePic": "scene_pic_5",
+      "id": 21
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 22
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 23
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 24
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 25
+    },
+    {
+      "sceneName": "徐州复仇战",
+      "scenePic": "scene_pic_6",
+      "id": 26
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 27
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 28
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 29
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 30
+    },
+    {
+      "sceneName": "濮阳之战（一）",
+      "scenePic": "scene_pic_7",
+      "id": 31
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 32
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 33
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 34
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 35
+    },
+    {
+      "sceneName": "濮阳之战（二）",
+      "scenePic": "scene_pic_8",
+      "id": 36
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 37
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 38
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 39
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 40
+    },
+    {
+      "sceneName": "濮阳之战（三）",
+      "scenePic": "scene_pic_9",
+      "id": 41
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 42
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 43
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 44
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 45
+    },
+    {
+      "sceneName": "献帝救出战",
+      "scenePic": "scene_pic_10",
+      "id": 46
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 47
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 48
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 49
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 50
+    },
+    {
+      "sceneName": "张绣讨伐战（一）",
+      "scenePic": "scene_pic_11",
+      "id": 51
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 52
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 53
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 54
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 55
+    },
+    {
+      "sceneName": "袁术讨伐战",
+      "scenePic": "scene_pic_12",
+      "id": 56
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 57
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 58
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 59
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 60
+    },
+    {
+      "sceneName": "张绣讨伐战（二）",
+      "scenePic": "scene_pic_13",
+      "id": 61
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 62
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 63
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 64
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 65
+    },
+    {
+      "sceneName": "袁绍要求军援",
+      "scenePic": "scene_pic_14",
+      "id": 66
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 67
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 68
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 69
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 70
+    },
+    {
+      "sceneName": "徐州救援战",
+      "scenePic": "scene_pic_15",
+      "id": 71
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 72
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 73
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 74
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 75
+    },
+    {
+      "sceneName": "吕布包围战",
+      "scenePic": "scene_pic_16",
+      "id": 76
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 77
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 78
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 79
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 80
+    },
+    {
+      "sceneName": "徐州入侵战",
+      "scenePic": "scene_pic_17",
+      "id": 81
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 82
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 83
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 84
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 85
+    },
+    {
+      "sceneName": "白马之战",
+      "scenePic": "scene_pic_18",
+      "id": 86
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 87
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 88
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 89
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 90
+    },
+    {
+      "sceneName": "延津之战",
+      "scenePic": "scene_pic_19",
+      "id": 91
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 92
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 93
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 94
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 95
+    },
+    {
+      "sceneName": "官渡之战",
+      "scenePic": "scene_pic_20",
+      "id": 96
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 97
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 98
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 99
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 100
+    }
+  ],
+  "clanList": [
+    {
+      "name": "青龙宝玉",
+      "pic": "family_1",
+      "clanType": "CLAN_TYPE_ALL",
+      "clanValue": 100,
+      "activationMoneyType": "MONEY_TYPE_YB",
+      "activationCost": 2000,
+      "described": "所有伤害提升100%",
+      "id": 1
+    },
+    {
+      "name": "朱雀宝玉",
+      "pic": "family_2",
+      "clanType": "CLAN_TYPE_CLICK",
+      "clanValue": 100,
+      "activationMoneyType": "MONEY_TYPE_YB",
+      "activationCost": 3000,
+      "described": "点击伤害提升100%",
+      "id": 2
+    },
+    {
+      "name": "玄武宝玉",
+      "pic": "family_3",
+      "clanType": "CLAN_TYPE_CRIT",
+      "clanValue": 100,
+      "activationMoneyType": "MONEY_TYPE_YB",
+      "activationCost": 4000,
+      "described": "暴击伤害提升100%",
+      "id": 3
+    },
+    {
+      "name": "白虎宝玉",
+      "pic": "family_4",
+      "clanType": "CLAN_TYPE_CUT_SKILL_CD",
+      "clanValue": 50,
+      "activationMoneyType": "MONEY_TYPE_YB",
+      "activationCost": 5000,
+      "described": "技能CD减少50%",
+      "id": 4
+    }
+  ],
+  "achievementList": [
+    {
+      "name": "杀人如麻",
+      "description": "击杀{}敌人",
+      "pic": "achievement_1",
+      "type": "ACHIEVEMENT_TYPE_KILL_ENEMY",
+      "firstValue": 100,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 5,
+      "secondMagnitude": 2,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 20,
+      "thirdMagnitude": 2,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 3,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 50,
+      "fifthMagnitude": 3,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 1
+    },
+    {
+      "name": "大杀四方",
+      "description": "到达{}关",
+      "pic": "achievement_2",
+      "type": "ACHIEVEMENT_TYPE_ARRIVE_SCENE",
+      "firstValue": 10,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 20,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 50,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 100,
+      "fourthMagnitude": 1,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 600,
+      "fifthMagnitude": 1,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 2
+    },
+    {
+      "name": "财源滚滚",
+      "description": "获得{}铜币",
+      "pic": "achievement_16",
+      "type": "ACHIEVEMENT_TYPE_GET_COIN",
+      "firstValue": 1,
+      "firstMagnitude": 2,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 1,
+      "secondMagnitude": 3,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 1,
+      "thirdMagnitude": 5,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 12,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 1,
+      "fifthMagnitude": 23,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 3
+    },
+    {
+      "name": "炼金术师",
+      "description": "获得{}灵石",
+      "pic": "achievement_14",
+      "type": "ACHIEVEMENT_TYPE_GET_JEWEL",
+      "firstValue": 10,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 50,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 1,
+      "thirdMagnitude": 2,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 5,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 10,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 4
+    },
+    {
+      "name": "武器大师",
+      "description": "获得{}神器",
+      "pic": "achievement_15",
+      "type": "ACHIEVEMENT_TYPE_GET_MAGIC_WEAPON",
+      "firstValue": 1,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 3,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 10,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 18,
+      "fourthMagnitude": 1,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 28,
+      "fifthMagnitude": 1,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 5
+    },
+    {
+      "name": "无限火力",
+      "description": "挚友{}秒伤",
+      "pic": "achievement_3",
+      "type": "ACHIEVEMENT_TYPE_FRIEND_DAMAGE",
+      "firstValue": 1,
+      "firstMagnitude": 2,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 1,
+      "secondMagnitude": 5,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 1,
+      "thirdMagnitude": 9,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 16,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 1,
+      "fifthMagnitude": 23,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 6
+    },
+    {
+      "name": "团队合作",
+      "description": "获得{}个挚友",
+      "pic": "achievement_4",
+      "type": "ACHIEVEMENT_TYPE_GET_FRIEND",
+      "firstValue": 1,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 2,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 3,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 4,
+      "fourthMagnitude": 1,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 5,
+      "fifthMagnitude": 1,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 7
+    },
+    {
+      "name": "天降横财",
+      "description": "获得{}个仙女礼物",
+      "pic": "achievement_5",
+      "type": "ACHIEVEMENT_TYPE_GET_GIFT",
+      "firstValue": 20,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 200,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 1,
+      "thirdMagnitude": 2,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 10,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 25,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 8
+    },
+    {
+      "name": "富甲天下",
+      "description": "击杀{}个聚宝盆",
+      "pic": "achievement_6",
+      "type": "ACHIEVEMENT_TYPE_GET_BOX",
+      "firstValue": 20,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 200,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 1,
+      "thirdMagnitude": 2,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 20,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 50,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 9
+    },
+    {
+      "name": "一夫当关",
+      "description": "击杀{}个头目",
+      "pic": "achievement_7",
+      "type": "ACHIEVEMENT_TYPE_KILL_BOSS",
+      "firstValue": 10,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 100,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 500,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 5,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 10
+    },
+    {
+      "name": "熟能生巧",
+      "description": "使用{}次虎咆阳炎",
+      "pic": "achievement_8",
+      "type": "ACHIEVEMENT_TYPE_USE_SKILL1",
+      "firstValue": 10,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 50,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 200,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 10,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 11
+    },
+    {
+      "name": "幻影之舞",
+      "description": "使用{}次神鬼乱舞",
+      "pic": "achievement_9",
+      "type": "ACHIEVEMENT_TYPE_USE_SKILL2",
+      "firstValue": 10,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 50,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 200,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 10,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 12
+    },
+    {
+      "name": "无尽之刃",
+      "description": "使用{}次三圣华斩",
+      "pic": "achievement_10",
+      "type": "ACHIEVEMENT_TYPE_USE_SKILL3",
+      "firstValue": 10,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 50,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 200,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 10,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 13
+    },
+    {
+      "name": "幽梦之灵",
+      "description": "使用{}次雷光焦狱",
+      "pic": "achievement_11",
+      "type": "ACHIEVEMENT_TYPE_USE_SKILL4",
+      "firstValue": 10,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 50,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 200,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 10,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 14
+    },
+    {
+      "name": "三相之力",
+      "description": "使用{}次八卦奇阵",
+      "pic": "achievement_12",
+      "type": "ACHIEVEMENT_TYPE_USE_SKILL5",
+      "firstValue": 10,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 50,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 200,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 10,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 15
+    },
+    {
+      "name": "贪婪之刃",
+      "description": "使用{}次招财进宝",
+      "pic": "achievement_13",
+      "type": "ACHIEVEMENT_TYPE_USE_SKILL6",
+      "firstValue": 10,
+      "firstMagnitude": 1,
+      "firstRewardType": "MONEY_TYPE_YB",
+      "firstRewardValue": 10,
+      "secondValue": 50,
+      "secondMagnitude": 1,
+      "secondRewardType": "MONEY_TYPE_YB",
+      "secondRewardValue": 20,
+      "thirdValue": 200,
+      "thirdMagnitude": 1,
+      "thirdRewardType": "MONEY_TYPE_YB",
+      "thirdRewardValue": 50,
+      "fourthValue": 1,
+      "fourthMagnitude": 2,
+      "fourthRewardType": "MONEY_TYPE_JEWEL",
+      "fourthRewardValue": 50,
+      "fifthValue": 10,
+      "fifthMagnitude": 2,
+      "fifthRewardType": "MONEY_TYPE_JEWEL",
+      "fifthRewardValue": 100,
+      "id": 16
+    }
+  ],
+  "shopList": [
+    {
+      "name": "额外铜币",
+      "type": "SHOP_TYPE_COIN",
+      "cost": 100,
+      "extraGet": 0,
+      "costRmb": 0,
+      "description": "获得{}铜币",
+      "icon": "mall_mon_1",
+      "isShow": 1,
+      "id": 1
+    },
+    {
+      "name": "大量铜币",
+      "type": "SHOP_TYPE_COIN",
+      "cost": 1000,
+      "extraGet": 0,
+      "costRmb": 0,
+      "description": "获得{}铜币",
+      "icon": "mall_mon_2",
+      "isShow": 1,
+      "id": 2
+    },
+    {
+      "name": "海量铜币",
+      "type": "SHOP_TYPE_COIN",
+      "cost": 5000,
+      "extraGet": 0,
+      "costRmb": 0,
+      "description": "获得{}铜币",
+      "icon": "mall_mon_3",
+      "isShow": 1,
+      "id": 3
+    },
+    {
+      "name": "太平要术",
+      "type": "SHOP_TYPE_SKILL",
+      "cost": 50,
+      "extraGet": 0,
+      "costRmb": 0,
+      "description": "保护挚友不会被BOSS杀害，持续24小时",
+      "icon": "mall_1",
+      "isShow": 1,
+      "id": 4
+    },
+    {
+      "name": "青木诀",
+      "type": "SHOP_TYPE_SKILL",
+      "cost": 100,
+      "extraGet": 0,
+      "costRmb": 0,
+      "description": "造成巨大伤害，敌人剩余HP-90%",
+      "icon": "mall_skill_2",
+      "isShow": 1,
+      "id": 5
+    },
+    {
+      "name": "200元宝",
+      "type": "SHOP_TYPE_YB",
+      "cost": 200,
+      "extraGet": 0,
+      "costRmb": 2,
+      "description": "价格便宜，童叟无欺",
+      "icon": "grade_1",
+      "isShow": 1,
+      "id": 6
+    },
+    {
+      "name": "600元宝",
+      "type": "SHOP_TYPE_YB",
+      "cost": 600,
+      "extraGet": 30,
+      "costRmb": 6,
+      "description": "额外赠送30元宝",
+      "icon": "grade_2",
+      "isShow": 1,
+      "id": 7
+    },
+    {
+      "name": "3000元宝",
+      "type": "SHOP_TYPE_YB",
+      "cost": 3000,
+      "extraGet": 500,
+      "costRmb": 30,
+      "description": "额外赠送500元宝",
+      "icon": "grade_3",
+      "isShow": 1,
+      "id": 8
+    },
+    {
+      "name": "5000元宝",
+      "type": "SHOP_TYPE_YB",
+      "cost": 5000,
+      "extraGet": 1500,
+      "costRmb": 50,
+      "description": "额外赠送1500元宝",
+      "icon": "grade_4",
+      "isShow": 1,
+      "id": 9
+    },
+    {
+      "name": "9800元宝",
+      "type": "SHOP_TYPE_YB",
+      "cost": 9800,
+      "extraGet": 4200,
+      "costRmb": 98,
+      "description": "额外赠送4200元宝",
+      "icon": "grade_5",
+      "isShow": 1,
+      "id": 10
+    },
+    {
+      "name": "19800元宝",
+      "type": "SHOP_TYPE_YB",
+      "cost": 19800,
+      "extraGet": 11200,
+      "costRmb": 198,
+      "description": "额外赠送11200元宝",
+      "icon": "grade_6",
+      "isShow": 1,
+      "id": 11
+    }
+  ],
+  "bagdropList": [
+    {
+      "name": "技能2",
+      "dropType": "SKILL_EFFECT_SHADOW_ATTACK",
+      "dropTypeDescribe": "获得“神鬼乱舞”秘籍，持续时间15秒",
+      "goOnTime": 15,
+      "probability": 2000,
+      "id": 1
+    },
+    {
+      "name": "技能3",
+      "dropType": "SKILL_EFFECT_CRIT_PROBABILITY",
+      "dropTypeDescribe": "获得“三圣华斩”秘籍，持续时间15秒",
+      "goOnTime": 15,
+      "probability": 2000,
+      "id": 2
+    },
+    {
+      "name": "技能4",
+      "dropType": "SKILL_EFFECTL_FRIEND_ACCELERATE",
+      "dropTypeDescribe": "获得“雷光焦狱”秘籍，持续时间15秒",
+      "goOnTime": 15,
+      "probability": 2000,
+      "id": 3
+    },
+    {
+      "name": "技能5",
+      "dropType": "SKILL_EFFECT_CLICK_INCREASE",
+      "dropTypeDescribe": "获得“八卦奇阵”秘籍，持续时间15秒",
+      "goOnTime": 15,
+      "probability": 2000,
+      "id": 4
+    },
+    {
+      "name": "灵石",
+      "dropType": "GET_TYPE_JEWEL",
+      "dropTypeDescribe": "获得灵石1个",
+      "goOnTime": 0,
+      "probability": 500,
+      "id": 5
+    },
+    {
+      "name": "铜币",
+      "dropType": "GET_TYPE_COIN",
+      "dropTypeDescribe": "获得铜币{}",
+      "goOnTime": 0,
+      "probability": 1000,
+      "id": 6
+    },
+    {
+      "name": "元宝",
+      "dropType": "GET_TYPE_YB",
+      "dropTypeDescribe": "获得元宝2个",
+      "goOnTime": 0,
+      "probability": 500,
+      "id": 7
+    }
+  ],
+  "challengeList": [
+    {
+      "difficultNum": 1,
+      "icon": "grade_1_1",
+      "rewardType": "MONEY_TYPE_YB",
+      "rewardCount": 15,
+      "description": "获得{}元宝",
+      "id": 1
+    },
+    {
+      "difficultNum": 10,
+      "icon": "grade_2_1",
+      "rewardType": "MONEY_TYPE_YB",
+      "rewardCount": 30,
+      "description": "获得{}元宝",
+      "id": 2
+    },
+    {
+      "difficultNum": 50,
+      "icon": "mall_1_1",
+      "rewardType": "REWARD_TYPE_USE_SKILL_DSTQ",
+      "rewardCount": 1,
+      "description": "可使用{}次太平要术",
+      "id": 3
+    },
+    {
+      "difficultNum": 100,
+      "icon": "icon_lixianjiangli01_1",
+      "rewardType": "REWARD_TYPE_CUT_BAGDROP_TIME",
+      "rewardCount": 2,
+      "description": "小飞箱出现概率x{}",
+      "id": 4
+    },
+    {
+      "difficultNum": 1000,
+      "icon": "Icon_lingshi_1_1",
+      "rewardType": "MONEY_TYPE_JEWEL",
+      "rewardCount": 10,
+      "description": "获得灵石{}个",
+      "id": 5
+    }
+  ]
+}

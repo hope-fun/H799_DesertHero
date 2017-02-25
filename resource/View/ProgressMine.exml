@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="View.ProgressMine" minWidth="30" minHeight="18" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="progressBg"
+	         left="0" right="0" top="0" bottom="0" source="bg_jindutiao01" scale9Grid="14,11,3,2"/>
+	<e:Image id="thumb" top="0" bottom="0" left="0" right="0" source="bg_jindutiao02" scale9Grid="14,12,2,1"/>
+	<e:Label id="labelDisplay" textAlign="center" verticalAlign="middle"
+	         size="16" fontFamily="黑体"
+	         horizontalCenter="0" verticalCenter="0" textColor="0xFFFFFF"/>
+</e:Skin>

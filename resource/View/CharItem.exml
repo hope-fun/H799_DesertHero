@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.CharItem" width="547" height="84" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Image id="bgImage" source="k_01_png" verticalCenter="0" horizontalCenter="0"/>
+		<e:Image id="layerBgImage" source="bg_huadongtiao_jiesuo" scale9Grid="9,10,14,11" left="0" right="0" top="0" bottom="0" visible="false"/>
+		<e:Group id="playerGroup" left="0" right="0" top="0" bottom="0" touchEnabled="false">
+			<e:Label id="skillDes" fontFamily="黑体" textAlign="center" size="16" verticalCenter="20" touchEnabled="false" left="100"/>
+		</e:Group>
+		<e:Group id="friendGroup" right="0" left="0" top="0" bottom="0" touchEnabled="false">
+			<e:Group id="layerGroup" width="185" height="19" horizontalCenter="-88.5" verticalCenter="17.5" touchEnabled="false">
+				<e:Image id="layer_one" source="layer_01_s_png" x="29" touchEnabled="false" visible="false"/>
+				<e:Image id="layer_two" source="layer_02_s_png" x="54" y="4" touchEnabled="false" visible="false"/>
+				<e:Image id="layer_three" source="layer_03_s_png" x="81" y="3" touchEnabled="false" visible="false"/>
+				<e:Image id="layer_four" source="layer_04_s_png" x="117" y="5" touchEnabled="false" visible="false"/>
+				<e:Image id="layer_five" source="layer_05_s_png" x="145" y="4" touchEnabled="false" visible="false"/>
+				<e:Image id="layer_six" source="layer_06_s_png" x="169" y="3" touchEnabled="false" visible="false"/>
+				<e:Image id="layer_seven" source="layer_07_s_png" x="206" y="5" touchEnabled="false" visible="false"/>
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" gap="12"/>
+				</e:layout>
+			</e:Group>
+			<e:Label id="friendDps" fontFamily="黑体" textAlign="center" bold="true" size="18" touchEnabled="false" left="237" verticalCenter="0"/>
+			<e:Group id="recruitGroup" height="27" width="165" verticalCenter="0.5" horizontalCenter="2.5" visible="false">
+				<e:Image source="icon_yinbi_png" left="81" top="2" width="26" height="26"/>
+				<e:Label id="recruitDemand" bold="true" touchEnabled="false" text="招募条件：  xxxxxxx" fontFamily="黑体" textAlign="center" size="18" verticalCenter="0.5" left="-1"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="shareGroup" top="0" bottom="0" width="158" touchEnabled="false">
+			<e:Label id="skillName" text="青龙偃月" size="20" fontFamily="黑体" verticalCenter="-17" left="100" touchEnabled="false" textColor="0xFEDE33"/>
+			<e:Label id="Lv" text="Lv." fontFamily="黑体" size="16" touchEnabled="false" x="102" y="34"/>
+			<e:Label id="skillLevel" text="0" fontFamily="黑体" size="16" touchEnabled="false" textColor="0x00F0FD" verticalCenter="2" left="130"/>
+			<e:Image id="skillIcon" touchEnabled="false" source="skill_01_1_png" width="68" height="66" horizontalCenter="-31" verticalCenter="0"/>
+			<e:Group id="btnGroup" left="394" right="-381" y="1">
+				<ViewModel:BtnShareVM id="levelBtn" label="按钮" width="136" height="74" skinName="View.BtnShareItem" verticalCenter="-1.5" horizontalCenter="-1.5"/>
+				<ViewModel:BtnSmallShareVM id="levelBtn0" label="按钮" verticalCenter="-1.5" skinName="View.BtnSmallShareItem" horizontalCenter="-114.5" visible="false"/>
+				<ViewModel:BtnSmallShareVM label="按钮" id="levelBtn1" skinName="View.BtnSmallShareItem" verticalCenter="-1.5" horizontalCenter="-198.5" visible="false"/>
+				<e:Image id="newSkill" source="icon_xin" verticalCenter="2.5" x="3" visible="false"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="dead" left="0" right="0" top="0" bottom="0" touchEnabled="false" visible="false">
+			<e:Image source="bg_siwang_weijiesuo" scale9Grid="9,10,10,8" left="0" right="0" top="0" bottom="0"/>
+			<e:Image source="icon_kulou" verticalCenter="0" horizontalCenter="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.BtnTopView" width="86" height="360" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="btnTopGroup" left="0" right="0" top="0" bottom="0">
+		<ViewModel:BtnTopItemVM id="btnSetting" x="45" y="3" btnIconSource="btn_shezhi_png" skinName="View.BtnTopItem"/>
+		<ViewModel:BtnTopItemVM id="btnAchievement" x="85" y="43" btnIconSource="btn_chengjiu_png" skinName="View.BtnTopItem"/>
+		<e:layout>
+			<e:VerticalLayout horizontalAlign="center" verticalAlign="top" gap="10"/>
+		</e:layout>
+	</e:Group>
+
+</e:Skin>

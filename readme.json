@@ -1,0 +1,25 @@
+Exml后缀关系说明:
+0.View:主皮肤对象
+1.Popup:二级弹窗(不一定比View高)
+2.Msg:消息弹窗(最高层)
+3.Item:重复的控件对象(有可能搭载在其他载体上面)
+4.Temp:测试用.
+
+Exml对应ts脚本后缀:
+0.VM
+
+Model层文件夹结构说明:
+DataLocal:
+0.Data:组织本地业务对应数据对象.
+
+DataService:
+0.StModel:网络层对应静态数据对象.
+1.DyModel:网络层对应动态数据对象.
+
+文件夹:ServiceLocal
+-本地业务以及数据操作，增删改查等.
+
+文件夹:ServiceWeb
+-网络层接口以及网络层业务.
+
+发布说明: 1.WebService: isOutWeb，2.WebService: 服务器地址，3.index中的中间件地址.

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.AchievementItem" width="542" height="74" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
+	<e:Group top="0" bottom="0" left="0" right="0">
+		<e:Image top="0" bottom="0" left="0" right="0" source="bg_huadongtiao" scale9Grid="212,43,213,36"/>
+		<e:Label id="itemName" text="击杀敌人" size="21" fontFamily="黑体" x="95" y="14"/>
+		<e:Image id="icon" source="achievement_1" x="13" y="6"/>
+		<e:Image id="firstStar" source="icon_star_hui" width="20" height="20" x="95" y="40"/>
+		<e:Image id="secondStar" source="icon_star_hui" width="20" height="20"  x="123" y="40"/>
+		<e:Image id="thirdStar" source="icon_star_hui" width="20" height="20"  x="151" y="40"/>
+		<e:Image id="fourthStar" source="icon_star_hui" width="20" height="20"  x="178" y="40"/>
+		<e:Image id="fifthStar" source="icon_star_hui" width="20" height="20" x="206" y="40"/>
+		<e:Label id="completionState" text="999.99aa/999.99aa" fontFamily="黑体" size="17" x="234" y="43"/>
+		<e:Label id="description" text="999.99aa/999.99aa" fontFamily="黑体" size="17" x="233" y="18"/>
+		<ViewModel:BtnShareVM id="rewardBtn" label="按钮" skinName="View.BtnShareItem" horizontalCenter="195.5" verticalCenter="-4" width="137"/>
+		<e:Image id="finish" source="yiwancheng" x="430" y="3" visible="false"/>
+	</e:Group>
+</e:Skin>

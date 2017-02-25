@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.ButtonSkin" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui">
+    <e:Image width="100%" height="100%" alpha.disabled="0.5"
+             source="button_up_png" scale9Grid.up="2,2,10,10"
+             source.down="button_down_png" scale9Grid.down="2,2,10,10"/>
+    <e:Label id="labelDisplay" top="8" bottom="8" left="8" right="8"
+             size="32" fontFamily="黑体"
+             textColor="0xFFFFFF" textColor.down="0x000000"  verticalAlign="middle" textAlign="center"/>
+    <e:Image id="iconDisplay" horizontalCenter="-50" verticalCenter="-8.5" source=""/>
+</e:Skin>

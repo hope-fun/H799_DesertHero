@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.ResetSkillView" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="mask_black" scale9Grid="1,1,1,1" left="0" right="0" top="0" bottom="0" alpha="0.7"/>
+	<e:Group width="510" height="230" horizontalCenter="0" verticalCenter="-113">
+		<e:Image bottom="0" fillMode="repeat" source="bg_tankuangda" scale9Grid="36,111,7,670" left="0" right="0" top="0"/>
+		<e:Label id="resetCost" text="你想要花999元宝重置此技能冷却么？" horizontalCenter="0.5" width="277" textAlign="center" fontFamily="黑体" size="24" top="42"/>
+		<ViewModel:BtnShareVM id="confirm" label="按钮" skinName="View.BtnShareItem" horizontalCenter="138.5" verticalCenter="37"/>
+		<ViewModel:BtnShareVM id="closeBtn" label="按钮" skinName="View.BtnShareItem" horizontalCenter="-131.5" verticalCenter="37"/>
+	</e:Group>
+</e:Skin>

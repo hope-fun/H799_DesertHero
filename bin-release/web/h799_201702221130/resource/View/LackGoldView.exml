@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.LackGoldView" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image  id="mask_black" width="100%" height="100%" source="mask_black" alpha="0" horizontalCenter="0" verticalCenter="-4" scale9Grid="1,1,1,1"/>
+	<e:Group  id="window" width="600" height="900" y="-550">
+		<e:Group height="229" width="510" horizontalCenter="0" verticalCenter="-127.5">
+			<e:Image fillMode="repeat" source="bg_tankuangda" scale9Grid="34,111,13,670" left="0" right="0" top="0" bottom="0"/>
+			<e:Label size="34" text="您的元宝不足" fontFamily="黑体" x="182" y="43" textColor="0xFF6D00"/>
+			<e:Label y="96" text="请补充元宝~ " fontFamily="黑体" size="26" textColor="0xFFFFFF" x="193"/>
+			<e:Image source="icon_yuanbao_png" x="128" y="49"/>
+			<ViewModel:BtnShareVM id="cancelBtn" label="按钮" skinName="View.BtnShareItem" verticalCenter="44.5" horizontalCenter="-127.5"/>
+			<ViewModel:BtnShareVM id="rechargeBtn" label="按钮" skinName="View.BtnShareItem" horizontalCenter="128.5" verticalCenter="44.5"/>
+		</e:Group>   
+	    
+
+	</e:Group>
+	
+	
+</e:Skin>

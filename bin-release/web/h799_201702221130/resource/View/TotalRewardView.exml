@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.TotalRewardView" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Image source="mask_black" scale9Grid="1,1,1,1" left="0" right="0" top="0" bottom="0" alpha="0.7"/>
+		<e:Group left="0" right="0" height="887" bottom="0">
+			<e:Image source="bg_tankuangda" left="0" right="0" top="0" bottom="0" scale9Grid="34,111,9,670"/>
+		</e:Group>
+		<e:Image source="bg_xiabiaoti" scale9Grid="25,2,2,36" width="274" horizontalCenter="0" height="55"/>
+		<e:Image source="bg_tankuangnei_jianbian" horizontalCenter="0.5" verticalCenter="-347" scale9Grid="88,13,13,3" width="595" height="34"/>
+		<e:Label text="灵石可以到兵器谱中兑换神兵呦！" size="20" fontFamily="黑体" x="47" y="94"/>
+		<ViewModel:CloseBtnVM id="closeBtn" label="按钮" x="541" skinName="View.CloseBtn" y="1"/>
+		<e:Image source="icon_lingshi" width="30" height="30" horizontalCenter="162" verticalCenter="-345"/>
+		<e:Image source="leichongjiangli" y="9" horizontalCenter="0"/>
+		<e:Label id="magicStone" text="999" fontFamily="黑体" left="499" verticalCenter="-347"/>
+		<e:Image source="bg_tankuangda_nei" scale9Grid="13,15,5,3" horizontalCenter="0" y="143" width="544" height="715"/>
+		<e:Scroller width="540" height="683" y="151" horizontalCenter="0">
+			<e:Group id="listGroup">
+				<e:layout>
+					<e:VerticalLayout horizontalAlign="center" verticalAlign="middle" gap="13"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

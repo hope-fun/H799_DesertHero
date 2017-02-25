@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.TotalRewardItem" states="complete,enabled,disabled" width="540" height="74" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Image top="0" left="0" source="bg_huadongtiao" right="0" bottom="0" scale9Grid="234,50,155,13"/>
+		<e:Image source="icon_lingshi" x="24" width="52" height="52" verticalCenter="0"/>
+		<ViewModel:ProgressMineVM id="currentProgress" x="109" y="37" skinName="View.ProgressMine" width="248"/>
+		<e:Label id="description" text="文字描述" x="109" y="13" size="18" fontFamily="黑体"/>
+		<e:Image id="finish" source="yiwancheng" x="397" width="126" visible.complete="true" verticalCenter="0" visible="false"/>
+		<ViewModel:BtnShareVM id="rewardBtn" label="按钮" skinName="View.BtnShareItem" verticalCenter="-4" horizontalCenter="192.5"/>
+	</e:Group>
+</e:Skin>

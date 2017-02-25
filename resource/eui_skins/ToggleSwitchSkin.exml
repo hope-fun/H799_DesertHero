@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ToggleSwitchSkin" states="up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected" xmlns:e="http://ns.egret.com/eui" height="58" width="161">
+    <e:Image source="bg_yinxiaokai"
+             source.up="bg_yinxiaoguan"
+             source.down="bg_yinxiaoguan"
+             source.disabled="bg_yinxiaoguan" scale9Grid="14,14,3,2" left="0" top="0" right="0" bottom="0"/>
+    <e:Image source="button_yinxiao"
+            
+             horizontalCenter.upAndSelected="48"
+             horizontalCenter.downAndSelected="48"
+             horizontalCenter.disabledAndSelected="48"
+             left="4" right="105" top="4" bottom="4" scale9Grid="14,14,3,3"/>
+</e:Skin>

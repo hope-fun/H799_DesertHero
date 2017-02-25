@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.BtnRechargeView" states="up,down" width="107" height="40" xmlns:e="http://ns.egret.com/eui">
+  <e:Group width="107" height="40" horizontalCenter="0" verticalCenter="0" scaleX.down="1.1" scaleY.down="1.1">
+  <e:Image source="icon_button_chongzhi" includeIn="up,down"/>
+  <e:Label id="btnText" size="22" fontFamily="黑体"  bold="true"  stroke="1" strokeColor="#333333" horizontalCenter="0" verticalCenter="0" textColor="0xFFFFFF"/>
+  </e:Group>
+</e:Skin>

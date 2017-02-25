@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.PersnoalMsgView" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*">
+	<e:Image  id="mask_black_personalMsg" width="100%" height="100%" source="mask_black" alpha="0" horizontalCenter="0" verticalCenter="0" scale9Grid="1,1,1,1"/>
+	<e:Group  id="window" width="600" height="900" y="0">  
+		<e:Group height="358" width="510" y="159" horizontalCenter="0">
+			<e:Image source="bg_tankuangxiao_zhongjian" horizontalCenter="0" fillMode="repeat" height="350"/>
+			<e:Image source="bg_tankuangxiao_xiabian" bottom="0" horizontalCenter="0"/>
+			<e:Image source="bg_tankuangxiao_shangbian"/>
+			<e:Label text="个人信息" size="40" horizontalCenter="0" y="26" fontFamily="黑体" textColor="0xFF6D00"/>
+			<e:Image y="92" width="444" height="235" alpha=".8" source="bg_tankuang_neihuabian" scale9Grid="30,31,12,12" x="33"/>
+			<e:Group y="108" height="192" width="385" x="64">
+				<e:Label y="0" textColor="0xFFFFFF" text="所有法宝等级：" fontFamily="黑体" size="20"/>
+				<e:Label id="allWeaponLevel" y="0" textColor="0xFFFFFF" text="99999" fontFamily="黑体" size="20" width="50" textAlign="right" right="0"/>
+				<e:Label y="34" textColor="0xFFFFFF" text="暴击率：" fontFamily="黑体" size="20"/>
+				<e:Label id="hitRate" y="34" textColor="0xFFFFFF" text="9199%" fontFamily="黑体" size="20" width="54" textAlign="right" right="0"/>
+				<e:Label y="70" textColor="0xFFFFFF" text="秒伤加成：" fontFamily="黑体" size="20"/>
+				<e:Label id="secondAddition" y="70" textColor="0xFFFFFF" text="99%" fontFamily="黑体" size="20" width="50" textAlign="right" right="0"/>
+				<e:Label y="103" textColor="0xFFFFFF" text="暴击加成：" fontFamily="黑体" size="20"/>
+				<e:Label id="hitAddition" y="103" textColor="0xFFFFFF" text="999%" fontFamily="黑体" size="20" textAlign="right" right="0"/>
+				<e:Label y="138" textColor="0xFFFFFF" text="所有铜钱加成：" fontFamily="黑体" size="20"/>
+				<e:Label id="goldAddition" y="138" textColor="0xFFFFFF" text="9%" fontFamily="黑体" size="20" textAlign="right" right="0"/>
+				<e:Label textColor="0xFFFFFF" text="上次兑换灵石后时间：" fontFamily="黑体" size="20" bottom="0"/>
+				<e:Label id="stoneDuring" textColor="0xFFFFFF" text="99:99" fontFamily="黑体" size="20" textAlign="right" right="0" bottom="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Button id="LGCloseBtn" skinName="View.CloseBtn" x="510" y="141"/>
+	</e:Group>
+</e:Skin>

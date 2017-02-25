@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.AnnouncementMsg" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="mask_black" scale9Grid="1,1,1,1" left="0" right="0" top="0" bottom="0" alpha="0.7"/>
+	<e:Group width="510" height="800" horizontalCenter="0" y="60">
+		<e:Group left="0" right="0" top="0" bottom="0">
+			<e:Image source="bg_xiabiaoti" scale9Grid="25,4,2,33" width="270" y="-10" horizontalCenter="0" height="55"/>
+			<e:Image source="gonggao" y="-3" horizontalCenter="0.5"/>
+			<e:Image source="bg_tankuangda" left="0" right="0" top="0" bottom="51" scale9Grid="36,111,7,670"/>
+		</e:Group>
+		<e:Group height="658" width="465" horizontalCenter="0" verticalCenter="-11">
+			<e:Image left="0" right="0" top="0" bottom="0" source="bg_tankuangda_nei" scale9Grid="11,12,6,10"/>
+			<e:Label id="noticeInfoTitle0" fontFamily="黑体" size="25" left="15" verticalCenter="-275.5" text="亲爱的玩家："/>
+			<e:Label id="activeTime0" fontFamily="黑体" size="25" text="  为了庆祝本次云中歌点击版成功封测，特举行元宝大放送活动，每位玩家可以领取600元宝。" multiline="true" height="81" top="81" width="400" horizontalCenter="0.5"/>
+			<e:Label top="181" multiline="true" height="81" horizontalCenter="0.5" fontFamily="黑体" width="400" size="25" text="  领取方法：在游戏里点击“活动”处的宝箱图标，输入CDKey“woai9g”领取元宝。" id="activeTime1" x="10" y="10"/>
+			<e:Label text="  充值返还：封测有过充值的用户可以获得充值金额三倍的元宝返还，直接到账。" width="400" y="20" size="25" top="281" fontFamily="黑体" id="activeTime2" multiline="true" height="81" horizontalCenter="0.5" x="20"/>
+			<e:Label horizontalCenter="0.5" multiline="true" y="30" height="81" text="  看云歌不如玩云歌，玩云歌就玩9G云中歌！" fontFamily="黑体" x="30" width="400" size="25" top="391" id="activeTime3"/>
+		</e:Group>
+	</e:Group>
+	<ViewModel:CloseBtnVM id="closeBtn" label="按钮" x="507" y="49" skinName="View.CloseBtn"/>
+</e:Skin>

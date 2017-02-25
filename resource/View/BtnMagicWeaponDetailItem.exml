@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.BtnMagicWeaponDetailItem" states="up,down" width="135" height="45" xmlns:e="http://ns.egret.com/eui">
+	<e:Group width="135" height="45" y="-1" horizontalCenter="0" verticalCenter="0">
+	<e:Image source="icon_button_on" source.up="bt_shenqing" scale9Grid.up="43,17,28,6" left.up="0" right.up="0" top.up="0" bottom.up="0" horizontalCenter.up="0" verticalCenter.up="0" source.down="bt_shenqing2" scale9Grid.down="43,18,29,6" left.down="0" right.down="0" top.down="0" bottom.down="0"/>
+	<e:Label id="detailText" size="18" text="拆 解" fontFamily="黑体" textAlign="center" stroke="1" strokeColor="#333333" horizontalCenter="0" verticalCenter="0" bold="true" textColor.down="0x000000" stroke.down="0"/>
+    </e:Group>
+</e:Skin>

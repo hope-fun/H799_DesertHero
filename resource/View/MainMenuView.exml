@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.MainMenuView" width="1280" height="720" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
+	<e:Group id="mainInfoGroup" bottom="0" right="0" left="0" top="0" touchEnabled="false">
+		<ViewModel:MainInfoVM id="mainInfo" left="0" right="0" top="0" bottom="0" skinName="View.MainInfoView"/>
+	</e:Group>
+	<e:Group id="menuPopupGroup" left="0" right="0" touchEnabled="false" height="239.69" bottom="0" anchorOffsetY="0">
+		<ViewModel:MenuPopupVM id="menuPopup" skinName="View.MenuPopup" horizontalCenter="0" bottom="0"/>
+	</e:Group>
+	<ViewModel:BtnTopVM id="btnTop" skinName="View.BtnTopView" top="20" right="20"/>
+	<ViewModel:BtnBottomVM id="btnBottom" bottom="0" horizontalCenter="0" skinName="View.BtnBottomView"/>
+
+
+</e:Skin>

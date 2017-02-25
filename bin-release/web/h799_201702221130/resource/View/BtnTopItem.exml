@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="View.BtnTopItem" states="up,down" width="86" height="107" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="btnGroup" scaleX.down="1.1" scaleY.down="1.1" verticalCenter="0" horizontalCenter="0">
+		<e:Image id="btnIcon" fillMode="scale" source="btn_chengjiu_png" verticalCenter="0" horizontalCenter="0"/>
+		<e:Image id="btnBg" scale9Grid="1,1,1,1" source.down="bt_shangcaidan_on" source="guangquan_01_png" left="0" right="0" top="0" bottom="0" visible="false"/>												
+	</e:Group>
+</e:Skin>
