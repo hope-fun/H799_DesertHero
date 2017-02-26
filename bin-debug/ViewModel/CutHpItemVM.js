@@ -66,6 +66,7 @@ var ViewModel;
                 //更新目前dps by cai_haotian 2016.2.23.
                 //                Main.singleton.mainMenuVM.mainInfo.setMIData(-Number(this.data));
                 Model.PlayerLocalService.setPerSecondTapDamage(-_this.damage);
+                alert("remove cut hp item");
                 _this.group.removeChild(_this);
             });
         };

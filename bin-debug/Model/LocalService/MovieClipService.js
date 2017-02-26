@@ -15,6 +15,22 @@ var Model;
      */
     var MovieClipService = (function (_super) {
         __extends(MovieClipService, _super);
+        //感觉没啥用,by zhu_jun,2017.02.26.
+        // public set Width(_value: number) {
+        //     this.movieClip.width = _value;
+        //     // this.movieClip.sy
+        //     this.syncRect();
+        // }
+        // public get Width(): number {
+        //     return this.movieClip.width;
+        // }
+        // public set Height(_value: number) {
+        //     this.movieClip.height = _value;
+        //     this.syncRect();
+        // }
+        // public get Height(): number {
+        //     return this.movieClip.height;
+        // }
         /**
          * @英雄攻击、待机动画播放.
          * @param: _uiGroup父节点.
@@ -50,6 +66,34 @@ var Model;
             },
             set: function (_value) {
                 this.movieClip.y = _value;
+                this.syncRect();
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MovieClipService.prototype, "ScaleX", {
+            /**
+             * @如果用scale,mc图片需要在中心点，不能直接带位置信息，位置程序自己调整.
+             */
+            get: function () {
+                return this.movieClip.scaleX;
+            },
+            set: function (_value) {
+                this.movieClip.scaleX = _value;
+                // this.movieClip.x -= this.movieClip.movieClipData.textureData.x * _value;//因为是整体缩放.
+                // this.movieClip.sy
+                this.syncRect();
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MovieClipService.prototype, "ScaleY", {
+            get: function () {
+                return this.movieClip.scaleY;
+            },
+            set: function (_value) {
+                this.movieClip.scaleY = _value;
+                // this.movieClip.y -= this.movieClip.y * _value;//因为是整体缩放.
                 this.syncRect();
             },
             enumerable: true,

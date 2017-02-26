@@ -2,27 +2,27 @@
     "SubTexture": [
         {
             "y": 1,
-            "frameWidth": 113,
-            "x": 1,
+            "frameX": -3,
             "frameHeight": 228,
-            "width": 113,
-            "frameY": -37,
-            "height": 191,
+            "frameY": -39,
+            "width": 107,
+            "frameWidth": 113,
+            "height": 187,
             "name": "B2",
-            "frameX": 0
+            "x": 1
         },
         {
             "y": 1,
-            "frameWidth": 113,
-            "x": 116,
+            "frameX": -12,
             "frameHeight": 228,
-            "width": 89,
             "frameY": 0,
+            "width": 89,
+            "frameWidth": 113,
             "height": 184,
             "name": "A2",
-            "frameX": -12
+            "x": 110
         }
     ],
-    "name": "Tx_yunge_attack",
-    "imagePath": "Tx_yunge_attack_tex.png"
+    "imagePath": "Tx_yunge_attack_tex.png",
+    "name": "Tx_yunge_attack"
 }

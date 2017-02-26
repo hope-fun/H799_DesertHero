@@ -58,9 +58,9 @@ module Model {
         /**
          * @动画监听事件.
          * @TODO:等待完善.
+         * @by zhu_jun,2017.02.26.
          */
         private onAnimationEvent(evt: dragonBones.AnimationEvent): void {
-
             switch (evt.type) {
                 case dragonBones.AnimationEvent.START:
                     break;
@@ -76,9 +76,15 @@ module Model {
                     // evt.armature.dispose();
                     break;
                 case dragonBones.FrameEvent.ANIMATION_FRAME_EVENT:
-                    // Main.singleton.mainGameVM.enemyHit();
+                    this.onFrameEvent(evt);
                     break;
+            }
+        }
 
+        private onFrameEvent(evt: dragonBones.FrameEvent): void {
+            console.log(evt.type, evt.frameLabel);//打印出事件的类型，和事件的帧标签
+            if (evt.frameLabel == "enemyHit") {
+                Main.singleton.mainGameVM.enemyHit();//龙骨播放完成执行受击帧事件.
             }
         }
 

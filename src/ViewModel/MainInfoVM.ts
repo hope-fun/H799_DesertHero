@@ -301,7 +301,7 @@ module ViewModel {
          * @by cai_haotian 2016.2.19.
          * @by zhu_jun,2017.02.22.
          */
-        public bufferAnimel(_uiGroup: eui.Group, _onCallback: Function = null) {
+        public bufferAnimel(_uiGroup: eui.Group, _onCallBack: Function = null) {
             var db: Model.DragonBones = new Model.DragonBones(_uiGroup,
                 "Tx_zhujue_hc0405_ske_json",
                 "Tx_zhujue_hc0405_tex_json",
@@ -312,7 +312,7 @@ module ViewModel {
                 _uiGroup.removeChild(evt.armature.display);
                 dragonBones.WorldClock.clock.remove(evt.armature);
                 evt.armature.dispose();
-                if (_onCallback != null) _onCallback();
+                if (_onCallBack != null) _onCallBack();
             });
             //TODO: by zhu_jun可能要加帧事件.
             // bufferArmature.addEventListener(dragonBones.FrameEvent.ANIMATION_FRAME_EVENT,(evt: dragonBones.FrameEvent) => {

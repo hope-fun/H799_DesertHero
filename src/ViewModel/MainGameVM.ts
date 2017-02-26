@@ -362,7 +362,7 @@ module ViewModel {
          */
         private cutHpAnim(_isClick: boolean, _onAnimFinish: Function) {
             //飘血动画.
-            var cutHpItem: ViewModel.CutHpItemVM = new ViewModel.CutHpItemVM(this);
+            var cutHpItem: ViewModel.CutHpItemVM = new ViewModel.CutHpItemVM(this.levelUpLight);
             var critFactor: number = Model.Mathf.random(0, 100);
             var damage: number = 0;
             if (_isClick) {
@@ -432,9 +432,9 @@ module ViewModel {
                 this.playerDB.play(Model.PlayerLocalService.PlayerData.PlayerIdle, 0);
             });
             this.onAttackEffect(this.yungeClickEffectGroup, //by zhu_jun,2017.02.26.
-                [Model.PlayerLocalService.PlayerData.EffectPngJson,
+                [Model.PlayerLocalService.PlayerData.Effect,
+                Model.PlayerLocalService.PlayerData.EffectPngJson,
                 Model.PlayerLocalService.PlayerData.EffectPng,
-                Model.PlayerLocalService.PlayerData.Effect,
                 Model.PlayerLocalService.PlayerData.st.playerEffect]);
         }
 
@@ -489,7 +489,7 @@ module ViewModel {
                 this.onAttackAnim(friendDB, _data.Attack, () => {
                     console.log("zhujun: friend _data.name " + _data.st.name + " play attack effect ! ");
                     this.onAttackEffect(_uiGroup,
-                        [_data.EffectPngJson, _data.EffectPng, _data.Effect, _data.st.effect], () => { });
+                        [_data.Effect, _data.EffectPngJson, _data.EffectPng, _data.st.effect], () => { });
                 });
                 Model.AudioService.Shared().PlaySound(_data.st.attackAudio);
             }, this, Model.Mathf.random(Model.PlayerLocalService.PlayerData.st.effectTimeMin * 1000, Model.PlayerLocalService.PlayerData.st.effectTimeMax * 1000));
@@ -523,20 +523,19 @@ module ViewModel {
          * @_data.st.dragonBones,
          * @特效的动作和骨架相同,所以都是_data[3].
          */
-        private onAttackEffect(_uiGroup: eui.Group, _data: string[], _onCallBack?: Function) {
+        private onAttackEffect(_uiGroup: eui.Group, _data: string[], _onCallBack: Function = null) {
             if (Model.WebServiceBase.isDebug) {
                 console.log("zhujun: on attack effect start !  " + JSON.stringify(_data));
             }
             var roleDB: Model.DragonBones = new Model.DragonBones(_uiGroup,
-                _data[0], _data[1], _data[2], _data[3], 640, 360, () => {
-                    if (_onCallBack) {
-                        _onCallBack();
-                    }
-                    if (Model.WebServiceBase.isDebug) {
-                        console.log("zhujun: attack effect play finished ! ");
-                    }
-                })
-            roleDB.play(_data[3], 1);
+                _data[0], _data[1], _data[2], _data[3], 640, 360);
+            roleDB.play(_data[3], 1, (evt: dragonBones.AnimationEvent) => {
+                _uiGroup.removeChild(evt.armature.display);
+                dragonBones.WorldClock.clock.remove(evt.armature);
+                evt.armature.dispose();
+                if (_onCallBack != null) _onCallBack();
+                if (Model.WebServiceBase.isDebug) console.log("zhujun: attack effect play finished ! ");
+            });
         }
 
         /**
@@ -655,12 +654,15 @@ module ViewModel {
             this.enemyDB.play(Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].Hit, 1, () => {
                 this.changeEnemy(Model.SceneLocalService.SceneData.currentMonster);
             });
-            //敌人受到攻击时的特效.
-            //by cai_haotian 2016.3.16.
-            var enemyHit = new Model.MovieClipService(this.levelUpLight);
+            var enemyHit: Model.MovieClipService = new Model.MovieClipService(this.levelUpLight);//敌人受到攻击时的特效.by zhu_jun,2017.02.06.
             var enemyHitMc = enemyHit.initMovieClip("Tx_shouji_json", "Tx_shouji_png", "Tx_shouji", 1, () => {
-                this.levelUpLight.removeChild(enemyHitMc);
+                if (Model.WebServiceBase.isDebug) ("remove enemy hit mc ! ");
+                this.levelUpLight.removeChild(enemyHitMc);//移除受击特效.
             });
+            enemyHit.X = 920;//这个是对着界面调整的.
+            enemyHit.Y = 300;
+            enemyHit.ScaleX = 1.5;
+            enemyHit.ScaleY = 1.5;
         }
 
         /**

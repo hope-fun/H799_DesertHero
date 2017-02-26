@@ -263,15 +263,15 @@ var ViewModel;
          * @by cai_haotian 2016.2.19.
          * @by zhu_jun,2017.02.22.
          */
-        MainInfoVM.prototype.bufferAnimel = function (_uiGroup, _onCallback) {
-            if (_onCallback === void 0) { _onCallback = null; }
+        MainInfoVM.prototype.bufferAnimel = function (_uiGroup, _onCallBack) {
+            if (_onCallBack === void 0) { _onCallBack = null; }
             var db = new Model.DragonBones(_uiGroup, "Tx_zhujue_hc0405_ske_json", "Tx_zhujue_hc0405_tex_json", "Tx_zhujue_hc0405_tex_png", "Tx_zhujue_hc0405", 640, 360); //1280,720//640,360
             db.play("Tx_zhujue_hc0405", 1, function (evt) {
                 _uiGroup.removeChild(evt.armature.display);
                 dragonBones.WorldClock.clock.remove(evt.armature);
                 evt.armature.dispose();
-                if (_onCallback != null)
-                    _onCallback();
+                if (_onCallBack != null)
+                    _onCallBack();
             });
             //TODO: by zhu_jun可能要加帧事件.
             // bufferArmature.addEventListener(dragonBones.FrameEvent.ANIMATION_FRAME_EVENT,(evt: dragonBones.FrameEvent) => {

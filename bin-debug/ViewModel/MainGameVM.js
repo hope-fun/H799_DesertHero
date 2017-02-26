@@ -228,7 +228,7 @@ var ViewModel;
          */
         MainGameVM.prototype.cutHpAnim = function (_isClick, _onAnimFinish) {
             //飘血动画.
-            var cutHpItem = new ViewModel.CutHpItemVM(this);
+            var cutHpItem = new ViewModel.CutHpItemVM(this.levelUpLight);
             var critFactor = Model.Mathf.random(0, 100);
             var damage = 0;
             if (_isClick) {
@@ -294,9 +294,9 @@ var ViewModel;
                 _this.playerDB.play(Model.PlayerLocalService.PlayerData.PlayerIdle, 0);
             });
             this.onAttackEffect(this.yungeClickEffectGroup, //by zhu_jun,2017.02.26.
-            [Model.PlayerLocalService.PlayerData.EffectPngJson,
+            [Model.PlayerLocalService.PlayerData.Effect,
+                Model.PlayerLocalService.PlayerData.EffectPngJson,
                 Model.PlayerLocalService.PlayerData.EffectPng,
-                Model.PlayerLocalService.PlayerData.Effect,
                 Model.PlayerLocalService.PlayerData.st.playerEffect]);
         };
         /**
@@ -347,7 +347,7 @@ var ViewModel;
                 //TODO:by zhu_jun,mc改db.
                 _this.onAttackAnim(friendDB, _data.Attack, function () {
                     console.log("zhujun: friend _data.name " + _data.st.name + " play attack effect ! ");
-                    _this.onAttackEffect(_uiGroup, [_data.EffectPngJson, _data.EffectPng, _data.Effect, _data.st.effect], function () { });
+                    _this.onAttackEffect(_uiGroup, [_data.Effect, _data.EffectPngJson, _data.EffectPng, _data.st.effect], function () { });
                 });
                 Model.AudioService.Shared().PlaySound(_data.st.attackAudio);
             }, this, Model.Mathf.random(Model.PlayerLocalService.PlayerData.st.effectTimeMin * 1000, Model.PlayerLocalService.PlayerData.st.effectTimeMax * 1000));
@@ -380,18 +380,20 @@ var ViewModel;
          * @特效的动作和骨架相同,所以都是_data[3].
          */
         MainGameVM.prototype.onAttackEffect = function (_uiGroup, _data, _onCallBack) {
+            if (_onCallBack === void 0) { _onCallBack = null; }
             if (Model.WebServiceBase.isDebug) {
                 console.log("zhujun: on attack effect start !  " + JSON.stringify(_data));
             }
-            var roleDB = new Model.DragonBones(_uiGroup, _data[0], _data[1], _data[2], _data[3], 640, 360, function () {
-                if (_onCallBack) {
+            var roleDB = new Model.DragonBones(_uiGroup, _data[0], _data[1], _data[2], _data[3], 640, 360);
+            roleDB.play(_data[3], 1, function (evt) {
+                _uiGroup.removeChild(evt.armature.display);
+                dragonBones.WorldClock.clock.remove(evt.armature);
+                evt.armature.dispose();
+                if (_onCallBack != null)
                     _onCallBack();
-                }
-                if (Model.WebServiceBase.isDebug) {
+                if (Model.WebServiceBase.isDebug)
                     console.log("zhujun: attack effect play finished ! ");
-                }
             });
-            roleDB.play(_data[3], 1);
         };
         /**
          * @改变敌人.
@@ -500,12 +502,16 @@ var ViewModel;
             this.enemyDB.play(Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].Hit, 1, function () {
                 _this.changeEnemy(Model.SceneLocalService.SceneData.currentMonster);
             });
-            //敌人受到攻击时的特效.
-            //by cai_haotian 2016.3.16.
-            var enemyHit = new Model.MovieClipService(this.levelUpLight);
+            var enemyHit = new Model.MovieClipService(this.levelUpLight); //敌人受到攻击时的特效.by zhu_jun,2017.02.06.
             var enemyHitMc = enemyHit.initMovieClip("Tx_shouji_json", "Tx_shouji_png", "Tx_shouji", 1, function () {
-                _this.levelUpLight.removeChild(enemyHitMc);
+                if (Model.WebServiceBase.isDebug)
+                    ("remove enemy hit mc ! ");
+                _this.levelUpLight.removeChild(enemyHitMc); //移除受击特效.
             });
+            enemyHit.X = 920; //这个是对着界面调整的.
+            enemyHit.Y = 300;
+            enemyHit.ScaleX = 1.5;
+            enemyHit.ScaleY = 1.5;
         };
         /**
          * @金币动画.
