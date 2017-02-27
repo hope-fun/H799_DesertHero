@@ -6,7 +6,7 @@ var Model;
     /**
      *
      * @author
-     *
+     * @TODO: by zhu_jun,delete key的方法.
      */
     var HashMap = (function () {
         function HashMap() {

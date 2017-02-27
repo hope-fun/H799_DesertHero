@@ -82,7 +82,7 @@ module ViewModel {
                     this.uiLayer.removeChild(this);
                     
                     for(var i = 0;i < Main.singleton.mainMenuVM.btnBottomGroup.length;i++) {
-                        if(Main.singleton.mainMenuVM.btnBottom.btnMall == Main.singleton.mainMenuVM.btnBottomGroup[i]) {
+                        if(Main.singleton.mainMenuVM.btnMall == Main.singleton.mainMenuVM.btnBottomGroup[i]) {
                             Main.singleton.mainMenuVM.btnBottomGroup[i].currentState = "down";
                             Main.singleton.mainMenuVM.btnBottomGroup[i].enabled = false;
                             Main.singleton.mainMenuVM.btnBottomGroup[i].btnWordImage.source = Main.singleton.mainMenuVM.btnBottomGroup[i].btnWordSourceDown;

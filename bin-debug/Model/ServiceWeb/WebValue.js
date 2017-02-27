@@ -308,18 +308,45 @@ var Model;
         areaId: MenuAreaType.GeneralSkill,
         btnId: 1
     };
+    /**
+     * @菜单事件配置,每个按钮四个方向的事件.
+     */
     WebValue.menuEventConfig = {
         bossBtn: {
             topBtn: null,
             topEvent: null,
             bottomBtn: null,
-            bottomEvent: function () { return alert(1); },
+            bottomEvent: null,
             leftBtn: null,
             leftEvent: null,
+            rightBtn: "btnSetting",
+            rightEvent: "onSetting"
+        },
+        btnSetting: {
+            topBtn: null,
+            topEvent: null,
+            bottomBtn: "btnAchievement",
+            bottomEvent: "onAchievement",
+            leftBtn: "bossBtn",
+            leftEvent: "onBoss",
+            rightBtn: null,
+            rightEvent: null
+        },
+        btnAchievement: {
+            topBtn: "btnSetting",
+            topEvent: "onSetting",
+            bottomBtn: null,
+            bottomEvent: null,
+            leftBtn: "bossBtn",
+            leftEvent: "onBoss",
             rightBtn: null,
             rightEvent: null
         }
     };
+    /**
+     * @事件列表.
+     */
+    WebValue.eventList = new Model.HashMap();
     Model.WebValue = WebValue;
     __reflect(WebValue.prototype, "Model.WebValue");
 })(Model || (Model = {}));

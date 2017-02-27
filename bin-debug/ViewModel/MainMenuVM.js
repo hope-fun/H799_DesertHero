@@ -35,71 +35,21 @@ var ViewModel;
         };
         MainMenuVM.prototype.childrenCreated = function () {
             _super.prototype.childrenCreated.call(this);
+            this.initEventList();
             this.initMenuPopup();
             this.initBtnTop();
             this.initBtnBottomEvent();
             this.initBtnBottomGroupUI();
-            Model.WebValue.menuEventConfig.bossBtn["bottomEvent"]();
-        };
-        MainMenuVM.prototype.initKeyMenuEvent = function () {
+            // this.updateKeyMenuEvent(Model.WebValue.menuEventConfig.bossBtn["rightEvent"]);
         };
         /**
-         * @初始化键盘菜单事件.
+         * @初始化事件列表.
          */
-        MainMenuVM.prototype.updateKeyMenuEvent = function (_areaId, _btnId) {
-            if (_areaId === void 0) { _areaId = null; }
-            if (_btnId === void 0) { _btnId = null; }
-            var areaId = _areaId == null ? Model.WebValue.menuAreaStatus.areaId : _areaId;
-            var btnId = _btnId == null ? Model.WebValue.menuAreaStatus.btnId : _btnId;
-            // if(_areaId == Model.MenuAreaType.BottomChild)
-            switch (areaId) {
-                case Model.MenuAreaType.TopLeft:
-                    //这个里面再判断btnId.看当前光标在哪个按钮上,就赋值哪个方法.
-                    if (Model.WebValue.menuAreaStatus.btnId == 1) {
-                        Model.KeyEventTool.onDirectionDown = function () {
-                            console.log("这个是TopLeft区域，第1个按钮的方法!");
-                        };
-                    }
-                    break;
-                case Model.MenuAreaType.TopRight:
-                    break;
-                case Model.MenuAreaType.GeneralMain:
-                    break;
-                case Model.MenuAreaType.GeneralSecond:
-                    break;
-                case Model.MenuAreaType.GeneralSkill:
-                    break;
-                case Model.MenuAreaType.MagicWeapon:
-                    break;
-                case Model.MenuAreaType.Mall:
-                    break;
-                default:
-                    break;
-            }
-        };
-        /**
-         * @主页面顶部按钮事件初始化.
-         */
-        MainMenuVM.prototype.initBtnTop = function () {
-            this.btnTop.btnSetting.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
-                new ViewModel.SettingsVM(Main.singleton, function () { });
-            }, this);
-            this.btnTop.btnAchievement.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
-                new ViewModel.AchievementVM(Main.singleton, function () { });
-            }, this);
-        };
-        /**
-         * @初始化菜单弹窗.
-         */
-        MainMenuVM.prototype.initMenuPopup = function () {
-            this.menuPopupGroup.visible = false;
-        };
-        /**
-         * @主页底部按钮事件初始化.
-         */
-        MainMenuVM.prototype.initBtnBottomEvent = function () {
+        MainMenuVM.prototype.initEventList = function () {
             var _this = this;
-            this.btnBottom.btnSkill.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            Model.WebValue.eventList.Set("onSetting", function () { new ViewModel.SettingsVM(_this.uiLayer, null); });
+            Model.WebValue.eventList.Set("onAchievement", function () { new ViewModel.AchievementVM(_this.uiLayer, null); });
+            Model.WebValue.eventList.Set("onSkill", function () {
                 Model.WebService.commitData(Model.WebValue.dataDyModel, function () {
                     if (Model.WebServiceBase.isDebug) {
                         console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));
@@ -114,46 +64,80 @@ var ViewModel;
                 });
                 _this.menuPopupGroup.visible = false;
                 _this.currentPage = PageName.MainInfo;
-            }, this);
-            this.btnBottom.btnProtagonist.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            });
+            Model.WebValue.eventList.Set("onProtagonist", function () {
                 _this.menuPopupGroup.visible = true;
                 _this.menuPopup.setPData();
                 _this.currentPage = PageName.Player;
-            }, this);
-            this.btnBottom.btnBosomFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            });
+            Model.WebValue.eventList.Set("onBosomFriend", function () {
                 _this.menuPopupGroup.visible = true;
                 _this.menuPopup.setBFData();
                 _this.currentPage = PageName.Friend;
-            }, this);
-            this.btnBottom.btnArtifact.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            });
+            Model.WebValue.eventList.Set("onArtifact", function () {
                 _this.menuPopupGroup.visible = true;
                 _this.menuPopup.setAData();
                 _this.currentPage = PageName.MagicWeapon;
-            }, this);
-            this.btnBottom.btnMall.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            });
+            Model.WebValue.eventList.Set("onMall", function () {
                 _this.menuPopupGroup.visible = true;
                 _this.menuPopup.setMData();
                 _this.currentPage = PageName.Mall;
-            }, this);
+            });
+        };
+        // private initKeyMenuEvent() {
+        // }
+        /**
+         * @初始化键盘菜单事件.
+         * @_btnName:按钮事件的key.
+         */
+        MainMenuVM.prototype.updateKeyMenuEvent = function (_btnName) {
+            //根据方向键取到_btnName.
+            Model.KeyEventTool.onOK = Model.WebValue.eventList[_btnName];
+        };
+        /**
+         * @主页面顶部按钮事件初始化.
+         */
+        MainMenuVM.prototype.initBtnTop = function () {
+            this.btnTop.btnSetting.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onSetting"), this);
+            this.btnTop.btnAchievement.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onAchievement"), this);
+        };
+        /**
+         * @初始化菜单弹窗.
+         */
+        MainMenuVM.prototype.initMenuPopup = function () {
+            this.menuPopupGroup.visible = false;
+        };
+        /**
+         * @主页底部按钮事件初始化.
+         */
+        MainMenuVM.prototype.initBtnBottomEvent = function () {
+            this.btnSkill.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onSkill"), this);
+            this.btnProtagonist.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onProtagonist"), this);
+            this.btnBosomFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onBosomFriend"), this);
+            this.btnArtifact.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onArtifact"), this);
+            this.btnMall.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onMall"), this);
         };
         /**
          * @初始化按钮组
          * @by cai_haotian 2016.3.28
          * @by zhu_jun,2017.02.19.
+         * @只有触摸屏时候有效.
          */
         MainMenuVM.prototype.initBtnBottomGroupUI = function () {
-            this.btnBottomGroup = [this.btnBottom.btnProtagonist, this.btnBottom.btnBosomFriend, this.btnBottom.btnArtifact, this.btnBottom.btnMall];
-            this.btnBottom.btnSkill.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnProtagonist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnBosomFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnArtifact.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnMall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnSkill.currentState = "down"; //设置当前按钮状态.
+            this.btnBottomGroup = [this.btnProtagonist, this.btnBosomFriend, this.btnArtifact, this.btnMall];
+            this.btnSkill.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnProtagonist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnBosomFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnArtifact.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnMall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnSkill.currentState = "down"; //设置当前按钮状态.
             //关闭newMark
-            this.btnBottom.btnProtagonist.btnNewMark.visible = false;
-            this.btnBottom.btnBosomFriend.btnNewMark.visible = false;
-            this.btnBottom.btnArtifact.btnNewMark.visible = false;
-            this.btnBottom.btnMall.btnNewMark.visible = false;
+            this.btnProtagonist.btnNewMark.visible = false;
+            this.btnBosomFriend.btnNewMark.visible = false;
+            this.btnArtifact.btnNewMark.visible = false;
+            this.btnMall.btnNewMark.visible = false;
         };
         /**
          * @根据点击转换按钮状态
@@ -161,13 +145,13 @@ var ViewModel;
          * @by zhu_jun,2017.02.19.
          */
         MainMenuVM.prototype.btnBottomChange = function (evt) {
-            if (evt.target == this.btnBottom.btnSkill) {
-                this.btnBottom.btnSkill.currentState = "down";
-                this.btnBottom.btnSkill.enabled = false;
+            if (evt.target == this.btnSkill) {
+                this.btnSkill.currentState = "down";
+                this.btnSkill.enabled = false;
             }
             else {
-                this.btnBottom.btnSkill.currentState = "up";
-                this.btnBottom.btnSkill.enabled = true;
+                this.btnSkill.currentState = "up";
+                this.btnSkill.enabled = true;
             }
             for (var i = 0; i < this.btnBottomGroup.length; i++) {
                 if (evt.target == this.btnBottomGroup[i]) {

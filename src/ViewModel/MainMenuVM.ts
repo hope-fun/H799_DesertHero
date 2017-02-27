@@ -28,10 +28,30 @@ module ViewModel {
          * @主页顶部按钮控件.
          */
         private btnTop: BtnTopVM;
+
+
         /**
-         * @主页面底部按钮控件.
+         * @技能按钮事件.
          */
-        public btnBottom: BtnBottomVM;
+        public btnSkill: BtnBottomItemVM;
+        /**
+         * @主角按钮.
+         */
+        public btnProtagonist: BtnBottomItemVM;
+        /**
+         * @挚友按钮.
+         */
+        public btnBosomFriend: BtnBottomItemVM;
+        /**
+         * @神器按钮.
+         */
+        public btnArtifact: BtnBottomItemVM;
+        /**
+         * @商城按钮.
+         */
+        public btnMall: BtnBottomItemVM;
+
+
         /**
          * @玩家主要信息控件.
          */
@@ -66,92 +86,22 @@ module ViewModel {
 
         protected childrenCreated() {
             super.childrenCreated();
+            this.initEventList();
             this.initMenuPopup();
             this.initBtnTop();
             this.initBtnBottomEvent();
             this.initBtnBottomGroupUI();
 
-            Model.WebValue.menuEventConfig.bossBtn["bottomEvent"]();
-        }
-
-        private initKeyMenuEvent() {
-
+            // this.updateKeyMenuEvent(Model.WebValue.menuEventConfig.bossBtn["rightEvent"]);
         }
 
         /**
-         * @初始化键盘菜单事件.
+         * @初始化事件列表.
          */
-        private updateKeyMenuEvent(_areaId: Model.MenuAreaType = null, _btnId: number = null) {
-            var areaId = _areaId == null ? Model.WebValue.menuAreaStatus.areaId : _areaId;
-            var btnId = _btnId == null ? Model.WebValue.menuAreaStatus.btnId : _btnId;
-            // if(_areaId == Model.MenuAreaType.BottomChild)
-            switch (areaId) {
-                case Model.MenuAreaType.TopLeft:
-                    //这个里面再判断btnId.看当前光标在哪个按钮上,就赋值哪个方法.
-                    if (Model.WebValue.menuAreaStatus.btnId == 1) {
-                        Model.KeyEventTool.onDirectionDown = () => {
-                            console.log("这个是TopLeft区域，第1个按钮的方法!");
-                        };
-
-                        // Model.KeyEventTool.onDirectionDown = onEventList["key"]();
-
-                    }
-                    break;
-                case Model.MenuAreaType.TopRight:
-                    var aaa={
-                        test:"test",
-                        test2:"test2"
-                    }
-
-                    aaa["test3"] = "test3";
-                    // aaa[2].re
-
-
-                    break;
-                case Model.MenuAreaType.GeneralMain:
-
-                    break;
-                case Model.MenuAreaType.GeneralSecond:
-
-                    break;
-                case Model.MenuAreaType.GeneralSkill:
-
-                    break;
-                case Model.MenuAreaType.MagicWeapon:
-
-                    break;
-                case Model.MenuAreaType.Mall:
-
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        /**
-         * @主页面顶部按钮事件初始化.
-         */
-        private initBtnTop() {
-            this.btnTop.btnSetting.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                new ViewModel.SettingsVM(Main.singleton, () => { });
-            }, this);
-            this.btnTop.btnAchievement.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                new ViewModel.AchievementVM(Main.singleton, () => { });
-            }, this);
-        }
-
-        /**
-         * @初始化菜单弹窗.
-         */
-        private initMenuPopup() {
-            this.menuPopupGroup.visible = false;
-        }
-
-        /**
-         * @主页底部按钮事件初始化.
-         */
-        private initBtnBottomEvent() {
-            this.btnBottom.btnSkill.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+        private initEventList() {
+            Model.WebValue.eventList.Set("onSetting", () => { new ViewModel.SettingsVM(this.uiLayer, null); });
+            Model.WebValue.eventList.Set("onAchievement", () => { new ViewModel.AchievementVM(this.uiLayer, null); });
+            Model.WebValue.eventList.Set("onSkill", () => {
                 Model.WebService.commitData(Model.WebValue.dataDyModel, () => {
                     if (Model.WebServiceBase.isDebug) {
                         console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));
@@ -165,47 +115,87 @@ module ViewModel {
                 });
                 this.menuPopupGroup.visible = false;
                 this.currentPage = PageName.MainInfo;
-            }, this);
-            this.btnBottom.btnProtagonist.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+            });
+            Model.WebValue.eventList.Set("onProtagonist", () => {
                 this.menuPopupGroup.visible = true;
                 this.menuPopup.setPData();
                 this.currentPage = PageName.Player;
-            }, this);
-            this.btnBottom.btnBosomFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+            });
+            Model.WebValue.eventList.Set("onBosomFriend", () => {
                 this.menuPopupGroup.visible = true;
                 this.menuPopup.setBFData();
                 this.currentPage = PageName.Friend;
-            }, this);
-            this.btnBottom.btnArtifact.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+            });
+            Model.WebValue.eventList.Set("onArtifact", () => {
                 this.menuPopupGroup.visible = true;
                 this.menuPopup.setAData();
                 this.currentPage = PageName.MagicWeapon;
-            }, this);
-            this.btnBottom.btnMall.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+            });
+            Model.WebValue.eventList.Set("onMall", () => {
                 this.menuPopupGroup.visible = true;
                 this.menuPopup.setMData();
                 this.currentPage = PageName.Mall;
-            }, this);
+            });
+        }
+
+        // private initKeyMenuEvent() {
+
+        // }
+
+        /**
+         * @初始化键盘菜单事件.
+         * @_btnName:按钮事件的key.
+         */
+        private updateKeyMenuEvent(_btnName: string) {
+            //根据方向键取到_btnName.
+            Model.KeyEventTool.onOK = Model.WebValue.eventList[_btnName];
+        }
+
+        /**
+         * @主页面顶部按钮事件初始化.
+         */
+        private initBtnTop() {
+            this.btnTop.btnSetting.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onSetting"), this);
+            this.btnTop.btnAchievement.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onAchievement"), this);
+        }
+
+        /**
+         * @初始化菜单弹窗.
+         */
+        private initMenuPopup() {
+            this.menuPopupGroup.visible = false;
+        }
+
+        /**
+         * @主页底部按钮事件初始化.
+         */
+        private initBtnBottomEvent() {
+            this.btnSkill.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onSkill"), this);
+            this.btnProtagonist.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onProtagonist"), this);
+            this.btnBosomFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onBosomFriend"), this);
+            this.btnArtifact.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onArtifact"), this);
+            this.btnMall.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onMall"), this);
         }
 
         /**
          * @初始化按钮组
          * @by cai_haotian 2016.3.28
          * @by zhu_jun,2017.02.19.
+         * @只有触摸屏时候有效.
          */
-        private initBtnBottomGroupUI() {//this.btnBottom.btnSkill是eui.Button.
-            this.btnBottomGroup = [this.btnBottom.btnProtagonist, this.btnBottom.btnBosomFriend, this.btnBottom.btnArtifact, this.btnBottom.btnMall];
-            this.btnBottom.btnSkill.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnProtagonist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnBosomFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnArtifact.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnMall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
-            this.btnBottom.btnSkill.currentState = "down";//设置当前按钮状态.
+        private initBtnBottomGroupUI() {//this.btnSkill是eui.Button.
+            this.btnBottomGroup = [this.btnProtagonist, this.btnBosomFriend, this.btnArtifact, this.btnMall];
+            this.btnSkill.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnProtagonist.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnBosomFriend.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnArtifact.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnMall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBottomChange, this);
+            this.btnSkill.currentState = "down";//设置当前按钮状态.
             //关闭newMark
-            this.btnBottom.btnProtagonist.btnNewMark.visible = false;
-            this.btnBottom.btnBosomFriend.btnNewMark.visible = false;
-            this.btnBottom.btnArtifact.btnNewMark.visible = false;
-            this.btnBottom.btnMall.btnNewMark.visible = false;
+            this.btnProtagonist.btnNewMark.visible = false;
+            this.btnBosomFriend.btnNewMark.visible = false;
+            this.btnArtifact.btnNewMark.visible = false;
+            this.btnMall.btnNewMark.visible = false;
         }
 
 
@@ -215,13 +205,13 @@ module ViewModel {
          * @by cai_haotian 2016.3.28
          * @by zhu_jun,2017.02.19.
          */
-        public btnBottomChange(evt?: egret.Event) {//this.btnBottom.btnSkill是eui.Button.
-            if (evt.target == this.btnBottom.btnSkill) {
-                this.btnBottom.btnSkill.currentState = "down";
-                this.btnBottom.btnSkill.enabled = false;
+        public btnBottomChange(evt?: egret.Event) {//this.btnSkill是eui.Button.
+            if (evt.target == this.btnSkill) {
+                this.btnSkill.currentState = "down";
+                this.btnSkill.enabled = false;
             } else {
-                this.btnBottom.btnSkill.currentState = "up";
-                this.btnBottom.btnSkill.enabled = true;
+                this.btnSkill.currentState = "up";
+                this.btnSkill.enabled = true;
             }
             for (var i = 0; i < this.btnBottomGroup.length; i++) {
                 if (evt.target == this.btnBottomGroup[i]) {

@@ -123,10 +123,10 @@ var ViewModel;
                 for (var i = 0; i < fDatas.length; i++) {
                     Model.FriendLocalService.isShow(fDatas[i], fDatas); //设置显示条件 by cai_haotian 2016.3.29
                     if (Enumerable.From(fDatas).Where(function (x) { return x.dy == null; }).Select(function (x) { return x.reachRecruit; }).FirstOrDefault(null)) {
-                        Main.singleton.mainMenuVM.btnBottom.btnBosomFriend.btnNewMark.visible = true; //设置新文字现实by cai_haotian 2016.3.30
+                        Main.singleton.mainMenuVM.btnBosomFriend.btnNewMark.visible = true; //设置新文字现实by cai_haotian 2016.3.30
                     }
                     else {
-                        Main.singleton.mainMenuVM.btnBottom.btnBosomFriend.btnNewMark.visible = false;
+                        Main.singleton.mainMenuVM.btnBosomFriend.btnNewMark.visible = false;
                     }
                     if (fDatas[i].dy) {
                         if (fDatas[i].dy.layerId < fDatas[i].layerMatchLevel) {
@@ -238,10 +238,10 @@ var ViewModel;
                 for (var i = 0; i < fDatas.length; i++) {
                     Model.FriendLocalService.isShow(fDatas[i], fDatas); //设置显示条件 by cai_haotian 2016.3.29
                     if (Enumerable.From(fDatas).Where(function (x) { return x.dy == null; }).Select(function (x) { return x.reachRecruit; }).FirstOrDefault(null)) {
-                        Main.singleton.mainMenuVM.btnBottom.btnBosomFriend.btnNewMark.visible = true; //设置新文字现实by cai_haotian 2016.3.30
+                        Main.singleton.mainMenuVM.btnBosomFriend.btnNewMark.visible = true; //设置新文字现实by cai_haotian 2016.3.30
                     }
                     else {
-                        Main.singleton.mainMenuVM.btnBottom.btnBosomFriend.btnNewMark.visible = false;
+                        Main.singleton.mainMenuVM.btnBosomFriend.btnNewMark.visible = false;
                     }
                     if (fDatas[i].dy) {
                         //                        Model.console.log("zhujun: fDatas[i].sceneId.layerId  " + fDatas[i].sceneId.layerId + " fDatas[i].layerMatchLevel " + fDatas[i].layerMatchLevel+ " level " + fDatas[i].sceneId.level);

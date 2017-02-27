@@ -1,13 +1,38 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="View.MainMenuView" width="1280" height="720" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
+<e:Skin class="View.MainMenuView" width="1280" height="720" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
 	<e:Group id="mainInfoGroup" bottom="0" right="0" left="0" top="0" touchEnabled="false">
-		<ViewModel:MainInfoVM id="mainInfo" left="0" right="0" top="0" bottom="0" skinName="View.MainInfoView"/>
+		<ViewModel:MainInfoVM id="mainInfo" left="0" right="0" top="0" bottom="0" skinName="View.MainInfoView" />
 	</e:Group>
 	<e:Group id="menuPopupGroup" left="0" right="0" touchEnabled="false" height="239.69" bottom="0" anchorOffsetY="0">
-		<ViewModel:MenuPopupVM id="menuPopup" skinName="View.MenuPopup" horizontalCenter="0" bottom="0"/>
+		<ViewModel:MenuPopupVM id="menuPopup" skinName="View.MenuPopup" horizontalCenter="0" bottom="0" />
 	</e:Group>
-	<ViewModel:BtnTopVM id="btnTop" skinName="View.BtnTopView" top="20" right="20"/>
-	<ViewModel:BtnBottomVM id="btnBottom" bottom="0" horizontalCenter="0" skinName="View.BtnBottomView"/>
-
-
+	<ViewModel:BtnTopVM id="btnTop" skinName="View.BtnTopView" top="20" right="20" />
+	<e:Button id="btnSkill" label="" horizontalCenter="0" bottom="0">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_jineng_png" source.down="btn_jineng02_png" />
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Group id="btnBottomLeftGroup" left="10" bottom="-12" right="750">
+		<ViewModel:BtnBottomItemVM id="btnProtagonist" x="45" y="3" width="272" height="103" btnWordSource="t_zhujiang_png"
+		                           btnWordSourceDown="t_zhujiang_png" skinName="View.BtnBottomItem" />
+		<ViewModel:BtnBottomItemVM id="btnBosomFriend" x="352" y="43" width="272" height="103" btnWordSource="t_fujiang_png"
+		                           btnWordSourceDown="t_fujiang_png" skinName="View.BtnBottomItem" />
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="left" verticalAlign="middle" gap="-30" paddingBottom="0" paddingTop="0"
+			                    paddingLeft="0" />
+		</e:layout>
+	</e:Group>
+	<e:Group id="btnBottomRightGroup" left="750" right="10" bottom="-12">
+		<ViewModel:BtnBottomItemVM id="btnArtifact" x="65" y="23" width="272" height="103" btnWordSource="t_shenqi_png"
+		                           btnWordSourceDown="t_shenqi_png" skinName="View.BtnBottomItem" />
+		<ViewModel:BtnBottomItemVM id="btnMall" x="75" y="33" width="272" height="103" btnWordSource="t_shangcheng_png"
+		                           btnWordSourceDown="t_shangcheng_png" skinName="View.BtnBottomItem" />
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="right" verticalAlign="middle" paddingTop="0" gap="-30" paddingRight="0" />
+		</e:layout>
+	</e:Group>
 </e:Skin>

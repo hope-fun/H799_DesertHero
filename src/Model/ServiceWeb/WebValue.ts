@@ -3,7 +3,7 @@ module Model {
      * @菜单区域类型.
      * @
      */
-    export enum MenuAreaType{
+    export enum MenuAreaType {
         TopLeft,
         TopRight,
         // BottomParent,
@@ -42,7 +42,7 @@ module Model {
         FRIEND_TYPE_FRIEND,
         FRIEND_TYPE_SKILL
     }
-    
+
     /**
      * @货币类型.
      * by zhu_jun,2016.01.17.
@@ -55,7 +55,7 @@ module Model {
         MONEY_TYPE_YB,
         MONEY_TYPE_JEWEL
     }
-    
+
     /**
      * @挚友技能层数效果类型
      * @提升本技能伤害	FRIEND_SKILL_TYPE_SLEF
@@ -139,7 +139,7 @@ module Model {
         WEAPON_TYPE_ADD_BOSS_COIN,
         WEAPON_TYPE_ADD_MUCH_COIN_CHANCE
     }
-    
+
     /**
      * @家族效果类型.
      * @所有伤害提升	CLAN_TYPE_ALL
@@ -153,7 +153,7 @@ module Model {
         CLAN_TYPE_CRIT,
         CLAN_TYPE_CUT_SKILL_CD
     }
-    
+
     /**
      * @成就类型.
      * @击杀敌人	   ACHIEVEMENT_TYPE_KILL_ENEMY
@@ -191,44 +191,44 @@ module Model {
         ACHIEVEMENT_TYPE_USE_SKILL5,
         ACHIEVEMENT_TYPE_USE_SKILL6
     }
-    
+
     /**
      * @普通怪物	MONSTER_TYPE_PERSON
      * @聚宝盆	MONSTER_TYPE_BOX
      * @BOSS	      MONSTER_TYPE_BOSS
-     */ 
-    export enum MonsterType{
+     */
+    export enum MonsterType {
         MONSTER_TYPE_PERSON,
         MONSTER_TYPE_BOX,
-	    MONSTER_TYPE_BOSS
+        MONSTER_TYPE_BOSS
     }
-    
+
     /**
      * @购买类型 
      * @by cai_haotian 2016.2.26
      * @增加钱 SHOP_TYPE_COIN
      * @购买的技能 SHOP_TYPE_SKILL
      * @商城购买元宝 SHOP_TYPE_YB
-     */ 
-    export enum ShopType{
+     */
+    export enum ShopType {
         SHOP_TYPE_COIN,
         SHOP_TYPE_SKILL,
         SHOP_TYPE_YB
     }
-    
+
     /**
      * @每日充值奖励类型
      * @by cai_haotian 2016.3.23
      * @奖励类型为元宝 MONEY_TYPE_YB
      * @奖励类型为灵石 MONEY_TYPE_JEWEL
-     */ 
-    export enum RewardType{
+     */
+    export enum RewardType {
         MONEY_TYPE_YB,
         MONEY_TYPE_JEWEL,
         REWARD_TYPE_USE_SKILL_DSTQ,
         REWARD_TYPE_CUT_BAGDROP_TIME
     }
-    
+
     /**
      * @每日挑战奖励类型
      * @by cai_haotian 2016.4.18.
@@ -236,14 +236,14 @@ module Model {
      * @奖励类型为灵石 MONEY_TYPE_JEWEL
      * @奖励类型为免费试用丹书铁卷 REWARD_TYPE_USE_SKILL_DSTQ
      * @小飞箱出现概率 REWARD_TYPE_CUT_BAGDROP_TIME
-     */ 
-    export enum DailyChallengeType{
+     */
+    export enum DailyChallengeType {
         MONEY_TYPE_YB,
         MONEY_TYPE_JEWEL,
         REWARD_TYPE_CUT_BAGDROP_TIME,
         REWARD_TYPE_USE_SKILL_DSTQ
     }
-    
+
 
 	/**
 	 * @author: zhu_jun
@@ -255,13 +255,13 @@ module Model {
 
         /**
          * @9G特殊要求
-         */ 
-        public static is9G:boolean=false;
+         */
+        public static is9G: boolean = false;
         /**
          * @是否是繁体版
-         */ 
-        public static isTraditional:boolean=false;
-        
+         */
+        public static isTraditional: boolean = false;
+
 		/**
 		 * @是否发送网络请求.
 		 */
@@ -281,20 +281,20 @@ module Model {
 		/**
 		 * @账号信息.
 		 */
-        public static accountM: AccountModel = new AccountModel();        
+        public static accountM: AccountModel = new AccountModel();
         /**
          * @动态数据对象.
          */
         public static dataDyModel: DataDyModel = new DataDyModel();
-//        /**
-//         * @获取网络层提交数据.
-//         */ 
-//        public static get DataDyModel(){
-//            WebValue.dataDyModel = new DataDyModel(PlayerLocalService.PlayerData.dy,
-//            SceneLocalService.SceneData.dy,null,null,null,null,null);
-//            return WebValue.dataDyModel;
-//        }
-        
+        //        /**
+        //         * @获取网络层提交数据.
+        //         */ 
+        //        public static get DataDyModel(){
+        //            WebValue.dataDyModel = new DataDyModel(PlayerLocalService.PlayerData.dy,
+        //            SceneLocalService.SceneData.dy,null,null,null,null,null);
+        //            return WebValue.dataDyModel;
+        //        }
+
         /**
          * @静态数据对象.
          */
@@ -303,29 +303,50 @@ module Model {
         /**
          * @按钮.
          */
-        public static menuAreaStatus={
-            areaId:MenuAreaType.GeneralSkill,
-            btnId:1
+        public static menuAreaStatus = {
+            areaId: MenuAreaType.GeneralSkill,
+            btnId: 1
         };
 
-        public static menuEventConfig={
-            bossBtn:{
-                topBtn:null,
-                topEvent:null,
-                bottomBtn:null,
-                bottomEvent:WebValue.eventList[""],
-                leftBtn:null,
-                leftEvent:null,
-                rightBtn:null,
-                rightEvent:null
+        /**
+         * @菜单事件配置,每个按钮四个方向的事件.
+         */
+        public static menuEventConfig = {
+            bossBtn: {
+                topBtn: null,
+                topEvent: null,
+                bottomBtn: null,
+                bottomEvent: null,
+                leftBtn: null,
+                leftEvent: null,
+                rightBtn: "btnSetting",
+                rightEvent: "onSetting"
+            },
+            btnSetting: {
+                topBtn: null,
+                topEvent: null,
+                bottomBtn: "btnAchievement",
+                bottomEvent: "onAchievement",
+                leftBtn: "bossBtn",
+                leftEvent: "onBoss",
+                rightBtn: null,
+                rightEvent: null
+            },
+            btnAchievement: {
+                topBtn: "btnSetting",
+                topEvent: "onSetting",
+                bottomBtn: null,
+                bottomEvent: null,
+                leftBtn: "bossBtn",
+                leftEvent: "onBoss",
+                rightBtn: null,
+                rightEvent: null
             }
-            // btnSetting
-            // btnAchievement
         }
 
         /**
          * @事件列表.
          */
-        public static eventList:Model.HashMap;
+        public static eventList: HashMap = new HashMap();
     }
 }
