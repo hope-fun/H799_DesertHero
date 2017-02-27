@@ -39,6 +39,43 @@ var ViewModel;
             this.initBtnTop();
             this.initBtnBottomEvent();
             this.initBtnBottomGroupUI();
+            Model.WebValue.menuEventConfig.bossBtn["bottomEvent"]();
+        };
+        MainMenuVM.prototype.initKeyMenuEvent = function () {
+        };
+        /**
+         * @初始化键盘菜单事件.
+         */
+        MainMenuVM.prototype.updateKeyMenuEvent = function (_areaId, _btnId) {
+            if (_areaId === void 0) { _areaId = null; }
+            if (_btnId === void 0) { _btnId = null; }
+            var areaId = _areaId == null ? Model.WebValue.menuAreaStatus.areaId : _areaId;
+            var btnId = _btnId == null ? Model.WebValue.menuAreaStatus.btnId : _btnId;
+            // if(_areaId == Model.MenuAreaType.BottomChild)
+            switch (areaId) {
+                case Model.MenuAreaType.TopLeft:
+                    //这个里面再判断btnId.看当前光标在哪个按钮上,就赋值哪个方法.
+                    if (Model.WebValue.menuAreaStatus.btnId == 1) {
+                        Model.KeyEventTool.onDirectionDown = function () {
+                            console.log("这个是TopLeft区域，第1个按钮的方法!");
+                        };
+                    }
+                    break;
+                case Model.MenuAreaType.TopRight:
+                    break;
+                case Model.MenuAreaType.GeneralMain:
+                    break;
+                case Model.MenuAreaType.GeneralSecond:
+                    break;
+                case Model.MenuAreaType.GeneralSkill:
+                    break;
+                case Model.MenuAreaType.MagicWeapon:
+                    break;
+                case Model.MenuAreaType.Mall:
+                    break;
+                default:
+                    break;
+            }
         };
         /**
          * @主页面顶部按钮事件初始化.

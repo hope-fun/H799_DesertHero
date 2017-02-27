@@ -545,6 +545,7 @@ module ViewModel {
             if (Model.WebServiceBase.isDebug) {
                 console.log("zhujun: change Enemy " + _index);
             }
+            // this.enemyDB.reset();
             this.enemyDB.changeArmature(Model.MonsterLocalService.MonsterList[_index].DBJson,
                 Model.MonsterLocalService.MonsterList[_index].DBPngJson,
                 Model.MonsterLocalService.MonsterList[_index].DBPng,
@@ -651,8 +652,9 @@ module ViewModel {
          */
         public enemyHit() {
             console.log("zhujun： enemy Hit " + Model.SceneLocalService.SceneData.currentMonster);
+            //之前这边是两个mc，播完受击动作需要切换mc回到待机动作.现在播一次攻击会默认回到循环待机.
             this.enemyDB.play(Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].Hit, 1, () => {
-                this.changeEnemy(Model.SceneLocalService.SceneData.currentMonster);
+                this.enemyDB.play(Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].Idle);
             });
             var enemyHit: Model.MovieClipService = new Model.MovieClipService(this.levelUpLight);//敌人受到攻击时的特效.by zhu_jun,2017.02.06.
             var enemyHitMc = enemyHit.initMovieClip("Tx_shouji_json", "Tx_shouji_png", "Tx_shouji", 1, () => {

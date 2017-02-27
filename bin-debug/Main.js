@@ -1,3 +1,11 @@
+var __reflect = (this && this.__reflect) || function (p, c, t) {
+    p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
+};
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-2015, Egret Technology Inc.
@@ -26,14 +34,12 @@
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var __reflect = (this && this.__reflect) || function (p, c, t) {
-    p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
-};
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+/**
+ * @按键控制说明.
+ * @back键：退出.
+ * @menu键：切换菜单区域.
+ * @
+ */
 var Main = (function (_super) {
     __extends(Main, _super);
     function Main() {
@@ -63,6 +69,7 @@ var Main = (function (_super) {
     Main.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
         Main.singleton = this;
+        this.keyEventTool = new Model.KeyEventTool(); //注册按键事件.
         //inject the custom material parser
         //注入自定义的素材解析器
         var assetAdapter = new AssetAdapter();
@@ -92,14 +99,6 @@ var Main = (function (_super) {
         this.isThemeLoadEnd = true;
         this.createLogoScene();
     };
-    Object.defineProperty(Main, "TTT", {
-        get: function () {
-            alert("ttt");
-            return "";
-        },
-        enumerable: true,
-        configurable: true
-    });
     /**
      * @创建资源加载以及logo场景.
      */

@@ -26,7 +26,12 @@
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+/**
+ * @按键控制说明.
+ * @back键：退出.
+ * @menu键：切换菜单区域.
+ * @
+ */
 class Main extends eui.UILayer {
     /**
      * @主脚本单例
@@ -37,6 +42,10 @@ class Main extends eui.UILayer {
      * @loading process interface
      */
     private logoVM: ViewModel.LogoVM;
+    /**
+     * @按键事件.
+     */
+    public keyEventTool: Model.KeyEventTool;
     /**
      * @主界面控件.  
      * @depth:2.
@@ -71,6 +80,7 @@ class Main extends eui.UILayer {
     protected createChildren(): void {
         super.createChildren();
         Main.singleton = this;
+        this.keyEventTool = new Model.KeyEventTool();//注册按键事件.
         //inject the custom material parser
         //注入自定义的素材解析器
         var assetAdapter = new AssetAdapter();
@@ -103,10 +113,6 @@ class Main extends eui.UILayer {
         this.createLogoScene();
     }
 
-    public static get TTT(): string {
-        alert("ttt");
-        return "";
-    }
 
     /**
      * @创建资源加载以及logo场景.

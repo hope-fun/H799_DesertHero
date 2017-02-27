@@ -101,6 +101,11 @@ module Model {
             this.armature.animation.gotoAndPlay(_actionName, -1, -1, playTimes);
         }
 
+        // public reset() {
+        //     dragonBones.WorldClock.clock.remove(this.armature);
+        //     this.armature.dispose();
+        // }
+
         // /**
         //  * @改变龙骨,不重新add到场景.
         //  */

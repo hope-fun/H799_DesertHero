@@ -4,6 +4,21 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 var Model;
 (function (Model) {
     /**
+     * @菜单区域类型.
+     * @
+     */
+    var MenuAreaType;
+    (function (MenuAreaType) {
+        MenuAreaType[MenuAreaType["TopLeft"] = 0] = "TopLeft";
+        MenuAreaType[MenuAreaType["TopRight"] = 1] = "TopRight";
+        // BottomParent,
+        MenuAreaType[MenuAreaType["GeneralMain"] = 2] = "GeneralMain";
+        MenuAreaType[MenuAreaType["GeneralSecond"] = 3] = "GeneralSecond";
+        MenuAreaType[MenuAreaType["GeneralSkill"] = 4] = "GeneralSkill";
+        MenuAreaType[MenuAreaType["MagicWeapon"] = 5] = "MagicWeapon";
+        MenuAreaType[MenuAreaType["Mall"] = 6] = "Mall";
+    })(MenuAreaType = Model.MenuAreaType || (Model.MenuAreaType = {}));
+    /**
      * @主角技能枚举.
      * @by zhu_jun,2016.01.17.
      * @破风剑诀	SKILL_EFFECT_CLICK_MULTIPLE
@@ -286,6 +301,25 @@ var Model;
      * @静态数据对象.
      */
     WebValue.dataStModel = new Model.DataStModel();
+    /**
+     * @按钮.
+     */
+    WebValue.menuAreaStatus = {
+        areaId: MenuAreaType.GeneralSkill,
+        btnId: 1
+    };
+    WebValue.menuEventConfig = {
+        bossBtn: {
+            topBtn: null,
+            topEvent: null,
+            bottomBtn: null,
+            bottomEvent: function () { return alert(1); },
+            leftBtn: null,
+            leftEvent: null,
+            rightBtn: null,
+            rightEvent: null
+        }
+    };
     Model.WebValue = WebValue;
     __reflect(WebValue.prototype, "Model.WebValue");
 })(Model || (Model = {}));

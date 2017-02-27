@@ -1,5 +1,20 @@
 module Model {
     /**
+     * @菜单区域类型.
+     * @
+     */
+    export enum MenuAreaType{
+        TopLeft,
+        TopRight,
+        // BottomParent,
+        GeneralMain,
+        GeneralSecond,
+        GeneralSkill,
+        MagicWeapon,
+        Mall
+    }
+
+    /**
      * @主角技能枚举.
      * @by zhu_jun,2016.01.17.
      * @破风剑诀	SKILL_EFFECT_CLICK_MULTIPLE
@@ -284,5 +299,33 @@ module Model {
          * @静态数据对象.
          */
         public static dataStModel: DataStModel = new DataStModel();
+
+        /**
+         * @按钮.
+         */
+        public static menuAreaStatus={
+            areaId:MenuAreaType.GeneralSkill,
+            btnId:1
+        };
+
+        public static menuEventConfig={
+            bossBtn:{
+                topBtn:null,
+                topEvent:null,
+                bottomBtn:null,
+                bottomEvent:WebValue.eventList[""],
+                leftBtn:null,
+                leftEvent:null,
+                rightBtn:null,
+                rightEvent:null
+            }
+            // btnSetting
+            // btnAchievement
+        }
+
+        /**
+         * @事件列表.
+         */
+        public static eventList:Model.HashMap;
     }
 }

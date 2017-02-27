@@ -70,6 +70,62 @@ module ViewModel {
             this.initBtnTop();
             this.initBtnBottomEvent();
             this.initBtnBottomGroupUI();
+
+            Model.WebValue.menuEventConfig.bossBtn["bottomEvent"]();
+        }
+
+        private initKeyMenuEvent() {
+
+        }
+
+        /**
+         * @初始化键盘菜单事件.
+         */
+        private updateKeyMenuEvent(_areaId: Model.MenuAreaType = null, _btnId: number = null) {
+            var areaId = _areaId == null ? Model.WebValue.menuAreaStatus.areaId : _areaId;
+            var btnId = _btnId == null ? Model.WebValue.menuAreaStatus.btnId : _btnId;
+            // if(_areaId == Model.MenuAreaType.BottomChild)
+            switch (areaId) {
+                case Model.MenuAreaType.TopLeft:
+                    //这个里面再判断btnId.看当前光标在哪个按钮上,就赋值哪个方法.
+                    if (Model.WebValue.menuAreaStatus.btnId == 1) {
+                        Model.KeyEventTool.onDirectionDown = () => {
+                            console.log("这个是TopLeft区域，第1个按钮的方法!");
+                        };
+
+                        // Model.KeyEventTool.onDirectionDown = onEventList["key"]();
+
+                    }
+                    break;
+                case Model.MenuAreaType.TopRight:
+                    var aaa={
+                        test:"test",
+                        test2:"test2"
+                    }
+
+                    aaa["test3"] = "test3";
+                    // aaa[2].re
+
+
+                    break;
+                case Model.MenuAreaType.GeneralMain:
+
+                    break;
+                case Model.MenuAreaType.GeneralSecond:
+
+                    break;
+                case Model.MenuAreaType.GeneralSkill:
+
+                    break;
+                case Model.MenuAreaType.MagicWeapon:
+
+                    break;
+                case Model.MenuAreaType.Mall:
+
+                    break;
+                default:
+                    break;
+            }
         }
 
         /**
@@ -110,7 +166,6 @@ module ViewModel {
                 this.menuPopupGroup.visible = false;
                 this.currentPage = PageName.MainInfo;
             }, this);
-
             this.btnBottom.btnProtagonist.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
                 this.menuPopupGroup.visible = true;
                 this.menuPopup.setPData();
@@ -161,10 +216,10 @@ module ViewModel {
          * @by zhu_jun,2017.02.19.
          */
         public btnBottomChange(evt?: egret.Event) {//this.btnBottom.btnSkill是eui.Button.
-            if(evt.target == this.btnBottom.btnSkill){
+            if (evt.target == this.btnBottom.btnSkill) {
                 this.btnBottom.btnSkill.currentState = "down";
                 this.btnBottom.btnSkill.enabled = false;
-            }else{
+            } else {
                 this.btnBottom.btnSkill.currentState = "up";
                 this.btnBottom.btnSkill.enabled = true;
             }
