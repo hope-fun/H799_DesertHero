@@ -21,7 +21,7 @@ module ViewModel {
         /**
          * @黑色背景.
          */
-        private maskBlackSettings: eui.Image;
+        private maskBlackSettings: eui.Rect;
         /**
          * @主题窗口
          */
@@ -68,7 +68,7 @@ module ViewModel {
          * @by cai_haotian 2016.3.10
          */ 
         private initWindow(){
-            egret.Tween.get(this.maskBlackSettings).to({ alpha: 0.7 },700,egret.Ease.circIn);
+            egret.Tween.get(this.maskBlackSettings).to({ alpha: 0.65 },700,egret.Ease.circIn);
             egret.Tween.get(this.window).to({ y: 0 },700,egret.Ease.backOut);
             this.LGCloseBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,() => {
                 egret.Tween.get(this.maskBlackSettings).to({ alpha: 0 },700,egret.Ease.circIn);

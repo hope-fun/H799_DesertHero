@@ -2589,7 +2589,7 @@
     {
       "name": "杀人如麻",
       "description": "击杀{}敌人",
-      "pic": "achievement_1",
+      "pic": "achievement_1_png",
       "type": "ACHIEVEMENT_TYPE_KILL_ENEMY",
       "firstValue": 100,
       "firstMagnitude": 1,
@@ -2616,7 +2616,7 @@
     {
       "name": "大杀四方",
       "description": "到达{}关",
-      "pic": "achievement_2",
+      "pic": "achievement_2_png",
       "type": "ACHIEVEMENT_TYPE_ARRIVE_SCENE",
       "firstValue": 10,
       "firstMagnitude": 1,
@@ -2643,7 +2643,7 @@
     {
       "name": "财源滚滚",
       "description": "获得{}铜币",
-      "pic": "achievement_16",
+      "pic": "achievement_16_png",
       "type": "ACHIEVEMENT_TYPE_GET_COIN",
       "firstValue": 1,
       "firstMagnitude": 2,
@@ -2670,7 +2670,7 @@
     {
       "name": "炼金术师",
       "description": "获得{}灵石",
-      "pic": "achievement_14",
+      "pic": "achievement_14_png",
       "type": "ACHIEVEMENT_TYPE_GET_JEWEL",
       "firstValue": 10,
       "firstMagnitude": 1,
@@ -2697,7 +2697,7 @@
     {
       "name": "武器大师",
       "description": "获得{}神器",
-      "pic": "achievement_15",
+      "pic": "achievement_15_png",
       "type": "ACHIEVEMENT_TYPE_GET_MAGIC_WEAPON",
       "firstValue": 1,
       "firstMagnitude": 1,
@@ -2724,7 +2724,7 @@
     {
       "name": "无限火力",
       "description": "挚友{}秒伤",
-      "pic": "achievement_3",
+      "pic": "achievement_3_png",
       "type": "ACHIEVEMENT_TYPE_FRIEND_DAMAGE",
       "firstValue": 1,
       "firstMagnitude": 2,
@@ -2751,7 +2751,7 @@
     {
       "name": "团队合作",
       "description": "获得{}个挚友",
-      "pic": "achievement_4",
+      "pic": "achievement_4_png",
       "type": "ACHIEVEMENT_TYPE_GET_FRIEND",
       "firstValue": 1,
       "firstMagnitude": 1,
@@ -2778,7 +2778,7 @@
     {
       "name": "天降横财",
       "description": "获得{}个仙女礼物",
-      "pic": "achievement_5",
+      "pic": "achievement_5_png",
       "type": "ACHIEVEMENT_TYPE_GET_GIFT",
       "firstValue": 20,
       "firstMagnitude": 1,
@@ -2805,7 +2805,7 @@
     {
       "name": "富甲天下",
       "description": "击杀{}个聚宝盆",
-      "pic": "achievement_6",
+      "pic": "achievement_6_png",
       "type": "ACHIEVEMENT_TYPE_GET_BOX",
       "firstValue": 20,
       "firstMagnitude": 1,
@@ -2832,7 +2832,7 @@
     {
       "name": "一夫当关",
       "description": "击杀{}个头目",
-      "pic": "achievement_7",
+      "pic": "achievement_7_png",
       "type": "ACHIEVEMENT_TYPE_KILL_BOSS",
       "firstValue": 10,
       "firstMagnitude": 1,
@@ -2859,7 +2859,7 @@
     {
       "name": "熟能生巧",
       "description": "使用{}次虎咆阳炎",
-      "pic": "achievement_8",
+      "pic": "achievement_8_png",
       "type": "ACHIEVEMENT_TYPE_USE_SKILL1",
       "firstValue": 10,
       "firstMagnitude": 1,
@@ -2886,7 +2886,7 @@
     {
       "name": "幻影之舞",
       "description": "使用{}次神鬼乱舞",
-      "pic": "achievement_9",
+      "pic": "achievement_9_png",
       "type": "ACHIEVEMENT_TYPE_USE_SKILL2",
       "firstValue": 10,
       "firstMagnitude": 1,
@@ -2913,7 +2913,7 @@
     {
       "name": "无尽之刃",
       "description": "使用{}次三圣华斩",
-      "pic": "achievement_10",
+      "pic": "achievement_10_png",
       "type": "ACHIEVEMENT_TYPE_USE_SKILL3",
       "firstValue": 10,
       "firstMagnitude": 1,
@@ -2940,7 +2940,7 @@
     {
       "name": "幽梦之灵",
       "description": "使用{}次雷光焦狱",
-      "pic": "achievement_11",
+      "pic": "achievement_11_png",
       "type": "ACHIEVEMENT_TYPE_USE_SKILL4",
       "firstValue": 10,
       "firstMagnitude": 1,
@@ -2967,7 +2967,7 @@
     {
       "name": "三相之力",
       "description": "使用{}次八卦奇阵",
-      "pic": "achievement_12",
+      "pic": "achievement_12_png",
       "type": "ACHIEVEMENT_TYPE_USE_SKILL5",
       "firstValue": 10,
       "firstMagnitude": 1,
@@ -2994,7 +2994,7 @@
     {
       "name": "贪婪之刃",
       "description": "使用{}次招财进宝",
-      "pic": "achievement_13",
+      "pic": "achievement_13_png",
       "type": "ACHIEVEMENT_TYPE_USE_SKILL6",
       "firstValue": 10,
       "firstMagnitude": 1,

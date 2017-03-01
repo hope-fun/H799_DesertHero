@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="View.ProgressHp" width="321" height="34" xmlns:e="http://ns.egret.com/eui">
-		<e:Image id="progressBg"
-		         scale9Grid="6,7,14,3" source="jindu01_png" verticalCenter="0" horizontalCenter="0"/>
-		<e:Image id="thumb" scale9Grid="7,7,13,3" source="jindu02_png" verticalCenter="0" horizontalCenter="0"/>
-		<e:Label id="labelDisplay" textAlign="center" verticalAlign="middle"
-		         size="15" fontFamily="黑体" textColor="0x707070"
-		         horizontalCenter="0" verticalCenter="0" visible="false"/>
-</e:Skin>

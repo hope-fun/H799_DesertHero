@@ -197,7 +197,6 @@ var ViewModel;
                     }
                     else {
                         if (Model.WebServiceBase.isDebug) {
-                            console.log("zhujun: monster have been alive ! ");
                         }
                     }
                 });

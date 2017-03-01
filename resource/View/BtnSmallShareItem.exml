@@ -3,8 +3,8 @@
         currentState="up" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*" >
 	<e:Group scaleX.down="1.1" scaleY.down="1.1"  horizontalCenter="0" verticalCenter="0" width="80" height="65">
 		<e:Group height="37" width="80" horizontalCenter="0" verticalCenter="13">
-			<e:Image id="zhujue" includeIn="up,down" left="0" right="0" top="0" bottom="0" visible.disabled="false" source.up="icon_button" scale9Grid.up="32,17,69,10" visible.up="false" source.down="icon_button" scale9Grid.down="17,16,103,13" visible.down="false" source="icon_button"/>
-			<e:Image id="friend" includeIn="up,down" left="0" right="0" top="0" bottom="0" visible.disabled="false" source.up="icon_button" scale9Grid.up="31,16,80,14" visible.up="false" source.down="icon_button" scale9Grid.down="23,18,93,9" visible.down="false" source="icon_button"/>
+			<e:Image id="zhujue" includeIn="up,down" left="0" right="0" top="0" bottom="0" visible.disabled="false" source.up="btn_01_png" scale9Grid.up="32,17,69,10" visible.up="false" source.down="btn_01_png" scale9Grid.down="17,16,103,13" visible.down="false" source="btn_01_png"/>
+			<e:Image id="friend" includeIn="up,down" left="0" right="0" top="0" bottom="0" visible.disabled="false" source.up="btn_01_png" scale9Grid.up="31,16,80,14" visible.up="false" source.down="btn_01_png" scale9Grid.down="23,18,93,9" visible.down="false" source="btn_01_png"/>
 			<e:Label id="describe" textColor="0x000000" size="16" fontFamily="黑体" textAlign="center" verticalAlign="middle"  horizontalCenter="0" verticalCenter="-0.5"/>
 		</e:Group>
 		<e:Label fontFamily="黑体" textAlign="center" size="16" id="costNum" verticalCenter="-19.5" text="58k" left="44"/>

@@ -14,7 +14,7 @@ module ViewModel {
         /**
          * @按钮图片路径 默认是关闭按钮
          */ 
-        public btnImgSource: string ="icon_guanbi";
+        public btnImgSource: string ="btn_tanchuang_png";
         
         /**
          * @效果层
@@ -24,9 +24,15 @@ module ViewModel {
         public constructor() {
             super();
             this.skinName = View.CloseBtn;
+             this.setSkinPart("btnImgSource", this.btnImgSource);
         }
         protected createChildren() { 
             super.createChildren();
+            
+        }
+
+        protected childrenCreated(){
+            super.childrenCreated();
             this.btnImg.source=this.btnImgSource;
         }
         

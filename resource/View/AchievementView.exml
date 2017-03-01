@@ -1,24 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="View.AchievementView" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
-	<e:Group id="window" width="600" height="900" y="0" x="0">
-		<e:Image source="mask_black" scale9Grid="1,1,1,1" left="0" right="0" top="0" bottom="0" alpha="0.7"/>
-		<e:Group left="0" right="0" height="853" bottom="4">
-			<e:Image fillMode="repeat" top="0" bottom="34" source="bg_tankuangda" scale9Grid="36,111,13,670" left="0" right="0"/>
-			<e:Image source="bg_tankuangda_nei" scale9Grid="12,13,5,7" height="690" width="550" verticalCenter="16.5" horizontalCenter="0"/>
-			<e:Scroller width="542" height="674" horizontalCenter="0" y="106">
-				<e:Group id="listGroup" width="564" cacheAsBitmap="true">
+<e:Skin class="View.AchievementView" width="1280" height="720" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Rect id="maskBlackSettings" left="0" right="0" top="0" bottom="0" fillAlpha="0"/>
+		<e:Group id="window" width="1280" height="720" horizontalCenter="0" y="0">
+			<e:Image id="popBg" fillMode="repeat" source="k_chengjiu_png" anchorOffsetX="0" anchorOffsetY="0" scale9Grid="624,97,18,473" verticalCenter="0" horizontalCenter="0"/>
+			<e:Scroller width="637.45" height="518.86" y="125.15" anchorOffsetY="0" anchorOffsetX="0" left="150">
+				<e:Group id="listGroup" width="651.09" cacheAsBitmap="true" scaleY="0.87" anchorOffsetY="0" height="586.63" x="6.06" y="0.18" anchorOffsetX="0">
 					<e:layout>
 						<e:VerticalLayout gap="12"/>
 					</e:layout>
 				</e:Group>
 			</e:Scroller>
+			<e:Label text="达成累计目标获取奖励！" size="30" fontFamily="隶书" y="125.33" x="766.03"/>
+			<e:Image id="icon" source="icon_yuanbao_png" x="785.03" y="190.15"/>
+			<e:Label id="earnMoney" text="9999999999999" fontFamily="黑体" size="34" verticalCenter="-150" left="839" textAlign="left"/>
+			<ViewModel:CloseBtnVM id="closeBtn" label="" verticalCenter="191.5" horizontalCenter="287.5" btnImgSource="btn_tanchuang_png" skinName="View.CloseBtn">
+			</ViewModel:CloseBtnVM>
 		</e:Group>
-		<e:Image source="bg_tankuangnei_jianbian" y="86" scale9Grid="89,11,15,5" height="34" width="545" x="28"/>
-		<e:Label text="达成目标获取奖励！" size="20" fontFamily="黑体" y="93" x="62"/>
-		<e:Image source="bg_xiabiaoti" y="30" scale9Grid="25,2,2,36" width="274" horizontalCenter="0" height="55"/>
-		<ViewModel:CloseBtnVM id="closeBtn" label="按钮" x="541" skinName="View.CloseBtn" y="31"/>
-		<e:Image source="chengjiu" y="39" horizontalCenter="0"/>
-		<e:Label id="earnMoney" text="9999" fontFamily="黑体" size="20" left="473" verticalCenter="-347"/>
-		<e:Image source="icon_yuanbao_png" horizontalCenter="152" verticalCenter="-347" width="30" height="20"/>
 	</e:Group>
 </e:Skin>

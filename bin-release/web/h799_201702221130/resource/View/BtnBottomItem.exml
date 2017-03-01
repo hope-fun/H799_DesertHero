@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="View.BtnBottomItem" states="up,down" width="272" height="103" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Group id="btnGroup" left="0" right="0" top="0" bottom="0">
-		<e:Image id="btnBg" source="btn_caidan_png" horizontalCenter="0" verticalCenter="0" source.down="btn_caidan_png"/>
-		<e:Image id="selectMark" source="btn_choose_png" verticalCenter="0" horizontalCenter="0" includeIn="down"/>
-		<e:Image id="btnWordImage" source="t_zhujiang_png" verticalCenter="0" horizontalCenter="0"/>
-		<e:Image id="btnNewMark" source="icon_new_png" left="30" top="20"/>												
-	</e:Group>
-</e:Skin>

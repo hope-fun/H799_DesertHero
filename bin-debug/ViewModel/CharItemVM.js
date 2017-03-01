@@ -440,8 +440,8 @@ var ViewModel;
          * @by zhu_jun,2017.02.26.
          */
         CharItemVM.prototype.levelUpAnimel = function () {
-            this.levelUpDB = new Model.DragonBones(this, "Tx_shengji_02_json", "Tx_shengji_tex_02_json", "Tx_shengji_tex_02_png", "Tx_shengji_02", 47, 36);
-            this.levelUpDB.setActive(false);
+            this.levelUpDB = new Model.DragonBones(this, "Tx_shengji_02_ske_json", "Tx_shengji_02_tex_json", "Tx_shengji_02_tex_png", "Tx_shengji_02", 47, 36);
+            // this.levelUpDB.setActive(false);
         };
         /**
          * @播放item上的升级特效

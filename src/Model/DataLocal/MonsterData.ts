@@ -95,7 +95,7 @@ module Model {
 		public set AddHp(_value: number) {
 			this.hp += _value;
 			if (Model.WebServiceBase.isDebug) {
-				console.log("zhujun: this.hp += _value  " + this.hp);
+				// console.log("zhujun: this.hp += _value  " + this.hp);
 			}
 
 			if (this.hp < 0) {

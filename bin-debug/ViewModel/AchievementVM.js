@@ -31,10 +31,19 @@ var ViewModel;
             _this.uiLayer.addChild(_this);
             return _this;
         }
+        /**
+         * @初始化窗口
+         * @by cai_haotian 2016.3.10
+         */
+        AchievementVM.prototype.initWindow = function () {
+            egret.Tween.get(this.maskBlackSettings).to({ alpha: 0.65 }, 700, egret.Ease.circIn);
+            egret.Tween.get(this.window).to({ y: 0 }, 700, egret.Ease.backOut);
+        };
         AchievementVM.prototype.createChildren = function () {
             _super.prototype.createChildren.call(this);
             this.setAchievementList();
             this.setYbCount();
+            this.initWindow();
         };
         /**
          * @设置成就钱数

@@ -79,7 +79,6 @@ var Model;
             set: function (_value) {
                 this.hp += _value;
                 if (Model.WebServiceBase.isDebug) {
-                    console.log("zhujun: this.hp += _value  " + this.hp);
                 }
                 if (this.hp < 0) {
                     this.hp = 0;

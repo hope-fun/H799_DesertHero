@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="View.BtnActiveSkillView" states="locked,disabled,enabled,during" width="80" height="80" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Group id="skillState" width="80" height="80" horizontalCenter="0" verticalCenter="0" >
-		<e:Image id="skillIcon" alpha.locked=".4" includeIn="disabled,locked,enabled,during" source="active_skill_1_png" verticalCenter="0" horizontalCenter="0" width="72" height="72"/>
-		<e:Image id="mask" includeIn="disabled,during" verticalCenter="0" horizontalCenter="0" alpha="0.65" source="guangMask_png"/> 
-		<e:Image id="border" verticalCenter.during="0" verticalCenter.enabled="0" verticalCenter.disabled="0" horizontalCenter.during="0" horizontalCenter.enabled="0" horizontalCenter.disabled="0" touchEnabled.enabled="false" source="guangquan_01_png" source.locked="suo_01_png" height.locked="80" verticalCenter.locked="0" horizontalCenter.locked="0" verticalCenter="0" horizontalCenter="0" source.disabled="guangquan_02_png"/>
-		<e:Label id="counterCD" text="99:99" bold="true" fontFamily="黑体" horizontalCenter.enabled="4" horizontalCenter.locked="4" verticalCenter.enabled="0" verticalCenter.locked="0" size="22" width.enabled="62" width.disabled="62" width.locked="62" visible.disabled="true" text.disabled="00:00" text.during="00:30" horizontalCenter.disabled="0" verticalCenter.disabled="0" anchorOffsetX.during="0" verticalCenter.during="0" left.during="0" right.during="0" verticalCenter="0" left="0" right="0" textAlign.enabled="center" textAlign.disabled="center" textAlign.locked="center" textAlign.during="center" textAlign="center" includeIn="disabled,during"/>
-    </e:Group>
-</e:Skin>

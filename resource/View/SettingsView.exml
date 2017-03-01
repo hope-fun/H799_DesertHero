@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="View.SettingsView" width="1280" height="720" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
    <e:Group  left="0" right="0" top="0" bottom="0">
-			<e:Image id="maskBlackSettings" width="100%" height="100%" source="mask_black" alpha="0" horizontalCenter="0" verticalCenter="0" scale9Grid="1,1,1,1" x="0" y="0" scaleX="1" scaleY="1"/>
-			<e:Group id="window" width="1280" x="0" height="720" y="0" anchorOffsetY="-720">
+			<e:Rect id="maskBlackSettings" fillAlpha="0.65" left="0" right="0" top="0" bottom="0"/>
+			<e:Group id="window" width="1280" x="0" height="720" y="-720" anchorOffsetY="0">
 				<e:Image id="popBg" scale9Grid="34,111,6,670" source="k_shezhi_png" horizontalCenter="0" verticalCenter="0"/>
 				<e:Label id="soundLabel" y="279" textColor="0xFFFFFF" text="音效" fontFamily="隶书" horizontalCenter="-97" size="35" x="513.0000000000001" scaleX="1" scaleY="1"/>
 				<e:Label id="musicLabel" y="343.00000000000006" textColor="0xFFFFFF" text="音乐" fontFamily="隶书" horizontalCenter="-96" size="35" x="514" scaleX="1" scaleY="1"/>

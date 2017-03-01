@@ -314,7 +314,7 @@ module ViewModel {
                         });//先死后加index.
                     } else {
                         if (Model.WebServiceBase.isDebug) {
-                            console.log("zhujun: monster have been alive ! ");
+                            // console.log("zhujun: monster have been alive ! ");
                         }
 
                     }

@@ -39,7 +39,7 @@ var ViewModel;
          */
         SettingsVM.prototype.initWindow = function () {
             var _this = this;
-            egret.Tween.get(this.maskBlackSettings).to({ alpha: 0.7 }, 700, egret.Ease.circIn);
+            egret.Tween.get(this.maskBlackSettings).to({ alpha: 0.65 }, 700, egret.Ease.circIn);
             egret.Tween.get(this.window).to({ y: 0 }, 700, egret.Ease.backOut);
             this.LGCloseBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
                 egret.Tween.get(_this.maskBlackSettings).to({ alpha: 0 }, 700, egret.Ease.circIn);

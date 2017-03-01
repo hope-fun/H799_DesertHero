@@ -19,7 +19,7 @@ module ViewModel {
         /**
          * @关闭按钮
          */
-        private closeBtn: ViewModel.CloseBtnVM;
+        private closeBtn:ViewModel.CloseBtnVM;
 
         /**
          * @显示列表
@@ -42,6 +42,8 @@ module ViewModel {
          */
         private achievementItem: ViewModel.AchievementItemVM[] = [];
 
+        private maskBlackSettings:eui.Rect;
+
         /**
          * @金币增长时间 
          */
@@ -59,10 +61,23 @@ module ViewModel {
             this.uiLayer.addChild(this);
         }
 
+
+        /**
+         * @初始化窗口
+         * @by cai_haotian 2016.3.10
+         */ 
+        private initWindow(){
+            egret.Tween.get(this.maskBlackSettings).to({ alpha: 0.65 },700,egret.Ease.circIn);
+            egret.Tween.get(this.window).to({ y: 0 },700,egret.Ease.backOut);
+
+
+        }
+
         protected createChildren() {
             super.createChildren();
             this.setAchievementList();
             this.setYbCount();
+            this.initWindow();
         }
 
     	/**

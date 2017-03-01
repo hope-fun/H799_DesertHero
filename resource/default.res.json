@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bgm-003_mp3,YX-001_mp3,YX-002_mp3,YX-003_mp3,YX-004_mp3,YX-005_mp3,YX-006_mp3,YX-007_mp3,YX-009_mp3,YX-010_mp3,YX-011_mp3,YX-012_mp3,critical-font_fnt,gold-font_fnt,normal-font_fnt,gold-show-font_fnt,stDB_json,dyDB_json,scene_pic_1,active_skill_3_png,active_skill_4_png,active_skill_5_png,active_skill_6_png,active_skill_1_png,active_skill_2_png,btn_02_png,btn_03_png,btn_caidan_png,btn_chengjiu_png,btn_choose_png,btn_huodong_png,btn_jineng_png,btn_jineng02_png,btn_shezhi_png,btn_taopao_png,btn_tiaozhan_png,guangquan_01_png,guangquan_02_png,icon_guanka_png,icon_jian_png,icon_new_png,icon_yinbi_png,icon_yuanbao_png,jindu01_png,jindu02_png,k_01_png,k_02_png,k_di_png,k_money_png,k_siwang_png,suo_01_png,xuetiao_01_png,xuetiao_02_png,xuetiao_03_png,bg_jineng_png,btn_01_png,t_dangqianmiaoshang_png,t_dianji_png,t_dianjijineng_png,t_dianjishanghai_png,t_fujiang_png,t_miaoshang_png,t_shangcheng_png,t_shenqi_png,t_suoyoushanghai_png,t_xiakemiaoshang_png,t_zhujiang_png,bodyGuanYu_ske_json,bodyGuanYu_tex_json,bodyGuanYu_tex_png,bodyQinQiong_ske_json,bodyQinQiong_tex_json,bodyQinQiong_tex_png,bodyZhangFei_ske_json,bodyZhangFei_tex_json,bodyZhangFei_tex_png,guangMask_png,juanzhou_png,Tx_dianji_png,daojishi_png,magic_weapon_30_png,magic_weapon_0_png,magic_weapon_1_png,magic_weapon_2_png,magic_weapon_3_png,magic_weapon_4_png,magic_weapon_5_png,magic_weapon_6_png,magic_weapon_7_png,magic_weapon_8_png,magic_weapon_9_png,magic_weapon_10_png,magic_weapon_11_png,magic_weapon_12_png,magic_weapon_13_png,magic_weapon_14_png,magic_weapon_15_png,magic_weapon_16_png,magic_weapon_17_png,magic_weapon_18_png,magic_weapon_19_png,magic_weapon_20_png,magic_weapon_21_png,magic_weapon_22_png,magic_weapon_23_png,magic_weapon_24_png,magic_weapon_25_png,magic_weapon_26_png,magic_weapon_27_png,magic_weapon_28_png,magic_weapon_29_png,skill_05_5_png,protagonist_png,skill_01_png,skill_01_1_png,skill_01_2_png,skill_01_3_png,skill_01_4_png,skill_01_5_png,skill_02_png,skill_02_1_png,skill_02_2_png,skill_02_3_png,skill_02_4_png,skill_02_5_png,skill_03_png,skill_03_1_png,skill_03_2_png,skill_03_3_png,skill_03_4_png,skill_03_5_png,skill_04_png,skill_04_1_png,skill_04_2_png,skill_04_3_png,skill_04_4_png,skill_04_5_png,skill_05_png,skill_05_1_png,skill_05_2_png,skill_05_3_png,skill_05_4_png,mall_skill_2_png,mall_1_png,mall_1_1_png,mall_get_yb_png,mall_mon_1_png,mall_mon_2_png,mall_mon_3_png,layer_07_s_png,layer_01_l_png,layer_01_s_png,layer_02_l_png,layer_02_s_png,layer_03_l_png,layer_03_s_png,layer_04_l_png,layer_04_s_png,layer_05_l_png,layer_05_s_png,layer_06_l_png,layer_06_s_png,layer_07_l_png,Icon_shangcheng_png,grade_4_png,grade_5_png,grade_6_png,grade_1_png,grade_2_png,grade_3_png,Tx_shouji_json,Tx_shouji_png,Tx_zhujue_04_json,Tx_zhujue_04_png,Tx_zhujue_hc0405_ske_json,Tx_zhujue_hc0405_tex_json,Tx_zhujue_hc0405_tex_png,Tx_zhujue_01_json,Tx_zhujue_01_png,Tx_zhujue_02_json,Tx_zhujue_02_png,Tx_zhujue_03_particle_png,Tx_zhujue_03_json,Tx_zhujue_06_json,Tx_zhujue_06_png,Tx_siwang_json,Tx_siwang_png,dipan_json,dipan_png,guangxian_json,guangxian_png,Tx_zhujue_tex_03_png,Tx_zhujue_tex_03_json,Tx_zhujue_03_particle_json,Tx_zhujue_03_particle2_png,Tx_zhujue_03_particle2_json,Tx_zhujue_tex_05_png,Tx_zhujue_tex_05_json,Tx_zhujue_05_json,Tx_yunge_attack_tex_png,Tx_yunge_attack_tex_json,Tx_yunge_attack_ske_json,bodyDaoShi_ske_json,bodyDaoShi_tex_json,bodyDaoShi_tex_png,bodyZhaoYun_ske_json,bodyZhaoYun_tex_json,bodyZhaoYun_tex_png,jindu_01_png,zy_png,btn_tanchuang_png,kaiguan_01_png,kaiguan_02_png,k_chengjiu_png,k_shezhi_png,k_tongyong_png,star_png,yiwancheng_png,icon_zhandoushengli_png,icon_zhandoushibai_png,loading02_png,loading01_png,luckywings512_png,icon_lingshi_png,Tx_shengji_02_tex_png,Tx_shengji_02_ske_json,Tx_shengji_02_tex_json",
+			"keys": "bgm-003_mp3,YX-001_mp3,YX-002_mp3,YX-003_mp3,YX-004_mp3,YX-005_mp3,YX-006_mp3,YX-007_mp3,YX-009_mp3,YX-010_mp3,YX-011_mp3,YX-012_mp3,critical-font_fnt,gold-font_fnt,normal-font_fnt,gold-show-font_fnt,stDB_json,dyDB_json,scene_pic_1,active_skill_3_png,active_skill_4_png,active_skill_5_png,active_skill_6_png,active_skill_1_png,active_skill_2_png,btn_02_png,btn_03_png,btn_caidan_png,btn_chengjiu_png,btn_choose_png,btn_huodong_png,btn_jineng_png,btn_jineng02_png,btn_shezhi_png,btn_taopao_png,btn_tiaozhan_png,guangquan_01_png,guangquan_02_png,icon_guanka_png,icon_jian_png,icon_new_png,icon_yinbi_png,icon_yuanbao_png,jindu01_png,jindu02_png,k_01_png,k_02_png,k_di_png,k_money_png,k_siwang_png,suo_01_png,xuetiao_01_png,xuetiao_02_png,xuetiao_03_png,bg_jineng_png,btn_01_png,t_dangqianmiaoshang_png,t_dianji_png,t_dianjijineng_png,t_dianjishanghai_png,t_fujiang_png,t_miaoshang_png,t_shangcheng_png,t_shenqi_png,t_suoyoushanghai_png,t_xiakemiaoshang_png,t_zhujiang_png,bodyGuanYu_ske_json,bodyGuanYu_tex_json,bodyGuanYu_tex_png,bodyQinQiong_ske_json,bodyQinQiong_tex_json,bodyQinQiong_tex_png,bodyZhangFei_ske_json,bodyZhangFei_tex_json,bodyZhangFei_tex_png,guangMask_png,juanzhou_png,Tx_dianji_png,daojishi_png,magic_weapon_30_png,magic_weapon_0_png,magic_weapon_1_png,magic_weapon_2_png,magic_weapon_3_png,magic_weapon_4_png,magic_weapon_5_png,magic_weapon_6_png,magic_weapon_7_png,magic_weapon_8_png,magic_weapon_9_png,magic_weapon_10_png,magic_weapon_11_png,magic_weapon_12_png,magic_weapon_13_png,magic_weapon_14_png,magic_weapon_15_png,magic_weapon_16_png,magic_weapon_17_png,magic_weapon_18_png,magic_weapon_19_png,magic_weapon_20_png,magic_weapon_21_png,magic_weapon_22_png,magic_weapon_23_png,magic_weapon_24_png,magic_weapon_25_png,magic_weapon_26_png,magic_weapon_27_png,magic_weapon_28_png,magic_weapon_29_png,skill_05_5_png,protagonist_png,skill_01_png,skill_01_1_png,skill_01_2_png,skill_01_3_png,skill_01_4_png,skill_01_5_png,skill_02_png,skill_02_1_png,skill_02_2_png,skill_02_3_png,skill_02_4_png,skill_02_5_png,skill_03_png,skill_03_1_png,skill_03_2_png,skill_03_3_png,skill_03_4_png,skill_03_5_png,skill_04_png,skill_04_1_png,skill_04_2_png,skill_04_3_png,skill_04_4_png,skill_04_5_png,skill_05_png,skill_05_1_png,skill_05_2_png,skill_05_3_png,skill_05_4_png,mall_skill_2_png,mall_1_png,mall_1_1_png,mall_get_yb_png,mall_mon_1_png,mall_mon_2_png,mall_mon_3_png,layer_07_s_png,layer_01_l_png,layer_01_s_png,layer_02_l_png,layer_02_s_png,layer_03_l_png,layer_03_s_png,layer_04_l_png,layer_04_s_png,layer_05_l_png,layer_05_s_png,layer_06_l_png,layer_06_s_png,layer_07_l_png,Icon_shangcheng_png,grade_4_png,grade_5_png,grade_6_png,grade_1_png,grade_2_png,grade_3_png,Tx_shouji_json,Tx_shouji_png,Tx_zhujue_04_json,Tx_zhujue_04_png,Tx_zhujue_hc0405_ske_json,Tx_zhujue_hc0405_tex_json,Tx_zhujue_hc0405_tex_png,Tx_zhujue_01_json,Tx_zhujue_01_png,Tx_zhujue_02_json,Tx_zhujue_02_png,Tx_zhujue_03_particle_png,Tx_zhujue_03_json,Tx_zhujue_06_json,Tx_zhujue_06_png,Tx_siwang_json,Tx_siwang_png,dipan_json,dipan_png,guangxian_json,guangxian_png,Tx_zhujue_tex_03_png,Tx_zhujue_tex_03_json,Tx_zhujue_03_particle_json,Tx_zhujue_03_particle2_png,Tx_zhujue_03_particle2_json,Tx_zhujue_tex_05_png,Tx_zhujue_tex_05_json,Tx_zhujue_05_json,Tx_yunge_attack_tex_png,Tx_yunge_attack_tex_json,Tx_yunge_attack_ske_json,bodyDaoShi_ske_json,bodyDaoShi_tex_json,bodyDaoShi_tex_png,bodyZhaoYun_ske_json,bodyZhaoYun_tex_json,bodyZhaoYun_tex_png,jindu_01_png,zy_png,btn_tanchuang_png,kaiguan_01_png,kaiguan_02_png,k_chengjiu_png,k_shezhi_png,k_tongyong_png,star_png,yiwancheng_png,icon_zhandoushengli_png,icon_zhandoushibai_png,loading02_png,loading01_png,luckywings512_png,icon_lingshi_png,Tx_shengji_02_tex_png,Tx_shengji_02_ske_json,Tx_shengji_02_tex_json,achievement_16_png,achievement_1_png,achievement_2_png,achievement_3_png,achievement_4_png,achievement_5_png,achievement_6_png,achievement_7_png,achievement_8_png,achievement_9_png,achievement_10_png,achievement_11_png,achievement_12_png,achievement_13_png,achievement_14_png,achievement_15_png",
 			"name": "preload"
 		}
 	],
@@ -1370,6 +1370,86 @@
 			"name": "Tx_shengji_02_tex_json",
 			"type": "json",
 			"url": "effects/Tx_shengji_02/Tx_shengji_02_tex.json"
+		},
+		{
+			"name": "achievement_16_png",
+			"type": "image",
+			"url": "images/icon/achievement_16.png"
+		},
+		{
+			"name": "achievement_1_png",
+			"type": "image",
+			"url": "images/icon/achievement_1.png"
+		},
+		{
+			"name": "achievement_2_png",
+			"type": "image",
+			"url": "images/icon/achievement_2.png"
+		},
+		{
+			"name": "achievement_3_png",
+			"type": "image",
+			"url": "images/icon/achievement_3.png"
+		},
+		{
+			"name": "achievement_4_png",
+			"type": "image",
+			"url": "images/icon/achievement_4.png"
+		},
+		{
+			"name": "achievement_5_png",
+			"type": "image",
+			"url": "images/icon/achievement_5.png"
+		},
+		{
+			"name": "achievement_6_png",
+			"type": "image",
+			"url": "images/icon/achievement_6.png"
+		},
+		{
+			"name": "achievement_7_png",
+			"type": "image",
+			"url": "images/icon/achievement_7.png"
+		},
+		{
+			"name": "achievement_8_png",
+			"type": "image",
+			"url": "images/icon/achievement_8.png"
+		},
+		{
+			"name": "achievement_9_png",
+			"type": "image",
+			"url": "images/icon/achievement_9.png"
+		},
+		{
+			"name": "achievement_10_png",
+			"type": "image",
+			"url": "images/icon/achievement_10.png"
+		},
+		{
+			"name": "achievement_11_png",
+			"type": "image",
+			"url": "images/icon/achievement_11.png"
+		},
+		{
+			"name": "achievement_12_png",
+			"type": "image",
+			"url": "images/icon/achievement_12.png"
+		},
+		{
+			"name": "achievement_13_png",
+			"type": "image",
+			"url": "images/icon/achievement_13.png"
+		},
+		{
+			"name": "achievement_14_png",
+			"type": "image",
+			"url": "images/icon/achievement_14.png"
+		},
+		{
+			"name": "achievement_15_png",
+			"type": "image",
+			"url": "images/icon/achievement_15.png"
 		}
 	]
 }

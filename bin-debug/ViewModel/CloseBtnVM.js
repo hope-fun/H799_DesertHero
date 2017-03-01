@@ -21,12 +21,16 @@ var ViewModel;
             /**
              * @按钮图片路径 默认是关闭按钮
              */
-            _this.btnImgSource = "icon_guanbi";
+            _this.btnImgSource = "btn_tanchuang_png";
             _this.skinName = View.CloseBtn;
+            _this.setSkinPart("btnImgSource", _this.btnImgSource);
             return _this;
         }
         CloseBtnVM.prototype.createChildren = function () {
             _super.prototype.createChildren.call(this);
+        };
+        CloseBtnVM.prototype.childrenCreated = function () {
+            _super.prototype.childrenCreated.call(this);
             this.btnImg.source = this.btnImgSource;
         };
         /**
