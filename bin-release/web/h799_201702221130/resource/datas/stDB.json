@@ -3216,7 +3216,7 @@
     },
     {
       "difficultNum": 1000,
-      "icon": "Icon_lingshi_1_1",
+      "icon": "icon_lingshi_png_1_1",
       "rewardType": "MONEY_TYPE_JEWEL",
       "rewardCount": 10,
       "description": "获得灵石{}个",

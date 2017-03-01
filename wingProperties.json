@@ -23,8 +23,8 @@
 						},
 						{
 							"isFolder":false,
-							"key":"Icon_lingshi_1_1",
-							"name":"Icon_lingshi_1_1"
+							"key":"icon_lingshi_png_1_1",
+							"name":"icon_lingshi_png_1_1"
 						},
 						{
 							"isFolder":false,
@@ -645,8 +645,8 @@
 						},
 						{
 							"isFolder":false,
-							"key":"MainGame_tw_json.Icon_lingshi_1",
-							"name":"MainGame_tw_json.Icon_lingshi_1"
+							"key":"MainGame_tw_json.icon_lingshi_png_1",
+							"name":"MainGame_tw_json.icon_lingshi_png_1"
 						},
 						{
 							"isFolder":false,
@@ -985,8 +985,8 @@
 						},
 						{
 							"isFolder":false,
-							"key":"MainGame_tw_json.icon_lingshi",
-							"name":"MainGame_tw_json.icon_lingshi"
+							"key":"MainGame_tw_json.icon_lingshi_png",
+							"name":"MainGame_tw_json.icon_lingshi_png"
 						},
 						{
 							"isFolder":false,
@@ -1277,8 +1277,8 @@
 						},
 						{
 							"isFolder":false,
-							"key":"MainGame_json.Icon_lingshi_1",
-							"name":"MainGame_json.Icon_lingshi_1"
+							"key":"MainGame_json.icon_lingshi_png_1",
+							"name":"MainGame_json.icon_lingshi_png_1"
 						},
 						{
 							"isFolder":false,
@@ -1617,8 +1617,8 @@
 						},
 						{
 							"isFolder":false,
-							"key":"MainGame_json.icon_lingshi",
-							"name":"MainGame_json.icon_lingshi"
+							"key":"MainGame_json.icon_lingshi_png",
+							"name":"MainGame_json.icon_lingshi_png"
 						},
 						{
 							"isFolder":false,

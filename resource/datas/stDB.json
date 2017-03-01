@@ -555,9 +555,7 @@
       "sixthLayerValue": 25,
       "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
       "seventhLayerValue": 10000,
-      "dragonBones": "bodyZhangFei",
-      "idle": "baihe_idle",
-      "attack": "baihe_attack",
+      "dragonBones": "bodyZhaoYun",
       "effect": "texture_baihe",
       "attackAudio": "YX-011_mp3",
       "id": 1
@@ -760,9 +758,7 @@
       "sixthLayerValue": 20,
       "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
       "seventhLayerValue": 30,
-      "dragonBones": "bodyZhangFei",
-      "idle": "bingyi_idle",
-      "attack": "bingyi_attack",
+      "dragonBones": "bodyZhaoYun",
       "effect": "texture_bingyi",
       "attackAudio": "YX-010_mp3",
       "id": 7
@@ -965,9 +961,7 @@
       "sixthLayerValue": 5,
       "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
       "seventhLayerValue": 1500,
-      "dragonBones": "bodyZhangFei",
-      "idle": "xupingjun_idle",
-      "attack": "xupingjun_attack",
+      "dragonBones": "bodyZhaoYun",
       "effect": "texture_xupingjun",
       "attackAudio": "YX-010_mp3",
       "id": 13
@@ -1170,9 +1164,7 @@
       "sixthLayerValue": 10,
       "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
       "seventhLayerValue": 10,
-      "dragonBones": "bodyZhangFei",
-      "idle": "mengjue_idle",
-      "attack": "mengjue_attack",
+      "dragonBones": "bodyZhaoYun",
       "effect": "texture_mengjue",
       "attackAudio": "YX-009_mp3",
       "id": 19
@@ -1375,9 +1367,7 @@
       "sixthLayerValue": 5,
       "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
       "seventhLayerValue": 20,
-      "dragonBones": "bodyZhangFei",
-      "idle": "liufuling_idle",
-      "attack": "liufuling_attack",
+      "dragonBones": "bodyZhaoYun",
       "effect": "texture_liufuling",
       "attackAudio": "YX-007_mp3",
       "id": 25
@@ -1924,35 +1914,35 @@
       "name": "裴元绍",
       "pic": "1",
       "monsterType": "MONSTER_TYPE_PERSON",
-      "dragonBones": "bodyQinQiong",
+      "dragonBones": "bodyDaoShi",
       "id": 1
     },
     {
       "name": "管亥",
       "pic": "2",
       "monsterType": "MONSTER_TYPE_PERSON",
-      "dragonBones": "bodyQinQiong",
+      "dragonBones": "bodyDaoShi",
       "id": 2
     },
     {
       "name": "赵弘",
       "pic": "3",
       "monsterType": "MONSTER_TYPE_PERSON",
-      "dragonBones": "bodyQinQiong",
+      "dragonBones": "bodyDaoShi",
       "id": 3
     },
     {
       "name": "张曼成",
       "pic": "4",
       "monsterType": "MONSTER_TYPE_PERSON",
-      "dragonBones": "bodyQinQiong",
+      "dragonBones": "bodyDaoShi",
       "id": 4
     },
     {
       "name": "张宝",
       "pic": "5",
       "monsterType": "MONSTER_TYPE_PERSON",
-      "dragonBones": "bodyQinQiong",
+      "dragonBones": "bodyDaoShi",
       "id": 5
     },
     {
@@ -1966,14 +1956,14 @@
       "name": "张梁",
       "pic": "7",
       "monsterType": "MONSTER_TYPE_PERSON",
-      "dragonBones": "bodyQinQiong",
+      "dragonBones": "bodyDaoShi",
       "id": 7
     },
     {
       "name": "张角",
       "pic": "8",
       "monsterType": "MONSTER_TYPE_PERSON",
-      "dragonBones": "bodyQinQiong",
+      "dragonBones": "bodyDaoShi",
       "id": 8
     },
     {
@@ -2526,6 +2516,31 @@
       "sceneName": "",
       "scenePic": "",
       "id": 100
+    },
+    {
+      "sceneName": "平定河北",
+      "scenePic": "scene_pic_21",
+      "id": 101
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 102
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 103
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 104
+    },
+    {
+      "sceneName": "",
+      "scenePic": "",
+      "id": 105
     }
   ],
   "clanList": [
@@ -3220,7 +3235,7 @@
     },
     {
       "difficultNum": 1000,
-      "icon": "Icon_lingshi_1_1",
+      "icon": "icon_lingshi_png_1_1",
       "rewardType": "MONEY_TYPE_JEWEL",
       "rewardCount": 10,
       "description": "获得灵石{}个",

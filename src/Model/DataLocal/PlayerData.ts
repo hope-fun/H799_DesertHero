@@ -26,7 +26,7 @@ module Model {
 
         public set CurrentDps(_value: number) {
             this.currentDps = _value;
-            Main.singleton.mainMenuVM.mainInfo.setCurrentDps(this.CurrentDpsAndUnit);
+            Main.singleton.mainMenuVM.setCurrentDps(this.CurrentDpsAndUnit);
         }
 
         /**
@@ -57,14 +57,14 @@ module Model {
          */
         public set Gold(_value: number) {
             this.dy.gold = _value;
-            Main.singleton.mainGameVM.sceneInfo.setMoney(this.GoldAndUnit);
+            Main.singleton.mainGameVM.setMoney(this.GoldAndUnit);
         }
         /**
          * @正加负减金币数量.
          */
         public set AddGold(_value: number) {
             this.dy.gold += _value;
-            Main.singleton.mainGameVM.sceneInfo.setMoney(this.GoldAndUnit);
+            Main.singleton.mainGameVM.setMoney(this.GoldAndUnit);
         }
         /**
          * @带单位金币总额.
@@ -80,7 +80,7 @@ module Model {
 
         public set ClickDamage(_value: number) {
             this.dy.clickDamage = _value;
-            Main.singleton.mainMenuVM.mainInfo.setTapDamage(this.ClickDamageAndUnit);
+            Main.singleton.mainMenuVM.setTapDamage(this.ClickDamageAndUnit);
         }
 
         /**
@@ -149,7 +149,7 @@ module Model {
          */
         public set FriendDamage(_value: number) {
             this.dy.friendDamage = _value;
-            Main.singleton.mainMenuVM.mainInfo.setFriendDps(this.FriendDamageAndUnit);
+            Main.singleton.mainMenuVM.setFriendDps(this.FriendDamageAndUnit);
         }
         /**
          * @带单位挚友总秒伤.

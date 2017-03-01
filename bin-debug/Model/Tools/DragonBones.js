@@ -18,14 +18,20 @@ var Model;
              */
             this.onCallBack = null;
             this.onCallBack = _onCallBack;
+            this.parent = _parent;
             this.createArmature(_dData, _tData, _pic, _armatureName);
             this.armature.getDisplay().x = _x;
             this.armature.getDisplay().y = _y;
             dragonBones.WorldClock.clock.add(this.armature);
-            _parent.addChild(this.armature.getDisplay());
+            this.parent.addChild(this.armature.getDisplay());
         }
         DragonBones.prototype.setActive = function (_bool) {
             this.armature.display.visible = _bool;
+        };
+        DragonBones.prototype.reset = function () {
+            this.parent.removeChild(this.armature.display);
+            dragonBones.WorldClock.clock.remove(this.armature);
+            this.armature.dispose();
         };
         /**
          * @修改DB工厂骨架.
@@ -35,16 +41,18 @@ var Model;
             if (_y === void 0) { _y = 360; }
             if (_onCallBack === void 0) { _onCallBack = null; }
             this.onCallBack = _onCallBack;
+            this.reset(); //删了重新添加.
             this.createArmature(_dData, _tData, _pic, _armatureName);
             this.armature.getDisplay().x = _x;
             this.armature.getDisplay().y = _y;
+            dragonBones.WorldClock.clock.add(this.armature);
+            this.parent.addChild(this.armature.getDisplay());
         };
         /**
          * @创建DB工厂骨架.
          */
         DragonBones.prototype.createArmature = function (_dData, _tData, _pic, _armatureName) {
             var dragonbonesFactory = new dragonBones.EgretFactory();
-            dragonbonesFactory = new dragonBones.EgretFactory();
             var dragonbonesData = RES.getRes(_dData);
             var textureData = RES.getRes(_tData);
             var texture = RES.getRes(_pic);

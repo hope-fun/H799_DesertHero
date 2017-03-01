@@ -308,45 +308,55 @@ var Model;
         areaId: MenuAreaType.GeneralSkill,
         btnId: 1
     };
+    /**********************菜单事件系统配置***************************/
     /**
      * @菜单事件配置,每个按钮四个方向的事件.
      */
     WebValue.menuEventConfig = {
         bossBtn: {
+            middleEvent: "onBoss",
             topBtn: null,
-            topEvent: null,
+            // topEvent: null,
             bottomBtn: null,
-            bottomEvent: null,
+            // bottomEvent: null,
             leftBtn: null,
-            leftEvent: null,
+            // leftEvent: null,
             rightBtn: "btnSetting",
-            rightEvent: "onSetting"
         },
         btnSetting: {
+            // middleBtn:"btnSetting",
+            middleEvent: "onSetting",
             topBtn: null,
-            topEvent: null,
+            // topEvent: null,
             bottomBtn: "btnAchievement",
-            bottomEvent: "onAchievement",
+            // bottomEvent: "onAchievement",
             leftBtn: "bossBtn",
-            leftEvent: "onBoss",
+            // leftEvent: "onBoss",
             rightBtn: null,
-            rightEvent: null
         },
         btnAchievement: {
+            middleEvent: "onAchievement",
             topBtn: "btnSetting",
-            topEvent: "onSetting",
+            // topEvent: "onSetting",
             bottomBtn: null,
-            bottomEvent: null,
+            // bottomEvent: null,
             leftBtn: "bossBtn",
-            leftEvent: "onBoss",
+            // leftEvent: "onBoss",
             rightBtn: null,
-            rightEvent: null
         }
     };
+    /**
+     * @当前光标在哪个按钮上面,要写在声明后面.
+     */
+    WebValue.currentBtn = { middleEvent: "", topBtn: "", bottomBtn: "", leftBtn: "", rightBtn: "" };
     /**
      * @事件列表.
      */
     WebValue.eventList = new Model.HashMap();
+    /**
+     * @按钮控件map.
+     */
+    WebValue.btnList = new Model.HashMap();
     Model.WebValue = WebValue;
     __reflect(WebValue.prototype, "Model.WebValue");
 })(Model || (Model = {}));

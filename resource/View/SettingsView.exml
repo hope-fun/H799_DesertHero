@@ -1,17 +1,36 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="View.SettingsView" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
-   <e:Image id="maskBlackSettings"  width="100%" height="100%" source="mask_black" alpha="0" horizontalCenter="0" verticalCenter="0" scale9Grid="1,1,1,1"/>
-   <e:Group  id="window" width="600" height="900" y="-550">
-			<e:Group height="357" width="511" horizontalCenter="0.5" verticalCenter="-112.5">
-				<e:Image source="bg_tankuangda" scale9Grid="34,111,6,670" left="0" right="0" top="0" bottom="0"/>
-				<e:Image y="92" width="426" height="234" horizontalCenter="0.5" source="bg_tankuangda_nei" scale9Grid="13,13,4,7"/>
+<e:Skin class="View.SettingsView" width="1280" height="720" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
+   <e:Group  left="0" right="0" top="0" bottom="0">
+			<e:Image id="maskBlackSettings" width="100%" height="100%" source="mask_black" alpha="0" horizontalCenter="0" verticalCenter="0" scale9Grid="1,1,1,1" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Group id="window" width="1280" x="0" height="720" y="0" anchorOffsetY="-720">
+				<e:Image id="popBg" scale9Grid="34,111,6,670" source="k_shezhi_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label id="soundLabel" y="279" textColor="0xFFFFFF" text="音效" fontFamily="隶书" horizontalCenter="-97" size="35" x="513.0000000000001" scaleX="1" scaleY="1"/>
+				<e:Label id="musicLabel" y="343.00000000000006" textColor="0xFFFFFF" text="音乐" fontFamily="隶书" horizontalCenter="-96" size="35" x="514" scaleX="1" scaleY="1"/>
+				<ViewModel:BtnMusicVM id="sound" width="96" height="38" scaleX="1" scaleY="1" horizontalCenter="80" verticalCenter="-65">
+					<ViewModel:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="kaiguan_01_png" source.down="kaiguan_02_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</ViewModel:skinName>
+				</ViewModel:BtnMusicVM>
+				<ViewModel:BtnMusicVM id="music" width="96" height="38" scaleX="1" scaleY="1" horizontalCenter="80" verticalCenter="-2">
+					<ViewModel:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="kaiguan_01_png" source.down="kaiguan_02_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</ViewModel:skinName>
+				</ViewModel:BtnMusicVM>
+				<e:Button id="LGCloseBtn" label="关闭" horizontalCenter="0.5" verticalCenter="120">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn_tanchuang_png" source.down="btn_tanchuang_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" fontFamily="隶书" size="35"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
 			</e:Group>  
-   	<e:Label text="账号设置" textColor="0xFFFFFF" size="40" horizontalCenter="0" y="192" fontFamily="黑体"/>
-	<e:Label y="279" textColor="0xFFFFFF" text="音效" fontFamily="黑体" horizontalCenter="-97" size="30" x="20"/>
-	<e:Label y="343" textColor="0xFFFFFF" text="音乐" fontFamily="黑体" horizontalCenter="-96" size="30" x="10"/>
-	<ViewModel:BtnMusicVM id="sound" x="352" y="276" width="96" height="38"/>
-	<ViewModel:BtnMusicVM id="music" y="339" x="352" width="96" height="38"/>
-	<ViewModel:BtnMagicWeaponDetailVM id="personalMsg" y="416" width="135" height="45" detailTextIn="个人信息" skinName="View.BtnMagicWeaponDetailItem" horizontalCenter="0"/>
-   	<e:Button id="LGCloseBtn" skinName="View.CloseBtn" x="509" y="139"/>
+	<ViewModel:BtnMagicWeaponDetailVM id="personalMsg" y="416" width="135" height="45" detailTextIn="个人信息" skinName="View.BtnMagicWeaponDetailItem" horizontalCenter="0" visible="false"/>
    </e:Group>
 </e:Skin>

@@ -34,8 +34,8 @@ var ViewModel;
          */
         ScrollMsgVM.prototype.initScroll = function () {
             var _this = this;
-            egret.Tween.get(this.scrollBar).to({ width: 276 }, 500).call(function () {
-                egret.Tween.get(_this.roundName).to({ alpha: 1 }, 100).call(function () {
+            egret.Tween.get(this.scrollBar).to({ width: 500 }, 550).call(function () {
+                egret.Tween.get(_this.roundName).to({ alpha: 1 }, 150).call(function () {
                     egret.setTimeout(function () {
                         if (_this.onCallBack)
                             _this.onCallBack(_this.uiLayer);

@@ -1,26 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "loading01,loading02,logo_png,bgm-003_mp3,YX-001_mp3,YX-002_mp3,YX-003_mp3,YX-004_mp3,YX-005_mp3,YX-006_mp3,YX-007_mp3,YX-009_mp3,YX-010_mp3,YX-011_mp3,YX-012_mp3,critical-font_fnt,gold-font_fnt,normal-font_fnt,gold-show-font_fnt,stDB_json,dyDB_json,scene_pic_1,scene_pic_2,scene_pic_3,active_skill_3_png,active_skill_4_png,active_skill_5_png,active_skill_6_png,active_skill_1_png,active_skill_2_png,btn_02_png,btn_03_png,btn_caidan_png,btn_chengjiu_png,btn_choose_png,btn_huodong_png,btn_jineng_png,btn_jineng02_png,btn_shezhi_png,btn_taopao_png,btn_tiaozhan_png,guangquan_01_png,guangquan_02_png,icon_guanka_png,icon_jian_png,icon_linshi_png,icon_new_png,icon_yinbi_png,icon_yuanbao_png,jindu01_png,jindu02_png,k_01_png,k_02_png,k_di_png,k_money_png,k_siwang_png,suo_01_png,xuetiao_01_png,xuetiao_02_png,xuetiao_03_png,bg_jineng_png,btn_01_png,t_dangqianmiaoshang_png,t_dianji_png,t_dianjijineng_png,t_dianjishanghai_png,t_fujiang_png,t_miaoshang_png,t_shangcheng_png,t_shenqi_png,t_suoyoushanghai_png,t_xiakemiaoshang_png,t_zhujiang_png,bodyGuanYu_ske_json,bodyGuanYu_tex_json,bodyGuanYu_tex_png,bodyQinQiong_ske_json,bodyQinQiong_tex_json,bodyQinQiong_tex_png,bodyZhangFei_ske_json,bodyZhangFei_tex_json,bodyZhangFei_tex_png,guangMask_png,juanzhou_png,Tx_dianji_png,daojishi_png,magic_weapon_30_png,magic_weapon_0_png,magic_weapon_1_png,magic_weapon_2_png,magic_weapon_3_png,magic_weapon_4_png,magic_weapon_5_png,magic_weapon_6_png,magic_weapon_7_png,magic_weapon_8_png,magic_weapon_9_png,magic_weapon_10_png,magic_weapon_11_png,magic_weapon_12_png,magic_weapon_13_png,magic_weapon_14_png,magic_weapon_15_png,magic_weapon_16_png,magic_weapon_17_png,magic_weapon_18_png,magic_weapon_19_png,magic_weapon_20_png,magic_weapon_21_png,magic_weapon_22_png,magic_weapon_23_png,magic_weapon_24_png,magic_weapon_25_png,magic_weapon_26_png,magic_weapon_27_png,magic_weapon_28_png,magic_weapon_29_png,skill_05_5_png,protagonist_png,skill_01_png,skill_01_1_png,skill_01_2_png,skill_01_3_png,skill_01_4_png,skill_01_5_png,skill_02_png,skill_02_1_png,skill_02_2_png,skill_02_3_png,skill_02_4_png,skill_02_5_png,skill_03_png,skill_03_1_png,skill_03_2_png,skill_03_3_png,skill_03_4_png,skill_03_5_png,skill_04_png,skill_04_1_png,skill_04_2_png,skill_04_3_png,skill_04_4_png,skill_04_5_png,skill_05_png,skill_05_1_png,skill_05_2_png,skill_05_3_png,skill_05_4_png,mall_skill_2_png,mall_1_png,mall_1_1_png,mall_get_yb_png,mall_mon_1_png,mall_mon_2_png,mall_mon_3_png,layer_07_s_png,layer_01_l_png,layer_01_s_png,layer_02_l_png,layer_02_s_png,layer_03_l_png,layer_03_s_png,layer_04_l_png,layer_04_s_png,layer_05_l_png,layer_05_s_png,layer_06_l_png,layer_06_s_png,layer_07_l_png,Icon_shangcheng_png,grade_4_png,grade_5_png,grade_6_png,grade_1_png,grade_2_png,grade_3_png,Tx_shouji_json,Tx_shouji_png,Tx_zhujue_04_json,Tx_zhujue_04_png,Tx_zhujue_hc0405_ske_json,Tx_zhujue_hc0405_tex_json,Tx_zhujue_hc0405_tex_png,Tx_zhujue_01_json,Tx_zhujue_01_png,Tx_zhujue_02_json,Tx_zhujue_02_png,Tx_zhujue_03_particle_png,Tx_zhujue_03_json,Tx_zhujue_06_json,Tx_zhujue_06_png,Tx_siwang_json,Tx_siwang_png,dipan_json,dipan_png,guangxian_json,guangxian_png,Tx_zhujue_tex_03_png,Tx_zhujue_tex_03_json,Tx_zhujue_03_particle_json,Tx_zhujue_03_particle2_png,Tx_zhujue_03_particle2_json,Tx_zhujue_tex_05_png,Tx_zhujue_tex_05_json,Tx_zhujue_05_json,Tx_yunge_attack_tex_png,Tx_yunge_attack_tex_json,Tx_yunge_attack_ske_json,bodyDaoShi_ske_json,bodyDaoShi_tex_json,bodyDaoShi_tex_png,bodyZhaoYun_ske_json,bodyZhaoYun_tex_json,bodyZhaoYun_tex_png",
+			"keys": "bgm-003_mp3,YX-001_mp3,YX-002_mp3,YX-003_mp3,YX-004_mp3,YX-005_mp3,YX-006_mp3,YX-007_mp3,YX-009_mp3,YX-010_mp3,YX-011_mp3,YX-012_mp3,critical-font_fnt,gold-font_fnt,normal-font_fnt,gold-show-font_fnt,stDB_json,dyDB_json,scene_pic_1,active_skill_3_png,active_skill_4_png,active_skill_5_png,active_skill_6_png,active_skill_1_png,active_skill_2_png,btn_02_png,btn_03_png,btn_caidan_png,btn_chengjiu_png,btn_choose_png,btn_huodong_png,btn_jineng_png,btn_jineng02_png,btn_shezhi_png,btn_taopao_png,btn_tiaozhan_png,guangquan_01_png,guangquan_02_png,icon_guanka_png,icon_jian_png,icon_new_png,icon_yinbi_png,icon_yuanbao_png,jindu01_png,jindu02_png,k_01_png,k_02_png,k_di_png,k_money_png,k_siwang_png,suo_01_png,xuetiao_01_png,xuetiao_02_png,xuetiao_03_png,bg_jineng_png,btn_01_png,t_dangqianmiaoshang_png,t_dianji_png,t_dianjijineng_png,t_dianjishanghai_png,t_fujiang_png,t_miaoshang_png,t_shangcheng_png,t_shenqi_png,t_suoyoushanghai_png,t_xiakemiaoshang_png,t_zhujiang_png,bodyGuanYu_ske_json,bodyGuanYu_tex_json,bodyGuanYu_tex_png,bodyQinQiong_ske_json,bodyQinQiong_tex_json,bodyQinQiong_tex_png,bodyZhangFei_ske_json,bodyZhangFei_tex_json,bodyZhangFei_tex_png,guangMask_png,juanzhou_png,Tx_dianji_png,daojishi_png,magic_weapon_30_png,magic_weapon_0_png,magic_weapon_1_png,magic_weapon_2_png,magic_weapon_3_png,magic_weapon_4_png,magic_weapon_5_png,magic_weapon_6_png,magic_weapon_7_png,magic_weapon_8_png,magic_weapon_9_png,magic_weapon_10_png,magic_weapon_11_png,magic_weapon_12_png,magic_weapon_13_png,magic_weapon_14_png,magic_weapon_15_png,magic_weapon_16_png,magic_weapon_17_png,magic_weapon_18_png,magic_weapon_19_png,magic_weapon_20_png,magic_weapon_21_png,magic_weapon_22_png,magic_weapon_23_png,magic_weapon_24_png,magic_weapon_25_png,magic_weapon_26_png,magic_weapon_27_png,magic_weapon_28_png,magic_weapon_29_png,skill_05_5_png,protagonist_png,skill_01_png,skill_01_1_png,skill_01_2_png,skill_01_3_png,skill_01_4_png,skill_01_5_png,skill_02_png,skill_02_1_png,skill_02_2_png,skill_02_3_png,skill_02_4_png,skill_02_5_png,skill_03_png,skill_03_1_png,skill_03_2_png,skill_03_3_png,skill_03_4_png,skill_03_5_png,skill_04_png,skill_04_1_png,skill_04_2_png,skill_04_3_png,skill_04_4_png,skill_04_5_png,skill_05_png,skill_05_1_png,skill_05_2_png,skill_05_3_png,skill_05_4_png,mall_skill_2_png,mall_1_png,mall_1_1_png,mall_get_yb_png,mall_mon_1_png,mall_mon_2_png,mall_mon_3_png,layer_07_s_png,layer_01_l_png,layer_01_s_png,layer_02_l_png,layer_02_s_png,layer_03_l_png,layer_03_s_png,layer_04_l_png,layer_04_s_png,layer_05_l_png,layer_05_s_png,layer_06_l_png,layer_06_s_png,layer_07_l_png,Icon_shangcheng_png,grade_4_png,grade_5_png,grade_6_png,grade_1_png,grade_2_png,grade_3_png,Tx_shouji_json,Tx_shouji_png,Tx_zhujue_04_json,Tx_zhujue_04_png,Tx_zhujue_hc0405_ske_json,Tx_zhujue_hc0405_tex_json,Tx_zhujue_hc0405_tex_png,Tx_zhujue_01_json,Tx_zhujue_01_png,Tx_zhujue_02_json,Tx_zhujue_02_png,Tx_zhujue_03_particle_png,Tx_zhujue_03_json,Tx_zhujue_06_json,Tx_zhujue_06_png,Tx_siwang_json,Tx_siwang_png,dipan_json,dipan_png,guangxian_json,guangxian_png,Tx_zhujue_tex_03_png,Tx_zhujue_tex_03_json,Tx_zhujue_03_particle_json,Tx_zhujue_03_particle2_png,Tx_zhujue_03_particle2_json,Tx_zhujue_tex_05_png,Tx_zhujue_tex_05_json,Tx_zhujue_05_json,Tx_yunge_attack_tex_png,Tx_yunge_attack_tex_json,Tx_yunge_attack_ske_json,bodyDaoShi_ske_json,bodyDaoShi_tex_json,bodyDaoShi_tex_png,bodyZhaoYun_ske_json,bodyZhaoYun_tex_json,bodyZhaoYun_tex_png,jindu_01_png,zy_png,btn_tanchuang_png,kaiguan_01_png,kaiguan_02_png,k_chengjiu_png,k_shezhi_png,k_tongyong_png,star_png,yiwancheng_png,icon_zhandoushengli_png,icon_zhandoushibai_png,loading02_png,loading01_png,luckywings512_png,icon_lingshi_png,Tx_shengji_02_tex_png,Tx_shengji_02_ske_json,Tx_shengji_02_tex_json",
 			"name": "preload"
 		}
 	],
 	"resources": [
-		{
-			"url": "images/loading01.png",
-			"type": "image",
-			"name": "loading01"
-		},
-		{
-			"url": "images/loading02.png",
-			"type": "image",
-			"name": "loading02"
-		},
-		{
-			"url": "images/luckywings512.png",
-			"type": "image",
-			"name": "logo_png"
-		},
 		{
 			"url": "assets/Button/button_down.png",
 			"type": "image",
@@ -137,11 +122,6 @@
 			"name": "on_png"
 		},
 		{
-			"url": "images/gold.png",
-			"type": "image",
-			"name": "gold_png"
-		},
-		{
 			"url": "sounds/bgm-003.mp3",
 			"type": "sound",
 			"name": "bgm-003_mp3"
@@ -217,87 +197,87 @@
 			"name": "normal-font_fnt"
 		},
 		{
-			"url": "images/bg/10.png",
+			"url": "images/bg/bg_10.png",
 			"type": "image",
 			"name": "scene_pic_10"
 		},
 		{
-			"url": "images/bg/11.png",
+			"url": "images/bg/bg_11.png",
 			"type": "image",
 			"name": "scene_pic_11"
 		},
 		{
-			"url": "images/bg/12.png",
+			"url": "images/bg/bg_12.png",
 			"type": "image",
 			"name": "scene_pic_12"
 		},
 		{
-			"url": "images/bg/13.png",
+			"url": "images/bg/bg_13.png",
 			"type": "image",
 			"name": "scene_pic_13"
 		},
 		{
-			"url": "images/bg/14.png",
+			"url": "images/bg/bg_14.png",
 			"type": "image",
 			"name": "scene_pic_14"
 		},
 		{
-			"url": "images/bg/15.png",
+			"url": "images/bg/bg_15.png",
 			"type": "image",
 			"name": "scene_pic_15"
 		},
 		{
-			"url": "images/bg/16.png",
+			"url": "images/bg/bg_16.png",
 			"type": "image",
 			"name": "scene_pic_16"
 		},
 		{
-			"url": "images/bg/17.png",
+			"url": "images/bg/bg_17.png",
 			"type": "image",
 			"name": "scene_pic_17"
 		},
 		{
-			"url": "images/bg/18.png",
+			"url": "images/bg/bg_18.png",
 			"type": "image",
 			"name": "scene_pic_18"
 		},
 		{
-			"url": "images/bg/19.png",
+			"url": "images/bg/bg_19.png",
 			"type": "image",
 			"name": "scene_pic_19"
 		},
 		{
-			"url": "images/bg/20.png",
+			"url": "images/bg/bg_20.png",
 			"type": "image",
 			"name": "scene_pic_20"
 		},
 		{
-			"url": "images/bg/4.png",
+			"url": "images/bg/bg_04.png",
 			"type": "image",
 			"name": "scene_pic_4"
 		},
 		{
-			"url": "images/bg/5.png",
+			"url": "images/bg/bg_05.png",
 			"type": "image",
 			"name": "scene_pic_5"
 		},
 		{
-			"url": "images/bg/6.png",
+			"url": "images/bg/bg_06.png",
 			"type": "image",
 			"name": "scene_pic_6"
 		},
 		{
-			"url": "images/bg/7.png",
+			"url": "images/bg/bg_07.png",
 			"type": "image",
 			"name": "scene_pic_7"
 		},
 		{
-			"url": "images/bg/8.png",
+			"url": "images/bg/bg_08.png",
 			"type": "image",
 			"name": "scene_pic_8"
 		},
 		{
-			"url": "images/bg/9.png",
+			"url": "images/bg/bg_09.png",
 			"type": "image",
 			"name": "scene_pic_9"
 		},
@@ -305,26 +285,6 @@
 			"url": "fonts/gold-show-font.fnt",
 			"type": "font",
 			"name": "gold-show-font_fnt"
-		},
-		{
-			"url": "images/icon_zhandoushengli.png",
-			"type": "image",
-			"name": "icon_zhandoushengli_png"
-		},
-		{
-			"url": "images/icon_zhandoushibai.png",
-			"type": "image",
-			"name": "icon_zhandoushibai_png"
-		},
-		{
-			"url": "images/icon_zhandoushengli_tw.png",
-			"type": "image",
-			"name": "icon_zhandoushengli_tw_png"
-		},
-		{
-			"url": "images/icon_zhandoushibai_tw.png",
-			"type": "image",
-			"name": "icon_zhandoushibai_tw_png"
 		},
 		{
 			"url": "datas/stDB.json",
@@ -455,11 +415,6 @@
 			"url": "images/mainUI/icon_jian.png",
 			"type": "image",
 			"name": "icon_jian_png"
-		},
-		{
-			"url": "images/mainUI/icon_linshi.png",
-			"type": "image",
-			"name": "icon_linshi_png"
 		},
 		{
 			"url": "images/mainUI/icon_new.png",
@@ -1277,64 +1232,144 @@
 			"name": "Tx_zhujue_tex_05_json"
 		},
 		{
-			"url": "effects/Tx_shengji_02/Tx_shengji_tex_02.png",
+			"url": "effects/Tx_yunge_attack/Tx_yunge_attack_tex.png",
 			"type": "image",
-			"name": "Tx_shengji_tex_02_png"
+			"name": "Tx_yunge_attack_tex_png"
 		},
 		{
-			"url": "effects/Tx_shengji_02/Tx_shengji_02.json",
+			"url": "effects/Tx_yunge_attack/Tx_yunge_attack_tex.json",
 			"type": "json",
-			"name": "Tx_shengji_02_json"
+			"name": "Tx_yunge_attack_tex_json"
 		},
 		{
-			"url": "effects/Tx_shengji_02/Tx_shengji_tex_02.json",
+			"url": "effects/Tx_yunge_attack/Tx_yunge_attack_ske.json",
 			"type": "json",
-			"name": "Tx_shengji_tex_02_json"
+			"name": "Tx_yunge_attack_ske_json"
 		},
 		{
-			"name": "Tx_yunge_attack_tex_png",
+			"url": "effects/bodyDaoShi/bodyDaoShi_ske.json",
+			"type": "json",
+			"name": "bodyDaoShi_ske_json"
+		},
+		{
+			"url": "effects/bodyDaoShi/bodyDaoShi_tex.json",
+			"type": "json",
+			"name": "bodyDaoShi_tex_json"
+		},
+		{
+			"url": "effects/bodyDaoShi/bodyDaoShi_tex.png",
 			"type": "image",
-			"url": "effects/Tx_yunge_attack/Tx_yunge_attack_tex.png"
+			"name": "bodyDaoShi_tex_png"
 		},
 		{
-			"name": "Tx_yunge_attack_tex_json",
+			"url": "effects/bodyZhaoYun/bodyZhaoYun_ske.json",
 			"type": "json",
-			"url": "effects/Tx_yunge_attack/Tx_yunge_attack_tex.json"
+			"name": "bodyZhaoYun_ske_json"
 		},
 		{
-			"name": "Tx_yunge_attack_ske_json",
+			"url": "effects/bodyZhaoYun/bodyZhaoYun_tex.json",
 			"type": "json",
-			"url": "effects/Tx_yunge_attack/Tx_yunge_attack_ske.json"
+			"name": "bodyZhaoYun_tex_json"
 		},
 		{
-			"name": "bodyDaoShi_ske_json",
-			"type": "json",
-			"url": "effects/bodyDaoShi/bodyDaoShi_ske.json"
-		},
-		{
-			"name": "bodyDaoShi_tex_json",
-			"type": "json",
-			"url": "effects/bodyDaoShi/bodyDaoShi_tex.json"
-		},
-		{
-			"name": "bodyDaoShi_tex_png",
+			"url": "effects/bodyZhaoYun/bodyZhaoYun_tex.png",
 			"type": "image",
-			"url": "effects/bodyDaoShi/bodyDaoShi_tex.png"
+			"name": "bodyZhaoYun_tex_png"
 		},
 		{
-			"name": "bodyZhaoYun_ske_json",
-			"type": "json",
-			"url": "effects/bodyZhaoYun/bodyZhaoYun_ske.json"
-		},
-		{
-			"name": "bodyZhaoYun_tex_json",
-			"type": "json",
-			"url": "effects/bodyZhaoYun/bodyZhaoYun_tex.json"
-		},
-		{
-			"name": "bodyZhaoYun_tex_png",
+			"url": "images/loading/jindu_01.png",
 			"type": "image",
-			"url": "effects/bodyZhaoYun/bodyZhaoYun_tex.png"
+			"name": "jindu_01_png"
+		},
+		{
+			"url": "images/loading/zy.png",
+			"type": "image",
+			"name": "zy_png"
+		},
+		{
+			"url": "images/popup/btn_tanchuang.png",
+			"type": "image",
+			"name": "btn_tanchuang_png"
+		},
+		{
+			"url": "images/popup/kaiguan_01.png",
+			"type": "image",
+			"name": "kaiguan_01_png"
+		},
+		{
+			"url": "images/popup/kaiguan_02.png",
+			"type": "image",
+			"name": "kaiguan_02_png"
+		},
+		{
+			"url": "images/popup/k_chengjiu.png",
+			"type": "image",
+			"name": "k_chengjiu_png"
+		},
+		{
+			"url": "images/popup/k_shezhi.png",
+			"type": "image",
+			"name": "k_shezhi_png"
+		},
+		{
+			"url": "images/popup/k_tongyong.png",
+			"type": "image",
+			"name": "k_tongyong_png"
+		},
+		{
+			"url": "images/popup/star.png",
+			"type": "image",
+			"name": "star_png"
+		},
+		{
+			"url": "images/popup/yiwancheng.png",
+			"type": "image",
+			"name": "yiwancheng_png"
+		},
+		{
+			"url": "images/mainUI/icon_zhandoushengli.png",
+			"type": "image",
+			"name": "icon_zhandoushengli_png"
+		},
+		{
+			"url": "images/mainUI/icon_zhandoushibai.png",
+			"type": "image",
+			"name": "icon_zhandoushibai_png"
+		},
+		{
+			"url": "images/loading/loading02.png",
+			"type": "image",
+			"name": "loading02_png"
+		},
+		{
+			"url": "images/loading/loading01.png",
+			"type": "image",
+			"name": "loading01_png"
+		},
+		{
+			"url": "images/logo/luckywings512.png",
+			"type": "image",
+			"name": "luckywings512_png"
+		},
+		{
+			"url": "images/mainUI/icon_lingshi.png",
+			"type": "image",
+			"name": "icon_lingshi_png"
+		},
+		{
+			"name": "Tx_shengji_02_tex_png",
+			"type": "image",
+			"url": "effects/Tx_shengji_02/Tx_shengji_02_tex.png"
+		},
+		{
+			"name": "Tx_shengji_02_ske_json",
+			"type": "json",
+			"url": "effects/Tx_shengji_02/Tx_shengji_02_ske.json"
+		},
+		{
+			"name": "Tx_shengji_02_tex_json",
+			"type": "json",
+			"url": "effects/Tx_shengji_02/Tx_shengji_02_tex.json"
 		}
 	]
 }

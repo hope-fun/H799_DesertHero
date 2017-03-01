@@ -14,17 +14,27 @@ module Model {
          */
         private onCallBack: Function = null;
 
+        private parent: egret.DisplayObjectContainer;
+
+
         public constructor(_parent: egret.DisplayObjectContainer, _dData: string, _tData: string, _pic: string, _armatureName: string, _x: number = 640, _y: number = 360, _onCallBack: Function = null) {
             this.onCallBack = _onCallBack;
+            this.parent = _parent;
             this.createArmature(_dData, _tData, _pic, _armatureName);
             this.armature.getDisplay().x = _x;
             this.armature.getDisplay().y = _y;
             dragonBones.WorldClock.clock.add(this.armature);
-            _parent.addChild(this.armature.getDisplay());
+            this.parent.addChild(this.armature.getDisplay());
         }
 
         public setActive(_bool: boolean) {
             this.armature.display.visible = _bool;
+        }
+
+        private reset() {
+            this.parent.removeChild(this.armature.display);
+            dragonBones.WorldClock.clock.remove(this.armature);
+            this.armature.dispose();
         }
 
         /**
@@ -32,9 +42,12 @@ module Model {
          */
         public changeArmature(_dData: string, _tData: string, _pic: string, _armatureName: string, _x: number = 640, _y: number = 360, _onCallBack: Function = null) {
             this.onCallBack = _onCallBack;
+            this.reset();//删了重新添加.
             this.createArmature(_dData, _tData, _pic, _armatureName);
             this.armature.getDisplay().x = _x;
             this.armature.getDisplay().y = _y;
+            dragonBones.WorldClock.clock.add(this.armature);
+            this.parent.addChild(this.armature.getDisplay());
         }
 
         /**
@@ -42,7 +55,6 @@ module Model {
          */
         private createArmature(_dData: string, _tData: string, _pic: string, _armatureName: string) {
             var dragonbonesFactory: dragonBones.EgretFactory = new dragonBones.EgretFactory();
-            dragonbonesFactory = new dragonBones.EgretFactory();
             var dragonbonesData = RES.getRes(_dData);
             var textureData = RES.getRes(_tData);
             var texture = RES.getRes(_pic);
@@ -53,7 +65,6 @@ module Model {
             this.armature.addEventListener(dragonBones.AnimationEvent.COMPLETE, this.onAnimationEvent, this);//this传谁，监听方法就监听谁.
             this.armature.addEventListener(dragonBones.AnimationEvent.LOOP_COMPLETE, this.onAnimationEvent, this);
         }
-
 
         /**
          * @动画监听事件.

@@ -19,6 +19,10 @@ declare module View{
 	}
 }
 declare module View{
+	class BtnBottomView extends eui.Skin{
+	}
+}
+declare module View{
 	class BtnMagicWeaponDetailItem extends eui.Skin{
 	}
 }
@@ -107,10 +111,6 @@ declare module View{
 	}
 }
 declare module View{
-	class MainInfoView extends eui.Skin{
-	}
-}
-declare module View{
 	class MainMenuView extends eui.Skin{
 	}
 }
@@ -152,10 +152,6 @@ declare module View{
 }
 declare module View{
 	class ResetSkillView extends eui.Skin{
-	}
-}
-declare module View{
-	class SceneInfoView extends eui.Skin{
 	}
 }
 declare module View{

@@ -203,11 +203,6 @@ var Main = (function (_super) {
                 console.log("zhujun: main menu vm call back successed !　");
             }
         });
-        this.mainGameVM = new ViewModel.MainGameVM(this, function () {
-            if (Model.WebServiceBase.isDebug) {
-                console.log("zhujun: main game vm call back successed ! ");
-            }
-        });
     };
     return Main;
 }(eui.UILayer));

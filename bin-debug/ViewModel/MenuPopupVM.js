@@ -58,9 +58,9 @@ var ViewModel;
             var _this = this;
             //            Main.singleton.mainMenuVM.currentPage = PageName.Player;
             //TODO: 传下来执行. 花费过后重新更新ui钱币数 by cai_haotian 2016.2.19.
-            //            Main.singleton.mainGameVM.sceneInfo.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
+            //            Main.singleton.mainGameVM.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
             //更新主界面 by cai_haotian 2016.2.22.
-            Main.singleton.mainMenuVM.mainInfo.initMainInfo();
+            Main.singleton.mainMenuVM.initMainInfo();
             this.protagonistPopGroup.visible = true;
             this.bosomFriendPopGroup.visible = false;
             this.artifactPopGroup.visible = false;
@@ -108,9 +108,9 @@ var ViewModel;
             var _this = this;
             //            Main.singleton.mainMenuVM.currentPage = PageName.Friend;
             //TODO:方法传下来执行.  花费过后重新更新ui钱币数 by cai_haotian 2016.2.19.
-            //            Main.singleton.mainGameVM.sceneInfo.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
+            //            Main.singleton.mainGameVM.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
             //更新主界面 by cai_haotian 2016.2.22.
-            Main.singleton.mainMenuVM.mainInfo.initMainInfo();
+            Main.singleton.mainMenuVM.initMainInfo();
             this.protagonistPopGroup.visible = false;
             this.bosomFriendPopGroup.visible = true;
             this.artifactPopGroup.visible = false;
@@ -349,7 +349,7 @@ var ViewModel;
         MenuPopupVM.prototype.setAData = function () {
             var _this = this;
             //            Main.singleton.mainMenuVM.currentPage = PageName.MagicWeapon;
-            Main.singleton.mainMenuVM.mainInfo.initMainInfo();
+            Main.singleton.mainMenuVM.initMainInfo();
             this.protagonistPopGroup.visible = false;
             this.bosomFriendPopGroup.visible = false;
             this.artifactPopGroup.visible = true;
@@ -421,7 +421,7 @@ var ViewModel;
                                     Model.PlayerLocalService.PlayerData.dy.treasure += Number(_data.shopList[i].extraGet);
                                 }
                                 _this.setMData(); //刷新UI，减钱
-                                Main.singleton.mainGameVM.sceneInfo.init(); //更新主场景ui
+                                Main.singleton.mainGameVM.initMainGameInfo(); //更新主场景ui
                             }, function () {
                                 if (Model.WebValue.isTraditional) {
                                     alert("充值失敗！");
@@ -435,7 +435,7 @@ var ViewModel;
                             if (_isFree) {
                                 Model.ShopLocalService.commitShop(_data, _isFree, function () {
                                     _this.setMData(); //刷新UI，减钱
-                                    Main.singleton.mainGameVM.sceneInfo.init(); //更新主场景ui
+                                    Main.singleton.mainGameVM.initMainGameInfo(); //更新主场景ui
                                     Model.WebService.commitData(Model.WebValue.dataDyModel, function () {
                                         if (Model.WebServiceBase.isDebug) {
                                             console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));
@@ -459,7 +459,7 @@ var ViewModel;
                                         //设置商城回调
                                         Model.ShopLocalService.commitShop(_data, _isFree, function () {
                                             _this.setMData(); //刷新UI，减钱
-                                            Main.singleton.mainGameVM.sceneInfo.init(); //更新主场景ui
+                                            Main.singleton.mainGameVM.initMainGameInfo(); //更新主场景ui
                                             Model.WebService.commitData(Model.WebValue.dataDyModel, function () {
                                                 if (Model.WebServiceBase.isDebug) {
                                                     console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));

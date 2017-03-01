@@ -24,6 +24,7 @@ var ViewModel;
             return _this;
         }
         CutHpItemVM.prototype.createChildren = function () {
+            console.log("zhujun: create cut hp group !!!!!!!!!!!!!!!!!!!");
             _super.prototype.createChildren.call(this);
         };
         /**
@@ -35,9 +36,9 @@ var ViewModel;
             this.normalAttack.font = RES.getRes("normal-font_fnt");
             this.normalAttack.smoothing = true;
             this.normalAttack.text = _data;
+            this.normalAttack.scaleX = 1.5;
+            this.normalAttack.scaleY = 1.5;
             this.TweenAnimate(100);
-            //更新目前dps by cai_haotian 2016.2.23.
-            //            Main.singleton.mainMenuVM.mainInfo.setMIData(Number(_data));
         };
         /**
          * @设置暴击时扣血量
@@ -49,22 +50,23 @@ var ViewModel;
             this.criticalAttack.font = RES.getRes("critical-font_fnt");
             this.criticalAttack.smoothing = true;
             this.criticalAttack.text = _data;
-            this.criticalAttack.y = 10;
-            //更新目前dps by cai_haotian 2016.2.23.
-            //            Main.singleton.mainMenuVM.mainInfo.setMIData(Number(_data));
+            // this.criticalAttack.y = 10;在变改成在exml里面锚定了.
+            this.criticalAttack.scaleX = 1.5;
+            this.criticalAttack.scaleY = 1.5;
             egret.setTimeout(function () {
                 _this.TweenAnimate(50);
             }, this, 200);
         };
         /**
-       * @渐淡动画
-       */
+         * @渐淡动画
+         */
         CutHpItemVM.prototype.TweenAnimate = function (num) {
             var _this = this;
             var groupAlphaTween = egret.Tween.get(this);
             groupAlphaTween.to({ alpha: 0, y: this.y - num }, 1000).call(function () {
+                egret.Tween.removeTweens(groupAlphaTween);
                 //更新目前dps by cai_haotian 2016.2.23.
-                //                Main.singleton.mainMenuVM.mainInfo.setMIData(-Number(this.data));
+                //                Main.singleton.mainMenuVM.setMIData(-Number(this.data));
                 Model.PlayerLocalService.setPerSecondTapDamage(-_this.damage);
                 // alert("remove cut hp item");
                 _this.group.removeChild(_this);

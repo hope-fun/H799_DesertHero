@@ -43,16 +43,16 @@ module Model {
                 }
                 
                 //寒冰心法数据
-                var skillInfo1 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[1],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.mainInfo.skillGroup.getChildAt(1));
+                var skillInfo1 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[1],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.skillGroup.getChildAt(1));
                 FlyBoxLocalService.skillInfo.push(skillInfo1);
                 //破空霸拳
-                var skillInfo2 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[2],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.mainInfo.skillGroup.getChildAt(2));
+                var skillInfo2 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[2],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.skillGroup.getChildAt(2));
                 FlyBoxLocalService.skillInfo.push(skillInfo2);
                 //寂灭雷诀
-                var skillInfo3 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[3],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.mainInfo.skillGroup.getChildAt(3));
+                var skillInfo3 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[3],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.skillGroup.getChildAt(3));
                 FlyBoxLocalService.skillInfo.push(skillInfo3);
                 //寂灭雷诀
-                var skillInfo5 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[4],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.mainInfo.skillGroup.getChildAt(4));
+                var skillInfo5 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[4],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.skillGroup.getChildAt(4));
                 FlyBoxLocalService.skillInfo.push(skillInfo5);
 
                 FlyBoxLocalService.currencyInfo = Enumerable.From(FlyBoxLocalService.dropList).Where(x=> x.goOnTime == 0).ToArray();

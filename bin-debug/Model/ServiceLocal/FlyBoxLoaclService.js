@@ -29,16 +29,16 @@ var Model;
                     FlyBoxLocalService.dropList.push(Model.WebValue.dataStModel.bagdropList[i]);
                 }
                 //寒冰心法数据
-                var skillInfo1 = new Model.FlyBoxSkillData(Model.PlayerSkillLocalService.PlayerSkillList[1], Main.singleton.mainMenuVM.mainInfo.skillGroup.getChildAt(1));
+                var skillInfo1 = new Model.FlyBoxSkillData(Model.PlayerSkillLocalService.PlayerSkillList[1], Main.singleton.mainMenuVM.skillGroup.getChildAt(1));
                 FlyBoxLocalService.skillInfo.push(skillInfo1);
                 //破空霸拳
-                var skillInfo2 = new Model.FlyBoxSkillData(Model.PlayerSkillLocalService.PlayerSkillList[2], Main.singleton.mainMenuVM.mainInfo.skillGroup.getChildAt(2));
+                var skillInfo2 = new Model.FlyBoxSkillData(Model.PlayerSkillLocalService.PlayerSkillList[2], Main.singleton.mainMenuVM.skillGroup.getChildAt(2));
                 FlyBoxLocalService.skillInfo.push(skillInfo2);
                 //寂灭雷诀
-                var skillInfo3 = new Model.FlyBoxSkillData(Model.PlayerSkillLocalService.PlayerSkillList[3], Main.singleton.mainMenuVM.mainInfo.skillGroup.getChildAt(3));
+                var skillInfo3 = new Model.FlyBoxSkillData(Model.PlayerSkillLocalService.PlayerSkillList[3], Main.singleton.mainMenuVM.skillGroup.getChildAt(3));
                 FlyBoxLocalService.skillInfo.push(skillInfo3);
                 //寂灭雷诀
-                var skillInfo5 = new Model.FlyBoxSkillData(Model.PlayerSkillLocalService.PlayerSkillList[4], Main.singleton.mainMenuVM.mainInfo.skillGroup.getChildAt(4));
+                var skillInfo5 = new Model.FlyBoxSkillData(Model.PlayerSkillLocalService.PlayerSkillList[4], Main.singleton.mainMenuVM.skillGroup.getChildAt(4));
                 FlyBoxLocalService.skillInfo.push(skillInfo5);
                 FlyBoxLocalService.currencyInfo = Enumerable.From(FlyBoxLocalService.dropList).Where(function (x) { return x.goOnTime == 0; }).ToArray();
                 if (Model.WebServiceBase.isDebug) {

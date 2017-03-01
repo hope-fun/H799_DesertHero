@@ -22,10 +22,6 @@ module ViewModel {
          */
         private goldAndTextGroup: eui.Group;
         /**
-         * @场景信息控件.
-         */
-        public sceneInfo: SceneInfoVM;
-        /**
          * @核心点击控件，重要!
          */
         public clickBtn: eui.Button;
@@ -171,7 +167,11 @@ module ViewModel {
 
         protected createChildren() {
             super.createChildren();
-            //            var audio: Model.AudioService = new Model.AudioService("bgm-003_mp3",() => { },-1);
+
+        }
+
+        protected childrenCreated() {
+            super.childrenCreated();
             Model.AudioService.Shared().PlayBGM("bgm-003_mp3");
             //TODO: by zhu_jun,2017.02.20.
             this.initDragonBones();
@@ -181,7 +181,14 @@ module ViewModel {
             this.initEnemy();
             this.initCheatingDetection();
             this.shockTool = new Model.ShockTools();
-            this.clickBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClickBtn, this);
+            Model.WebValue.eventList.Set("onClickBtn", (evt: egret.TouchEvent) => {
+                this.onClickBtn(evt);
+            });
+            this.clickBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, Model.WebValue.eventList.Get("onClickBtn"), this);
+            /***********************************SceneInfoInit****************************************/
+            this.bossHp.labelDisplay.visible = false;
+            this.bossInfoGroup.visible = false;
+            this.initMainGameInfo();
         }
 
         private initDragonBones() {
@@ -202,29 +209,6 @@ module ViewModel {
             dragonBones.WorldClock.clock.advanceTime(pass / 1000);
             return false;
         }
-
-
-        // try {
-        //     var _time: number;
-        //     var onTicker = (timeStamp: number) => {
-        //         if (!_time) {
-        //             _time = timeStamp;
-        //         }
-        //         var now = timeStamp;
-        //         var pass = now - _time;
-        //         _time = now;
-        //         dragonBones.WorldClock.clock.advanceTime(pass / 1000);
-        //         return false;
-        //     }
-        //     armature.display.x = x;
-        //     armature.display.y = y;
-        //     parent.addChild(armature.display);
-        //     // dragonBones.WorldClock.clock.add(armature);
-        //     armature.animation.gotoAndPlay(action,-1, -1, playTimes);
-        //     egret.startTick(onTicker, this);
-        //     //    egret.Ticker.getInstance().register(function(frameTime: number) {
-        //     //        dragonBones.WorldClock.clock.advanceTime(0.05)
-        //     //    },this);
 
 
         /**
@@ -288,7 +272,7 @@ module ViewModel {
          */
         private onClickBtn(evt?: egret.TouchEvent): void {
             this.clickFrequence++;
-            this.clickEffect(evt);
+            this.clickEffect(evt ? evt : null);
             this.initPlayerAttack();//主角攻击,隐藏待机,回调关攻击,显示待机.
             Model.AudioService.Shared().PlaySound(Model.PlayerLocalService.PlayerData.st.playerAttackAudio);
             this.cutHp(true);
@@ -301,25 +285,30 @@ module ViewModel {
          * @更新UI
          */
         public cutHp(_isClick: boolean = false) {
+            // alert("this.cutFlag " + this.cutFlag);
+            // alert("this.cheatFlag " + this.cheatFlag);
             if (this.cutFlag && this.cheatFlag) {
                 this.cutHpAnim(_isClick, (damage: number) => {
                     //此段作为正常扣血
                     Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].AddHp = -damage;//model层扣血.
-                    this.sceneInfo.setMonsterHp();
+                    this.setMonsterHp();
                     if (Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].hp <= 0) {//当前怪的血够小于零，说明怪物已经死亡.                    
+                        // alert("enemyKilled ! ");
                         this.enemyKilled(() => {
+                            // alert("Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].MonsterType " + Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].MonsterType);
+
                             if (Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].MonsterType == Model.MonsterType.MONSTER_TYPE_BOSS) {//如果是boss死了，切换整组怪物数据.
-                                this.sceneInfo.bossDeathEvent();
+                                this.bossDeathEvent();
                                 Model.SceneLocalService.setNextSceneData();//更新关卡数据.
-                                this.sceneInfo.setSceneIndex();
+                                this.setSceneIndex();
                                 this.changeScene();
                                 Model.MonsterLocalService.setMonsterData();
                                 //保护挚友 by cai_haotian 2016.3.21
                                 if (!Model.PlayerLocalService.PlayerData.protectFriend) {
                                     Model.FriendLocalService.sealFriendAndSkills();//判断是否触发挚友技能锁定。
                                 }
-
                             } else {
+                                // alert("Model.SceneLocalService.SceneData.currentMonster " + Model.SceneLocalService.SceneData.currentMonster);
                                 Model.SceneLocalService.SceneData.currentMonster++;
                             }
                         });//先死后加index.
@@ -329,8 +318,6 @@ module ViewModel {
                         }
 
                     }
-
-
                 });
             }
         }
@@ -361,28 +348,28 @@ module ViewModel {
          * @扣血动画.
          */
         private cutHpAnim(_isClick: boolean, _onAnimFinish: Function) {
-            //飘血动画.
-            var cutHpItem: ViewModel.CutHpItemVM = new ViewModel.CutHpItemVM(this.levelUpLight);
             var critFactor: number = Model.Mathf.random(0, 100);
             var damage: number = 0;
             if (_isClick) {
+                //飘血动画.
+                var cutHpItem: ViewModel.CutHpItemVM = new ViewModel.CutHpItemVM(this.levelUpLight);
                 if (critFactor <= Model.PlayerLocalService.PlayerData.CritRate) {//暴击.
-                    cutHpItem.y = 230;
+                    cutHpItem.y = 200;
                     damage = Model.PlayerLocalService.PlayerData.CritDamage;
                     var damgeUnit = Model.MainLocalService.toUnitConversion(Number(damage));
                     Model.PlayerLocalService.setPerSecondTapDamage(Number(damage));
                     cutHpItem.setCriticalAttack(damgeUnit, damage);//暴击显示
                     this.shockTool.shock(this, 3);
                 } else {
-                    cutHpItem.y = 300;
+                    cutHpItem.y = 270;
                     damage = Model.PlayerLocalService.PlayerData.dy.clickDamage;
                     var damgeUnit = Model.MainLocalService.toUnitConversion(Number(damage));
                     Model.PlayerLocalService.setPerSecondTapDamage(Number(damage));
                     cutHpItem.setNoramlAttack(damgeUnit, damage);//普通攻击
                 }
-                cutHpItem.x = 480 - cutHpItem.width / 2;
+                cutHpItem.x = 900 - cutHpItem.width / 2;//by zhu_jun,2017.03.01.
             } else {
-                cutHpItem.y = 300;
+                // cutHpItem.y = 270;
                 damage = Model.PlayerLocalService.PlayerData.dy.friendDamage;
             }
             _onAnimFinish(damage);
@@ -391,9 +378,15 @@ module ViewModel {
         /**
          * 点击特效
          */
-        private clickEffect(evt: egret.TouchEvent): void {
-            this.tapEffect.x = evt.stageX - this.tapEffect.width / 2;
-            this.tapEffect.y = evt.stageY - this.tapEffect.height / 2;
+        private clickEffect(evt?: egret.TouchEvent): void {//
+            if (evt) {
+                this.tapEffect.x = evt.stageX - this.tapEffect.width / 2;
+                this.tapEffect.y = evt.stageY - this.tapEffect.height / 2;
+            } else {
+                this.tapEffect.x = Model.Mathf.random(0, this.stage.width - this.tapEffect.width / 2);
+                this.tapEffect.y = Model.Mathf.random(0, this.stage.height - this.tapEffect.height / 2);
+            }
+
             this.tapEffect.visible = true;
             egret.setTimeout(() => {
                 this.tapEffect.visible = false;
@@ -543,9 +536,9 @@ module ViewModel {
          */
         public changeEnemy(_index: number) {
             if (Model.WebServiceBase.isDebug) {
-                console.log("zhujun: change Enemy " + _index);
+                console.log("zhujun: change Enemy " + _index + " Model.MonsterLocalService.MonsterList[_index].DBJson " + Model.MonsterLocalService.MonsterList[_index].DBJson);
             }
-            // this.enemyDB.reset();
+            // this.enemyDB.armature.dispose();
             this.enemyDB.changeArmature(Model.MonsterLocalService.MonsterList[_index].DBJson,
                 Model.MonsterLocalService.MonsterList[_index].DBPngJson,
                 Model.MonsterLocalService.MonsterList[_index].DBPng,
@@ -560,7 +553,7 @@ module ViewModel {
         private goldDrop() {
             var dropMoney = Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].dropMoney;
             var dropMoneyAndUnit = Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].DropMoneyAndUnit;
-            this.goldAnimel(dropMoney, dropMoneyAndUnit);
+            this.onGoldAnimel(dropMoney, dropMoneyAndUnit);
         }
 
         /**
@@ -581,7 +574,7 @@ module ViewModel {
          * @by zhu_jun,2017.02.26.修改动画相关.
          */
         public enemyKilled(_onKilled: Function) {
-
+            // alert("go in enemyKilled ");
             //这段作为正常游戏流程的调用
             //调用成就方法 by cai_haotian 
             this.achievement();
@@ -592,25 +585,26 @@ module ViewModel {
             this.goldDrop();//要在怪物死亡后，切换index之前调用金币模块.
             this.jewelDrop();//如果为Boss则有几率掉落灵石.
             var effect: Model.MovieClipService = new Model.MovieClipService(this.enemyGroup);//by zhu_jun,2017.02.26.
-            effect.initMovieClip("tx_siwang_json", "tx_siwang_png", "Tx_siwang", 1, () => {
+
+            effect.initMovieClip("Tx_siwang_json", "Tx_siwang_png", "Tx_siwang", 1, () => {
+                // alert("_onKill call back ! " + Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].MonsterType);
                 this.enemyGroup.removeChild(effect.movieClip);
                 _onKilled();
                 if (Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].MonsterType == Model.MonsterType.MONSTER_TYPE_BOSS) {//判断当前怪是不是boss.
-                    this.sceneInfo.swardIcon.visible = false;//关小剑.
-                    this.sceneInfo.bossInfoGroup.visible = true;//显示倒计时，逃跑按钮，进度条
-                    this.sceneInfo.countTimeImage.visible = true;//显示倒计时 by cai_haotian 2016.4.18
-                    this.sceneInfo.countTimeLabel.visible = true;//显示进度条 by cai_haotian 2016.4.18
-                    this.sceneInfo.bossBtn.currentState = "down";//设置按钮显示 by cai_haotian 2016.4.18
-
+                    this.swardIcon.visible = false;//关小剑.
+                    this.bossInfoGroup.visible = true;//显示倒计时，逃跑按钮，进度条
+                    this.countTimeImage.visible = true;//显示倒计时 by cai_haotian 2016.4.18
+                    this.countTimeLabel.visible = true;//显示进度条 by cai_haotian 2016.4.18
+                    this.bossBtn.currentState = "down";//设置按钮显示 by cai_haotian 2016.4.18
                     //倒计时初始化.                    
-                    this.sceneInfo.setCountDown(() => {
+                    this.setCountDown(() => {
                         if (Model.WebServiceBase.isDebug) {
                             console.log("zhujun: boss倒计时结束,进入刷怪模式 ! ");
                         }
                         Model.MonsterLocalService.setFarmMonsterData();
                         Model.SceneLocalService.SceneData.currentMonster = 0;//强制切换怪物.
                         this.changeEnemy(Model.SceneLocalService.SceneData.currentMonster);//怪物死后调用
-                        this.sceneInfo.setMonsterHp();//倒计时到了,强制切换怪物数据，更新UIhp.
+                        this.setMonsterHp();//倒计时到了,强制切换怪物数据，更新UIhp.
 
                         Model.WebService.commitData(Model.WebValue.dataDyModel, () => {
                             if (Model.WebServiceBase.isDebug) {
@@ -628,22 +622,27 @@ module ViewModel {
                     });
                 } else {
                     if (Model.SceneLocalService.SceneData.currentMonster == Model.SceneLocalService.SceneData.monsterCount - 1) {//如果最后一位非boss,则是循环模式.
+                        // alert("1");
                         Model.MonsterLocalService.setFarmMonsterData();
                         Model.SceneLocalService.SceneData.currentMonster = 0;//强制切换怪物.
                     } else {
-
+                        //  alert("2");
                         if (Model.WebServiceBase.isDebug) {
                             console.log("zhujun: 这边进入了循环战斗,UI应该不变,等点击按钮时,修改数据,切换回挑战boss ! ");
                         }
 
                     }
                 }
-                this.sceneInfo.setMonsterHp();//普通怪物死亡更新UIhp.
+                this.setMonsterHp();//普通怪物死亡更新UIhp.
                 this.changeEnemy(Model.SceneLocalService.SceneData.currentMonster);//怪物死后调用
-                this.sceneInfo.setMonsterIndex();
+                this.setMonsterIndex();
                 this.cutFlag = true;//重新开始扣血事件 by cai_haotian 2016.3.8.
                 this.commitAuto();//自动提交数据
-            }, false);
+            }, false);//TODO: by zhu_jun，这边应该传false，进帧事件.
+            effect.ScaleX = 1.5;
+            effect.ScaleY = 1.5;
+            effect.X = 900;
+            effect.Y = 300;
         }
 
         /**
@@ -670,7 +669,7 @@ module ViewModel {
         /**
          * @金币动画.
          */
-        public goldAnimel(_goldAdd: number, _goldAddAndUnit: string) {
+        public onGoldAnimel(_goldAdd: number, _goldAddAndUnit: string) {
             var max = Model.Mathf.random(1, 5);
             for (var i = 0; i < max; i++) {//控制掉过个数
                 var coin: eui.Image = new eui.Image();
@@ -689,7 +688,7 @@ module ViewModel {
                     _bTween.obj.touchEnabled = false;
                     this.addHpText(_bTween, _goldAddAndUnit);
                     _bTween.GoldRecycleAnim(() => {
-                        this.sceneInfo.goldAnimelStart();//点击后播放呼吸动画
+                        Main.singleton.mainMenuVM.goldAnimelStart();//点击后播放呼吸动画
                         Model.PlayerLocalService.PlayerData.AddGold = _goldAdd; //收到钱后更新金币数量
                         //调用成就 by cai_haotian 2016.4.5
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_GET_COIN, _goldAdd);
@@ -729,7 +728,7 @@ module ViewModel {
          */
         public jewelAnimel(_jewelAdd: number, _jewelAddAndUnit: string) {
             var jewel: eui.Image = new eui.Image();
-            jewel.source = "icon_lingshi";
+            jewel.source = "icon_lingshi_png";
             jewel.width = 23;
             jewel.height = 23;
             jewel.x = 500;
@@ -823,5 +822,289 @@ module ViewModel {
                 default: alert("怪物类型出错！请联系管理员！c");
             }
         }
+
+        /*******************************************SceneInfoVM******************************************/
+        /**
+ * @boss血条.
+ */
+        public bossHp: ViewModel.ProgressHp;
+        /**
+         * @剩余时间条.
+         */
+        public countTimeImage: eui.Image;
+        /**
+        *@剩余时间数值显示
+        */
+        public countTimeLabel: eui.Label;
+        // /**
+        //  * @玩家拥有金币
+        //  */
+        // public charMoney: eui.BitmapLabel;
+        /**
+         * @boss挑战切换按钮.
+         */
+        public bossBtn: eui.ToggleButton;
+        /**
+         * @当前闯关数
+         */
+        public sceneNumLabel: eui.Label;
+        /**
+         * @当前关数
+         */
+        public currentRound: eui.Label;
+        /**
+         * @当前关数图片 
+         */
+        public currentImage: eui.Image;
+        /**
+         * @前一关数
+         */
+        public preRound: eui.Label;
+        /**
+         * @前一关数图片
+         */
+        public preImage: eui.Image;
+        /**
+         * @下一关数
+         */
+        public nextRound: eui.Label;
+        /**
+         * @下一关数图片
+         */
+        public nextImage: eui.Image
+        /**
+         * @金币
+         */
+        public gold: eui.Image;
+        /**
+         * @剑
+         */
+        public swardIcon: eui.Image;
+        /**
+         * @boss血量数字.
+         */
+        public bossHpLabel: eui.Label;
+        /**
+         * @boss详情父节点.
+         */
+        public bossInfoGroup: eui.Group;
+        /**
+         * @boss计时器声明.
+         */
+        private bossTimer: egret.Timer;
+
+        /**
+         * @boss倒计时结束事件.
+         */
+        public onTimeLeft: Function = null;
+        /**
+         * @当前剩余时间.
+         */
+        private currentLeftTime: number = 0;
+        /**
+         * @倒计时次数.
+         */
+        private countDownTimes: number;
+        /**
+         * @进度条减去的每份长度.
+         */
+        private countTimePercent: number;
+        /**
+         * @正常ui显示组
+         * @by cai_haotian 2016.4.18
+         */
+        private currentInfo: eui.Group;
+
+        //        protected childrenCreated() {
+        //     super.childrenCreated();
+
+        // }
+
+        public initMainGameInfo() {
+            this.setMoney(Model.PlayerLocalService.PlayerData.GoldAndUnit);
+            this.setMonsterIndex();
+            this.setSceneIndex();
+            this.setMonsterHp();
+
+            this.bossBtn.addEventListener(egret.Event.CHANGE, this.bossBtnEvent, this);
+            //            this.bossBtn.currentState = "upAndSelected";
+            //            console.log("zhujun bossBtn 默认状态: " + this.bossBtn.selected);//默认是false.
+        }
+
+
+        /**
+         * @boss按钮切换事件.
+         * @false:逃跑状态,进入方法变true,按钮变绿,倒计时去掉.
+         * @true:挑战状态,进入方法变false,按钮变红,
+         */
+        public bossBtnEvent() {
+            if (this.bossBtn.selected) {//true: 执行true的方法.
+                this.timeLeftComplete();//重置倒计时.
+            } else {//false: 默认是逃跑状态.这里是点击按钮重新过来挑战boss.
+                //重置回调事件，逃跑时，回调事件是构造boss关卡数据,切换到boss.
+                //TODO: 这段最好是传下来.
+                Model.MonsterLocalService.setMonsterData();
+                Model.SceneLocalService.SceneData.currentMonster = Model.MonsterLocalService.MonsterList.length - 1;
+                this.bossBtn.currentState = "upAndSelected";
+                this.countTimeLabel.visible = true;
+                this.countTimeImage.visible = true;
+                this.sceneNumLabel.visible = false;
+                this.swardIcon.visible = false;
+                this.setCountDown(this.onTimeLeft);
+                this.bossBtn.removeEventListener(egret.Event.CHANGE, this.bossBtnEvent, this);
+                this.initMainGameInfo();
+            }
+        }
+
+        /**
+         * @boss死亡事件.
+         * @切换回普通战斗.
+         */
+        public bossDeathEvent() {
+            //终止所有计时.
+            this.bossTimer.removeEventListener(egret.TimerEvent.TIMER, this.timeLeftEvent, this);
+            this.bossTimer.removeEventListener(egret.TimerEvent.TIMER_COMPLETE, this.timeLeftComplete, this);
+            this.bossTimer.stop();
+            //            this.bossBtn.removeEventListener(egret.Event.CHANGE,this.bossBtnEvent,this);
+            //重置为正常战斗UI.
+            this.swardIcon.visible = true;//关小剑.
+            this.bossInfoGroup.visible = false;//显示倒计时，逃跑按钮，进度条
+            this.sceneNumLabel.visible = true;
+        }
+
+        /**
+         * @倒计时到0,或者点击逃跑,UI重置.
+         */
+        public runAwayEvent() {
+            this.bossBtn.currentState = "downAndSelected";//"down";
+            this.countTimeLabel.visible = false;
+            this.countTimeImage.visible = false;
+            this.sceneNumLabel.visible = false;
+            this.swardIcon.visible = false;
+        }
+
+        /**
+         * @设置金币.
+         * @TODO: by zhu_jun,2017.02.19.
+         */
+        public setMoney(_value: string) {
+            // this.charMoney.font = RES.getRes("gold-show-font_fnt");
+            // this.charMoney.text = _value;
+            if (this.onCallBack) this.onCallBack();  // Main.singleton.mainMenuVM.refreshMenu();//改钱之后，会更新相关模块UI.执行的是刷新.
+
+        }
+
+        /**
+         * @设置怪物index.
+         * @怪物切换时候更新.
+         */
+        public setMonsterIndex() {
+            this.sceneNumLabel.text = String(Model.SceneLocalService.SceneData.currentMonster + 1 + "/" + Model.SceneLocalService.SceneData.monsterCount);
+        }
+
+        /**
+         * @设置关卡序号.
+         */
+        public setSceneIndex() {
+            this.preRound.text = String(Model.SceneLocalService.SceneData.sceneId - 1);
+            this.currentRound.text = Model.SceneLocalService.SceneData.sceneId + "";
+            this.nextRound.text = String(Model.SceneLocalService.SceneData.sceneId + 1);
+            //TODO: by zhu_jun,2017.02.20.关卡id背景不变了.
+            // this.preImage.source = String("guanshu_" + String((Model.SceneLocalService.SceneData.sceneId - 1) % 3));
+            // this.currentImage.source = String("guanshu_" + String(Model.SceneLocalService.SceneData.sceneId % 3));
+            // this.nextImage.source = String("guanshu_" + String((Model.SceneLocalService.SceneData.sceneId + 1) % 3));
+            //调用成就 2016.4.5
+            Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_ARRIVE_SCENE, Model.SceneLocalService.SceneData.sceneId);
+        }
+
+        /**
+         * @设置boss血量.
+         */
+        public setMonsterHp() {
+            var hp: number = Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].hp;
+            var hpMax: number = Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].hpMax;
+            if (hp == hpMax) {
+                this.bossHp.slideDuration = 0;
+            } else {
+                this.bossHp.slideDuration = 500;//0
+            }
+            this.bossHpLabel.text = String(Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].HpAndUnit
+                + "/"
+                + Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].HpMaxAndUnit);
+            this.bossHp.maximum = hpMax;
+            this.bossHp.minimum = 0;
+            //            console.log("1111111:" + hp)
+            this.bossHp.value = hp;
+        }
+
+        /**
+         * @设置挑战boss血量
+         * @by cai_haotian 2016.4.15.
+         */
+        public setChallengeBoss() {
+            var hpMax: number = Model.ChallengeLoaclService.challengeBossData.hpMax;
+            var hp: number = Model.ChallengeLoaclService.challengeBossData.hp;
+            if (hp == hpMax) {
+                this.bossHp.slideDuration = 0;
+            } else {
+                this.bossHp.slideDuration = 500;//0
+            }
+            var leftHp = Model.MainLocalService.toUnitConversion(hp);
+            var maxHp = Model.ChallengeLoaclService.challengeBossData.GetHpMax
+            this.bossHpLabel.text = leftHp + "/" + maxHp;
+            this.bossHp.maximum = hpMax;
+            this.bossHp.minimum = 0;
+            this.bossHp.value = hp;
+        }
+
+        /**
+         * @设置倒计时.
+         */
+        public setCountDown(_onTimeLeft: Function, _time?: number) {
+            if (_time) {
+
+            } else {
+                this.onTimeLeft = _onTimeLeft;
+            }
+            this.currentLeftTime = _time ? _time : Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].leftTime;
+            this.countTimeImage.width = 220;
+
+            this.countDownTimes = _time ? _time * 1000 / 100 : Model.MonsterLocalService.MonsterList[Model.SceneLocalService.SceneData.currentMonster].leftTime * 1000 / 100
+            this.countTimePercent = 220 / this.countDownTimes;
+            this.bossTimer = new egret.Timer(100, this.countDownTimes);//0.1秒更新一次记时条.
+            if (_time) {
+
+            } else {
+                this.bossTimer.addEventListener(egret.TimerEvent.TIMER, this.timeLeftEvent, this);
+                this.bossTimer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.timeLeftComplete, this);
+                this.bossTimer.start();
+            }
+        }
+
+
+
+        /**
+         * @剩余时间.
+         */
+        private timeLeftEvent() {
+            this.currentLeftTime -= 0.1;
+            this.countTimeLabel.text = this.currentLeftTime.toFixed(1);
+            this.countTimeImage.width -= this.countTimePercent;
+            console.log("每100毫秒执行一次!");
+        }
+
+        /**
+         * @剩余时间结束时调用.
+         */
+        public timeLeftComplete() {
+            this.bossTimer.removeEventListener(egret.TimerEvent.TIMER, this.timeLeftEvent, this);
+            this.bossTimer.removeEventListener(egret.TimerEvent.TIMER_COMPLETE, this.timeLeftComplete, this);
+            this.bossTimer.stop();
+            this.runAwayEvent();
+            if (this.onTimeLeft) this.onTimeLeft();
+        }
+
+
+
     }
 }

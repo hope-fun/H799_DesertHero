@@ -87,7 +87,7 @@ var Model;
         Object.defineProperty(PlayerData.prototype, "CurrentDps", {
             set: function (_value) {
                 this.currentDps = _value;
-                Main.singleton.mainMenuVM.mainInfo.setCurrentDps(this.CurrentDpsAndUnit);
+                Main.singleton.mainMenuVM.setCurrentDps(this.CurrentDpsAndUnit);
             },
             enumerable: true,
             configurable: true
@@ -132,7 +132,7 @@ var Model;
              */
             set: function (_value) {
                 this.dy.gold = _value;
-                Main.singleton.mainGameVM.sceneInfo.setMoney(this.GoldAndUnit);
+                Main.singleton.mainGameVM.setMoney(this.GoldAndUnit);
             },
             enumerable: true,
             configurable: true
@@ -143,7 +143,7 @@ var Model;
              */
             set: function (_value) {
                 this.dy.gold += _value;
-                Main.singleton.mainGameVM.sceneInfo.setMoney(this.GoldAndUnit);
+                Main.singleton.mainGameVM.setMoney(this.GoldAndUnit);
             },
             enumerable: true,
             configurable: true
@@ -162,7 +162,7 @@ var Model;
         Object.defineProperty(PlayerData.prototype, "ClickDamage", {
             set: function (_value) {
                 this.dy.clickDamage = _value;
-                Main.singleton.mainMenuVM.mainInfo.setTapDamage(this.ClickDamageAndUnit);
+                Main.singleton.mainMenuVM.setTapDamage(this.ClickDamageAndUnit);
             },
             enumerable: true,
             configurable: true
@@ -226,7 +226,7 @@ var Model;
              */
             set: function (_value) {
                 this.dy.friendDamage = _value;
-                Main.singleton.mainMenuVM.mainInfo.setFriendDps(this.FriendDamageAndUnit);
+                Main.singleton.mainMenuVM.setFriendDps(this.FriendDamageAndUnit);
             },
             enumerable: true,
             configurable: true

@@ -9,7 +9,7 @@
 		<e:Image source="bg_tankuangnei_jianbian" horizontalCenter="0.5" verticalCenter="-347" scale9Grid="88,13,13,3" width="595" height="34"/>
 		<e:Label text="灵石可以到兵器谱中兑换神兵呦！" size="20" fontFamily="黑体" x="47" y="94"/>
 		<ViewModel:CloseBtnVM id="closeBtn" label="按钮" x="541" skinName="View.CloseBtn" y="1"/>
-		<e:Image source="icon_lingshi" width="30" height="30" horizontalCenter="162" verticalCenter="-345"/>
+		<e:Image source="icon_lingshi_png" width="30" height="30" horizontalCenter="162" verticalCenter="-345"/>
 		<e:Image source="leichongjiangli" y="9" horizontalCenter="0"/>
 		<e:Label id="magicStone" text="999" fontFamily="黑体" left="499" verticalCenter="-347"/>
 		<e:Image source="bg_tankuangda_nei" scale9Grid="13,15,5,3" horizontalCenter="0" y="143" width="544" height="715"/>

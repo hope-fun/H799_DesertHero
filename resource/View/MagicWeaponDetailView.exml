@@ -16,7 +16,7 @@
 			<e:Label id="weaponAddNext" y="277" size="18" text="攻击力增加999%" fontFamily="黑体" x="64"/>
 			<e:Label id="weaponRemoveNext" y="304" size="18" text="关卡减少10%" fontFamily="黑体" x="64"/>
 			<e:Image source="icon_yuanbao_png" x="273" y="392" visible="false"/>
-			<e:Image source="icon_lingshi" x="278" y="420" width="26" height="26" visible="false"/>
+			<e:Image source="icon_lingshi_png" x="278" y="420" width="26" height="26" visible="false"/>
 			<e:Label id="consumption" text="消耗999" fontFamily="黑体" size="18" right="250" verticalCenter="121.5" visible="false"/>
 			<e:Label id="restitution" text="返还999" fontFamily="黑体" size="18" right="250" verticalCenter="150.5" visible="false"/>
 			<ViewModel:BtnShareVM id="decomposeBtn" label="按钮" y="424" skinName="View.BtnShareItem" horizontalCenter="0.5" visible="false"/>

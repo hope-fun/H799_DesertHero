@@ -207,7 +207,7 @@ var ViewModel;
          */
         BtnShareVM.prototype.setMWBuy = function (_costNum, _isDisable) {
             if (_isDisable === void 0) { _isDisable = false; }
-            this.costIcon.source = "icon_lingshi";
+            this.costIcon.source = "icon_lingshi_png";
             this.costNum.text = _costNum.toString();
             if (Model.WebValue.isTraditional) {
                 this.description.text = "購買神器";
@@ -231,7 +231,7 @@ var ViewModel;
         BtnShareVM.prototype.setMWUnlock = function (_costNum, _isDisable) {
             if (_isDisable === void 0) { _isDisable = false; }
             this.costNum.text = Model.MainLocalService.toUnitConversion(_costNum);
-            this.setCostIcon("icon_lingshi", 18, 18);
+            this.setCostIcon("icon_lingshi_png", 18, 18);
             if (Model.WebValue.isTraditional) {
                 this.description.text = "升級";
             }
@@ -366,7 +366,7 @@ var ViewModel;
         BtnShareVM.prototype.setCumulativeBtn = function (_costNum, _isDisable) {
             if (_isDisable === void 0) { _isDisable = false; }
             this.costNum.text = Model.MainLocalService.toUnitConversion(_costNum);
-            this.setCostIcon("icon_lingshi", 18, 18);
+            this.setCostIcon("icon_lingshi_png", 18, 18);
             if (Model.WebValue.isTraditional) {
                 this.description.text = "獎 勵";
             }
@@ -437,7 +437,7 @@ var ViewModel;
         BtnShareVM.prototype.setAchievementJWBtn = function (_costNum, _isDisable) {
             this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.downAuto, this);
             this.costNum.text = Model.MainLocalService.toUnitConversion(_costNum);
-            this.setCostIcon("icon_lingshi", 18, 18);
+            this.setCostIcon("icon_lingshi_png", 18, 18);
             if (Model.WebValue.isTraditional) {
                 this.description.text = "獎  勵";
             }

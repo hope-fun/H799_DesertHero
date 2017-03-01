@@ -213,27 +213,31 @@ module Model {
         /**
          * @
          */
-        public static onMenu: Function = null;
+        // public static onMenu: Function = null;
         /**
          * @返回键事件.
          */
         public static onBack: Function = null;
 
-
-
         /**
-         * @方向状态.
+         * @各按键按下状态.
+         * @按键按下为true.
+         * @按键连按开关.
          */
-        public static directionStatus = {
+        public static keyDownStatus = {
             left: false,
             right: false,
             up: false,
-            down: false
+            down: false,
+            oK: false,
+            back: false
         }
 
         public constructor() {
+            // this = new KeyEventTool();
             document.onkeyup = this.keyUpEvent;//注册按键抬起事件.
             document.onkeydown = this.keyDownEvent;//注册按键按下事件.
+
         }
 
         /**
@@ -317,22 +321,28 @@ module Model {
             var keyName: string = KeyEventTool.getKeyCodeName(keyCode);
             switch (keyName) {
                 case "UP":
-                    KeyEventTool.directionStatus.up = false;//仅供位移事件使用，业务那边会监听状态.
-                    KeyEventTool.onDirectionUp(Direction.UP);
+                    KeyEventTool.keyDownStatus.up = false;//仅供位移事件使用，业务那边会监听状态.
+                    if (KeyEventTool.onDirectionUp != null) KeyEventTool.onDirectionUp(Direction.UP);
                     break;
                 case "DOWN":
-                    KeyEventTool.directionStatus.down = false;
-                    KeyEventTool.onDirectionUp(Direction.DOWN);
+                    KeyEventTool.keyDownStatus.down = false;
+                    if (KeyEventTool.onDirectionUp != null) KeyEventTool.onDirectionUp(Direction.DOWN);
                     break;
                 case "LEFT":
-                    KeyEventTool.directionStatus.left = false;
-                    KeyEventTool.onDirectionUp(Direction.LEFT);
+                    KeyEventTool.keyDownStatus.left = false;
+                    if (KeyEventTool.onDirectionUp != null) KeyEventTool.onDirectionUp(Direction.LEFT);
                     break;
                 case "RIGHT":
-                    KeyEventTool.directionStatus.right = false;
-                    KeyEventTool.onDirectionUp(Direction.RIGHT);
+                    KeyEventTool.keyDownStatus.right = false;
+                    if (KeyEventTool.onDirectionUp != null) KeyEventTool.onDirectionUp(Direction.RIGHT);
                     break;
                 case "OK":
+                    console.log("OK key is up ! ");
+                    KeyEventTool.keyDownStatus.oK = false;
+                    break;
+                case "BACK":
+                    console.log("BACK key is up ! ");
+                    KeyEventTool.keyDownStatus.back = false;
                     break;
                 default:
                     break;
@@ -348,31 +358,39 @@ module Model {
             // console.log("zhujun: evt " + evt.keyCode + " keyCode " + keyCode + " keyName " + keyName);
             switch (keyName) {//连按的时候第一下会停顿一下,所以方向键的连按改成按下就改状态,通过代码的监听来实现位移.
                 case "UP":
-                    KeyEventTool.directionStatus.up = true;
-                    KeyEventTool.onDirectionDown(Direction.UP);
+                    // console.log("!KeyEventTool.directionStatus.up " + !KeyEventTool.keyDownStatus.up);
+                    if (KeyEventTool.onDirectionDown != null && !KeyEventTool.keyDownStatus.up) KeyEventTool.onDirectionDown(Direction.UP);
+                    KeyEventTool.keyDownStatus.up = true;
                     break;
                 case "DOWN":
-                    KeyEventTool.directionStatus.down = true;
-                    KeyEventTool.onDirectionDown(Direction.DOWN);
+                    if (KeyEventTool.onDirectionDown != null && !KeyEventTool.keyDownStatus.down) KeyEventTool.onDirectionDown(Direction.DOWN);
+                    KeyEventTool.keyDownStatus.down = true;
+
                     break;
                 case "LEFT":
-                    KeyEventTool.directionStatus.left = true;
-                    KeyEventTool.onDirectionDown(Direction.LEFT);
+                    if (KeyEventTool.onDirectionDown != null && !KeyEventTool.keyDownStatus.left) KeyEventTool.onDirectionDown(Direction.LEFT);
+                    KeyEventTool.keyDownStatus.left = true;
+
                     break;
                 case "RIGHT":
-                    KeyEventTool.directionStatus.right = true;
-                    KeyEventTool.onDirectionDown(Direction.RIGHT);
+                    if (KeyEventTool.onDirectionDown != null && !KeyEventTool.keyDownStatus.right) KeyEventTool.onDirectionDown(Direction.RIGHT);
+                    KeyEventTool.keyDownStatus.right = true;
+
                     break;
                 case "OK":
-                    // if(isDebug)console.log("zhujun: key code 13 is OK ! " + KeyEventTool.onOK);
-                    if (KeyEventTool.onOK != null) {
-                       KeyEventTool.onOK();
+                    // console.log(KeyEventTool.onOK != null);
+                    // console.log(KeyEventTool.keyDownStatus.oK);
+
+                    if (KeyEventTool.onOK != null && !KeyEventTool.keyDownStatus.oK) {
+                        KeyEventTool.onOK();
                     }
+                    KeyEventTool.keyDownStatus.oK = true;
                     break;
                 case "BACK":
-                    if (KeyEventTool.onBack != null) {
+                    if (KeyEventTool.onBack != null && !KeyEventTool.keyDownStatus.back) {
                         KeyEventTool.onBack();
                     }
+                    KeyEventTool.keyDownStatus.back = true;
                     break;
                 case "RETURN":
                     break;
@@ -407,7 +425,6 @@ module Model {
                 default:
                     break;
             }
-            //            this.keyUpEvent(evt);//注释掉这句可以连续按下,不注释只点击一次.
         }
 
     }

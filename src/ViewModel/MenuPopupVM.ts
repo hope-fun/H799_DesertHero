@@ -140,9 +140,9 @@ module ViewModel {
         public setPData() {
 //            Main.singleton.mainMenuVM.currentPage = PageName.Player;
             //TODO: 传下来执行. 花费过后重新更新ui钱币数 by cai_haotian 2016.2.19.
-//            Main.singleton.mainGameVM.sceneInfo.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
+//            Main.singleton.mainGameVM.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
             //更新主界面 by cai_haotian 2016.2.22.
-            Main.singleton.mainMenuVM.mainInfo.initMainInfo();
+            Main.singleton.mainMenuVM.initMainInfo();
             
             this.protagonistPopGroup.visible = true;
             this.bosomFriendPopGroup.visible = false;
@@ -190,9 +190,9 @@ module ViewModel {
         public setBFData() {
 //            Main.singleton.mainMenuVM.currentPage = PageName.Friend;
             //TODO:方法传下来执行.  花费过后重新更新ui钱币数 by cai_haotian 2016.2.19.
-//            Main.singleton.mainGameVM.sceneInfo.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
+//            Main.singleton.mainGameVM.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
             //更新主界面 by cai_haotian 2016.2.22.
-            Main.singleton.mainMenuVM.mainInfo.initMainInfo();
+            Main.singleton.mainMenuVM.initMainInfo();
             this.protagonistPopGroup.visible = false;
             this.bosomFriendPopGroup.visible = true;
             this.artifactPopGroup.visible = false;
@@ -426,7 +426,7 @@ module ViewModel {
          */
         public setAData() {
 //            Main.singleton.mainMenuVM.currentPage = PageName.MagicWeapon;
-            Main.singleton.mainMenuVM.mainInfo.initMainInfo();
+            Main.singleton.mainMenuVM.initMainInfo();
             this.protagonistPopGroup.visible = false;
             this.bosomFriendPopGroup.visible = false;
             this.artifactPopGroup.visible = true;
@@ -499,7 +499,7 @@ module ViewModel {
                                         Model.PlayerLocalService.PlayerData.dy.treasure += Number(_data.shopList[i].extraGet);
                                     }
                                     this.setMData();//刷新UI，减钱
-                                    Main.singleton.mainGameVM.sceneInfo.init();//更新主场景ui
+                                    Main.singleton.mainGameVM.initMainGameInfo();//更新主场景ui
                                 },()=>{
                                     if(Model.WebValue.isTraditional){
                                         alert("充值失敗！");
@@ -511,7 +511,7 @@ module ViewModel {
                             if(_isFree) {//这里是免费释放技能
                                 Model.ShopLocalService.commitShop(_data,_isFree,() => {
                                     this.setMData();//刷新UI，减钱
-                                    Main.singleton.mainGameVM.sceneInfo.init();//更新主场景ui
+                                    Main.singleton.mainGameVM.initMainGameInfo();//更新主场景ui
                                     Model.WebService.commitData(Model.WebValue.dataDyModel,() => {
                                         if(Model.WebServiceBase.isDebug) {
                                             console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));
@@ -533,7 +533,7 @@ module ViewModel {
                                         //设置商城回调
                                         Model.ShopLocalService.commitShop(_data,_isFree,() => {
                                             this.setMData();//刷新UI，减钱
-                                            Main.singleton.mainGameVM.sceneInfo.init();//更新主场景ui
+                                            Main.singleton.mainGameVM.initMainGameInfo();//更新主场景ui
                                             Model.WebService.commitData(Model.WebValue.dataDyModel,() => {
                                                 if(Model.WebServiceBase.isDebug) {
                                                     console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));

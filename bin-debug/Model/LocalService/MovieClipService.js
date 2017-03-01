@@ -109,9 +109,11 @@ var Model;
             var mcData = new egret.MovieClipDataFactory(RES.getRes(_json), RES.getRes(_png));
             this.movieClip = new egret.MovieClip(mcData.generateMovieClipData(_mcName));
             if (_switch) {
+                // alert("_switch " + _switch);
                 this.movieClip.addEventListener(egret.Event.COMPLETE, this.onEvent, this);
             }
             else {
+                // alert("_switch " + _switch);
                 this.movieClip.addEventListener(egret.MovieClipEvent.FRAME_LABEL, this.onEvent, this);
             }
             this.uiGroup.addChild(this.movieClip);
@@ -121,6 +123,8 @@ var Model;
             return this.movieClip;
         };
         MovieClipService.prototype.onEvent = function (evt) {
+            // alert("this.movieClip.currentFrame" + this.movieClip.currentFrame + " e.type " + evt.type + "on event evt.frameLabel " + evt.frameLabel);
+            // alert("on event evt.frameLabel " + evt.currentTarget);
             if (this.onCallBack)
                 this.onCallBack(); //循环动画没传方法,所以不会进这里.
             //            Model.console.log("zhujun: 循环动画没传方法,所以不会进这里. movie clip is " + this.movieClip);

@@ -217,16 +217,14 @@ class Main extends eui.UILayer {
     private createScene() {
         Model.PlayerLocalService.initAllData();//创建场景之前先初始化数据.
         Model.AudioService.Shared();//实例化声音控件
+
         this.mainMenuVM = new ViewModel.MainMenuVM(this, () => {
             if (Model.WebServiceBase.isDebug) {
                 console.log("zhujun: main menu vm call back successed !　");
             }
+
         });
-        this.mainGameVM = new ViewModel.MainGameVM(this, () => {
-            if (Model.WebServiceBase.isDebug) {
-                console.log("zhujun: main game vm call back successed ! ");
-            }
-        });
+
 
     }
 }

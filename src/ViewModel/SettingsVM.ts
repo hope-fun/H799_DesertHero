@@ -72,7 +72,7 @@ module ViewModel {
             egret.Tween.get(this.window).to({ y: 0 },700,egret.Ease.backOut);
             this.LGCloseBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,() => {
                 egret.Tween.get(this.maskBlackSettings).to({ alpha: 0 },700,egret.Ease.circIn);
-                egret.Tween.get(this.window).to({ y: -550 },700,egret.Ease.backIn).call(() => {
+                egret.Tween.get(this.window).to({ y: -720 },700,egret.Ease.backIn).call(() => {
                     this.uiLayer.removeChild(this);
                 });
             },this);

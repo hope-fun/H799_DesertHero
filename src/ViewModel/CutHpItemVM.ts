@@ -39,6 +39,7 @@ module ViewModel {
         }
 
         protected createChildren() {
+            console.log("zhujun: create cut hp group !!!!!!!!!!!!!!!!!!!");
             super.createChildren();
         }
 
@@ -52,9 +53,9 @@ module ViewModel {
             this.normalAttack.font = RES.getRes("normal-font_fnt");
             this.normalAttack.smoothing = true;
             this.normalAttack.text = _data;
+            this.normalAttack.scaleX = 1.5;
+            this.normalAttack.scaleY = 1.5;
             this.TweenAnimate(100);
-            //更新目前dps by cai_haotian 2016.2.23.
-            //            Main.singleton.mainMenuVM.mainInfo.setMIData(Number(_data));
         }
 
         /**
@@ -66,22 +67,22 @@ module ViewModel {
             this.criticalAttack.font = RES.getRes("critical-font_fnt");
             this.criticalAttack.smoothing = true;
             this.criticalAttack.text = _data;
-            this.criticalAttack.y = 10;
-            //更新目前dps by cai_haotian 2016.2.23.
-            //            Main.singleton.mainMenuVM.mainInfo.setMIData(Number(_data));
-
+            // this.criticalAttack.y = 10;在变改成在exml里面锚定了.
+            this.criticalAttack.scaleX = 1.5;
+            this.criticalAttack.scaleY = 1.5;
             egret.setTimeout(() => {
                 this.TweenAnimate(50);
             }, this, 200);
         }
     	/**
-       * @渐淡动画
-       */
+         * @渐淡动画
+         */
         private TweenAnimate(num?: number) {
             var groupAlphaTween = egret.Tween.get(this);
             groupAlphaTween.to({ alpha: 0, y: this.y - num }, 1000).call(() => {
+                egret.Tween.removeTweens(groupAlphaTween);
                 //更新目前dps by cai_haotian 2016.2.23.
-                //                Main.singleton.mainMenuVM.mainInfo.setMIData(-Number(this.data));
+                //                Main.singleton.mainMenuVM.setMIData(-Number(this.data));
                 Model.PlayerLocalService.setPerSecondTapDamage(-this.damage);
                 // alert("remove cut hp item");
                 this.group.removeChild(this);
