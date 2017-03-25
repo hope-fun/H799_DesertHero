@@ -17,3 +17,4 @@ var Model;
     Model.ShopStModel = ShopStModel;
     __reflect(ShopStModel.prototype, "Model.ShopStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=ShopStModel.js.map

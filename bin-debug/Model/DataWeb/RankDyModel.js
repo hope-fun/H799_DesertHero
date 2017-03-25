@@ -17,3 +17,4 @@ var Model;
     Model.RankDyModel = RankDyModel;
     __reflect(RankDyModel.prototype, "Model.RankDyModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=RankDyModel.js.map

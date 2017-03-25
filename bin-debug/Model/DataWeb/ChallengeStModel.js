@@ -17,3 +17,4 @@ var Model;
     Model.ChallengeStModel = ChallengeStModel;
     __reflect(ChallengeStModel.prototype, "Model.ChallengeStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=ChallengeStModel.js.map

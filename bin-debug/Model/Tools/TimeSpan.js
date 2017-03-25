@@ -228,3 +228,4 @@ var Model;
     Model.TimeSpan = TimeSpan;
     __reflect(TimeSpan.prototype, "Model.TimeSpan");
 })(Model || (Model = {}));
+//# sourceMappingURL=TimeSpan.js.map

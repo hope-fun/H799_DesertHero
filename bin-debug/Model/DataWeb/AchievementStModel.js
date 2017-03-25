@@ -17,3 +17,4 @@ var Model;
     Model.AchievementStModel = AchievementStModel;
     __reflect(AchievementStModel.prototype, "Model.AchievementStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=AchievementStModel.js.map

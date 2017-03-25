@@ -89,3 +89,4 @@ var ViewModel;
     ViewModel.SettingsVM = SettingsVM;
     __reflect(SettingsVM.prototype, "ViewModel.SettingsVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=SettingsVM.js.map

@@ -236,3 +236,4 @@ var Model;
     Model.AchievementLocalService = AchievementLocalService;
     __reflect(AchievementLocalService.prototype, "Model.AchievementLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=AchievementLocalService.js.map

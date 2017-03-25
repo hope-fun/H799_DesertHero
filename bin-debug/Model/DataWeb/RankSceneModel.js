@@ -17,3 +17,4 @@ var Model;
     Model.RankSceneModel = RankSceneModel;
     __reflect(RankSceneModel.prototype, "Model.RankSceneModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=RankSceneModel.js.map

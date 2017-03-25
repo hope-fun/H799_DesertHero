@@ -563,3 +563,4 @@ var Model;
     Model.FriendLocalService = FriendLocalService;
     __reflect(FriendLocalService.prototype, "Model.FriendLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=FriendLocalService.js.map

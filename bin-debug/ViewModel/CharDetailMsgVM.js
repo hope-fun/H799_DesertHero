@@ -178,3 +178,4 @@ var ViewModel;
     ViewModel.CharDetailMsgVM = CharDetailMsgVM;
     __reflect(CharDetailMsgVM.prototype, "ViewModel.CharDetailMsgVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=CharDetailMsgVM.js.map

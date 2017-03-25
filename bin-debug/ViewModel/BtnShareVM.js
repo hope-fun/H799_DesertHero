@@ -530,3 +530,4 @@ var ViewModel;
     ViewModel.BtnShareVM = BtnShareVM;
     __reflect(BtnShareVM.prototype, "ViewModel.BtnShareVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=BtnShareVM.js.map

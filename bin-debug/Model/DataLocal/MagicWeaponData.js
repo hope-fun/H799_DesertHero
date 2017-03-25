@@ -50,3 +50,4 @@ var Model;
     Model.MagicWeaponData = MagicWeaponData;
     __reflect(MagicWeaponData.prototype, "Model.MagicWeaponData");
 })(Model || (Model = {}));
+//# sourceMappingURL=MagicWeaponData.js.map

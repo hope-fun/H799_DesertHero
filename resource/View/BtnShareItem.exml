@@ -3,7 +3,7 @@
         currentState="up" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*" >
 	<e:Group scaleX.down="1.1" scaleY.down="1.1"  horizontalCenter="0" verticalCenter="0" width="137" scaleX.downBlue="1.1" scaleY.downBlue="1.1" touchEnabled.disabled="false">
 		<e:Group left="0" top="26" bottom="1" right="0">
-			<e:Image id="btnBg" left="0" scale9Grid="8,8,121,31" top="0" right="0" bottom="0" x="10" y="10" source.up="btn_01_png" scale9Grid.up="15,13,107,19" source.down="btn_01_png" scale9Grid.down="15,13,107,19" source.disabled="btn_03_png" scale9Grid.disabled="18,16,101,14" source.upBlue="btn_02_png" scale9Grid.upBlue="18,15,99,15" source.downBlue="btn_02_png" scale9Grid.downBlue="19,17,98,13" source="btn_01_png"/>
+			<e:Image id="btnBg" left="0"  top="0" right="0" bottom="0" x="10" y="10" source.up="btn_01_png"  source.down="btn_01_png"  source.disabled="btn_03_png"  source.upBlue="btn_02_png"  source.downBlue="btn_02_png" source="btn_01_png"/>
 			<e:Label id="valueLabel" size="16" textColor="0x000000" fontFamily="黑体" verticalCenter="5.5" horizontalCenter="0" width="137" textAlign="center"/>
 			<e:Label id="valueDesLabel" textColor="0x000000" size="16" fontFamily="黑体" horizontalCenter="0.5" verticalCenter="-9.5"/>
 			<e:Label id="description" textColor="0x000000" size="16" fontFamily="黑体" textAlign="center" verticalAlign="middle"  horizontalCenter="0" verticalCenter="0"/>

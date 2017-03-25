@@ -113,3 +113,4 @@ var Model;
     Model.DragonBones = DragonBones;
     __reflect(DragonBones.prototype, "Model.DragonBones");
 })(Model || (Model = {}));
+//# sourceMappingURL=DragonBones.js.map

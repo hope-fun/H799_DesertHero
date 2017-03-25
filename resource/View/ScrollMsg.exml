@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="View.ScrollMsg" width="1280" height="720" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="scrollBar" source="juanzhou_png" scale9Grid="84,0,384,290" horizontalCenter="-1" verticalCenter="-74" anchorOffsetX="0" width="168"/>
+	<e:Image id="scrollBar" source="juanzhou_png" horizontalCenter="-1" verticalCenter="-74" anchorOffsetX="0" width="168"/>
 	<e:Label id="roundName" text="苍狼大漠" fontFamily="隶书" textColor="0x000000" alpha="0" verticalCenter="-80" horizontalCenter="0" size="68"/>
 </e:Skin>

@@ -322,3 +322,4 @@ var Model;
     Model.WebServiceToolKit = WebServiceToolKit;
     __reflect(WebServiceToolKit.prototype, "Model.WebServiceToolKit");
 })(Model || (Model = {}));
+//# sourceMappingURL=WebServiceToolKit.js.map

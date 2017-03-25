@@ -254,3 +254,4 @@ var Model;
     Model.WebServiceResponseBase = WebServiceResponseBase;
     __reflect(WebServiceResponseBase.prototype, "Model.WebServiceResponseBase");
 })(Model || (Model = {}));
+//# sourceMappingURL=WebServiceBase.js.map

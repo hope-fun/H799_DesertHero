@@ -96,3 +96,4 @@ var Model;
     Model.FlyBoxLocalService = FlyBoxLocalService;
     __reflect(FlyBoxLocalService.prototype, "Model.FlyBoxLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=FlyBoxLoaclService.js.map

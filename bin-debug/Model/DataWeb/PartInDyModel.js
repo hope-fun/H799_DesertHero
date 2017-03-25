@@ -16,3 +16,4 @@ var Model;
     Model.PartInDyModel = PartInDyModel;
     __reflect(PartInDyModel.prototype, "Model.PartInDyModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=PartInDyModel.js.map

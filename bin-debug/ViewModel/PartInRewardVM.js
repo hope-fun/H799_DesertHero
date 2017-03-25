@@ -66,3 +66,4 @@ var ViewModel;
     ViewModel.PartInRewardVM = PartInRewardVM;
     __reflect(PartInRewardVM.prototype, "ViewModel.PartInRewardVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=PartInRewardVM.js.map

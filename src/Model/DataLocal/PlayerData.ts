@@ -26,51 +26,61 @@ module Model {
 
         public set CurrentDps(_value: number) {
             this.currentDps = _value;
-            Main.singleton.mainMenuVM.setCurrentDps(this.CurrentDpsAndUnit);
+            Main.sington.mainMenuVM.setCurrentDps(this.CurrentDpsAndUnit);
         }
-
         /**
          * @带单位当前秒伤.
          */
         public get CurrentDpsAndUnit(): string {
             return MainLocalService.toUnitConversion(this.currentDps);
         }
-
+        /**
+         * @直接设置元宝数量.
+         */
+        public set Gold(_value: number){
+            this.dy.gold = _value;
+            Main.sington.mainGameVM.setGold(this.dy.gold.toString());
+        }
+        /**
+         * @正加负减元宝数量.
+         */
+        public set AddGold(_value:number){
+            this.dy.gold += _value;
+            Main.sington.mainGameVM.setGold(this.dy.gold.toString());
+        }
         /**
          * @直接设置灵石数量.
          */
         public set Jewel(_value: number) {
             this.dy.jewel = _value;
-            //            Main.singleton.mainGameVM.sceneInfo
-            //TODO: by zhu_jun,这边需要更新灵石.
+            Main.sington.mainGameVM.setJewel(this.dy.jewel.toString());
         }
         /**
          * @正加负减灵石数量.
          */
         public set AddJewel(_value: number) {
             this.dy.jewel = Number(this.dy.jewel) + _value;
-            //            Main.singleton.mainGameVM.sceneInfo
-            //TODO: by zhu_jun,这边需要更新灵石.
+            Main.sington.mainGameVM.setJewel(this.dy.jewel.toString());
         }
         /**
-         * @设置动态金币数量.
+         * @设置动态银币数量.
          */
-        public set Gold(_value: number) {
-            this.dy.gold = _value;
-            Main.singleton.mainGameVM.setMoney(this.GoldAndUnit);
+        public set Silver(_value: number) {
+            this.dy.silver = _value;
+            Main.sington.mainGameVM.setSilver(this.SilverAndUnit);
         }
         /**
-         * @正加负减金币数量.
+         * @正加负减银币数量.
          */
-        public set AddGold(_value: number) {
-            this.dy.gold += _value;
-            Main.singleton.mainGameVM.setMoney(this.GoldAndUnit);
+        public set AddSilver(_value: number) {
+            this.dy.silver += _value;
+            Main.sington.mainGameVM.setSilver(this.SilverAndUnit);
         }
         /**
          * @带单位金币总额.
          */
-        public get GoldAndUnit(): string {
-            var value: string = MainLocalService.toUnitConversion(this.dy.gold);
+        public get SilverAndUnit(): string {
+            var value: string = MainLocalService.toUnitConversion(this.dy.silver);
             return value;
         }
         /**
@@ -80,7 +90,7 @@ module Model {
 
         public set ClickDamage(_value: number) {
             this.dy.clickDamage = _value;
-            Main.singleton.mainMenuVM.setTapDamage(this.ClickDamageAndUnit);
+            Main.sington.mainMenuVM.setTapDamage(this.ClickDamageAndUnit);
         }
 
         /**
@@ -149,7 +159,7 @@ module Model {
          */
         public set FriendDamage(_value: number) {
             this.dy.friendDamage = _value;
-            Main.singleton.mainMenuVM.setFriendDps(this.FriendDamageAndUnit);
+            Main.sington.mainMenuVM.setFriendDps(this.FriendDamageAndUnit);
         }
         /**
          * @带单位挚友总秒伤.
@@ -243,7 +253,6 @@ module Model {
          */
         public isChallenge: boolean = false;
 
-
         /**
          * @离线奖励显示 
          */
@@ -252,8 +261,8 @@ module Model {
         }
 
         /**
- * @特效配置
- */
+         * @特效配置
+         */
         public get EffectPngJson(): string {
             return this.st.playerEffect + "_tex_json";
         }

@@ -142,8 +142,7 @@ module ViewModel {
             //TODO: 传下来执行. 花费过后重新更新ui钱币数 by cai_haotian 2016.2.19.
 //            Main.singleton.mainGameVM.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
             //更新主界面 by cai_haotian 2016.2.22.
-            Main.singleton.mainMenuVM.initMainInfo();
-            
+            Main.sington.mainMenuVM.initMainInfo();
             this.protagonistPopGroup.visible = true;
             this.bosomFriendPopGroup.visible = false;
             this.artifactPopGroup.visible = false;
@@ -192,7 +191,7 @@ module ViewModel {
             //TODO:方法传下来执行.  花费过后重新更新ui钱币数 by cai_haotian 2016.2.19.
 //            Main.singleton.mainGameVM.setMoney(Model.MainInfoLocalService.toUnitConversion(Model.PlayerLocalService.PlayerData.sceneId.gold));
             //更新主界面 by cai_haotian 2016.2.22.
-            Main.singleton.mainMenuVM.initMainInfo();
+            Main.sington.mainMenuVM.initMainInfo();
             this.protagonistPopGroup.visible = false;
             this.bosomFriendPopGroup.visible = true;
             this.artifactPopGroup.visible = false;
@@ -205,9 +204,9 @@ module ViewModel {
                 for(var i = 0;i < fDatas.length;i++) {//挚友技能初始化.
                     Model.FriendLocalService.isShow(fDatas[i],fDatas);//设置显示条件 by cai_haotian 2016.3.29
                     if(Enumerable.From(fDatas).Where(x=>x.dy==null).Select(x=>x.reachRecruit).FirstOrDefault(null)) {
-                        Main.singleton.mainMenuVM.btnBosomFriend.btnNewMark.visible = true;//设置新文字现实by cai_haotian 2016.3.30
+                        Main.sington.mainMenuVM.btnBosomFriend.btnNewMark.visible = true;//设置新文字现实by cai_haotian 2016.3.30
                     } else {
-                        Main.singleton.mainMenuVM.btnBosomFriend.btnNewMark.visible = false;
+                        Main.sington.mainMenuVM.btnBosomFriend.btnNewMark.visible = false;
                     }
                     if(fDatas[i].dy) {
                         if(fDatas[i].dy.layerId < fDatas[i].layerMatchLevel) {
@@ -219,13 +218,13 @@ module ViewModel {
                                         console.log("zhujun: friend and skill " + _data.st.id + " layer successed ! ");
                                     }
                                 } else {
-                                    var killedView = new ViewModel.KilledViewVM(Main.singleton,(_data: Model.FriendData) => {
+                                    var killedView = new ViewModel.KilledViewVM(Main.sington,(_data: Model.FriendData) => {
                                         if(Model.PlayerLocalService.isEnoughSycee(_data.sealCDMoney)) {
                                             Model.FriendLocalService.removeSealCD(_data);
                                             this.setBFData();//更新UI,减去UI钱，加购买钱， 开下一个 
                                         } else {
-                                            new ViewModel.LackGoldVM(Main.singleton,() => {
-                                                Main.singleton.removeChild(killedView);
+                                            new ViewModel.LackGoldVM(Main.sington,() => {
+                                                Main.sington.removeChild(killedView);
                                             });
                                         }
                                     });
@@ -243,13 +242,13 @@ module ViewModel {
                                     }
                                     
                                 }else{
-                                    var killedView=new ViewModel.KilledViewVM(Main.singleton,(_data:Model.FriendData)=>{
+                                    var killedView=new ViewModel.KilledViewVM(Main.sington,(_data:Model.FriendData)=>{
                                             if(Model.PlayerLocalService.isEnoughSycee(_data.sealCDMoney)){
                                                 Model.FriendLocalService.removeSealCD(_data);
                                                 this.setBFData();//更新UI,减去UI钱，加购买钱， 开下一个 
                                             }else{
-                                                new ViewModel.LackGoldVM(Main.singleton,() => {
-                                                    Main.singleton.removeChild(killedView);
+                                                new ViewModel.LackGoldVM(Main.sington,() => {
+                                                    Main.sington.removeChild(killedView);
                                                 });
                                             }
                                         });
@@ -265,7 +264,7 @@ module ViewModel {
                                 if(_data.IsEnoughRecruit){
                                     Model.FriendLocalService.buySuccessedCallBack(_data);
                                     //显示人物 by cai_haotian 2016.2.22.
-                                    Main.singleton.mainGameVM.switchFriend(_data);
+                                    Main.sington.mainGameVM.switchFriend(_data);
                                     this.setBFData();//更新UI,减去UI钱，加购买钱， 开下一个
                                     if(_data.Type == Model.FriendType.FRIEND_TYPE_FRIEND) {
                                         //调用成就 by cai_haotian 2016.4.5
@@ -290,12 +289,12 @@ module ViewModel {
                                     });
                                     
                                 }else{
-                                    new ViewModel.LackGoldVM(Main.singleton,()=>{});
+                                    new ViewModel.LackGoldVM(Main.sington,()=>{});
                                 }
                             }else{
                                 Model.FriendLocalService.buySuccessedCallBack(_data);
                                 //显示人物 by cai_haotian 2016.2.22.
-                                Main.singleton.mainGameVM.switchFriend(_data);
+                                Main.sington.mainGameVM.switchFriend(_data);
                                 this.setBFData();//更新UI,减去UI钱，加购买钱， 开下一个
                                 //第一次显示挚友 by cai_haotian 2016.2.22.
                                 if(_data.Type == Model.FriendType.FRIEND_TYPE_FRIEND) {
@@ -317,9 +316,9 @@ module ViewModel {
                 for(var i = 0;i < fDatas.length;i++) {
                     Model.FriendLocalService.isShow(fDatas[i],fDatas);//设置显示条件 by cai_haotian 2016.3.29
                     if(Enumerable.From(fDatas).Where(x=> x.dy == null).Select(x=> x.reachRecruit).FirstOrDefault(null)) {
-                        Main.singleton.mainMenuVM.btnBosomFriend.btnNewMark.visible = true;//设置新文字现实by cai_haotian 2016.3.30
+                        Main.sington.mainMenuVM.btnBosomFriend.btnNewMark.visible = true;//设置新文字现实by cai_haotian 2016.3.30
                     }else{
-                        Main.singleton.mainMenuVM.btnBosomFriend.btnNewMark.visible = false;
+                        Main.sington.mainMenuVM.btnBosomFriend.btnNewMark.visible = false;
                     }
                     if(fDatas[i].dy) {
 //                        Model.console.log("zhujun: fDatas[i].sceneId.layerId  " + fDatas[i].sceneId.layerId + " fDatas[i].layerMatchLevel " + fDatas[i].layerMatchLevel+ " level " + fDatas[i].sceneId.level);
@@ -333,13 +332,13 @@ module ViewModel {
                                     }
                                     
                                 } else {
-                                    var killedView = new ViewModel.KilledViewVM(Main.singleton,(_data: Model.FriendData) => {
+                                    var killedView = new ViewModel.KilledViewVM(Main.sington,(_data: Model.FriendData) => {
                                         if(Model.PlayerLocalService.isEnoughSycee(_data.sealCDMoney)) {
                                             Model.FriendLocalService.removeSealCD(_data);
                                             this.setBFData();//更新UI,减去UI钱，加购买钱， 开下一个 
                                         } else {
-                                            new ViewModel.LackGoldVM(Main.singleton,() => {
-                                                Main.singleton.removeChild(killedView);
+                                            new ViewModel.LackGoldVM(Main.sington,() => {
+                                                Main.sington.removeChild(killedView);
                                                 });
                                         }
                                     });
@@ -357,13 +356,13 @@ module ViewModel {
                                     }
                                     
                                 } else {
-                                    var killedView = new ViewModel.KilledViewVM(Main.singleton,(_data: Model.FriendData) => {
+                                    var killedView = new ViewModel.KilledViewVM(Main.sington,(_data: Model.FriendData) => {
                                         if(Model.PlayerLocalService.isEnoughSycee(_data.sealCDMoney)) {
                                             Model.FriendLocalService.removeSealCD(_data);
                                             this.setBFData();//更新UI,减去UI钱，加购买钱， 开下一个 
                                         } else {
-                                            new ViewModel.LackGoldVM(Main.singleton,() => {
-                                                Main.singleton.removeChild(killedView);
+                                            new ViewModel.LackGoldVM(Main.sington,() => {
+                                                Main.sington.removeChild(killedView);
                                             });
                                         }
                                     });
@@ -383,7 +382,7 @@ module ViewModel {
                                 if(_data.IsEnoughRecruit) {
                                     Model.FriendLocalService.buySuccessedCallBack(_data);
                                     //显示人物 by cai_haotian 2016.2.22.
-                                    Main.singleton.mainGameVM.switchFriend(_data);
+                                    Main.sington.mainGameVM.switchFriend(_data);
                                     this.setBFData();//更新UI,减去UI钱，加购买钱， 开下一个
                                     //第一次显示挚友 by cai_haotian 2016.2.22.
                                     if(Model.WebServiceBase.isDebug) {
@@ -396,12 +395,12 @@ module ViewModel {
                                     }
                                     
                                 } else {
-                                    new ViewModel.LackGoldVM(Main.singleton,() => { });
+                                    new ViewModel.LackGoldVM(Main.sington,() => { });
                                 }
                             } else {
                                 Model.FriendLocalService.buySuccessedCallBack(_data);
                                 //显示人物 by cai_haotian 2016.2.22.
-                                Main.singleton.mainGameVM.switchFriend(_data);
+                                Main.sington.mainGameVM.switchFriend(_data);
                                 this.setBFData();//更新UI,减去UI钱，加购买钱， 开下一个
                                 //第一次显示挚友 by cai_haotian 2016.2.22.
                                 if(Model.WebServiceBase.isDebug) {
@@ -426,7 +425,7 @@ module ViewModel {
          */
         public setAData() {
 //            Main.singleton.mainMenuVM.currentPage = PageName.MagicWeapon;
-            Main.singleton.mainMenuVM.initMainInfo();
+            Main.sington.mainMenuVM.initMainInfo();
             this.protagonistPopGroup.visible = false;
             this.bosomFriendPopGroup.visible = false;
             this.artifactPopGroup.visible = true;
@@ -478,7 +477,7 @@ module ViewModel {
                 this.shopScroller.viewport.scrollV = 80 * 6 + 30;//TODO: 如果列表长度会变，就改成获取元宝的id-1.
             }
             //设置元宝数量
-            this.treasureLabel.text = Model.PlayerLocalService.PlayerData.dy.treasure+"";
+            this.treasureLabel.text = Model.PlayerLocalService.PlayerData.dy.gold+"";
             var sDatas:Model.ShopData[]=Model.ShopLocalService.ShopList;
             if(this.shopGroup.numChildren==0){
                 this.sBuyItem=new ShopItemVM(this.shopGroup,()=>{
@@ -495,11 +494,11 @@ module ViewModel {
                                         console.log("cai_haotian recharge success!!!!!");   
                                     }
                                     for(var i = 0;i < _data.shopList.length; i++) {
-                                        Model.PlayerLocalService.PlayerData.dy.treasure += Number(_data.shopList[i].cost);
-                                        Model.PlayerLocalService.PlayerData.dy.treasure += Number(_data.shopList[i].extraGet);
+                                        Model.PlayerLocalService.PlayerData.dy.gold += Number(_data.shopList[i].cost);
+                                        Model.PlayerLocalService.PlayerData.dy.gold += Number(_data.shopList[i].extraGet);
                                     }
                                     this.setMData();//刷新UI，减钱
-                                    Main.singleton.mainGameVM.initMainGameInfo();//更新主场景ui
+                                    Main.sington.mainGameVM.initMainGameInfo();//更新主场景ui
                                 },()=>{
                                     if(Model.WebValue.isTraditional){
                                         alert("充值失敗！");
@@ -511,7 +510,7 @@ module ViewModel {
                             if(_isFree) {//这里是免费释放技能
                                 Model.ShopLocalService.commitShop(_data,_isFree,() => {
                                     this.setMData();//刷新UI，减钱
-                                    Main.singleton.mainGameVM.initMainGameInfo();//更新主场景ui
+                                    Main.sington.mainGameVM.initMainGameInfo();//更新主场景ui
                                     Model.WebService.commitData(Model.WebValue.dataDyModel,() => {
                                         if(Model.WebServiceBase.isDebug) {
                                             console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));
@@ -533,7 +532,7 @@ module ViewModel {
                                         //设置商城回调
                                         Model.ShopLocalService.commitShop(_data,_isFree,() => {
                                             this.setMData();//刷新UI，减钱
-                                            Main.singleton.mainGameVM.initMainGameInfo();//更新主场景ui
+                                            Main.sington.mainGameVM.initMainGameInfo();//更新主场景ui
                                             Model.WebService.commitData(Model.WebValue.dataDyModel,() => {
                                                 if(Model.WebServiceBase.isDebug) {
                                                     console.log("cai_haotian: commitAuto success ! " + JSON.stringify(Model.WebValue.dataDyModel));
@@ -550,7 +549,7 @@ module ViewModel {
                                         });
                                     }
                                 } else {
-                                    new ViewModel.LackGoldVM(Main.singleton,() => { });
+                                    new ViewModel.LackGoldVM(Main.sington,() => { });
                                 }
                             }
                         }

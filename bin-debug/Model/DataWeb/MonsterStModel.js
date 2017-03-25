@@ -16,3 +16,4 @@ var Model;
     Model.MonsterStModel = MonsterStModel;
     __reflect(MonsterStModel.prototype, "Model.MonsterStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=MonsterStModel.js.map

@@ -52,3 +52,4 @@ var ViewModel;
     ViewModel.PersonalMsgVM = PersonalMsgVM;
     __reflect(PersonalMsgVM.prototype, "ViewModel.PersonalMsgVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=PersonalMsgVM.js.map

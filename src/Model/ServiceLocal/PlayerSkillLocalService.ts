@@ -182,10 +182,10 @@ module Model {
          */ 
         public static upgradeSuccessedCallBack(_data:PlayerSkillData,_time?:number){
             switch(_time){
-                case 1: PlayerLocalService.PlayerData.AddGold = -_data.cost;
+                case 1: PlayerLocalService.PlayerData.AddSilver = -_data.cost;
                     _data.dy.level += 1;
                     break;
-                case 10: PlayerLocalService.PlayerData.AddGold = -_data.tenUpgradeCost;
+                case 10: PlayerLocalService.PlayerData.AddSilver = -_data.tenUpgradeCost;
                     _data.dy.level += 10;
                     break;
                 default: alert("技能升级出错，请联系管理员！");
@@ -302,9 +302,9 @@ module Model {
                         var goldAddAndUnit = Model.MainLocalService.toUnitConversion(goldAdd);
                         _onCallback(goldAdd,goldAddAndUnit);
                     }
-                    Main.singleton.mainGameVM.clickBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,skillEffect,this);
+                    Main.sington.mainGameVM.clickBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,skillEffect,this);
                     egret.setTimeout(()=>{
-                        Main.singleton.mainGameVM.clickBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP,skillEffect,this);
+                        Main.sington.mainGameVM.clickBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP,skillEffect,this);
                     },this,duringTime*1000);
                     break;
                 default:
@@ -324,7 +324,7 @@ module Model {
                 if(WebServiceBase.isDebug){
                     console.log("cai_haotian cleanSkillCD success!!!");
                 }
-                PlayerLocalService.PlayerData.dy.treasure -= _data.st.removeCdCost;
+                PlayerLocalService.PlayerData.dy.gold -= _data.st.removeCdCost;
                 _data.dy.cdTime = 0;
                 _onCallBack();
                 return _data;    

@@ -84,7 +84,7 @@ module ViewModel {
     	 * @设置成就钱数
     	 */
         public setYbCount() {
-            this.earnMoney.text = Model.PlayerLocalService.PlayerData.dy.treasure + "";
+            this.earnMoney.text = Model.PlayerLocalService.PlayerData.dy.gold + "";
         }
 
     	/**
@@ -174,7 +174,7 @@ module ViewModel {
                 tween.bezierP1Y = 180;
                 tween.bezierP1X = bezierP1X;//设置回收动画，贝塞尔曲线的P1点x坐标
                 var recycleCallBack = (_bTween: Model.TweenCustom) => {
-                    Model.PlayerLocalService.PlayerData.dy.treasure += 1;
+                    Model.PlayerLocalService.PlayerData.dy.gold += 1;
                     this.setYbCount();
                 }
                 tween.GoldRecycleAnim(recycleCallBack);

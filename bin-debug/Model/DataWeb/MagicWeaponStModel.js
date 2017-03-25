@@ -16,3 +16,4 @@ var Model;
     Model.MagicWeaponStModel = MagicWeaponStModel;
     __reflect(MagicWeaponStModel.prototype, "Model.MagicWeaponStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=MagicWeaponStModel.js.map

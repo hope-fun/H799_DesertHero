@@ -87,7 +87,7 @@ module ViewModel {
 
         protected childrenCreated() {
             super.childrenCreated();
-            Main.singleton.mainGameVM = new ViewModel.MainGameVM(this.uiLayer, () => {
+            Main.sington.mainGameVM = new ViewModel.MainGameVM(this.uiLayer, () => {
                 if (Model.WebServiceBase.isDebug) {
                     console.log("zhujun: main game vm call back successed ! ");
                 }
@@ -435,7 +435,7 @@ module ViewModel {
             var duringTime = _flag ? _data.continueTime : 15;
             var cd: number = null;
 
-            var enemyHit = () => { Main.singleton.mainGameVM.enemyHit() };
+            var enemyHit = () => { Main.sington.mainGameVM.enemyHit() };
 
             if (_flag) {
                 _item.touchEnabled = false;
@@ -459,14 +459,14 @@ module ViewModel {
                     //技能1 是单次点击后直接播放 并且开始计时cd
                     //3秒后实现攻击
                     egret.setTimeout(() => {
-                        mcItem = new Model.MovieClipService(Main.singleton.mainGameVM.yungeFrontSkill);
+                        mcItem = new Model.MovieClipService(Main.sington.mainGameVM.yungeFrontSkill);
                         mc = mcItem.initMovieClip("Tx_zhujue_0" + _data.st.id + "_json", "Tx_zhujue_0" + _data.st.id + "_png", "Tx_zhujue_0" + _data.st.id, 1, () => {
-                            Main.singleton.mainGameVM.yungeFrontSkill.removeChild(mcItem.movieClip);
+                            Main.sington.mainGameVM.yungeFrontSkill.removeChild(mcItem.movieClip);
                         });
                         duringTime = 0;
                         Model.AudioService.Shared().PlaySound("YX-007_mp3");
                         Model.PlayerSkillLocalService.PlayerSkillEffect(_data, () => {
-                            Main.singleton.mainGameVM.cutHp(true);
+                            Main.sington.mainGameVM.cutHp(true);
                         }, _flag);
                     }, this, duringTime * 1000);
 
@@ -479,7 +479,7 @@ module ViewModel {
 
                     break;
                 case 2:
-                    mcItem = new Model.MovieClipService(Main.singleton.mainGameVM.yungeFrontSkill);
+                    mcItem = new Model.MovieClipService(Main.sington.mainGameVM.yungeFrontSkill);
                     mc = mcItem.initMovieClip("Tx_zhujue_0" + _data.st.id + "_json", "Tx_zhujue_0" + _data.st.id + "_png", "Tx_zhujue_0" + _data.st.id, -1, () => { });
                     mc.addEventListener(egret.Event.LOOP_COMPLETE, enemyHit, this);
 
@@ -490,11 +490,11 @@ module ViewModel {
 
                     //调用技能逻辑效果
                     Model.PlayerSkillLocalService.PlayerSkillEffect(_data, () => {
-                        Main.singleton.mainGameVM.cutHp(true);
+                        Main.sington.mainGameVM.cutHp(true);
                     }, _flag);
                     break;
                 case 3:
-                    var particleEffects = new Model.Particles(Main.singleton.mainGameVM.yungeFrontSkill, "Tx_zhujue_03_particle_png", "Tx_zhujue_03_particle_json");
+                    var particleEffects = new Model.Particles(Main.sington.mainGameVM.yungeFrontSkill, "Tx_zhujue_03_particle_png", "Tx_zhujue_03_particle_json");
                     var partcleObject = particleEffects.setParticlesPos(272, 280);
                     partcleObject.start();
                     if (_flag) {
@@ -502,7 +502,7 @@ module ViewModel {
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_USE_SKILL3, 1);
                     }
                     // by zhu_jun,2017.02.21.,技能特效.
-                    var skill3DB = new Model.DragonBones(Main.singleton.mainGameVM.yungeFrontSkill,
+                    var skill3DB = new Model.DragonBones(Main.sington.mainGameVM.yungeFrontSkill,
                         "Tx_zhujue_03_json", "Tx_zhujue_03_part_json", "Tx_zhujue_03_part_png", "Tx_zhujue_03",
                         720, 360)
                     skill3DB.play("Tx_zhujue_03");
@@ -510,7 +510,7 @@ module ViewModel {
                     }, _flag);
                     break;
                 case 4://龙骨动画,by zhu_jun,2017.02.22.
-                    mcItem = new Model.MovieClipService(Main.singleton.mainGameVM.yungeSkill0);
+                    mcItem = new Model.MovieClipService(Main.sington.mainGameVM.yungeSkill0);
                     mc = mcItem.initMovieClip("Tx_zhujue_04_json", "Tx_zhujue_04_png", "Tx_zhujue_04", -1, () => { });
                     if (_flag) {//调用成就 by cai_haotian 2016.4.5.
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_USE_SKILL4, 1);
@@ -519,8 +519,8 @@ module ViewModel {
                     }, _flag);
                     break;
                 case 5:
-                    this.bufferAnimel(Main.singleton.mainGameVM.yungeFrontSkill, () => {
-                        var skill3DB = new Model.DragonBones(Main.singleton.mainGameVM.yungeSkill0,//by zhu_jun,2017.02.21.
+                    this.bufferAnimel(Main.sington.mainGameVM.yungeFrontSkill, () => {
+                        var skill3DB = new Model.DragonBones(Main.sington.mainGameVM.yungeSkill0,//by zhu_jun,2017.02.21.
                             "Tx_zhujue_05_json", "Tx_zhujue_05_part_json", "Tx_zhujue_05_part_png", "Tx_zhujue_05",
                             720, 360)
                         skill3DB.play("Tx_zhujue_05");
@@ -534,14 +534,14 @@ module ViewModel {
                     break;
                 case 6:
                     //最后一个特效为粒子特效
-                    var particleEffects = new Model.Particles(Main.singleton.mainGameVM.yungeFrontSkill, "Tx_zhujue_06_2_png", "Tx_zhujue_06_2_json");
+                    var particleEffects = new Model.Particles(Main.sington.mainGameVM.yungeFrontSkill, "Tx_zhujue_06_2_png", "Tx_zhujue_06_2_json");
                     var partcleObject = particleEffects.setParticlesPos(272, 142);
                     if (_flag) {
                         //调用成就 by cai_haotian 2016.4.5
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_USE_SKILL6, 1);
                     }
-                    Model.PlayerSkillLocalService.PlayerSkillEffect(_data, (_gold: number, _goldAndunit: string) => {//调用技能逻辑效果
-                        Main.singleton.mainGameVM.onGoldAnimel(_gold, _goldAndunit);
+                    Model.PlayerSkillLocalService.PlayerSkillEffect(_data, (_gold: number, _SilverAndUnit: string) => {//调用技能逻辑效果
+                        Main.sington.mainGameVM.onGoldAnimel(_gold, _SilverAndUnit);
                     }, _flag);
                     break;
                 default:
@@ -568,23 +568,23 @@ module ViewModel {
                             //                            Main.singleton.mainGameVM.clickBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP,skillOncAnimate,this);
                             break;
                         case 2:
-                            Main.singleton.mainGameVM.yungeFrontSkill.removeChild(mc);
+                            Main.sington.mainGameVM.yungeFrontSkill.removeChild(mc);
                             mc.removeEventListener(egret.Event.LOOP_COMPLETE, enemyHit, this);
                             break;
                         case 3://TODO：by zhu_jun,2017.01.24.下面一行会报错.
-                            Main.singleton.mainGameVM.yungeFrontSkill.removeChild(armature.display);
-                            Main.singleton.mainGameVM.yungeFrontSkill.removeChild(partcleObject);
+                            Main.sington.mainGameVM.yungeFrontSkill.removeChild(armature.display);
+                            Main.sington.mainGameVM.yungeFrontSkill.removeChild(partcleObject);
                             break;
                         case 4:
-                            Main.singleton.mainGameVM.yungeSkill0.removeChild(mc);
+                            Main.sington.mainGameVM.yungeSkill0.removeChild(mc);
                             break;
                         case 5:
                             //此层级在后面
-                            Main.singleton.mainGameVM.yungeSkill0.removeChild(armature.display);
+                            Main.sington.mainGameVM.yungeSkill0.removeChild(armature.display);
                             break;
                         case 6:
                             //粒子动画特效移除
-                            Main.singleton.mainGameVM.yungeFrontSkill.removeChild(partcleObject);
+                            Main.sington.mainGameVM.yungeFrontSkill.removeChild(partcleObject);
                             break;
                         default:
                             alert("主角技能使用出错！请联系管理员！！");
@@ -628,7 +628,7 @@ module ViewModel {
          * @by cai_haotian 2016.2.24.
          */
         public resetCD(_data: Model.PlayerSkillData, _item?: ViewModel.BtnActiveSkillVM) {
-            var resetCD = new ViewModel.ResetSkillVM(Main.singleton, _data, (_data: Model.PlayerSkillData) => {
+            var resetCD = new ViewModel.ResetSkillVM(Main.sington, _data, (_data: Model.PlayerSkillData) => {
                 Model.PlayerSkillLocalService.reduceCD(_data, () => {
                     this.initMainInfo();
                     egret.clearInterval(_item.cd);

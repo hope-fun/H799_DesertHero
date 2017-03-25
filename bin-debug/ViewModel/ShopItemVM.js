@@ -53,7 +53,7 @@ var ViewModel;
             this.goodsName.text = _data.st.name;
             this.goodsIcon.source = _data.Icon;
             if (_data.Type == Model.ShopType.SHOP_TYPE_COIN) {
-                this.goodsDesOne.text = _data.st.description.replace("{}", _data.goldAndUnit);
+                this.goodsDesOne.text = _data.st.description.replace("{}", _data.SilverAndUnit);
             }
             else {
                 this.goodsDesOne.text = _data.st.description;
@@ -113,3 +113,4 @@ var ViewModel;
     ViewModel.ShopItemVM = ShopItemVM;
     __reflect(ShopItemVM.prototype, "ViewModel.ShopItemVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=ShopItemVM.js.map

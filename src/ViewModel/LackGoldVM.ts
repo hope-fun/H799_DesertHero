@@ -81,19 +81,19 @@ module ViewModel {
                 egret.setTimeout(() => {
                     this.uiLayer.removeChild(this);
                     
-                    for(var i = 0;i < Main.singleton.mainMenuVM.btnBottomGroup.length;i++) {
-                        if(Main.singleton.mainMenuVM.btnMall == Main.singleton.mainMenuVM.btnBottomGroup[i]) {
-                            Main.singleton.mainMenuVM.btnBottomGroup[i].currentState = "down";
-                            Main.singleton.mainMenuVM.btnBottomGroup[i].enabled = false;
-                            Main.singleton.mainMenuVM.btnBottomGroup[i].btnWordImage.source = Main.singleton.mainMenuVM.btnBottomGroup[i].btnWordSourceDown;
+                    for(var i = 0;i < Main.sington.mainMenuVM.btnBottomGroup.length;i++) {
+                        if(Main.sington.mainMenuVM.btnMall == Main.sington.mainMenuVM.btnBottomGroup[i]) {
+                            Main.sington.mainMenuVM.btnBottomGroup[i].currentState = "down";
+                            Main.sington.mainMenuVM.btnBottomGroup[i].enabled = false;
+                            Main.sington.mainMenuVM.btnBottomGroup[i].btnWordImage.source = Main.sington.mainMenuVM.btnBottomGroup[i].btnWordSourceDown;
                         } else {
-                            Main.singleton.mainMenuVM.btnBottomGroup[i].currentState = "up";
-                            Main.singleton.mainMenuVM.btnBottomGroup[i].enabled = true;
-                            Main.singleton.mainMenuVM.btnBottomGroup[i].btnWordImage.source = Main.singleton.mainMenuVM.btnBottomGroup[i].btnWordSource;
+                            Main.sington.mainMenuVM.btnBottomGroup[i].currentState = "up";
+                            Main.sington.mainMenuVM.btnBottomGroup[i].enabled = true;
+                            Main.sington.mainMenuVM.btnBottomGroup[i].btnWordImage.source = Main.sington.mainMenuVM.btnBottomGroup[i].btnWordSource;
                         }
                     }
-                    Main.singleton.mainMenuVM.menuPopupGroup.visible = true;
-                    Main.singleton.mainMenuVM.menuPopup.setMData(true);
+                    Main.sington.mainMenuVM.menuPopupGroup.visible = true;
+                    Main.sington.mainMenuVM.menuPopup.setMData(true);
                 },this,700);
             },this);
         }

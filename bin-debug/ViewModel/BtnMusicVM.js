@@ -37,3 +37,4 @@ var ViewModel;
     ViewModel.BtnMusicVM = BtnMusicVM;
     __reflect(BtnMusicVM.prototype, "ViewModel.BtnMusicVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=BtnMusicVM.js.map

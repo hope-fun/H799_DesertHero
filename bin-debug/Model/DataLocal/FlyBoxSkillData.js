@@ -19,3 +19,4 @@ var Model;
     Model.FlyBoxSkillData = FlyBoxSkillData;
     __reflect(FlyBoxSkillData.prototype, "Model.FlyBoxSkillData");
 })(Model || (Model = {}));
+//# sourceMappingURL=FlyBoxSkillData.js.map

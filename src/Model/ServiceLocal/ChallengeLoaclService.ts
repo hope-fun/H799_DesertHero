@@ -65,10 +65,9 @@ module Model{
           if(Model.WebServiceBase.isDebug){
                 console.log("cai_haotian   _data "+JSON.stringify(_data));
           }
-          
           switch(_data.Type){
             case DailyChallengeType.MONEY_TYPE_YB:
-                  PlayerLocalService.PlayerData.dy.treasure += _data.st.rewardCount;
+                  PlayerLocalService.PlayerData.AddGold = _data.st.rewardCount;
                 break;
             case DailyChallengeType.MONEY_TYPE_JEWEL:
                   PlayerLocalService.PlayerData.AddJewel = _data.st.rewardCount;

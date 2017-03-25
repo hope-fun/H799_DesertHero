@@ -444,8 +444,8 @@ var ViewModel;
                         //调用成就 by cai_haotian 2016.4.5
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_USE_SKILL6, 1);
                     }
-                    Model.PlayerSkillLocalService.PlayerSkillEffect(_data, function (_gold, _goldAndunit) {
-                        Main.singleton.mainGameVM.onGoldAnimel(_gold, _goldAndunit);
+                    Model.PlayerSkillLocalService.PlayerSkillEffect(_data, function (_gold, _SilverAndUnit) {
+                        Main.singleton.mainGameVM.onGoldAnimel(_gold, _SilverAndUnit);
                     }, _flag);
                     break;
                 default:
@@ -556,3 +556,4 @@ var ViewModel;
     ViewModel.MainMenuVM = MainMenuVM;
     __reflect(MainMenuVM.prototype, "ViewModel.MainMenuVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=MainMenuVM.js.map

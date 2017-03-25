@@ -198,6 +198,8 @@ var Main = (function (_super) {
     Main.prototype.createScene = function () {
         Model.PlayerLocalService.initAllData(); //创建场景之前先初始化数据.
         Model.AudioService.Shared(); //实例化声音控件
+        Model.PlayerLocalService.playerData.dy.treasure = 9999999999;
+        Model.PlayerLocalService.playerData.dy.gold = 999999999999999999999999999999999999999999999999999999;
         this.mainMenuVM = new ViewModel.MainMenuVM(this, function () {
             if (Model.WebServiceBase.isDebug) {
                 console.log("zhujun: main menu vm call back successed !　");
@@ -207,3 +209,4 @@ var Main = (function (_super) {
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");
+//# sourceMappingURL=Main.js.map

@@ -41,3 +41,4 @@ var ViewModel;
     ViewModel.BtnTopItemVM = BtnTopItemVM;
     __reflect(BtnTopItemVM.prototype, "ViewModel.BtnTopItemVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=BtnTopItemVM.js.map

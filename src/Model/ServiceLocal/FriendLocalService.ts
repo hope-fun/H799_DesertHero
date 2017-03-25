@@ -289,7 +289,7 @@ module Model {
          * @by cai_haotian 2016.3.28.
          */ 
         public static isShow(_data: FriendData,_friendDataList: Model.FriendData[]){
-            if(Model.PlayerLocalService.PlayerData.dy.gold >= _data.recruitDemand) {
+            if(Model.PlayerLocalService.PlayerData.dy.silver >= _data.recruitDemand) {
                 _data.reachRecruit=true;
             }else{
                 var flag:boolean = Enumerable.From(_friendDataList).Select(x=>x.reachRecruit==true).FirstOrDefault(null);
@@ -453,13 +453,13 @@ module Model {
         public static upgradeSuccessedCallBack(_data: FriendData,_time:number) {
             switch(_time){
                 case 1: _data.dy.level += 1;//等级加1. 
-                    PlayerLocalService.PlayerData.AddGold = -_data.upgradeCost;
+                    PlayerLocalService.PlayerData.AddSilver = -_data.upgradeCost;
                     break;
                 case 10: _data.dy.level += 10;//等级加10. 
-                    PlayerLocalService.PlayerData.AddGold = -_data.tenUpgradeCost;
+                    PlayerLocalService.PlayerData.AddSilver = -_data.tenUpgradeCost;
                     break;
                 case 100: _data.dy.level += 100;//等级加100. 
-                    PlayerLocalService.PlayerData.AddGold = -_data.hundredUpgradeCost;
+                    PlayerLocalService.PlayerData.AddSilver = -_data.hundredUpgradeCost;
                     break;
                 default:alert("挚友升级出错，请联系管理员！");
             }
@@ -471,7 +471,7 @@ module Model {
          */ 
         public static layerSuccessedCallBack(_data:FriendData){
             _data.dy.layerId += 1;
-            PlayerLocalService.PlayerData.AddGold = -_data.layerCost;
+            PlayerLocalService.PlayerData.AddSilver = -_data.layerCost;
             PlayerLocalService.initAllData();
         }
         
@@ -504,7 +504,7 @@ module Model {
                 }
                 
                 PlayerLocalService.initAllData();//该数据,UI. TODO: 在层级和挚友那边都要做是否被封印的判断.
-                Main.singleton.mainGameVM.switchFriend(randomData); //改主页
+                Main.sington.mainGameVM.switchFriend(randomData); //改主页
             }
             Model.WebService.commitData(Model.WebValue.dataDyModel,() => {
                 if(Model.WebServiceBase.isDebug) {
@@ -533,10 +533,10 @@ module Model {
          * @by cai_haotian 2016.4.18.
          */ 
         public static removeSealCD(_data:FriendData){
-            Model.PlayerLocalService.PlayerData.dy.treasure-=_data.sealCDMoney;
+            Model.PlayerLocalService.PlayerData.AddGold-=_data.sealCDMoney;//by zhu_jun,2017.03.22.
             _data.dy.sealCD=0;
             PlayerLocalService.initAllData();//TODO: 在层级和只有那边都要做是否被封印的判断.
-            Main.singleton.mainGameVM.switchFriend(_data); //改主页
+            Main.sington.mainGameVM.switchFriend(_data); //改主页
 //                Main.singleton.mainGameVM. 改主页
         }
         

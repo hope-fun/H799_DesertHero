@@ -77,3 +77,4 @@ var ViewModel;
     ViewModel.CutHpItemVM = CutHpItemVM;
     __reflect(CutHpItemVM.prototype, "ViewModel.CutHpItemVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=CutHpItemVM.js.map

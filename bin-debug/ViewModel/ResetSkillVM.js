@@ -73,3 +73,4 @@ var ViewModel;
     ViewModel.ResetSkillVM = ResetSkillVM;
     __reflect(ResetSkillVM.prototype, "ViewModel.ResetSkillVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=ResetSkillVM.js.map

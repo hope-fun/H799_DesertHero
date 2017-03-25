@@ -1,0 +1,1 @@
+{"version":3,"file":"AccountModel.js","sourceRoot":"","sources":["../../../src/Model/DataWeb/AccountModel.ts"],"names":[],"mappings":";;;AAAA,IAAO,KAAK,CA8BX;AA9BD,WAAO,KAAK;IACX;;;OAGG;IACH;QACC,sBAAmB,GAAW;YACpB,IAAI,CAAC,EAAE,GAAG,GAAG,CAAC;QACxB,CAAC;QAqBF,mBAAC;IAAD,CAAC,AAxBD,IAwBC;IAxBY,kBAAY,eAwBxB,CAAA;IAxBY,UAAA,YAAY,iCAwBxB,CAAA;AACF,CAAC,EA9BM,KAAK,KAAL,KAAK,QA8BX"}

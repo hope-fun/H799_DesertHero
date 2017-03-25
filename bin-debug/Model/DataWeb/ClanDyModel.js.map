@@ -1,0 +1,1 @@
+{"version":3,"file":"ClanDyModel.js","sourceRoot":"","sources":["../../../src/Model/DataWeb/ClanDyModel.ts"],"names":[],"mappings":";;;AAAA,IAAO,KAAK,CAmBX;AAnBD,WAAO,KAAK;IACR;;;;;OAKG;IACH;QACI,qBAAmB,GAAU;YACzB,IAAI,CAAC,MAAM,GAAC,GAAG,CAAC;QACpB,CAAC;QAQL,kBAAC;IAAD,CAAC,AAXD,IAWC;IAXY,iBAAW,cAWvB,CAAA;IAXY,UAAA,WAAW,gCAWvB,CAAA;AACL,CAAC,EAnBM,KAAK,KAAL,KAAK,QAmBX"}

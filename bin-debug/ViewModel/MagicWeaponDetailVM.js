@@ -58,3 +58,4 @@ var ViewModel;
     ViewModel.MagicWeaponDetailVM = MagicWeaponDetailVM;
     __reflect(MagicWeaponDetailVM.prototype, "ViewModel.MagicWeaponDetailVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=MagicWeaponDetailVM.js.map

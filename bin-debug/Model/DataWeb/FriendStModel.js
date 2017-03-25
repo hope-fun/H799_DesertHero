@@ -17,3 +17,4 @@ var Model;
     Model.FriendStModel = FriendStModel;
     __reflect(FriendStModel.prototype, "Model.FriendStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=FriendStModel.js.map

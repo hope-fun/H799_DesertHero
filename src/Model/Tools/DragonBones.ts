@@ -95,7 +95,7 @@ module Model {
         private onFrameEvent(evt: dragonBones.FrameEvent): void {
             console.log(evt.type, evt.frameLabel);//打印出事件的类型，和事件的帧标签
             if (evt.frameLabel == "enemyHit") {
-                Main.singleton.mainGameVM.enemyHit();//龙骨播放完成执行受击帧事件.
+                Main.sington.mainGameVM.enemyHit();//龙骨播放完成执行受击帧事件.
             }
         }
 

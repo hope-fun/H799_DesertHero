@@ -142,3 +142,4 @@ var Model;
     Model.MonsterLocalService = MonsterLocalService;
     __reflect(MonsterLocalService.prototype, "Model.MonsterLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=MonsterLocalService.js.map

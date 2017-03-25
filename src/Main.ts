@@ -36,7 +36,7 @@ class Main extends eui.UILayer {
     /**
      * @主脚本单例
      */
-    public static singleton: Main;
+    public static sington: Main;
     /**
      * @加载进度界面
      * @loading process interface
@@ -79,7 +79,7 @@ class Main extends eui.UILayer {
 
     protected createChildren(): void {
         super.createChildren();
-        Main.singleton = this;
+        Main.sington = this;
         this.keyEventTool = new Model.KeyEventTool();//注册按键事件.
         //inject the custom material parser
         //注入自定义的素材解析器
@@ -204,10 +204,8 @@ class Main extends eui.UILayer {
         Model.WebService.updateStData((_data: Model.DataStModel) => {
             Model.WebValue.dataStModel = _data;
             if (Model.WebServiceBase.isDebug) console.log("zhujun: update st data interface call back successed ! ");
-
         }, () => {
             if (Model.WebServiceBase.isDebug) console.log("zhujujn: update st data interface call back failed ! ");
-
         });
     }
 
@@ -217,14 +215,13 @@ class Main extends eui.UILayer {
     private createScene() {
         Model.PlayerLocalService.initAllData();//创建场景之前先初始化数据.
         Model.AudioService.Shared();//实例化声音控件
-
+        //TODO:测试数据.
+        Model.PlayerLocalService.playerData.dy.gold = 9999999999;
+        Model.PlayerLocalService.playerData.dy.silver = 999999999999999999999999999999999999999999999999999999;
         this.mainMenuVM = new ViewModel.MainMenuVM(this, () => {
             if (Model.WebServiceBase.isDebug) {
                 console.log("zhujun: main menu vm call back successed !　");
             }
-
         });
-
-
     }
 }

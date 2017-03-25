@@ -29,3 +29,4 @@ var ViewModel;
     ViewModel.ProgressHp = ProgressHp;
     __reflect(ProgressHp.prototype, "ViewModel.ProgressHp");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=ProgressHpVM.js.map

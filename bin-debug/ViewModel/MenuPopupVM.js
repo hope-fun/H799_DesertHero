@@ -499,3 +499,4 @@ var ViewModel;
     ViewModel.MenuPopupVM = MenuPopupVM;
     __reflect(MenuPopupVM.prototype, "ViewModel.MenuPopupVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=MenuPopupVM.js.map

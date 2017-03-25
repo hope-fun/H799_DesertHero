@@ -152,10 +152,7 @@ module ViewModel {
          * @by cai_haotian 2016.3.14
          */
         public levelUpLight: eui.Group;
-        /**
-         * @挑战结束之后胜利失败的图片.
-         */
-        public challengeFinishTitle: eui.Image;
+
 
         public constructor(_uiLayer: eui.UILayer, _onCallBack: Function) {
             super();
@@ -481,8 +478,9 @@ module ViewModel {
                 //TODO:by zhu_jun,mc改db.
                 this.onAttackAnim(friendDB, _data.Attack, () => {
                     console.log("zhujun: friend _data.name " + _data.st.name + " play attack effect ! ");
-                    this.onAttackEffect(_uiGroup,
-                        [_data.Effect, _data.EffectPngJson, _data.EffectPng, _data.st.effect], () => { });
+                    //TODO: by zhu_jun,关闭老的攻击特效,至少挚友用不到了.
+                    // this.onAttackEffect(_uiGroup,
+                    //     [_data.Effect, _data.EffectPngJson, _data.EffectPng, _data.st.effect], () => { });
                 });
                 Model.AudioService.Shared().PlaySound(_data.st.attackAudio);
             }, this, Model.Mathf.random(Model.PlayerLocalService.PlayerData.st.effectTimeMin * 1000, Model.PlayerLocalService.PlayerData.st.effectTimeMax * 1000));
@@ -688,8 +686,8 @@ module ViewModel {
                     _bTween.obj.touchEnabled = false;
                     this.addHpText(_bTween, _goldAddAndUnit);
                     _bTween.GoldRecycleAnim(() => {
-                        Main.singleton.mainMenuVM.goldAnimelStart();//点击后播放呼吸动画
-                        Model.PlayerLocalService.PlayerData.AddGold = _goldAdd; //收到钱后更新金币数量
+                        Main.sington.mainMenuVM.goldAnimelStart();//点击后播放呼吸动画
+                        Model.PlayerLocalService.PlayerData.AddSilver = _goldAdd; //收到钱后更新金币数量
                         //调用成就 by cai_haotian 2016.4.5
                         Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_GET_COIN, _goldAdd);
                     });
@@ -717,9 +715,9 @@ module ViewModel {
             label.text = _goldAddAndUnit;
             label.x = _tween.ePos.x - label.textWidth / 2;
             label.y = _tween.ePos.y - _tween.obj.height;
-            Main.singleton.mainMenuVM.addChild(label);
+            Main.sington.mainMenuVM.addChild(label);
             egret.Tween.get(label).to({ y: 350, alpha: 0 }, 1200).call(() => {
-                Main.singleton.mainMenuVM.removeChild(label);
+                Main.sington.mainMenuVM.removeChild(label);
             });
         }
 
@@ -733,7 +731,7 @@ module ViewModel {
             jewel.height = 23;
             jewel.x = 500;
             jewel.y = 300;
-            Main.singleton.mainMenuVM.addChild(jewel);
+            Main.sington.mainMenuVM.addChild(jewel);
             var endRandomX = Model.Mathf.random(0, 600);//掉落终点的x坐标
             var bezierP1X = endRandomX + Model.Mathf.random(-100, 100);//返回时贝塞尔曲线的P1点x坐标 Y坐标在TweenCustom中固定
             var startPos: Model.Vector2 = new Model.Vector2(300, 300);//设置出现点的起始坐标
@@ -773,9 +771,9 @@ module ViewModel {
             label.text = _goldAddAndUnit;
             label.x = _tween.ePos.x - label.textWidth / 2;
             label.y = _tween.ePos.y - _tween.obj.height;
-            Main.singleton.mainMenuVM.addChild(label);
+            Main.sington.mainMenuVM.addChild(label);
             egret.Tween.get(label).to({ y: 350, alpha: 0 }, 1200).call(() => {
-                Main.singleton.mainMenuVM.removeChild(label);
+                Main.sington.mainMenuVM.removeChild(label);
             });
         }
 
@@ -836,10 +834,18 @@ module ViewModel {
         *@剩余时间数值显示
         */
         public countTimeLabel: eui.Label;
-        // /**
-        //  * @玩家拥有金币
-        //  */
-        // public charMoney: eui.BitmapLabel;
+        /**
+         * @玩家拥有的银币,2017.03.21.
+         */
+        private sliverLabel: eui.Label;
+        /**
+         * @玩家拥有的珠宝,2017.03.21.
+         */
+        private jewelLabel:eui.Label;
+        /**
+         * @玩家拥有的黄金,2017.03.21.
+         */
+        private goldLabel:eui.Label;
         /**
          * @boss挑战切换按钮.
          */
@@ -921,7 +927,8 @@ module ViewModel {
         // }
 
         public initMainGameInfo() {
-            this.setMoney(Model.PlayerLocalService.PlayerData.GoldAndUnit);
+            this.setSilver(Model.PlayerLocalService.PlayerData.SilverAndUnit);
+            this.setJewel(Model.PlayerLocalService.PlayerData.dy.jewel.toString());
             this.setMonsterIndex();
             this.setSceneIndex();
             this.setMonsterHp();
@@ -984,14 +991,26 @@ module ViewModel {
         }
 
         /**
-         * @设置金币.
-         * @TODO: by zhu_jun,2017.02.19.
+         * @设置银币.
+         * @by zhu_jun,2017.02.19.
          */
-        public setMoney(_value: string) {
-            // this.charMoney.font = RES.getRes("gold-show-font_fnt");
-            // this.charMoney.text = _value;
-            if (this.onCallBack) this.onCallBack();  // Main.singleton.mainMenuVM.refreshMenu();//改钱之后，会更新相关模块UI.执行的是刷新.
-
+        public setSilver(_value: string) {
+            this.sliverLabel.text = _value;
+            if (this.onCallBack) this.onCallBack();  // Main.singleton.mainMenuVM.refreshMenu();改钱之后，会更新相关模块UI.执行的是刷新.
+        }
+        /**
+         * @设置元宝.
+         */
+        public setGold(_value:string){
+            this.goldLabel.text = _value;
+             if (this.onCallBack) this.onCallBack();  // Main.singleton.mainMenuVM.refreshMenu();改元宝之后，会更新相关模块UI.执行的是刷新.
+        }
+        /**
+         * 设置灵石.
+         */
+        public setJewel(_value:string){
+            this.jewelLabel.text = _value;
+            if(this.onCallBack)this.onCallBack();// Main.singleton.mainMenuVM.refreshMenu();改灵石之后，会更新相关模块UI.执行的是刷新.
         }
 
         /**
@@ -1080,8 +1099,6 @@ module ViewModel {
                 this.bossTimer.start();
             }
         }
-
-
 
         /**
          * @剩余时间.

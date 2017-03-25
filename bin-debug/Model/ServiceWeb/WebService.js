@@ -482,3 +482,4 @@ var Model;
     Model.PartInRward = PartInRward;
     __reflect(PartInRward.prototype, "Model.PartInRward");
 })(Model || (Model = {}));
+//# sourceMappingURL=WebService.js.map

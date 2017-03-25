@@ -171,3 +171,4 @@ var Model;
     Model.MovieClipService = MovieClipService;
     __reflect(MovieClipService.prototype, "Model.MovieClipService");
 })(Model || (Model = {}));
+//# sourceMappingURL=MovieClipService.js.map

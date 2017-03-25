@@ -33,3 +33,4 @@ var ViewModel;
     ViewModel.LogoVM = LogoVM;
     __reflect(LogoVM.prototype, "ViewModel.LogoVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=LogoVM.js.map

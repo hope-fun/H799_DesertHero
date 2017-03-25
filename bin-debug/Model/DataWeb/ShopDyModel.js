@@ -20,3 +20,4 @@ var Model;
     Model.ShopDyModel = ShopDyModel;
     __reflect(ShopDyModel.prototype, "Model.ShopDyModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=ShopDyModel.js.map

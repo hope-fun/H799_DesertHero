@@ -51,3 +51,4 @@ var Model;
     Model.WebServiceValue = WebServiceValue;
     __reflect(WebServiceValue.prototype, "Model.WebServiceValue", ["Model.IWebServiceValue"]);
 })(Model || (Model = {}));
+//# sourceMappingURL=WebServiceValue.js.map

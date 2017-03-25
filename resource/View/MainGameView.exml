@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="View.MainGameView" width="1280" height="720" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
-	<e:Image id="bg" left="0" right="0" top="0" height="660" source="scene_pic_1" />
+	<w:Config id="15ac726bb1d"/>
+	<e:Image id="tempImage" source="page_01_2_png" left="0" right="0" top="0" bottom="0" visible="false"/>
+	<e:Image id="bg" left="0" right="0" top="0" height="660" source="scene_pic_1"  visible="false"/>
 	<e:Group id="yungeSkill1" touchEnabled="false" left="0" right="0" top="0" bottom="0" />
 	<e:Group id="yungeSkill0" bottom="0" left="0" top="0" right="0" y="20" touchEnabled="false" x="20" />
 	<e:Group id="enemyGroup" touchEnabled="false" left="0" right="0" top="0" bottom="0" />
@@ -27,30 +29,43 @@
 	<e:Group id="goldAndTextGroup" left="0" right="0" top="0" bottom="0" touchEnabled="false" />
 	<!--<e:Group id="sceneInfoGroup" left="0" right="0" top="0" bottom="0" touchEnabled="false">
 	-->
-	<e:Group left="0" right="0" top="0" bottom="0" touchEnabled="false">
+	<e:Group id="mainGameUI" left="0" right="0" top="0" bottom="0" touchEnabled="false">
 		<e:Group id="currentInfo" left="0" right="0" top="0" bottom="0" touchEnabled="false">
 			<e:Group id="bossInfoGroup" touchEnabled="false" left="0" right="0" top="0" bottom="0" visible="false">
 				<e:Label id="countTimeLabel" text="20.6" size="20" fontFamily="黑体" textColor="0xFF5900" x="410.3" y="88.34" />
 				<ViewModel:BtnRunItemVM id="bossBtn" label="切换按钮" skinName="View.BtnRunItem" x="19" y="53.67" />
-				<e:Image id="countTimeImage" scale9Grid="1,1,6,3" maxWidth="227" minWidth="0" width="220" source="daojishi_png"
+				<e:Image id="countTimeImage" maxWidth="227" minWidth="0" width="220" source="daojishi_png"
 				         left="161" verticalCenter="-265.5" />
 			</e:Group>
-			<e:Image id="swardIcon" source="icon_jian_png" x="33" y="38.67" />
-			<e:Label id="sceneNumLabel" text="1/10" left="98" verticalCenter="-292" size="24" />
+			<e:Image id="swardIcon" source="icon_jian_png" x="17" y="18.67" />
+			<e:Label id="sceneNumLabel" text="1/10" left="79" verticalCenter="-312" size="24" />
 		</e:Group>
 		<e:Group id="sceneInfoGroup" left="0" right="0" top="0" bottom="0" touchEnabled="false">
-			<e:Image id="preImage" width="40" height="40" horizontalCenter="-137" verticalCenter="-296" source="icon_guanka_png" />
-			<e:Label id="preRound" text="0" fontFamily="黑体" stroke="2" size="20" horizontalCenter="-137.5" verticalCenter="-296" />
-			<e:Image id="currentImage" horizontalCenter="-91.5" verticalCenter="-304.5" source="icon_guanka_png" />
-			<e:Label id="currentRound" text="1" fontFamily="黑体" size="28" stroke="2" background="false" horizontalCenter="-91"
-			         verticalCenter="-306" />
-			<e:Image id="nextImage" width="40" height="40" horizontalCenter="-47" verticalCenter="-296" source="icon_guanka_png" />
-			<e:Label id="nextRound" text="2" fontFamily="黑体" stroke="2" size="20" horizontalCenter="-47.5" verticalCenter="-296" />
-			<ViewModel:ProgressHp id="bossHp" skinName="View.ProgressHp" left="150" top="50" />
-			<e:Label id="bossHpLabel" fontFamily="黑体" stroke="0" size="16" background="false" text="9999HP" left="400" top="60" />
-			<e:Image id="gold" source="icon_yinbi_png" horizontalCenter="-59.5" verticalCenter="-283.5" visible="false" />
+			<e:Image id="preImage" width="40" height="40" horizontalCenter="-157" verticalCenter="-316" source="icon_guanka_png" />
+			<e:Label id="preRound" text="0" fontFamily="黑体" stroke="2" size="20" horizontalCenter="-157" verticalCenter="-316" />
+			<e:Image id="currentImage" horizontalCenter="-111.5" verticalCenter="-324.5" source="icon_guanka_png" />
+			<e:Label id="currentRound" text="1" fontFamily="黑体" size="28" stroke="2" background="false" horizontalCenter="-111"
+			         verticalCenter="-326" />
+			<e:Image id="nextImage" width="40" height="40" horizontalCenter="-67" verticalCenter="-316" source="icon_guanka_png" />
+			<e:Label id="nextRound" text="2" fontFamily="黑体" stroke="2" size="20" horizontalCenter="-67" verticalCenter="-316" />
+			<ViewModel:ProgressHp id="bossHp" skinName="View.ProgressHp" left="134" top="30"  anchorOffsetX="0" width="310.33"/>
+			<e:Label id="bossHpLabel" fontFamily="黑体" stroke="0" size="16" background="false" text="9999HP" left="384" top="40" />
 		</e:Group>
-		<e:Image id="challengeFinishTitle" source="" x="0" y="180" visible="false" />
+		<e:Group id="silverGroup" scaleX="1" scaleY="1" anchorOffsetX="0" right="473" top="33" anchorOffsetY="0" height="37.01" width="164.67">
+			<e:Image id="silverBg" source="k_money_png" left="0" right="0" top="0" bottom="0"/>
+			<e:Image id="sliverIcon" source="icon_yinbi_png" scaleX="1" scaleY="1" left="-7" verticalCenter="-3.5" width="44" height="44"/>
+			<e:Label id="sliverLabel" text="0000000000" fontFamily="SimHei" horizontalCenter="12.665000000000006" verticalCenter="-1.504999999999999" size="24"/>
+		</e:Group>
+		<e:Group id="jewelGroup" scaleX="1" scaleY="1" top="34" right="291" anchorOffsetX="0" anchorOffsetY="0" height="35" width="166.67">
+			<e:Image id="jewelBg" source="k_money_png" anchorOffsetX="0" left="0" right="0" top="0" bottom="0"/>
+			<e:Image id="jewelIcon" scaleX="1" scaleY="1" verticalCenter="-5.5" left="-6" width="44" height="44" source="icon_lingshi_png"/>
+			<e:Label id="jewelLabel" text="0000000000" horizontalCenter="12.665000000000006" verticalCenter="-1.504999999999999" fontFamily="SimHei" size="24"/>
+		</e:Group>
+		<e:Group id="goldGroup" scaleX="1" scaleY="1" top="33" right="109" anchorOffsetX="0" anchorOffsetY="0" height="35" width="165.33">
+			<e:Image id="goldBg" source="k_money_png" left="0" right="0" top="0" bottom="0"/>
+			<e:Image id="goldIcon" scaleX="1" scaleY="1" verticalCenter="-5.5" left="-11" source="icon_yuanbao_png" width="46" height="44"/>
+			<e:Label id="goldLabel" text="0000000000" horizontalCenter="12.665000000000006" verticalCenter="-1.504999999999999" fontFamily="SimHei" size="24"/>
+		</e:Group>
 	</e:Group>
 	<!--</e:Group>
 	-->

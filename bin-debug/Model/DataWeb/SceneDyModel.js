@@ -16,3 +16,4 @@ var Model;
     Model.SceneDyModel = SceneDyModel;
     __reflect(SceneDyModel.prototype, "Model.SceneDyModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=SceneDyModel.js.map

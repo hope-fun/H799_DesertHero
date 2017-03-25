@@ -16,3 +16,4 @@ var Model;
     Model.SkillStModel = SkillStModel;
     __reflect(SkillStModel.prototype, "Model.SkillStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=SkillStModel.js.map

@@ -94,3 +94,4 @@ var Model;
     Model.ShockTools = ShockTools;
     __reflect(ShockTools.prototype, "Model.ShockTools");
 })(Model || (Model = {}));
+//# sourceMappingURL=ShockToolsShaok.js.map

@@ -25,3 +25,4 @@ var ViewModel;
     ViewModel.TestVM = TestVM;
     __reflect(TestVM.prototype, "ViewModel.TestVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=TestVM.js.map

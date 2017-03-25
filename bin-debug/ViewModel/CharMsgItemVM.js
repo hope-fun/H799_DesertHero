@@ -42,3 +42,4 @@ var ViewModel;
     ViewModel.CharMsgItemVM = CharMsgItemVM;
     __reflect(CharMsgItemVM.prototype, "ViewModel.CharMsgItemVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=CharMsgItemVM.js.map

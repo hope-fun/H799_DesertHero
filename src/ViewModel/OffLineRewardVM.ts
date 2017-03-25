@@ -52,7 +52,7 @@ module ViewModel{
     	
     	public setCount(){
     	     this.rewardCount.text=Model.PlayerLocalService.PlayerData.OffLineMoney;
-           Model.PlayerLocalService.PlayerData.AddGold = Model.PlayerLocalService.PlayerData.offLineMoney;
+           Model.PlayerLocalService.PlayerData.AddSilver = Model.PlayerLocalService.PlayerData.offLineMoney;
            //调用成就 by cai_haotian 2016.4.5
            Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_GET_COIN,Model.PlayerLocalService.PlayerData.offLineMoney);
     	}

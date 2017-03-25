@@ -101,3 +101,4 @@ var Model;
     Model.TweenCustom = TweenCustom;
     __reflect(TweenCustom.prototype, "Model.TweenCustom");
 })(Model || (Model = {}));
+//# sourceMappingURL=TweenCustom.js.map

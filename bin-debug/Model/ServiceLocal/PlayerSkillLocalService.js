@@ -325,3 +325,4 @@ var Model;
     Model.PlayerSkillLocalService = PlayerSkillLocalService;
     __reflect(PlayerSkillLocalService.prototype, "Model.PlayerSkillLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=PlayerSkillLocalService.js.map

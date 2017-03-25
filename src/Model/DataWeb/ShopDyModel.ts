@@ -17,15 +17,15 @@ module Model {
         public lastShopTime:number;
         
         /**
-         * @金币数量
+         * @银币数量
          */ 
-        public gold:number;
+        public silver:number;
         
         
-        public constructor(_id: number,_time:number,_gold:number) {
+        public constructor(_id: number,_time:number,_silver:number) {
             this.shopId=_id;
             this.lastShopTime=_time;
-            this.gold=_gold;
+            this.silver=_silver;
         }
     }
 }

@@ -29,3 +29,4 @@ var Model;
     Model.ClanData = ClanData;
     __reflect(ClanData.prototype, "Model.ClanData");
 })(Model || (Model = {}));
+//# sourceMappingURL=ClanData.js.map

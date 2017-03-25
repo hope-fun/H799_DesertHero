@@ -17,3 +17,4 @@ var Model;
     Model.ClanStModel = ClanStModel;
     __reflect(ClanStModel.prototype, "Model.ClanStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=ClanStModel.js.map

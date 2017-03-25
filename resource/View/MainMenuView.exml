@@ -2,7 +2,7 @@
 <e:Skin class="View.MainMenuView" width="1280" height="720" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
 	<e:Group id="mainInfoGroup" bottom="0" horizontalCenter="0">
-		<e:Image id="mainBg" scale9Grid="1,1,2,258" source="bg_jineng_png" horizontalCenter="0" bottom="0"/>
+		<e:Image id="mainBg" source="bg_jineng_png" horizontalCenter="0" bottom="0"/>
 		<e:Image id="currentDpsTitle" source="t_dangqianmiaoshang_png" x="789" y="65.23"/>
 		<e:Label id="currentDps" text="9.28aa" fontFamily="黑体" size="30" horizontalCenter="200" verticalCenter="-11"/>
 		<e:Image id="currentDpsImage" width="184" source="xuetiao_01_png" horizontalCenter="197" verticalCenter="14.5"/>

@@ -146,3 +146,4 @@ var Model;
     Model.ClanLocalService = ClanLocalService;
     __reflect(ClanLocalService.prototype, "Model.ClanLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=ClanLocalService.js.map

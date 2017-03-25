@@ -17,3 +17,4 @@ var Model;
     Model.MagicWeaponDyModel = MagicWeaponDyModel;
     __reflect(MagicWeaponDyModel.prototype, "Model.MagicWeaponDyModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=MagicWeaponDyModel.js.map

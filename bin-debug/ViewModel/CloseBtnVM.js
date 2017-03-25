@@ -48,3 +48,4 @@ var ViewModel;
     ViewModel.CloseBtnVM = CloseBtnVM;
     __reflect(CloseBtnVM.prototype, "ViewModel.CloseBtnVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=CloseBtnVM.js.map

@@ -87,3 +87,4 @@ var ViewModel;
     ViewModel.LackGoldVM = LackGoldVM;
     __reflect(LackGoldVM.prototype, "ViewModel.LackGoldVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=LackGoldVM.js.map

@@ -703,3 +703,4 @@ var Model;
     Model.MagicWeaponService = MagicWeaponService;
     __reflect(MagicWeaponService.prototype, "Model.MagicWeaponService");
 })(Model || (Model = {}));
+//# sourceMappingURL=MagicWeaponService.js.map

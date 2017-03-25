@@ -537,3 +537,4 @@ var ViewModel;
     ViewModel.CharItemVM = CharItemVM;
     __reflect(CharItemVM.prototype, "ViewModel.CharItemVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=CharItemVM.js.map

@@ -209,3 +209,4 @@ var ViewModel;
     ViewModel.ReceiveRewardsVM = ReceiveRewardsVM;
     __reflect(ReceiveRewardsVM.prototype, "ViewModel.ReceiveRewardsVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=ReceiveRewardsVM.js.map

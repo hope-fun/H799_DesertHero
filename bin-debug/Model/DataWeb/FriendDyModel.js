@@ -21,3 +21,4 @@ var Model;
     Model.FriendDyModel = FriendDyModel;
     __reflect(FriendDyModel.prototype, "Model.FriendDyModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=FriendDyModel.js.map

@@ -354,7 +354,9 @@ var ViewModel;
                 //TODO:by zhu_jun,mc改db.
                 _this.onAttackAnim(friendDB, _data.Attack, function () {
                     console.log("zhujun: friend _data.name " + _data.st.name + " play attack effect ! ");
-                    _this.onAttackEffect(_uiGroup, [_data.Effect, _data.EffectPngJson, _data.EffectPng, _data.st.effect], function () { });
+                    //TODO: by zhu_jun,关闭老的攻击特效,至少挚友用不到了.
+                    // this.onAttackEffect(_uiGroup,
+                    //     [_data.Effect, _data.EffectPngJson, _data.EffectPng, _data.st.effect], () => { });
                 });
                 Model.AudioService.Shared().PlaySound(_data.st.attackAudio);
             }, this, Model.Mathf.random(Model.PlayerLocalService.PlayerData.st.effectTimeMin * 1000, Model.PlayerLocalService.PlayerData.st.effectTimeMax * 1000));
@@ -686,7 +688,7 @@ var ViewModel;
         //     super.childrenCreated();
         // }
         MainGameVM.prototype.initMainGameInfo = function () {
-            this.setMoney(Model.PlayerLocalService.PlayerData.GoldAndUnit);
+            this.setMoney(Model.PlayerLocalService.PlayerData.SilverAndUnit);
             this.setMonsterIndex();
             this.setSceneIndex();
             this.setMonsterHp();
@@ -861,3 +863,4 @@ var ViewModel;
     ViewModel.MainGameVM = MainGameVM;
     __reflect(MainGameVM.prototype, "ViewModel.MainGameVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=MainGameVM.js.map

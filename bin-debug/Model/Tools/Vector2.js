@@ -18,3 +18,4 @@ var Model;
     Model.Vector2 = Vector2;
     __reflect(Vector2.prototype, "Model.Vector2");
 })(Model || (Model = {}));
+//# sourceMappingURL=Vector2.js.map

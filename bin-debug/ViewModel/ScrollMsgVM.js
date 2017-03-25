@@ -48,3 +48,4 @@ var ViewModel;
     ViewModel.ScrollMsgVM = ScrollMsgVM;
     __reflect(ScrollMsgVM.prototype, "ViewModel.ScrollMsgVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=ScrollMsgVM.js.map

@@ -17,3 +17,4 @@ var Model;
     Model.SystemConfigStModel = SystemConfigStModel;
     __reflect(SystemConfigStModel.prototype, "Model.SystemConfigStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=SystemConfigStModel.js.map

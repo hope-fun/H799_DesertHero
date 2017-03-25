@@ -36,3 +36,4 @@ var ViewModel;
     ViewModel.LoadingBarItemVM = LoadingBarItemVM;
     __reflect(LoadingBarItemVM.prototype, "ViewModel.LoadingBarItemVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=LoadingBarItemVM.js.map

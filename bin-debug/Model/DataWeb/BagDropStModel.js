@@ -17,3 +17,4 @@ var Model;
     Model.BagDropStModel = BagDropStModel;
     __reflect(BagDropStModel.prototype, "Model.BagDropStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=BagDropStModel.js.map

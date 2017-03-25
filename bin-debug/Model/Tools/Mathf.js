@@ -53,3 +53,4 @@ var Model;
     Model.Mathf = Mathf;
     __reflect(Mathf.prototype, "Model.Mathf");
 })(Model || (Model = {}));
+//# sourceMappingURL=Mathf.js.map

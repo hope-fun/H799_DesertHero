@@ -129,3 +129,4 @@ var Model;
     Model.MonsterData = MonsterData;
     __reflect(MonsterData.prototype, "Model.MonsterData");
 })(Model || (Model = {}));
+//# sourceMappingURL=MonsterData.js.map

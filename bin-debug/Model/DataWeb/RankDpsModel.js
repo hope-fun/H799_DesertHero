@@ -17,3 +17,4 @@ var Model;
     Model.RankDPSModel = RankDPSModel;
     __reflect(RankDPSModel.prototype, "Model.RankDPSModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=RankDpsModel.js.map

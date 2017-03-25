@@ -76,3 +76,4 @@ var ViewModel;
     ViewModel.TotalRewardItemVM = TotalRewardItemVM;
     __reflect(TotalRewardItemVM.prototype, "ViewModel.TotalRewardItemVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=TotalRewardItemVM.js.map

@@ -30,3 +30,4 @@ var Model;
     Model.LocalValue = LocalValue;
     __reflect(LocalValue.prototype, "Model.LocalValue");
 })(Model || (Model = {}));
+//# sourceMappingURL=LocalValue.js.map

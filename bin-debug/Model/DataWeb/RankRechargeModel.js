@@ -17,3 +17,4 @@ var Model;
     Model.RankRechargeModel = RankRechargeModel;
     __reflect(RankRechargeModel.prototype, "Model.RankRechargeModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=RankRechargeModel.js.map

@@ -124,7 +124,7 @@ module ViewModel {
          */ 
         private createBuyPop(){
             if(this.onCallback) {
-                new ViewModel.MagicWeaponBuyDetailVM(Main.singleton,() => { });
+                new ViewModel.MagicWeaponBuyDetailVM(Main.sington,() => { });
             }
         }
         
@@ -170,7 +170,7 @@ module ViewModel {
          */ 
         private createPop(){
             if(this.onCallback){
-                var item: ViewModel.MagicWeaponDetailVM = new ViewModel.MagicWeaponDetailVM(Main.singleton,() => { });
+                var item: ViewModel.MagicWeaponDetailVM = new ViewModel.MagicWeaponDetailVM(Main.sington,() => { });
                 item.setMWData(this.mWData);
             }
         }

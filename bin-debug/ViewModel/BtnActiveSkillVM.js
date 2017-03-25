@@ -86,3 +86,4 @@ var ViewModel;
     ViewModel.BtnActiveSkillVM = BtnActiveSkillVM;
     __reflect(BtnActiveSkillVM.prototype, "ViewModel.BtnActiveSkillVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=BtnActiveSkillVM.js.map

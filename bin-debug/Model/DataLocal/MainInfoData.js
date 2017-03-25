@@ -36,3 +36,4 @@ var Model;
     Model.MainInfoData = MainInfoData;
     __reflect(MainInfoData.prototype, "Model.MainInfoData");
 })(Model || (Model = {}));
+//# sourceMappingURL=MainInfoData.js.map

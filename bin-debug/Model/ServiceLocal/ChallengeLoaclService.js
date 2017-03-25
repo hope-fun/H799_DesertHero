@@ -102,3 +102,4 @@ var Model;
     Model.ChallengeLoaclService = ChallengeLoaclService;
     __reflect(ChallengeLoaclService.prototype, "Model.ChallengeLoaclService");
 })(Model || (Model = {}));
+//# sourceMappingURL=ChallengeLoaclService.js.map

@@ -54,3 +54,4 @@ var Model;
     Model.ChallengeData = ChallengeData;
     __reflect(ChallengeData.prototype, "Model.ChallengeData");
 })(Model || (Model = {}));
+//# sourceMappingURL=ChallengeData.js.map

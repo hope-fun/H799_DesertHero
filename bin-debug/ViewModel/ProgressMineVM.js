@@ -29,3 +29,4 @@ var ViewModel;
     ViewModel.ProgressMineVM = ProgressMineVM;
     __reflect(ProgressMineVM.prototype, "ViewModel.ProgressMineVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=ProgressMineVM.js.map

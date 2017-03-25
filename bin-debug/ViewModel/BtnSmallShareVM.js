@@ -49,3 +49,4 @@ var ViewModel;
     ViewModel.BtnSmallShareVM = BtnSmallShareVM;
     __reflect(BtnSmallShareVM.prototype, "ViewModel.BtnSmallShareVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=BtnSmallShareVM.js.map

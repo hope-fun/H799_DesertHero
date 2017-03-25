@@ -16,3 +16,4 @@ var Model;
     Model.ShopList = ShopList;
     __reflect(ShopList.prototype, "Model.ShopList");
 })(Model || (Model = {}));
+//# sourceMappingURL=ShopList.js.map

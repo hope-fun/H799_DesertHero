@@ -42,3 +42,4 @@ var ViewModel;
     ViewModel.AnnouncementMsgVM = AnnouncementMsgVM;
     __reflect(AnnouncementMsgVM.prototype, "ViewModel.AnnouncementMsgVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=AnnouncementMsgVM.js.map

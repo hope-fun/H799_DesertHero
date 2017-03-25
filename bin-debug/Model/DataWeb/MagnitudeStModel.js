@@ -17,3 +17,4 @@ var Model;
     Model.MagnitudeStModel = MagnitudeStModel;
     __reflect(MagnitudeStModel.prototype, "Model.MagnitudeStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=MagnitudeStModel.js.map

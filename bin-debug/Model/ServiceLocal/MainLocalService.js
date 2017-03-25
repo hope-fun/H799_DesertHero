@@ -80,3 +80,4 @@ var Model;
     Model.MainLocalService = MainLocalService;
     __reflect(MainLocalService.prototype, "Model.MainLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=MainLocalService.js.map

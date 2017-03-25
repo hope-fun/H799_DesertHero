@@ -417,3 +417,4 @@ var Model;
     Model.FriendData = FriendData;
     __reflect(FriendData.prototype, "Model.FriendData");
 })(Model || (Model = {}));
+//# sourceMappingURL=FriendData.js.map

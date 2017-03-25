@@ -17,3 +17,4 @@ var Model;
     Model.DailyRechargeInfo = DailyRechargeInfo;
     __reflect(DailyRechargeInfo.prototype, "Model.DailyRechargeInfo");
 })(Model || (Model = {}));
+//# sourceMappingURL=DailyRechargeInfo.js.map

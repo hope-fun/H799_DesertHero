@@ -157,3 +157,4 @@ var Model;
     Model.ShopLocalService = ShopLocalService;
     __reflect(ShopLocalService.prototype, "Model.ShopLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=ShopLocalService.js.map

@@ -555,8 +555,8 @@
       "sixthLayerValue": 25,
       "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
       "seventhLayerValue": 10000,
-      "dragonBones": "bodyZhaoYun",
-      "effect": "texture_baihe",
+      "dragonBones": "bodyGuanYinPing",
+      "effect": "Tx_baihe_attack",
       "attackAudio": "YX-011_mp3",
       "id": 1
     },
@@ -731,7 +731,7 @@
       "id": 6
     },
     {
-      "name": "郭嘉",
+      "name": "赵云",
       "type": "FRIEND_TYPE_FRIEND",
       "icon": "skill_02",
       "description": "",
@@ -934,7 +934,7 @@
       "id": 12
     },
     {
-      "name": "曹仁",
+      "name": "诸葛亮",
       "type": "FRIEND_TYPE_FRIEND",
       "icon": "skill_03",
       "description": "",
@@ -961,7 +961,7 @@
       "sixthLayerValue": 5,
       "seventhLayerType": "FRIEND_SKILL_TYPE_SLEF",
       "seventhLayerValue": 1500,
-      "dragonBones": "bodyZhaoYun",
+      "dragonBones": "bodyZhuGeLiang",
       "effect": "texture_xupingjun",
       "attackAudio": "YX-010_mp3",
       "id": 13
@@ -1137,7 +1137,7 @@
       "id": 18
     },
     {
-      "name": "许褚",
+      "name": "张飞",
       "type": "FRIEND_TYPE_FRIEND",
       "icon": "skill_04",
       "description": "",
@@ -1164,7 +1164,7 @@
       "sixthLayerValue": 10,
       "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
       "seventhLayerValue": 10,
-      "dragonBones": "bodyZhaoYun",
+      "dragonBones": "bodyZhangFei",
       "effect": "texture_mengjue",
       "attackAudio": "YX-009_mp3",
       "id": 19
@@ -1340,7 +1340,7 @@
       "id": 24
     },
     {
-      "name": "荀彧",
+      "name": "貂蝉",
       "type": "FRIEND_TYPE_FRIEND",
       "icon": "skill_05",
       "description": "",
@@ -1367,7 +1367,7 @@
       "sixthLayerValue": 5,
       "seventhLayerType": "FRIEND_SKILL_TYPE_ALL",
       "seventhLayerValue": 20,
-      "dragonBones": "bodyZhaoYun",
+      "dragonBones": "bodyDiaoChan",
       "effect": "texture_liufuling",
       "attackAudio": "YX-007_mp3",
       "id": 25

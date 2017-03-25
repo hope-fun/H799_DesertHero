@@ -43,16 +43,16 @@ module Model {
                 }
                 
                 //寒冰心法数据
-                var skillInfo1 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[1],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.skillGroup.getChildAt(1));
+                var skillInfo1 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[1],<ViewModel.BtnActiveSkillVM>Main.sington.mainMenuVM.skillGroup.getChildAt(1));
                 FlyBoxLocalService.skillInfo.push(skillInfo1);
                 //破空霸拳
-                var skillInfo2 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[2],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.skillGroup.getChildAt(2));
+                var skillInfo2 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[2],<ViewModel.BtnActiveSkillVM>Main.sington.mainMenuVM.skillGroup.getChildAt(2));
                 FlyBoxLocalService.skillInfo.push(skillInfo2);
                 //寂灭雷诀
-                var skillInfo3 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[3],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.skillGroup.getChildAt(3));
+                var skillInfo3 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[3],<ViewModel.BtnActiveSkillVM>Main.sington.mainMenuVM.skillGroup.getChildAt(3));
                 FlyBoxLocalService.skillInfo.push(skillInfo3);
                 //寂灭雷诀
-                var skillInfo5 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[4],<ViewModel.BtnActiveSkillVM>Main.singleton.mainMenuVM.skillGroup.getChildAt(4));
+                var skillInfo5 = new FlyBoxSkillData(PlayerSkillLocalService.PlayerSkillList[4],<ViewModel.BtnActiveSkillVM>Main.sington.mainMenuVM.skillGroup.getChildAt(4));
                 FlyBoxLocalService.skillInfo.push(skillInfo5);
 
                 FlyBoxLocalService.currencyInfo = Enumerable.From(FlyBoxLocalService.dropList).Where(x=> x.goOnTime == 0).ToArray();
@@ -80,11 +80,9 @@ module Model {
                 return FlyBoxLocalService.currencyInfo[0].dropTypeDescribe;
             } else if(_currencyProbability >= FlyBoxLocalService.currencyInfo[0].probability * 0.05 && _currencyProbability <= FlyBoxLocalService.currencyInfo[2].probability * 0.1-1) {
                 //元宝
-                PlayerLocalService.PlayerData.dy.treasure += 2;
-                
-                //调用成就 by cai_haotian 2016.4.5
+                PlayerLocalService.PlayerData.AddGold += 2;//by zhu_jun,2017.03.22.
+                //调用成就 by cai_haotian 2016.4.5.
 //                Model.AchievementLocalService.setCurrentGet(Model.AchievementType.ACHIEVEMENT_TYPE_GET_COIN,2);
-                
                 return FlyBoxLocalService.currencyInfo[2].dropTypeDescribe;
             } else if(_currencyProbability >= FlyBoxLocalService.currencyInfo[2].probability * 0.1 && _currencyProbability <= FlyBoxLocalService.currencyInfo[1].probability*0.1-1) {
                 //金币
@@ -92,7 +90,7 @@ module Model {
                 var fdsAdd = FriendLocalService.FriendSkillTypeCoin/100;
                 var mWAdd = MagicWeaponService.AddCoin/100;
                 var add = Math.ceil((bossHp / 5) * (1 + fdsAdd + mWAdd));
-                PlayerLocalService.PlayerData.AddGold = add;
+                PlayerLocalService.PlayerData.AddSilver = add;
                 var des = FlyBoxLocalService.currencyInfo[1].dropTypeDescribe.replace("{}",MainLocalService.toUnitConversion(add));
                 
                 //调用成就 by cai_haotian 2016.4.5

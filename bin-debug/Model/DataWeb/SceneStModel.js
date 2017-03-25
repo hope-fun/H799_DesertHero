@@ -17,3 +17,4 @@ var Model;
     Model.SceneStModel = SceneStModel;
     __reflect(SceneStModel.prototype, "Model.SceneStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=SceneStModel.js.map

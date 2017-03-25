@@ -30,3 +30,4 @@ var ViewModel;
     ViewModel.BtnRunItemVM = BtnRunItemVM;
     __reflect(BtnRunItemVM.prototype, "ViewModel.BtnRunItemVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=BtnRunItemVM.js.map

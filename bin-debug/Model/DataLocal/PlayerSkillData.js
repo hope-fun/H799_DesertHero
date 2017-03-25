@@ -67,3 +67,4 @@ var Model;
     Model.PlayerSkillData = PlayerSkillData;
     __reflect(PlayerSkillData.prototype, "Model.PlayerSkillData");
 })(Model || (Model = {}));
+//# sourceMappingURL=PlayerSkillData.js.map

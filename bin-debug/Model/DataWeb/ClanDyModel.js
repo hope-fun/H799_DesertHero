@@ -18,3 +18,4 @@ var Model;
     Model.ClanDyModel = ClanDyModel;
     __reflect(ClanDyModel.prototype, "Model.ClanDyModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=ClanDyModel.js.map

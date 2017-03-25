@@ -39,3 +39,4 @@ var ViewModel;
     ViewModel.GiftPacksVM = GiftPacksVM;
     __reflect(GiftPacksVM.prototype, "ViewModel.GiftPacksVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=GiftPacksVM.js.map

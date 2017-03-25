@@ -24,7 +24,7 @@ module Model {
         /**
          * @获得铜币数量(不带单位)
          */
-        public gold: number;
+        public silver: number;
 
         public get Icon(): string {
             return this.st.icon + "_png";
@@ -33,8 +33,8 @@ module Model {
         /**
          * @获得铜币显示数量
          */
-        public get goldAndUnit() {
-            return MainLocalService.toUnitConversion(this.gold);
+        public get SilverAndUnit() {
+            return MainLocalService.toUnitConversion(this.silver);
         }
 
         /**

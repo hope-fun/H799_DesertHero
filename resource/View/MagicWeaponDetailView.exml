@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="View.MagicWeaponDetailView" width="600" height="900" xmlns:e="http://ns.egret.com/eui" xmlns:ViewModel="ViewModel.*" xmlns:w="http://ns.egret.com/wing">
-	<e:Image id="mask_black_detail" source="mask_black" width="100%" height="100%" alpha="0.7" horizontalCenter="0" verticalCenter="0" scale9Grid="1,1,1,1"/>
+	<e:Image id="mask_black_detail" source="mask_black" width="100%" height="100%" alpha="0.7" horizontalCenter="0" verticalCenter="0"/>
 	<e:Group id="window" width="600" height="900" y="0">
 		<e:Group height="565" width="510" y="160" horizontalCenter="0">
-			<e:Image source="bg_tankuangda" scale9Grid="37,69,5,749" left="0" right="0" top="0" bottom="0"/>
-			<e:Image width="426" height="75" alpha=".8" x="42" y="29" source="bg_tankuangda_nei2" scale9Grid="15,14,2,3"/>
+			<e:Image source="bg_tankuangda" left="0" right="0" top="0" bottom="0"/>
+			<e:Image width="426" height="75" alpha=".8" x="42" y="29" source="bg_tankuangda_nei2"/>
 			<e:Image id="magicWeapon" source="magic_weapon_1" width="62" height="62" horizontalCenter="-168" verticalCenter="-215.5"/>
 			<e:Label id="weaponName" size="24" text="刑天斧" fontFamily="黑体" x="139" y="39"/>
 			<e:Label id="weaponLevel" size="20" text="Lv.999" fontFamily="黑体" y="69" left="139"/>
-			<e:Image width="426" height="418" horizontalCenter="0" alpha=".8" y="111" source="bg_tankuangda_nei" scale9Grid="14,13,3,5"/>
+			<e:Image width="426" height="418" horizontalCenter="0" alpha=".8" y="111" source="bg_tankuangda_nei"/>
 			<e:Label size="18" text="当前属性：" fontFamily="黑体" x="64" y="137"/>
 			<e:Label id="weaponAddNow" size="18" text="攻击力增加999%" fontFamily="黑体" x="64" y="163"/>
 			<e:Label id="weaponRemoveNow" size="18" text="关卡减少10%" fontFamily="黑体" x="64" y="189"/>
@@ -23,6 +23,6 @@
 			<e:Button id="magicCloseBtn" skinName="View.CloseBtn" x="471" y="-20"/>
 			<e:Image source="bg_tankuang_fengexian" y="227" horizontalCenter="0"/>
 		</e:Group>     
-		<e:Image id="mask_black" source="mask_black" width="600" height="900" alpha="0" scale9Grid="1,1,1,1" x="0" y="82" visible="false"/>
+		<e:Image id="mask_black" source="mask_black" width="600" height="900" alpha="0" x="0" y="82" visible="false"/>
 	</e:Group>
 </e:Skin>

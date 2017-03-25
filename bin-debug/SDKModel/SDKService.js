@@ -41,3 +41,4 @@ var Model;
     Model.SDKService = SDKService;
     __reflect(SDKService.prototype, "Model.SDKService");
 })(Model || (Model = {}));
+//# sourceMappingURL=SDKService.js.map

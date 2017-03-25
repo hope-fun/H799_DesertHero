@@ -19,3 +19,4 @@ var Model;
     Model.DataStModel = DataStModel;
     __reflect(DataStModel.prototype, "Model.DataStModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=DataStModel.js.map

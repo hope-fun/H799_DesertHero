@@ -21,7 +21,7 @@ var Model;
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(ShopData.prototype, "goldAndUnit", {
+        Object.defineProperty(ShopData.prototype, "SilverAndUnit", {
             /**
              * @获得铜币显示数量
              */
@@ -46,3 +46,4 @@ var Model;
     Model.ShopData = ShopData;
     __reflect(ShopData.prototype, "Model.ShopData");
 })(Model || (Model = {}));
+//# sourceMappingURL=ShopData.js.map

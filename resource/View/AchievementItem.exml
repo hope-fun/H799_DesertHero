@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="View.AchievementItem" width="542" height="74" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
 	<e:Group top="0" bottom="0" left="0" right="0">
-		<e:Image top="0" bottom="0" left="0" right="0" scale9Grid="212,43,213,36" source="k_02_png"/>
+		<e:Image top="0" bottom="0" left="0" right="0" source="k_02_png"/>
 		<e:Label id="itemName" text="击杀敌人" size="21" fontFamily="黑体" x="95" y="14"/>
 		<e:Image id="icon" source="achievement_1" x="13" y="6"/>
 		<e:Image id="firstStar" source="icon_star_hui" width="20" height="20" x="95" y="40"/>

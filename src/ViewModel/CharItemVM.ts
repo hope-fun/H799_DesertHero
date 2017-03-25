@@ -152,7 +152,7 @@ module ViewModel {
 
                 this.skillLevel.text = _data.dy.level.toString();
                 this.skillIcon.source = _data.st.leadHead;
-                var isEnough: boolean = Model.PlayerLocalService.PlayerData.dy.gold > _data.upgradeCost;
+                var isEnough: boolean = Model.PlayerLocalService.PlayerData.dy.silver > _data.upgradeCost;
                 this.levelBtn.setPUpgrade(_data.UpgradeCostAndUnit, _data.ClickDamageDeltaUnit, isEnough);
                 this.levelBtn0.setCharIcon(10, this.pData.TenUpgradeCostAndUnit)//设置+10显示价格 by cai_haotian 2016.3.8
                 this.levelBtn1.setCharIcon(100, this.pData.HundredUpgradeCostAndUnit)//设置+100显示价格 by cai_haotian 2016.3.8
@@ -180,7 +180,7 @@ module ViewModel {
                 this.skillLevel.text = _data.dy.level.toString();
                 this.skillDes.text = _data.Description;
                 this.skillIcon.source = _data.st.icon;
-                var isEnough: boolean = Model.PlayerLocalService.PlayerData.dy.gold > _data.cost;
+                var isEnough: boolean = Model.PlayerLocalService.PlayerData.dy.silver > _data.cost;
                 this.levelBtn.setPSUnlock(_data.CostAndUnit, _data.effectDelta.toString(), isEnough);
                 if (_data.dy.level > 0) {
                     this.levelBtn0.setCharIcon(10, _data.TenUpgradeCostAndUnit)//设置+10显示价格 by cai_haotian 2016.3.8
@@ -243,15 +243,11 @@ module ViewModel {
 
                 if (_data.dy.layerId < _data.layerMatchLevel) {//当前可解锁层级大于当前已经解锁层级，显示层级解锁按钮.
                     this.layerBgImage.visible = true;//by cai_haotian 2016.3.10. 显示层级背景
-                    this.levelBtn.setFUpgrade(_data.LayerCostAndUnit, _data.DpsDeltaUnit, Model.PlayerLocalService.PlayerData.dy.gold > _data.layerCost, _data.LayerStr);
+                    this.levelBtn.setFUpgrade(_data.LayerCostAndUnit, _data.DpsDeltaUnit, Model.PlayerLocalService.PlayerData.dy.silver > _data.layerCost, _data.LayerStr);
                 } else {
                     this.layerBgImage.visible = false;//by cai_haotian 2016.3.10. 隐藏层级背景
-                    this.levelBtn.setFUpgrade(_data.UpgradeCostAndUnit, _data.DpsDeltaUnit, Model.PlayerLocalService.PlayerData.dy.gold > _data.upgradeCost);
+                    this.levelBtn.setFUpgrade(_data.UpgradeCostAndUnit, _data.DpsDeltaUnit, Model.PlayerLocalService.PlayerData.dy.silver > _data.upgradeCost);
                 }
-
-
-
-
 
             } else {//主角技能未解锁,则显示一级时候的属性.(未招募)
                 if (_data.reachRecruit) {
@@ -265,8 +261,6 @@ module ViewModel {
                     } else {
                         this.friendDps.text = "未解锁";
                     }
-
-
                     this.levelBtn.visible = true;
                     this.newSkill.visible = true;
                     //by cai_haotian 元宝解锁的不管够不够都能点 
@@ -286,7 +280,6 @@ module ViewModel {
                         } else {
                             this.recruitDemand.text = "招募条件：  " + _data.RecruitDemand;
                         }
-
                         this.levelBtn.visible = false;
                     }
                 }
@@ -298,7 +291,7 @@ module ViewModel {
          */
         private createFriendPop() {
             if (this.onCallback) {
-                var item: ViewModel.CharDetailMsgVM = new ViewModel.CharDetailMsgVM(Main.singleton, () => { });
+                var item: ViewModel.CharDetailMsgVM = new ViewModel.CharDetailMsgVM(Main.sington, () => { });
                 item.initFData(this.fData);
             }
         }
@@ -308,7 +301,7 @@ module ViewModel {
          */
         private createCharPop() {
             if (this.onCallback) {
-                var item: ViewModel.CharDetailMsgVM = new ViewModel.CharDetailMsgVM(Main.singleton, () => { });
+                var item: ViewModel.CharDetailMsgVM = new ViewModel.CharDetailMsgVM(Main.sington, () => { });
                 item.initPData();
             }
         }
@@ -364,19 +357,19 @@ module ViewModel {
                         this.hundredBtn = null;
                     }
 
-                    var tenClose = Model.PlayerLocalService.PlayerData.dy.gold <= this.pData.tenUpgradeCost;
-                    var hundredClose = Model.PlayerLocalService.PlayerData.dy.gold <= this.pData.hundredUpgradeCost;
+                    var tenClose = Model.PlayerLocalService.PlayerData.dy.silver <= this.pData.tenUpgradeCost;
+                    var hundredClose = Model.PlayerLocalService.PlayerData.dy.silver <= this.pData.hundredUpgradeCost;
                     this.setBtnClose(tenClose, hundredClose);
                 } else {
                     this.flag++;
                     if (this.flag == 5) {
-                        var tenFlag = Model.PlayerLocalService.PlayerData.dy.gold > this.pData.tenUpgradeCost;
-                        var hundredFlag = Model.PlayerLocalService.PlayerData.dy.gold > this.pData.hundredUpgradeCost;
+                        var tenFlag = Model.PlayerLocalService.PlayerData.dy.silver > this.pData.tenUpgradeCost;
+                        var hundredFlag = Model.PlayerLocalService.PlayerData.dy.silver > this.pData.hundredUpgradeCost;
                         this.setBtnShow(tenFlag, hundredFlag);
                         this.flag = 0;
                     } else {
-                        var tenClose = Model.PlayerLocalService.PlayerData.dy.gold <= this.pData.tenUpgradeCost;
-                        var hundredClose = Model.PlayerLocalService.PlayerData.dy.gold <= this.pData.hundredUpgradeCost;
+                        var tenClose = Model.PlayerLocalService.PlayerData.dy.silver <= this.pData.tenUpgradeCost;
+                        var hundredClose = Model.PlayerLocalService.PlayerData.dy.silver <= this.pData.hundredUpgradeCost;
                         this.setBtnClose(tenClose, hundredClose);
                     }
                 }
@@ -481,20 +474,20 @@ module ViewModel {
                         egret.clearTimeout(this.hundredBtn);
                         this.hundredBtn = null;
                     }
-                    var tenClose = Model.PlayerLocalService.PlayerData.dy.gold <= this.fData.tenUpgradeCost;
-                    var hundredClose = Model.PlayerLocalService.PlayerData.dy.gold <= this.fData.hundredUpgradeCost;
+                    var tenClose = Model.PlayerLocalService.PlayerData.dy.silver <= this.fData.tenUpgradeCost;
+                    var hundredClose = Model.PlayerLocalService.PlayerData.dy.silver <= this.fData.hundredUpgradeCost;
                     this.setBtnClose(tenClose, hundredClose);
                 } else {
                     this.flag++;
                     if (this.flag == 5) {
                         //10连升
-                        var tenFlag = Model.PlayerLocalService.PlayerData.dy.gold > this.fData.tenUpgradeCost;
-                        var hundredFlag = Model.PlayerLocalService.PlayerData.dy.gold > this.fData.hundredUpgradeCost;
+                        var tenFlag = Model.PlayerLocalService.PlayerData.dy.silver > this.fData.tenUpgradeCost;
+                        var hundredFlag = Model.PlayerLocalService.PlayerData.dy.silver > this.fData.hundredUpgradeCost;
                         this.setBtnShow(tenFlag, hundredFlag);
                         this.flag = 0;
                     } else {
-                        var tenClose = Model.PlayerLocalService.PlayerData.dy.gold <= this.fData.tenUpgradeCost;
-                        var hundredClose = Model.PlayerLocalService.PlayerData.dy.gold <= this.fData.hundredUpgradeCost;
+                        var tenClose = Model.PlayerLocalService.PlayerData.dy.silver <= this.fData.tenUpgradeCost;
+                        var hundredClose = Model.PlayerLocalService.PlayerData.dy.silver <= this.fData.hundredUpgradeCost;
                         this.setBtnClose(tenClose, hundredClose);
                     }
 
@@ -575,15 +568,15 @@ module ViewModel {
          */
         private levelUpCharAnimel(id: number = 0) {
             //光特效
-            var light: Model.MovieClipService = new Model.MovieClipService(Main.singleton.mainGameVM.levelUpLight);
+            var light: Model.MovieClipService = new Model.MovieClipService(Main.sington.mainGameVM.levelUpLight);
             var mcLight: egret.MovieClip = light.initMovieClip("guangxian_json", "guangxian_png", "guangxian", 1, () => {
-                Main.singleton.mainGameVM.levelUpLight.removeChild(mcLight);
+                Main.sington.mainGameVM.levelUpLight.removeChild(mcLight);
             });
             switch (id) {
                 case 0:
-                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.singleton.mainGameVM.yungeLevelUp);
+                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.sington.mainGameVM.yungeLevelUp);
                     var mc: egret.MovieClip = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, () => {
-                        Main.singleton.mainGameVM.yungeLevelUp.removeChild(mc);
+                        Main.sington.mainGameVM.yungeLevelUp.removeChild(mc);
                     });
                     mc.x = 268;
                     mc.y = 415;
@@ -592,9 +585,9 @@ module ViewModel {
                     mcLight.y = 413.45;
                     break;
                 case 1:
-                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.singleton.mainGameVM.baiheLevelUp);
+                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.sington.mainGameVM.baiheLevelUp);
                     var mc: egret.MovieClip = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, () => {
-                        Main.singleton.mainGameVM.baiheLevelUp.removeChild(mc);
+                        Main.sington.mainGameVM.baiheLevelUp.removeChild(mc);
                     });
                     mc.x = 190;
                     mc.y = 465;
@@ -604,9 +597,9 @@ module ViewModel {
 
                     break;
                 case 7:
-                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.singleton.mainGameVM.bingyiLevelUp);
+                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.sington.mainGameVM.bingyiLevelUp);
                     var mc: egret.MovieClip = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, () => {
-                        Main.singleton.mainGameVM.bingyiLevelUp.removeChild(mc);
+                        Main.sington.mainGameVM.bingyiLevelUp.removeChild(mc);
                     });
                     mc.x = 91;
                     mc.y = 503;
@@ -615,9 +608,9 @@ module ViewModel {
                     mcLight.y = 501.45;
                     break;
                 case 13:
-                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.singleton.mainGameVM.xupingjunLevelUp);
+                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.sington.mainGameVM.xupingjunLevelUp);
                     var mc: egret.MovieClip = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, () => {
-                        Main.singleton.mainGameVM.xupingjunLevelUp.removeChild(mc);
+                        Main.sington.mainGameVM.xupingjunLevelUp.removeChild(mc);
                     });
                     mc.x = 201;
                     mc.y = 352;
@@ -626,9 +619,9 @@ module ViewModel {
                     mcLight.y = 350.45;
                     break;
                 case 19:
-                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.singleton.mainGameVM.mengjueLevelUp);
+                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.sington.mainGameVM.mengjueLevelUp);
                     var mc: egret.MovieClip = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, () => {
-                        Main.singleton.mainGameVM.mengjueLevelUp.removeChild(mc);
+                        Main.sington.mainGameVM.mengjueLevelUp.removeChild(mc);
                     });
                     mc.x = 96;
                     mc.y = 310;
@@ -637,9 +630,9 @@ module ViewModel {
                     mcLight.y = 308.45;
                     break;
                 case 25:
-                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.singleton.mainGameVM.liufulingLevelUp);
+                    var groud: Model.MovieClipService = new Model.MovieClipService(Main.sington.mainGameVM.liufulingLevelUp);
                     var mc: egret.MovieClip = groud.initMovieClip(this.effectDiskJson, this.effectDiskPng, this.effectDisk, 1, () => {
-                        Main.singleton.mainGameVM.liufulingLevelUp.removeChild(mc);
+                        Main.sington.mainGameVM.liufulingLevelUp.removeChild(mc);
                     });
                     mc.x = 78;
                     mc.y = 397;

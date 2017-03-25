@@ -7,7 +7,7 @@ module Model {
     	/**
     	 * @玩家数据.
     	 */
-        private static playerData: PlayerData = null;
+        public static playerData: PlayerData = null;//TODO:private
     	
 		/**
 		 * @by zhu_jun,2016.01.15.
@@ -172,13 +172,13 @@ module Model {
          */
         public static upgradeSuccessedCallBack(_data: PlayerData,_time:number=1) {
             switch(_time){
-                case 1: PlayerLocalService.playerData.AddGold = -_data.upgradeCost;//扣钱.
+                case 1: PlayerLocalService.playerData.AddSilver = -_data.upgradeCost;//扣钱.
                     PlayerLocalService.playerData.dy.level += 1;//增加等级.
                     break;
-                case 10: PlayerLocalService.playerData.AddGold = -_data.tenUpgradeCost;//10连升扣钱
+                case 10: PlayerLocalService.playerData.AddSilver = -_data.tenUpgradeCost;//10连升扣钱
                     PlayerLocalService.playerData.dy.level += 10;//增加等级.
                     break;
-                case 100: PlayerLocalService.playerData.AddGold = -_data.hundredUpgradeCost;//10连升扣钱
+                case 100: PlayerLocalService.playerData.AddSilver = -_data.hundredUpgradeCost;//10连升扣钱
                     PlayerLocalService.playerData.dy.level += 100;//增加等级.
                     break;
                 default:alert("升级出现错误，请联系管理员!");
@@ -190,7 +190,7 @@ module Model {
          * @金币是否足够.
          */
         public static isEnoughGold(_deltaGold: number,_onEnough: Function = null): boolean {
-            if(PlayerLocalService.PlayerData.dy.gold < _deltaGold) {
+            if(PlayerLocalService.PlayerData.dy.silver < _deltaGold) {
                 return false;
             } else {
                 if(_onEnough) {
@@ -208,7 +208,7 @@ module Model {
          */
         public static changeGold(_deltaGold: number): boolean {
             return PlayerLocalService.isEnoughGold(_deltaGold,(_bDeltaGold: number) => {
-                PlayerLocalService.PlayerData.AddGold = _bDeltaGold;
+                PlayerLocalService.PlayerData.AddSilver = _bDeltaGold;
             });
         }
         
@@ -216,7 +216,7 @@ module Model {
          * @元宝是够足够.
          */
         public static isEnoughSycee(_deltaSycee: number,_onEnough: Function = null) {
-            if(PlayerLocalService.PlayerData.dy.treasure < _deltaSycee) {
+            if(PlayerLocalService.PlayerData.dy.gold < _deltaSycee) {
                 return false;
             } else {
                 if(_onEnough) {
@@ -232,7 +232,7 @@ module Model {
          */
         public static changeSycee(_deltaSycee: number) {
             return PlayerLocalService.isEnoughSycee(_deltaSycee,(_bDeltaSycee) => {
-                PlayerLocalService.PlayerData.dy.treasure += _bDeltaSycee;
+                PlayerLocalService.PlayerData.AddGold += _bDeltaSycee;//by zhu_jun,2017.03.22.
             });
         }
         

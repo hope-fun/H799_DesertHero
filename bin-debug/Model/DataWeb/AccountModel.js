@@ -16,3 +16,4 @@ var Model;
     Model.AccountModel = AccountModel;
     __reflect(AccountModel.prototype, "Model.AccountModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=AccountModel.js.map

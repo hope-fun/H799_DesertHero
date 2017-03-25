@@ -95,3 +95,4 @@ var ViewModel;
     ViewModel.KilledViewVM = KilledViewVM;
     __reflect(KilledViewVM.prototype, "ViewModel.KilledViewVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=KilledViewVM.js.map

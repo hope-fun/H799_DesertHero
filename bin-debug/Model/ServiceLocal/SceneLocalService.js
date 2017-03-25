@@ -79,3 +79,4 @@ var Model;
     Model.SceneLocalService = SceneLocalService;
     __reflect(SceneLocalService.prototype, "Model.SceneLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=SceneLocalService.js.map

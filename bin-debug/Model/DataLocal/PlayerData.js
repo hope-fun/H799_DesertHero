@@ -132,7 +132,7 @@ var Model;
              */
             set: function (_value) {
                 this.dy.gold = _value;
-                Main.singleton.mainGameVM.setMoney(this.GoldAndUnit);
+                Main.singleton.mainGameVM.setMoney(this.SilverAndUnit);
             },
             enumerable: true,
             configurable: true
@@ -143,12 +143,12 @@ var Model;
              */
             set: function (_value) {
                 this.dy.gold += _value;
-                Main.singleton.mainGameVM.setMoney(this.GoldAndUnit);
+                Main.singleton.mainGameVM.setMoney(this.SilverAndUnit);
             },
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(PlayerData.prototype, "GoldAndUnit", {
+        Object.defineProperty(PlayerData.prototype, "SilverAndUnit", {
             /**
              * @带单位金币总额.
              */
@@ -399,3 +399,4 @@ var Model;
     Model.PlayerData = PlayerData;
     __reflect(PlayerData.prototype, "Model.PlayerData");
 })(Model || (Model = {}));
+//# sourceMappingURL=PlayerData.js.map

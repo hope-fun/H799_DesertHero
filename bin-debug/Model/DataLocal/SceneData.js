@@ -26,3 +26,4 @@ var Model;
     Model.SceneData = SceneData;
     __reflect(SceneData.prototype, "Model.SceneData");
 })(Model || (Model = {}));
+//# sourceMappingURL=SceneData.js.map

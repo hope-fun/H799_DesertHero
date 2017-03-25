@@ -105,3 +105,4 @@ var ViewModel;
     ViewModel.AchievementItemVM = AchievementItemVM;
     __reflect(AchievementItemVM.prototype, "ViewModel.AchievementItemVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=AchievementItemVM.js.map

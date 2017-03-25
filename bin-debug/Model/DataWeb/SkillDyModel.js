@@ -20,3 +20,4 @@ var Model;
     Model.SkillDyModel = SkillDyModel;
     __reflect(SkillDyModel.prototype, "Model.SkillDyModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=SkillDyModel.js.map

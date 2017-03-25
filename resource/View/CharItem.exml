@@ -2,14 +2,14 @@
 <e:Skin class="View.CharItem" width="547" height="84" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ViewModel="ViewModel.*">
 	<e:Group left="0" right="0" top="0" bottom="0">
-		<!--<e:Image id="bgImage" source="k_01_png" verticalCenter="0" horizontalCenter="0" />
-		<e:Image id="layerBgImage" source="bg_huadongtiao_jiesuo" scale9Grid="9,10,14,11" left="0" right="0" top="0"
+		<e:Image id="bgImage" source="k_01_png" verticalCenter="0" horizontalCenter="0" />
+		<e:Image id="layerBgImage" source="bg_huadongtiao_jiesuo" left="0" right="0" top="0"
 		         bottom="0" visible="false" />
 		<e:Group id="playerGroup" left="0" right="0" top="0" bottom="0" touchEnabled="false">
 			<e:Label id="skillDes" fontFamily="黑体" textAlign="center" size="16" verticalCenter="20" touchEnabled="false"
 			         left="100" />
-		</e:Group>-->
-		<!--<e:Group id="friendGroup" right="0" left="0" top="0" bottom="0" touchEnabled="false">
+		</e:Group>
+		<e:Group id="friendGroup" right="0" left="0" top="0" bottom="0" touchEnabled="false">
 			<e:Group id="layerGroup" width="185" height="19" horizontalCenter="-88.5" verticalCenter="17.5" touchEnabled="false">
 				<e:Image id="layer_one" source="layer_01_s_png" x="29" touchEnabled="false" visible="false" />
 				<e:Image id="layer_two" source="layer_02_s_png" x="54" y="4" touchEnabled="false" visible="false" />
@@ -29,8 +29,8 @@
 				<e:Label id="recruitDemand" bold="true" touchEnabled="false" text="招募条件：  xxxxxxx" fontFamily="黑体"
 				         textAlign="center" size="18" verticalCenter="0.5" left="-1" />
 			</e:Group>
-		</e:Group>-->
-		<!--<e:Group id="shareGroup" top="0" bottom="0" width="158" touchEnabled="false">
+		</e:Group>
+		<e:Group id="shareGroup" top="0" bottom="0" width="158" touchEnabled="false">
 			<e:Label id="skillName" text="青龙偃月" size="20" fontFamily="黑体" verticalCenter="-17" left="100" touchEnabled="false"
 			         textColor="0xFEDE33" />
 			<e:Label id="Lv" text="Lv." fontFamily="黑体" size="16" touchEnabled="false" x="102" y="34" />
@@ -49,8 +49,8 @@
 			</e:Group>
 		</e:Group>
 		<e:Group id="dead" left="0" right="0" top="0" bottom="0" touchEnabled="false" visible="false">
-			<e:Image source="bg_siwang_weijiesuo" scale9Grid="9,10,10,8" left="0" right="0" top="0" bottom="0" />
+			<e:Image source="bg_siwang_weijiesuo" left="0" right="0" top="0" bottom="0" />
 			<e:Image source="icon_kulou" verticalCenter="0" horizontalCenter="0" />
-		</e:Group>-->
+		</e:Group>
 	</e:Group>
 </e:Skin>

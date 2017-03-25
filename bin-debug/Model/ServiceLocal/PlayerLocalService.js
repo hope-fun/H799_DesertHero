@@ -243,7 +243,8 @@ var Model;
     /**
      * @玩家数据.
      */
-    PlayerLocalService.playerData = null;
+    PlayerLocalService.playerData = null; //TODO:private
     Model.PlayerLocalService = PlayerLocalService;
     __reflect(PlayerLocalService.prototype, "Model.PlayerLocalService");
 })(Model || (Model = {}));
+//# sourceMappingURL=PlayerLocalService.js.map

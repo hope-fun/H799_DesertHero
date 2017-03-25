@@ -24,3 +24,4 @@ var Model;
     Model.DataDyModel = DataDyModel;
     __reflect(DataDyModel.prototype, "Model.DataDyModel");
 })(Model || (Model = {}));
+//# sourceMappingURL=DataDyModel.js.map

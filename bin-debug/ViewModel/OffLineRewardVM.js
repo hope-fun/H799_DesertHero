@@ -47,3 +47,4 @@ var ViewModel;
     ViewModel.OffLineRewardVM = OffLineRewardVM;
     __reflect(OffLineRewardVM.prototype, "ViewModel.OffLineRewardVM");
 })(ViewModel || (ViewModel = {}));
+//# sourceMappingURL=OffLineRewardVM.js.map
